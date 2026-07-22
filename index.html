@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maths Question Hub</title>
+<style>
+  :root {
+    --bg: #0f1420;
+    --panel: #1a2236;
+    --panel-2: #222c45;
+    --text: #eef1f8;
+    --muted: #9aa5c0;
+    --accent: #5b8cff;
+    --good: #35c26f;
+    --bad: #e2555a;
+    --border: #2c3654;
+  }
+  * { box-sizing: border-box; }
+  html, body {
+    margin: 0; padding: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    min-height: 100vh;
+  }
+  header {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 1rem 1.5rem;
+    background: var(--panel);
+    border-bottom: 1px solid var(--border);
+  }
+  header h1 { font-size: 1.3rem; margin: 0; font-weight: 600; }
+  header .controls { display: flex; gap: 0.75rem; align-items: center; }
+  select, button, input[type="text"], input[type="password"] {
+    font-size: 1rem;
+    background: var(--panel-2);
+    color: var(--text);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+  }
+  button { cursor: pointer; }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
+  button.icon { padding: 0.5rem 0.7rem; }
+
+  main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem 4rem;
+  }
+  .status-row {
+    display: flex; justify-content: space-between; align-items: center;
+    color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem;
+  }
+  .tally { display: flex; gap: 1rem; }
+  .tally span.good { color: var(--good); }
+  .tally span.bad { color: var(--bad); }
+
+  #startScreen { text-align: center; padding: 4rem 1rem; }
+  #startScreen p { color: var(--muted); max-width: 480px; margin: 0.5rem auto 2rem; }
+
+  .card {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+  }
+  .badge {
+    display: inline-block;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--muted);
+    background: var(--panel-2);
+    border-radius: 999px;
+    padding: 0.2rem 0.7rem;
+    margin-right: 0.5rem;
+  }
+  #question-text {
+    font-size: 1.8rem;
+    line-height: 1.4;
+    margin: 1rem 0 0;
+  }
+  #answer-form { display: flex; gap: 0.75rem; margin-top: 1.5rem; }
+  #answer-input {
+    flex: 1;
+    font-size: 1.3rem;
+    padding: 0.9rem 1rem;
+  }
+  #feedback-panel {
+    margin-top: 1.5rem;
+    padding: 1.25rem 1.5rem;
+    border-radius: 12px;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    display: none;
+  }
+  #feedback-panel.correct { display: block; background: rgba(53,194,111,0.12); border: 1px solid var(--good); }
+  #feedback-panel.incorrect { display: block; background: rgba(226,85,90,0.12); border: 1px solid var(--bad); }
+  #feedback-panel.pending { display: block; background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); }
+
+  .actions-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
+  .reveal-box {
+    margin-top: 1rem; padding: 1rem; border-radius: 10px;
+    background: var(--panel-2); color: var(--muted); font-size: 1rem; display: none;
+  }
+  .reveal-box.show { display: block; }
+
+  dialog {
+    background: var(--panel); color: var(--text);
+    border: 1px solid var(--border); border-radius: 14px;
+    padding: 1.5rem; width: 420px; max-width: 90vw;
+  }
+  dialog::backdrop { background: rgba(0,0,0,0.6); }
+  dialog label { display: block; margin: 0.9rem 0 0.3rem; font-size: 0.9rem; color: var(--muted); }
+  dialog input { width: 100%; }
+  dialog p.hint { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+  dialog .dialog-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 1.5rem; }
+
+  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 2rem 1rem; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>📐 Maths Question Hub</h1>
+  <div class="controls">
+    <select id="section-select"></select>
+    <button id="settings-btn" class="icon" title="AI settings">⚙️ Settings</button>
+  </div>
+</header>
+
+<main>
+  <div id="startScreen">
+    <h2 id="section-title">Pick a section to begin</h2>
+    <p id="section-desc"></p>
+    <button id="start-btn" class="primary">Start</button>
+  </div>
+
+  <div id="quizScreen" style="display:none;">
+    <div class="status-row">
+      <div id="progress"></div>
+      <div class="tally">
+        <span class="good" id="tally-correct">✓ 0</span>
+        <span class="bad" id="tally-incorrect">✗ 0</span>
+      </div>
+    </div>
+
+    <div class="card">
+      <div>
+        <span class="badge" id="q-tier"></span>
+        <span class="badge" id="q-topic"></span>
+      </div>
+      <p id="question-text"></p>
+
+      <form id="answer-form">
+        <input type="text" id="answer-input" placeholder="Type your answer here..." autocomplete="off">
+        <button type="submit" class="primary" id="submit-btn">Submit</button>
+      </form>
+
+      <div id="feedback-panel"></div>
+
+      <div class="actions-row">
+        <button id="reveal-btn">Show worked answer</button>
+        <button id="next-btn" class="primary">Next question →</button>
+        <button id="restart-btn">Restart section</button>
+      </div>
+
+      <div class="reveal-box" id="reveal-box"></div>
+    </div>
+  </div>
+</main>
+
+<footer>Runs entirely in your browser. Your API key is stored only in this browser's local storage.</footer>
+
+<dialog id="settings-dialog">
+  <h3>AI settings</h3>
+  <label for="api-key-input">Gemini API key</label>
+  <input type="password" id="api-key-input" placeholder="Paste your free Google AI Studio key">
+  <p class="hint">Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API.</p>
+  <label for="model-input">Model</label>
+  <input type="text" id="model-input" placeholder="gemini-2.0-flash">
+  <p class="hint">Default free-tier model is gemini-2.0-flash. Change this if Google renames or updates their free model.</p>
+  <div class="dialog-actions">
+    <button id="settings-cancel">Cancel</button>
+    <button id="settings-save" class="primary">Save</button>
+  </div>
+</dialog>
+
+<script>
+const MANIFEST_URL = 'questions/manifest.json';
+const state = {
+  manifest: [],
+  bank: null,
+  order: [],
+  index: 0,
+  correctCount: 0,
+  incorrectCount: 0,
+};
+
+const el = (id) => document.getElementById(id);
+
+function shuffle(arr) {
+  const a = arr.slice();
+  for (let i = a.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [a[i], a[j]] = [a[j], a[i]];
+  }
+  return a;
+}
+
+async function loadManifest() {
+  const res = await fetch(MANIFEST_URL);
+  state.manifest = await res.json();
+  const select = el('section-select');
+  select.innerHTML = state.manifest.map(m => `<option value="${m.file}">${m.id} — ${m.title}</option>`).join('');
+  select.addEventListener('change', updateStartScreen);
+  updateStartScreen();
+}
+
+function updateStartScreen() {
+  const file = el('section-select').value;
+  const entry = state.manifest.find(m => m.file === file);
+  if (entry) {
+    el('section-title').textContent = `${entry.id} — ${entry.title}`;
+    el('section-desc').textContent = entry.description || '';
+  }
+}
+
+async function startSection() {
+  const file = el('section-select').value;
+  const res = await fetch(file);
+  state.bank = await res.json();
+  state.order = shuffle(state.bank.questions.map((_, i) => i));
+  state.index = 0;
+  state.correctCount = 0;
+  state.incorrectCount = 0;
+  el('startScreen').style.display = 'none';
+  el('quizScreen').style.display = 'block';
+  showQuestion();
+}
+
+function currentQuestion() {
+  return state.bank.questions[state.order[state.index]];
+}
+
+function showQuestion() {
+  const q = currentQuestion();
+  el('q-tier').textContent = q.tier;
+  el('q-topic').textContent = q.topic;
+  el('question-text').textContent = q.prompt;
+  el('progress').textContent = `Question ${state.index + 1} of ${state.order.length}`;
+  el('answer-input').value = '';
+  el('answer-input').disabled = false;
+  el('submit-btn').disabled = false;
+  el('feedback-panel').style.display = 'none';
+  el('feedback-panel').className = '';
+  el('reveal-box').classList.remove('show');
+  el('answer-input').focus();
+}
+
+function updateTally() {
+  el('tally-correct').textContent = `✓ ${state.correctCount}`;
+  el('tally-incorrect').textContent = `✗ ${state.incorrectCount}`;
+}
+
+function nextQuestion() {
+  if (state.index < state.order.length - 1) {
+    state.index++;
+  } else {
+    state.order = shuffle(state.bank.questions.map((_, i) => i));
+    state.index = 0;
+  }
+  showQuestion();
+}
+
+function getSettings() {
+  return {
+    apiKey: localStorage.getItem('mqh_api_key') || '',
+    model: localStorage.getItem('mqh_model') || 'gemini-2.0-flash',
+  };
+}
+
+function buildPrompt(q, studentAnswer) {
+  const misconceptions = (q.misconceptions || [])
+    .map(m => `- If the student's answer resembles "${m.wrongAnswer}", the likely mistake is: ${m.reason}`)
+    .join('\n');
+  return `Question: ${q.prompt}
+Correct answer: ${q.answer}
+Known common misconceptions for this question:
+${misconceptions || '(none listed)'}
+
+Student's answer: ${studentAnswer}
+
+Evaluate the student's answer and respond in the required JSON format.`;
+}
+
+const SYSTEM_INSTRUCTION = `You are a friendly, encouraging Year 9 maths tutor giving live feedback on a classroom projector screen. Keep responses to 2-3 short, spoken-style sentences. Never simply restate the correct answer when the student is wrong — give a Socratic nudge toward the specific mistake first, referencing the matching known misconception if one is given. If the student is correct, briefly affirm why. Reply with ONLY compact JSON in this exact shape, no markdown fences, no extra commentary: {"correct": true or false, "feedback": "..."}`;
+
+async function callGemini(q, studentAnswer) {
+  const { apiKey, model } = getSettings();
+  if (!apiKey) {
+    throw new Error('No API key set. Click Settings and paste a free Gemini API key from Google AI Studio.');
+  }
+  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const body = {
+    systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
+    contents: [{ parts: [{ text: buildPrompt(q, studentAnswer) }] }],
+    generationConfig: { temperature: 0.3 },
+  };
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(body),
+  });
+  if (!res.ok) {
+    const errText = await res.text();
+    throw new Error(`API error (${res.status}): ${errText.slice(0, 200)}`);
+  }
+  const data = await res.json();
+  const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
+  const cleaned = raw.trim().replace(/^```json/i, '').replace(/^```/, '').replace(/```$/, '').trim();
+  try {
+    return JSON.parse(cleaned);
+  } catch (e) {
+    return { correct: null, feedback: raw || 'The AI returned an unexpected response format.' };
+  }
+}
+
+async function submitAnswer(ev) {
+  ev.preventDefault();
+  const studentAnswer = el('answer-input').value.trim();
+  if (!studentAnswer) return;
+  const q = currentQuestion();
+
+  el('submit-btn').disabled = true;
+  el('answer-input').disabled = true;
+  const panel = el('feedback-panel');
+  panel.className = 'pending';
+  panel.style.display = 'block';
+  panel.textContent = 'Thinking...';
+
+  try {
+    const result = await callGemini(q, studentAnswer);
+    if (result.correct === true) {
+      panel.className = 'correct';
+      state.correctCount++;
+    } else if (result.correct === false) {
+      panel.className = 'incorrect';
+      state.incorrectCount++;
+    } else {
+      panel.className = 'pending';
+    }
+    panel.textContent = result.feedback;
+    updateTally();
+  } catch (err) {
+    panel.className = 'pending';
+    panel.textContent = `⚠️ ${err.message}`;
+    el('submit-btn').disabled = false;
+    el('answer-input').disabled = false;
+  }
+}
+
+function toggleReveal() {
+  const q = currentQuestion();
+  const box = el('reveal-box');
+  box.textContent = `Answer: ${q.answer}` + (q.workedExample ? ` (see ${q.workedExample} in the textbook)` : '');
+  box.classList.toggle('show');
+}
+
+function openSettings() {
+  const { apiKey, model } = getSettings();
+  el('api-key-input').value = apiKey;
+  el('model-input').value = model;
+  el('settings-dialog').showModal();
+}
+
+function saveSettings() {
+  localStorage.setItem('mqh_api_key', el('api-key-input').value.trim());
+  localStorage.setItem('mqh_model', el('model-input').value.trim() || 'gemini-2.0-flash');
+  el('settings-dialog').close();
+}
+
+el('start-btn').addEventListener('click', startSection);
+el('answer-form').addEventListener('submit', submitAnswer);
+el('next-btn').addEventListener('click', nextQuestion);
+el('restart-btn').addEventListener('click', startSection);
+el('reveal-btn').addEventListener('click', toggleReveal);
+el('settings-btn').addEventListener('click', openSettings);
+el('settings-cancel').addEventListener('click', () => el('settings-dialog').close());
+el('settings-save').addEventListener('click', saveSettings);
+
+loadManifest();
+</script>
+</body>
+</html>
