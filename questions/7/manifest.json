@@ -14,6 +14,12 @@
       "title": "Parallel lines",
       "path": "questions/7B/manifest.json",
       "description": "Corresponding, alternate and cointerior angles, deciding whether lines are parallel, and adding an auxiliary parallel line to solve harder problems."
+    },
+    {
+      "id": "7F",
+      "title": "Enlargement and similar figures",
+      "path": "questions/7F/manifest.json",
+      "description": "Enlarging figures from a centre of enlargement, scale factors, and using similarity to find unknown lengths."
     }
   ]
 }

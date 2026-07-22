@@ -1,0 +1,886 @@
+{
+  "id": "7F",
+  "title": "Enlargement and similar figures",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 7 Geometry, Section 7F. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 13 \u2014 Enlarging figures",
+      "image": "assets/example13.png"
+    },
+    {
+      "title": "Example 14 \u2014 Using the scale factor",
+      "image": "assets/example14.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "identifying corresponding angles, sides and scale factor in similar figures",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220F",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220F",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "identifying corresponding angles, sides and scale factor in similar figures",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220D",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220D",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "identifying corresponding angles, sides and scale factor in similar figures",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "GH",
+      "aiNotes": "Official answer (from the Cambridge answer key): GH",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "identifying corresponding angles, sides and scale factor in similar figures",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AE",
+      "aiNotes": "Official answer (from the Cambridge answer key): AE",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "identifying corresponding angles, sides and scale factor in similar figures",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "measuring an enlargement to find the scale factor",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "double (OA\u2032 = 2 \u00d7 OA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): double (OA\u2032 = 2 \u00d7 OA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "measuring an enlargement to find the scale factor",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "double (OB\u2032 = 2 \u00d7 OB)",
+      "aiNotes": "Official answer (from the Cambridge answer key): double (OB\u2032 = 2 \u00d7 OB)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "measuring an enlargement to find the scale factor",
+      "image": "assets/bu2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "double (OC\u2032 = 2 \u00d7 OC)",
+      "aiNotes": "Official answer (from the Cambridge answer key): double (OC\u2032 = 2 \u00d7 OC)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "measuring an enlargement to find the scale factor",
+      "image": "assets/bu2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2e",
+      "tier": "warmup",
+      "topic": "measuring an enlargement to find the scale factor",
+      "image": "assets/bu2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "yes",
+      "aiNotes": "Official answer (from the Cambridge answer key): yes",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "measuring a reduction to find the scale factor",
+      "image": "assets/bu3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "OA\u2032 is a quarter of OA",
+      "aiNotes": "Official answer (from the Cambridge answer key): OA\u2032 is a quarter of OA",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        },
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "measuring a reduction to find the scale factor",
+      "image": "assets/bu3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "OD\u2032 is a quarter of OD",
+      "aiNotes": "Official answer (from the Cambridge answer key): OD\u2032 is a quarter of OD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        },
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3c",
+      "tier": "warmup",
+      "topic": "measuring a reduction to find the scale factor",
+      "image": "assets/bu3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "1/4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 1/4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        },
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3d",
+      "tier": "warmup",
+      "topic": "measuring a reduction to find the scale factor",
+      "image": "assets/bu3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "yes",
+      "aiNotes": "Official answer (from the Cambridge answer key): yes",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        },
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu4a",
+      "tier": "warmup",
+      "topic": "applying a scale factor to a square",
+      "image": "assets/bu4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "yes",
+      "aiNotes": "Official answer (from the Cambridge answer key): yes",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4b",
+      "tier": "warmup",
+      "topic": "applying a scale factor to a square",
+      "image": "assets/bu4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "8 cm",
+      "aiNotes": "Official answer (from the Cambridge answer key): 8 cm",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4c",
+      "tier": "warmup",
+      "topic": "applying a scale factor to a square",
+      "image": "assets/bu4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "25 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 25 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "enlarging a triangle from a centre of enlargement",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394A\u2032B\u2032C\u2032 should have sides 1/3 that of \u0394ABC",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394A\u2032B\u2032C\u2032 should have sides 1/3 that of \u0394ABC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "enlarging a triangle from a centre of enlargement",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394A\u2032B\u2032C\u2032 should have sides double that of \u0394ABC",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394A\u2032B\u2032C\u2032 should have sides double that of \u0394ABC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "enlarging a square from a centre of enlargement",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A\u2032B\u2032C\u2032D\u2032 should have side lengths 1/2 that of ABCD",
+      "aiNotes": "Official answer (from the Cambridge answer key): A\u2032B\u2032C\u2032D\u2032 should have side lengths 1/2 that of ABCD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "enlarging a square from a centre of enlargement",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A\u2032B\u2032C\u2032D\u2032 should have side lengths 1.5 times that of ABCD",
+      "aiNotes": "Official answer (from the Cambridge answer key): A\u2032B\u2032C\u2032D\u2032 should have side lengths 1.5 times that of ABCD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 2, x = 14, y = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 2, x = 14, y = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 1.5, x = 9, y = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 1.5, x = 9, y = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 1.5, x = 45, y = 24",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 1.5, x = 45, y = 24",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 0.4, x = 1, y = 1.4",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 0.4, x = 1, y = 1.4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3e",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 2.5, x = 0.6, y = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 2.5, x = 0.6, y = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3f",
+      "tier": "fluency",
+      "topic": "finding the scale factor and unknown sides in similar figures",
+      "image": "assets/ex3f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 1.75, x = 3.5, y = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 1.75, x = 3.5, y = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        },
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and centre of enlargement from a coordinate diagram",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 2, centre of enlargement = (0, 0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 2, centre of enlargement = (0, 0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and centre of enlargement from a coordinate diagram",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 0.5, centre of enlargement = (0, 0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 0.5, centre of enlargement = (0, 0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and centre of enlargement from a coordinate diagram",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 0.5, centre of enlargement = (3, 0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 0.5, centre of enlargement = (3, 0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and centre of enlargement from a coordinate diagram",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "scale factor = 3, centre of enlargement = (1, 0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): scale factor = 3, centre of enlargement = (1, 0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "measuring from the wrong point, or assuming the centre of enlargement is always inside the shape",
+          "reason": "the centre of enlargement (O) can be inside, outside, or on the figure - distances must be measured from O to each vertex, not between vertices"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "using similar triangles to solve a shadow/light problem",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i 3.6 m   ii 9 m   iii 2.7 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): i 3.6 m   ii 9 m   iii 2.7 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "using similar triangles to solve a shadow/light problem",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i 5.4 m   ii 6.3 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): i 5.4 m   ii 6.3 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "problem-solving",
+      "topic": "using similar triangles to solve a shadow/light problem",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i 6 m   ii 3 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): i 6 m   ii 3 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices/sides in the wrong order (e.g. matching AB with GH instead of AB with EF)",
+          "reason": "corresponding parts must be matched in the same order the shapes are named/labelled - matching the wrong pairs gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "measuring a photo to estimate a real-world length using scale",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12.7 cm (matching the truck's 12.7 m real length, so the photo's scale factor can be found)",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12.7 cm (matching the truck's 12.7 m real length, so the photo's scale factor can be found)",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "measuring a photo to estimate a real-world height using scale",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 cm",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 cm",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6c",
+      "tier": "problem-solving",
+      "topic": "using a photo's scale factor to estimate an unmeasured real-world length",
+      "image": "assets/ex6c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "reasoning",
+      "topic": "reasoning about scale factors above, below and equal to 1",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a > 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): a > 1",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "reasoning",
+      "topic": "reasoning about scale factors above, below and equal to 1",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a < 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): a < 1",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "reasoning",
+      "topic": "reasoning about scale factors above, below and equal to 1",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 1",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "reasoning",
+      "topic": "explaining why certain shapes are, or are not, always similar",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "all angles of any square equal 90\u00b0, with only 1 side length (so any two squares are automatically similar)",
+      "aiNotes": "Official answer (from the Cambridge answer key): all angles of any square equal 90\u00b0, with only 1 side length (so any two squares are automatically similar)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8b",
+      "tier": "reasoning",
+      "topic": "explaining why certain shapes are, or are not, always similar",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "all angles in any equilateral triangle equal 60\u00b0, with only 1 side length (so any two equilateral triangles are automatically similar)",
+      "aiNotes": "Official answer (from the Cambridge answer key): all angles in any equilateral triangle equal 60\u00b0, with only 1 side length (so any two equilateral triangles are automatically similar)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8c",
+      "tier": "reasoning",
+      "topic": "explaining why certain shapes are, or are not, always similar",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "length and width might be multiplied by different numbers (so the angles could stay 90\u00b0 while the ratio of length to width differs between the two rectangles)",
+      "aiNotes": "Official answer (from the Cambridge answer key): length and width might be multiplied by different numbers (so the angles could stay 90\u00b0 while the ratio of length to width differs between the two rectangles)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8d",
+      "tier": "reasoning",
+      "topic": "explaining why certain shapes are, or are not, always similar",
+      "image": "assets/ex8d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "two isosceles triangles do not have to have the same base angles (the equal-sides could be a different proportion of the base)",
+      "aiNotes": "Official answer (from the Cambridge answer key): two isosceles triangles do not have to have the same base angles (the equal-sides could be a different proportion of the base)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming corresponding sides are equal instead of just corresponding angles",
+          "reason": "in similar figures, corresponding ANGLES are equal but corresponding SIDES are only in the same ratio (proportional), not equal, unless the scale factor is 1"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex9",
+      "tier": "reasoning",
+      "topic": "finding the scale factor that reverses an enlargement",
+      "image": "assets/ex9.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "1/k",
+      "aiNotes": "Official answer (from the Cambridge answer key): 1/k",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ]
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "using a map scale ratio to convert between map and ground distances",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "100 000 cm = 1 km, so 2 cm on the map = 1 km on the ground",
+      "aiNotes": "Official answer (from the Cambridge answer key): 100 000 cm = 1 km, so 2 cm on the map = 1 km on the ground",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "using a map scale ratio to convert between map and ground distances",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "24 cm on the map represents 12 km on the ground",
+      "aiNotes": "Official answer (from the Cambridge answer key): 24 cm on the map represents 12 km on the ground",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing original/image instead of image/original (or vice versa) when finding the scale factor",
+          "reason": "scale factor = image length / original length - getting the ratio upside down gives the reciprocal of the correct answer"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "enrichment",
+      "topic": "the Sierpinski triangle - repeated enlargement and self-similar patterns",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "N/A (drawing task - continue the pattern for two more figures, each made of 3 shrunk copies of the previous figure)",
+      "aiNotes": "Official answer (from the Cambridge answer key): N/A (drawing task - continue the pattern for two more figures, each made of 3 shrunk copies of the previous figure)",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11b",
+      "tier": "enrichment",
+      "topic": "the Sierpinski triangle - repeated enlargement and self-similar patterns",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  l/2   ii  l/4   iii  l/128 (each figure the smallest triangle is half the side length of the previous figure's smallest triangle)",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  l/2   ii  l/4   iii  l/128 (each figure the smallest triangle is half the side length of the previous figure's smallest triangle)",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11c",
+      "tier": "enrichment",
+      "topic": "the Sierpinski triangle - repeated enlargement and self-similar patterns",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  3/4   ii  9/16   iii  243/1024 (each figure shades 3/4 of the previously shaded fraction, since 1 of every 4 triangles becomes unshaded)",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  3/4   ii  9/16   iii  243/1024 (each figure shades 3/4 of the previously shaded fraction, since 1 of every 4 triangles becomes unshaded)",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11d",
+      "tier": "enrichment",
+      "topic": "the Sierpinski triangle - repeated enlargement and self-similar patterns",
+      "image": "assets/ex11d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "zero (as the enlargement and copying continues forever, the shaded area shrinks towards zero even though the pattern never stops)",
+      "aiNotes": "Official answer (from the Cambridge answer key): zero (as the enlargement and copying continues forever, the shaded area shrinks towards zero even though the pattern never stops)",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    }
+  ]
+}
