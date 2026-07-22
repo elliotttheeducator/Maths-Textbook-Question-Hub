@@ -1,6 +1,6 @@
-# Maths Textbook Question Hub
+# EduFlow
 
-A single-page classroom app: put it on the big screen, work through a
+EduFlow is a single-page classroom app: put it on the big screen, work through a
 chapter's questions in the order Cambridge designed them, and get a
 Socratic AI tutor to help — using the actual textbook page images, not an
 AI recreation of them.
@@ -24,8 +24,12 @@ runs entirely in the browser.
    - The key is stored only in that browser's `localStorage`. It is sent
      directly from the browser to Google's API and nowhere else.
    - Optionally set a **Teacher PIN** here too (see Teacher mode below).
-3. The home screen lists every chapter — click one to open its cover screen
-   (Key Ideas and Worked Examples, scrollable, straight from the textbook).
+   - Settings itself is teacher-mode-only (see below) — the very first time,
+     with no PIN set yet, toggling Teacher mode unlocks it immediately so
+     you can do this initial setup at all.
+3. From the landing screen, open **Chapters** — click a chapter to open its
+   cover screen (Key Ideas and Worked Examples, scrollable, straight from
+   the textbook).
 4. Click **Ready? Start questions →**. Questions run in the exact order
    Cambridge printed them (fluency → problem-solving → reasoning →
    enrichment, increasing difficulty) — sequential by default, never
@@ -44,7 +48,10 @@ never see a reveal button on the shared screen by default:
   clicking the toggle turns Teacher mode on immediately with no gate; the
   PIN is friction to keep the button off the student-facing screen, not
   real security).
-- With Teacher mode on, three things appear:
+- With Teacher mode on, four things appear:
+  - **⚙️ Settings** itself (API key, model, PIN) — students never see this,
+    so once you've set it up on a device the key just works from then on
+    with no student-facing configuration at all.
   - **Show official worked answer** on each question, revealing the actual
     Cambridge answer crop (or an honest "not available yet" note if that
     question's official answer hasn't been wired in).
@@ -70,6 +77,22 @@ the complementary angle"), that shared instruction is its own
 `contextImage`, shown above the specific sub-part's image so nothing
 printed on the page is lost — see the `contextImage` field in the schema
 below.
+
+## Math formatting in chat
+
+Tutor replies are typeset properly — fractions, exponents, degree signs,
+angle notation — using [KaTeX](https://katex.org), vendored locally under
+`vendor/katex/` (no CDN dependency, so it still works on flaky school
+wifi). The tutor's system instruction tells it to write all math in LaTeX
+between `$...$`, and `renderMath()` in `index.html` re-typesets the chat
+log after every message.
+
+For students typing back: a row of quick-insert buttons (°, ∠, π, √, etc.)
+sits under the chat input, and typing something like `x^2` followed by a
+space auto-converts it to `x²` live (Unicode superscript characters, not
+real markup — keeps the input a plain text field). This is a lightweight
+stand-in, not a full equation editor; a proper calculator/input is planned
+but not built yet.
 
 ## Deployment (GitHub Pages)
 
