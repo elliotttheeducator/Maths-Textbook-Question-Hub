@@ -1,0 +1,938 @@
+{
+  "id": "7B",
+  "title": "Parallel lines",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 7 Geometry, Section 7B. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    },
+    {
+      "image": "assets/keyideas_2.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 4 \u2014 Deciding if lines are parallel",
+      "image": "assets/example4.png"
+    },
+    {
+      "title": "Example 5 \u2014 Finding angles in parallel lines",
+      "image": "assets/example5.png"
+    },
+    {
+      "title": "Example 6 \u2014 Adding a third parallel line",
+      "image": "assets/example6.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "parallel line angle rules (fill in the blank)",
+      "image": "assets/bu1a.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "equal",
+      "aiNotes": "Official answer (from the Cambridge answer key): equal",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "parallel line angle rules (fill in the blank)",
+      "image": "assets/bu1b.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "equal",
+      "aiNotes": "Official answer (from the Cambridge answer key): equal",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "parallel line angle rules (fill in the blank)",
+      "image": "assets/bu1c.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "supplementary",
+      "aiNotes": "Official answer (from the Cambridge answer key): supplementary",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2a.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 125 (alternate angles in parallel lines)",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 125 (alternate angles in parallel lines)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2b.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 110 (cointerior angles in parallel lines)",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 110 (cointerior angles in parallel lines)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2c.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "c = 80 (corresponding angles in parallel lines)",
+      "aiNotes": "Official answer (from the Cambridge answer key): c = 80 (corresponding angles in parallel lines)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2d.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 96 (vertically opposite angles)",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 96 (vertically opposite angles)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "bu2e",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2e.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "e = 54 (supplementary angles)",
+      "aiNotes": "Official answer (from the Cambridge answer key): e = 54 (supplementary angles)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "bu2f",
+      "tier": "warmup",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/bu2f.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "f = 116 (cointerior angles in parallel lines)",
+      "aiNotes": "Official answer (from the Cambridge answer key): f = 116 (cointerior angles in parallel lines)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1a.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes, alternate angles are equal.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes, alternate angles are equal.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1b.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes, cointerior angles add to 180\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes, cointerior angles add to 180\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1c.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes, corresponding angles are equal.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes, corresponding angles are equal.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1d.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "No, corresponding angles are not equal.",
+      "aiNotes": "Official answer (from the Cambridge answer key): No, corresponding angles are not equal.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex1e",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1e.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "No, alternate angles are not equal.",
+      "aiNotes": "Official answer (from the Cambridge answer key): No, alternate angles are not equal.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex1f",
+      "tier": "fluency",
+      "topic": "deciding if lines are parallel",
+      "image": "assets/ex1f.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "No, cointerior angles do not add to 180\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): No, cointerior angles do not add to 180\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2a.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 110, b = 70",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 110, b = 70",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2b.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "c = 95, d = 95",
+      "aiNotes": "Official answer (from the Cambridge answer key): c = 95, d = 95",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2c.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "e = 100, f = 100, g = 100",
+      "aiNotes": "Official answer (from the Cambridge answer key): e = 100, f = 100, g = 100",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2d.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 60, b = 120",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 60, b = 120",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2e.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 100, b = 80, c = 80",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 100, b = 80, c = 80",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "finding angles in parallel lines",
+      "image": "assets/ex2f.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "e = 140, f = 140, d = 140",
+      "aiNotes": "Official answer (from the Cambridge answer key): e = 140, f = 140, d = 140",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3a",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3a.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 70, y = 40",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 70, y = 40",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3b",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3b.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 58, z = 122",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 58, z = 122",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3c",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3c.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 110, v = 50, w = 50",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 110, v = 50, w = 50",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3d",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3d.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 118",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 118",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3e",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3e.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 295",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 295",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex3f",
+      "tier": "problem-solving",
+      "topic": "finding angles in parallel lines (multi-step)",
+      "image": "assets/ex3f.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 79",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 79",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        },
+        {
+          "wrongAnswer": "applying a parallel-line angle rule without checking the lines are actually marked parallel (matching arrowheads)",
+          "reason": "the rules (corresponding/alternate equal, cointerior supplementary) only hold when the lines are parallel - the diagram must show matching arrow marks"
+        }
+      ]
+    },
+    {
+      "id": "ex4a",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4a.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "105\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 105\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex4b",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4b.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "105\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 105\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex4c",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4c.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "56\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 56\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex4d",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4d.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "105\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 105\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex4e",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4e.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "90\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 90\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex4f",
+      "tier": "problem-solving",
+      "topic": "adding a third parallel line",
+      "image": "assets/ex4f.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "85\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 85\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "finding x using parallel line angle rules",
+      "image": "assets/ex5a.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "56",
+      "aiNotes": "Official answer (from the Cambridge answer key): 56",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "finding x using parallel line angle rules",
+      "image": "assets/ex5b.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "120",
+      "aiNotes": "Official answer (from the Cambridge answer key): 120",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex5c",
+      "tier": "problem-solving",
+      "topic": "finding x using parallel line angle rules",
+      "image": "assets/ex5c.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "50",
+      "aiNotes": "Official answer (from the Cambridge answer key): 50",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6a",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6a.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "180\u00b0 \u2212 a\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 180\u00b0 \u2212 a\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6b",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6b.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "180\u00b0 \u2212 a\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 180\u00b0 \u2212 a\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6c",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6c.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "180\u00b0 \u2212 (a\u00b0 + b\u00b0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): 180\u00b0 \u2212 (a\u00b0 + b\u00b0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6d",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6d.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "180\u00b0 \u2212 (a\u00b0 + b\u00b0)",
+      "aiNotes": "Official answer (from the Cambridge answer key): 180\u00b0 \u2212 (a\u00b0 + b\u00b0)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6e",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6e.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a\u00b0 + c\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): a\u00b0 + c\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex6f",
+      "tier": "reasoning",
+      "topic": "writing expressions for angles in parallel-line diagrams",
+      "image": "assets/ex6f.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "180\u00b0 \u2212 2c\u00b0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 180\u00b0 \u2212 2c\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
+          "reason": "corresponding and alternate angles are EQUAL when lines are parallel; cointerior angles are SUPPLEMENTARY (sum to 180\u00b0) - mixing these up is the most common error in this topic"
+        }
+      ]
+    },
+    {
+      "id": "ex7",
+      "tier": "reasoning",
+      "topic": "proving lines are parallel",
+      "image": "assets/ex7.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ABC = 100\u00b0, \u2220BCD = 80\u00b0, \u2220ABC + \u2220BCD = 180\u00b0, therefore AB \u2225 DC as cointerior angles are supplementary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ABC = 100\u00b0, \u2220BCD = 80\u00b0, \u2220ABC + \u2220BCD = 180\u00b0, therefore AB \u2225 DC as cointerior angles are supplementary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "concluding parallel because the angles look similar, without checking they actually sum to 180\u00b0 or are equal",
+          "reason": "you must explicitly test the angle relationship (here, that the cointerior pair sums to exactly 180\u00b0) before concluding the lines are parallel"
+        }
+      ]
+    },
+    {
+      "id": "ex8a",
+      "tier": "reasoning",
+      "topic": "using parallel lines to prove the triangle angle sum",
+      "image": "assets/ex8a.png",
+      "contextImage": "assets/ex8_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Cointerior angles on parallel lines add to 180\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Cointerior angles on parallel lines add to 180\u00b0.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex8b",
+      "tier": "reasoning",
+      "topic": "using parallel lines to prove the triangle angle sum",
+      "image": "assets/ex8b.png",
+      "contextImage": "assets/ex8_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Alternate angles are equal, on parallel lines.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Alternate angles are equal, on parallel lines.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex8c",
+      "tier": "reasoning",
+      "topic": "using parallel lines to prove the triangle angle sum",
+      "image": "assets/ex8c.png",
+      "contextImage": "assets/ex8_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Since a + b + c = 180 (from parts a and b combined) and a, b, c are exactly the three interior angles of the triangle, this proves the angle sum of any triangle is 180\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Since a + b + c = 180 (from parts a and b combined) and a, b, c are exactly the three interior angles of the triangle, this proves the angle sum of any triangle is 180\u00b0.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex9a",
+      "tier": "enrichment",
+      "topic": "proof in geometry (constructing an auxiliary parallel line)",
+      "image": "assets/ex9a.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220BAE = 180\u00b0 \u2212 a\u00b0 (alternate angles, AB \u2225 DE). \u2220ABC = 180\u00b0 \u2212 c\u00b0 \u2212 (180\u00b0 \u2212 a\u00b0) (angle sum of a triangle) = 180\u00b0 \u2212 c\u00b0 \u2212 180\u00b0 + a\u00b0 = a\u00b0 \u2212 c\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220BAE = 180\u00b0 \u2212 a\u00b0 (alternate angles, AB \u2225 DE). \u2220ABC = 180\u00b0 \u2212 c\u00b0 \u2212 (180\u00b0 \u2212 a\u00b0) (angle sum of a triangle) = 180\u00b0 \u2212 c\u00b0 \u2212 180\u00b0 + a\u00b0 = a\u00b0 \u2212 c\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex9b",
+      "tier": "enrichment",
+      "topic": "proof in geometry (constructing an auxiliary parallel line)",
+      "image": "assets/ex9b.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ABD = 180\u00b0 \u2212 (a\u00b0 + b\u00b0) (angle sum of triangle ABD). \u2220ABC + \u2220ABD = 180\u00b0 (straight line). Therefore \u2220ABC = a\u00b0 + b\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ABD = 180\u00b0 \u2212 (a\u00b0 + b\u00b0) (angle sum of triangle ABD). \u2220ABC + \u2220ABD = 180\u00b0 (straight line). Therefore \u2220ABC = a\u00b0 + b\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex9c",
+      "tier": "enrichment",
+      "topic": "proof in geometry (constructing an auxiliary parallel line)",
+      "image": "assets/ex9c.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Construct XY through B parallel to AE. \u2220ABY = a\u00b0 (alternate angles, AE \u2225 XY). \u2220CBY = b\u00b0 (alternate angles, DC \u2225 XY). Therefore \u2220ABC = a\u00b0 + b\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Construct XY through B parallel to AE. \u2220ABY = a\u00b0 (alternate angles, AE \u2225 XY). \u2220CBY = b\u00b0 (alternate angles, DC \u2225 XY). Therefore \u2220ABC = a\u00b0 + b\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    },
+    {
+      "id": "ex9d",
+      "tier": "enrichment",
+      "topic": "proof in geometry (constructing an auxiliary parallel line)",
+      "image": "assets/ex9d.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Construct XY through A parallel to ED. \u2220XAD = 180\u00b0 \u2212 b\u00b0 (cointerior angles, ED \u2225 XY). \u2220DAB = 360\u00b0 \u2212 a\u00b0 (revolution). So \u2220XAB = 360\u00b0 \u2212 a\u00b0 \u2212 (180\u00b0 \u2212 b\u00b0) = 180\u00b0 + b\u00b0 \u2212 a\u00b0. \u2220ABC = \u2220XAB (alternate angles, XY \u2225 BC). Therefore \u2220ABC = 180\u00b0 + b\u00b0 \u2212 a\u00b0.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Construct XY through A parallel to ED. \u2220XAD = 180\u00b0 \u2212 b\u00b0 (cointerior angles, ED \u2225 XY). \u2220DAB = 360\u00b0 \u2212 a\u00b0 (revolution). So \u2220XAB = 360\u00b0 \u2212 a\u00b0 \u2212 (180\u00b0 \u2212 b\u00b0) = 180\u00b0 + b\u00b0 \u2212 a\u00b0. \u2220ABC = \u2220XAB (alternate angles, XY \u2225 BC). Therefore \u2220ABC = 180\u00b0 + b\u00b0 \u2212 a\u00b0.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve directly without adding the extra parallel line",
+          "reason": "some angles can only be found by first adding a third line parallel to the other two, creating new alternate angle pairs to work with"
+        }
+      ]
+    }
+  ]
+}

@@ -8,6 +8,12 @@
       "title": "Angles and triangles",
       "path": "questions/7A/manifest.json",
       "description": "Complementary and supplementary angles, angles at a point, triangle angle sum, the exterior angle theorem, and clock angles."
+    },
+    {
+      "id": "7B",
+      "title": "Parallel lines",
+      "path": "questions/7B/manifest.json",
+      "description": "Corresponding, alternate and cointerior angles, deciding whether lines are parallel, and adding an auxiliary parallel line to solve harder problems."
     }
   ]
 }

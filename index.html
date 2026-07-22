@@ -139,6 +139,7 @@
   .actions-row { display: flex; gap: 0.75rem; margin-top: 1.25rem; flex-wrap: wrap; }
   .answer-reveal { margin-top: 1rem; }
   .answer-reveal .paper { margin-top: 0.5rem; }
+  .answer-text-paper p { margin: 0; color: var(--board); font-size: 1.15rem; line-height: 1.5; }
   .no-official-note {
     margin-top: 1rem; padding: 1rem; border-radius: 10px; background: rgba(0,0,0,0.2); color: var(--chalk-dim);
     font-size: 0.95rem; border: 2px dashed var(--border); display: none;
@@ -278,10 +279,11 @@
       </div>
 
       <div class="no-official-note" id="no-official-note">
-        No official answer image for this question yet. Check the final answer with your teacher; the tutor above can still help you work through the method.
+        No official answer for this question yet. Check the final answer with your teacher; the tutor above can still help you work through the method.
       </div>
       <div class="answer-reveal" id="answer-reveal" style="display:none;">
-        <div class="paper"><img id="answer-image" alt="Official worked answer"></div>
+        <div class="paper" id="answer-image-wrap"><img id="answer-image" alt="Official worked answer"></div>
+        <div class="paper answer-text-paper" id="answer-text-wrap"><p id="answer-text"></p></div>
       </div>
     </div>
   </div>
@@ -720,7 +722,16 @@ async function sendChatMessage(ev) {
 function toggleReveal() {
   const q = currentQuestion();
   if (q.officialAnswerAvailable && q.answerImage) {
+    el('answer-image-wrap').style.display = 'block';
+    el('answer-text-wrap').style.display = 'none';
     el('answer-image').src = state.baseDir + q.answerImage;
+    el('answer-reveal').style.display = 'block';
+    el('no-official-note').classList.remove('show');
+  } else if (q.officialAnswerAvailable && q.answer) {
+    el('answer-image-wrap').style.display = 'none';
+    el('answer-text-wrap').style.display = 'block';
+    el('answer-text').textContent = q.answer;
+    renderMath(el('answer-text-wrap'));
     el('answer-reveal').style.display = 'block';
     el('no-official-note').classList.remove('show');
   } else {
