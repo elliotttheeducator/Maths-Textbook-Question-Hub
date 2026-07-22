@@ -42,67 +42,67 @@
         { "wrongAnswer": "swapping the two results", "reason": "using 90-x for supplementary or 180-x for complementary" }
       ] },
 
-    { "id": "ex2", "tier": "fluency", "topic": "angles at a point (complementary/supplementary/revolution)", "image": "assets/ex2.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Each part shows rays at a point where the marked angles form a right angle, a straight line, or a full revolution together with a°. Without the official answer key, do not assert exact values — instead help the student identify which relationship applies (do the rays look like they form a right angle / straight line / full circle?) and set up their own equation.",
+    { "id": "ex2", "tier": "fluency", "topic": "angles at a point (complementary/supplementary/revolution)", "image": "assets/ex2.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex2.png",
+      "aiNotes": "Official answers: a=63, b=71, c=38, d=147, e=233, f=33. Each part shows rays at a point where the marked angles form a right angle, a straight line, or a full revolution together with a°.",
       "misconceptions": [
         { "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180°)", "reason": "some of these are actually a full revolution (360°) or a marked right angle (90°) — the student needs to read which one applies from the diagram itself" }
       ] },
 
-    { "id": "ex3", "tier": "fluency", "topic": "triangle angle sum and classification", "image": "assets/ex3.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a) 100+40+a=180 -> a=40, isosceles. b) 80+70+b=180 -> b=30, acute scalene. c) 40+c+50=180 -> c=90, right-angled scalene. d) only one angle (d°) is given with tick marks and no other numeric angle — not solvable without the official answer/more info. e) isosceles (tick marks), base 40° given twice -> e=100. f) right angle mark + 45° -> f=45 (45-45-90 triangle). g) 30+g+50=180 -> g=100, obtuse scalene. h) 60+h+60=180 -> h=60, equilateral. i) 35+75+i=180 -> i=70, acute scalene.",
+    { "id": "ex3", "tier": "fluency", "topic": "triangle angle sum and classification", "image": "assets/ex3.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex3.png",
+      "aiNotes": "Official answers: a) obtuse isosceles, a=40. b) acute scalene, b=30. c) right-angled scalene, c=90. d) equilateral, d=60. e) obtuse isosceles, e=100. f) right-angled isosceles, f=45. g) obtuse scalene, g=100. h) equilateral, h=60. i) acute scalene, i=70.",
       "misconceptions": [
         { "wrongAnswer": "subtracting only one of the two given angles from 180", "reason": "e.g. thinking a=140 instead of a=40 in part a" },
-        { "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal", "reason": "e.g. missing that part a is isosceles because 40°=40°" }
+        { "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90° makes it obtuse", "reason": "e.g. missing that part a is isosceles AND obtuse (100° angle), not just isosceles" }
       ] },
 
-    { "id": "ex4", "tier": "fluency", "topic": "triangle angle sum with exterior/isosceles diagrams", "image": "assets/ex4.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "d) 90+30+a=180 -> a=60, and x is the exterior angle supplementary to a, so x=120 (right-angle mark visible). Other parts (s, t, r, b, c, d) involve tick marks and angles positioned outside the triangle (exterior angles) that are genuinely easy to misread from a compressed image — do not assert values for those without the official answer key; focus on discussing which rule (angle sum, isosceles base angles, exterior angle) looks relevant.",
+    { "id": "ex4", "tier": "fluency", "topic": "triangle angle sum with exterior/isosceles diagrams", "image": "assets/ex4.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex4.png",
+      "aiNotes": "Official answers: a) s=120. b) t=20. c) r=70. d) a=60, x=120. e) a=100, b=140. f) c=115, d=65.",
       "misconceptions": [
         { "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle", "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it" }
       ] },
 
-    { "id": "ex5", "tier": "problem-solving", "topic": "clock angles (minute hand rotation)", "image": "assets/ex5.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Minute hand moves 6°/minute (360°/60min). a) 1 hour=360°. b) 1/4 hour=90°. c) 10 min=60°. d) 15 min=90°. e) 72 min=432° (more than one revolution). f) 1 min=6°. g) 2 hours=720°. h) 1 day=8640°.",
+    { "id": "ex5", "tier": "problem-solving", "topic": "clock angles (minute hand rotation)", "image": "assets/ex5.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex5.png",
+      "aiNotes": "Official answers (minute hand moves 6°/minute): a) 360°. b) 90°. c) 60°. d) 90°. e) 432° (more than one revolution). f) 6°. g) 720°. h) 8640°.",
       "misconceptions": [
         { "wrongAnswer": "using 1°/minute instead of 6°/minute", "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate" },
         { "wrongAnswer": "capping the 72-minute answer at 360°", "reason": "doesn't realise the hand can go past a full revolution" }
       ] },
 
-    { "id": "ex6", "tier": "fluency", "topic": "exterior angle and vertically opposite angles", "image": "assets/ex6.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Both parts combine an isosceles triangle with vertically opposite / exterior angle relationships (similar style to Example 3b). Do not assert exact values without the official answer key — discuss which angles are equal (vertically opposite, or the two base angles of the isosceles triangle) and which relationship (angle sum vs exterior angle theorem) fits.",
+    { "id": "ex6", "tier": "fluency", "topic": "exterior angle and vertically opposite angles", "image": "assets/ex6.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex6.png",
+      "aiNotes": "Official answers: a) x=56. b) x=155. Both combine an isosceles triangle with vertically opposite / exterior angle relationships (similar style to Example 3b).",
       "misconceptions": [] },
 
-    { "id": "ex7", "tier": "problem-solving", "topic": "angle between clock hands", "image": "assets/ex7.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Use angle = |30*H - 5.5*M| (H = hour 0-11, M = minutes), then if over 180 take 360 minus that. a) 3:00pm=90. b) 5:00am=150. c) 6:30pm=15. d) 11:30pm=165. e) 3:45am=157.5. f) 1:20am=80. g) 4:55am=177.5. h) 2:42am=171. i) 9:27am=121.5.",
+    { "id": "ex7", "tier": "problem-solving", "topic": "angle between clock hands", "image": "assets/ex7.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex7.png",
+      "aiNotes": "Official answers (angle = |30*H - 5.5*M|, take 360 minus if over 180): a) 90°. b) 150°. c) 15°. d) 165°. e) 157.5°. f) 80°. g) 177.5°. h) 171°. i) 121.5°.",
       "misconceptions": [
         { "wrongAnswer": "treating the hour hand as fixed exactly on its number", "reason": "forgets the hour hand moves 0.5°/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7" },
         { "wrongAnswer": "giving the reflex angle instead of the smaller angle", "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180°" }
       ] },
 
-    { "id": "ex8", "tier": "reasoning", "topic": "circle geometry — tangent and radius", "image": "assets/ex8.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Involves a tangent (90° to the radius) and a given 120° angle; asks the student to explain why x=330. This needs careful reading of the specific circle diagram — do not assert the derivation without the official answer key, but you can prompt the student to start from 'the tangent is 90° to the radius' and think about what's left over around the centre point.",
+    { "id": "ex8", "tier": "reasoning", "topic": "circle geometry — tangent and radius", "image": "assets/ex8.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex8.png",
+      "aiNotes": "Official derivation: angle AOB + angle ABO = 120° (exterior angle of the triangle formed by the tangent, radius and chord). angle ABO=90° (tangent is 90° to radius), so angle AOB=30°. x is the reflex of that (going the long way around the centre), so x = 360-30 = 330.",
       "misconceptions": [] },
 
-    { "id": "ex9", "tier": "reasoning", "topic": "circle geometry — isosceles radii", "image": "assets/ex9.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "O is the centre, so OA and OB are both radii (equal), making triangle OAB isosceles with apex angle 116° at O. The two base angles (including angle OAB) are therefore equal: (180-116)/2 = 32. This one is derivable from a clean geometric fact (radii are equal) — reasonably confident, but still flag it as AI-derived, not the official wording, until confirmed.",
+    { "id": "ex9", "tier": "reasoning", "topic": "circle geometry — isosceles radii", "image": "assets/ex9.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex9.png",
+      "aiNotes": "Official derivation: AO=BO (both radii), so triangle AOB is isosceles with apex angle AOB=116° at O. Base angles are equal: angle OAB = (180-116)/2 = 32.",
       "misconceptions": [
         { "wrongAnswer": "not recognising OA and OB as radii", "reason": "misses that both are radii of the same circle and therefore equal, which is what makes the triangle isosceles" }
       ] },
 
-    { "id": "ex10", "tier": "reasoning", "topic": "exterior angle theorem (proof steps)", "image": "assets/ex10.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a) a=85,b=75 -> angle XYW (interior, at Y) = 180-85-75=20, so exterior angle XYZ = 180-20 = 160. b) a=105,b=60 -> interior at Y = 180-105-60=15, exterior XYZ=165. c) General proof: interior angle at Y = 180-a-b, and XYZ is supplementary to it (straight line XYW), so XYZ = 180-(180-a-b) = a+b. Note: the question explicitly says not to just quote the exterior angle theorem — walk through the straight-line/angle-sum steps.",
+    { "id": "ex10", "tier": "reasoning", "topic": "exterior angle theorem (proof steps)", "image": "assets/ex10.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex10.png",
+      "aiNotes": "Official answers: a) 160°. b) 165°. c) General proof: angle WYZ + a + b = 180 (angle sum of triangle), and angle XYZ + angle WYZ = 180 (straight line), so angle XYZ = a + b. The question explicitly says not to just quote the exterior angle theorem — walk through the straight-line/angle-sum steps.",
       "misconceptions": [
         { "wrongAnswer": "just applying the exterior angle theorem directly (XYZ=a+b) without the intermediate steps", "reason": "the question explicitly asks NOT to use the theorem as a shortcut, but to derive it from angle sum + straight line facts" }
       ] },
 
-    { "id": "ex11", "tier": "reasoning", "topic": "exterior angle theorem (proof)", "image": "assets/ex11.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "Let interior angles be a,b,c with a+b+c=180. Each exterior angle = 180 minus its adjacent interior angle, so the three exterior angles sum to 540-(a+b+c) = 540-180 = 360.",
+    { "id": "ex11", "tier": "reasoning", "topic": "exterior angle theorem (proof)", "image": "assets/ex11.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex11.png",
+      "aiNotes": "Official proof: let interior angles be a,b,c with a+b+c=180. Each exterior angle = 180 minus its adjacent interior angle, so the three exterior angles sum to 540-(a+b+c) = 540-180 = 360.",
       "misconceptions": [
         { "wrongAnswer": "stating '360° because it's a revolution' with no derivation", "reason": "asserts the result without connecting it back to the 180° interior angle sum, which is what the question asks to prove" }
       ] },
 
-    { "id": "ex12", "tier": "enrichment", "topic": "algebra with angles at a point / in a triangle", "image": "assets/ex12.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a) right-angle mark shown split into 3x and x: 3x+x=90 -> x=22.5. c) four angles at a point (revolution): 4x+2x+3x+x=360 -> x=36. d) isosceles triangle, apex x°, two equal base angles (x+15)° each: x+2(x+15)=180 -> 3x+30=180 -> x=50. Parts b, e, f involve reading exactly which rays bound which angle in a compact diagram — genuinely easy to misread, so do not assert values for those without the official answer key.",
+    { "id": "ex12", "tier": "enrichment", "topic": "algebra with angles at a point / in a triangle", "image": "assets/ex12.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex12.png",
+      "aiNotes": "Official answers: a) 4x=90, x=22.5. b) 3x=180, x=60. c) 10x=360, x=36. d) 2(x+15)+x=180, x=50. e) 2x+20=140, x=60. f) 6x+90=360, x=45.",
       "misconceptions": [
         { "wrongAnswer": "using 180 instead of 360 for a full-revolution diagram (part c)", "reason": "forgets these angles go all the way around a point rather than along a straight line" }
       ] }
