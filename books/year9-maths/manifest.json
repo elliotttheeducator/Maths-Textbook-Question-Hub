@@ -2,8 +2,8 @@
   {
     "id": "7",
     "title": "Geometry",
-    "path": "questions/7/manifest.json",
-    "cover": "questions/7/assets/cover.png",
+    "path": "books/year9-maths/7/manifest.json",
+    "cover": "books/year9-maths/7/assets/cover.png",
     "description": "Angles, parallel lines, enlargement, and similar triangles."
   }
 ]

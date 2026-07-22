@@ -1,36 +1,36 @@
 {
   "id": "7",
   "title": "Geometry",
-  "cover": "questions/7/assets/cover.png",
+  "cover": "books/year9-maths/7/assets/cover.png",
   "sections": [
     {
       "id": "7A",
       "title": "Angles and triangles",
-      "path": "questions/7A/manifest.json",
+      "path": "books/year9-maths/7A/manifest.json",
       "description": "Complementary and supplementary angles, angles at a point, triangle angle sum, the exterior angle theorem, and clock angles."
     },
     {
       "id": "7B",
       "title": "Parallel lines",
-      "path": "questions/7B/manifest.json",
+      "path": "books/year9-maths/7B/manifest.json",
       "description": "Corresponding, alternate and cointerior angles, deciding whether lines are parallel, and adding an auxiliary parallel line to solve harder problems."
     },
     {
       "id": "7F",
       "title": "Enlargement and similar figures",
-      "path": "questions/7F/manifest.json",
+      "path": "books/year9-maths/7F/manifest.json",
       "description": "Enlarging figures from a centre of enlargement, scale factors, and using similarity to find unknown lengths."
     },
     {
       "id": "7G",
       "title": "Similar triangles",
-      "path": "questions/7G/manifest.json",
+      "path": "books/year9-maths/7G/manifest.json",
       "description": "The four tests for similar triangles (SSS, SAS, AAA, RHS) and using similarity to find unknown lengths."
     },
     {
       "id": "7H",
       "title": "Proving and applying similar triangles",
-      "path": "questions/7H/manifest.json",
+      "path": "books/year9-maths/7H/manifest.json",
       "description": "Writing full similarity proofs with reasons, and applying similar triangles to practical measurement problems like shadows, rivers and chasms."
     }
   ]

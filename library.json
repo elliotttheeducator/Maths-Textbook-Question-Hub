@@ -1,0 +1,9 @@
+[
+  {
+    "id": "year9-maths",
+    "title": "Year 9 Mathematics",
+    "subtitle": "Essential Mathematics for the Australian Curriculum",
+    "cover": "assets/chapters-tile.png",
+    "manifest": "books/year9-maths/manifest.json"
+  }
+]

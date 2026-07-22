@@ -27,9 +27,11 @@ runs entirely in the browser.
    - Settings itself is teacher-mode-only (see below) — the very first time,
      with no PIN set yet, toggling Teacher mode unlocks it immediately so
      you can do this initial setup at all.
-3. From the landing screen, open **Chapters** — click a chapter to open its
-   cover screen (Key Ideas and Worked Examples, scrollable, straight from
-   the textbook).
+3. From the landing screen, pick a textbook (if there's only one set up,
+   this is a single **Chapters** tile — see "Multiple textbooks" below if
+   you're running more than one class/book from this same repo) — then
+   click a chapter to open its cover screen (Key Ideas and Worked
+   Examples, scrollable, straight from the textbook).
 4. Click **Ready? Start questions →**. Questions run in the exact order
    Cambridge printed them (fluency → problem-solving → reasoning →
    enrichment, increasing difficulty) — sequential by default, never
@@ -103,6 +105,51 @@ This repo is a static site, so GitHub Pages works with zero config:
    pick the branch and `/ (root)`.
 3. Your class URL will be `https://<user>.github.io/<repo>/`.
 
+## Multiple textbooks (one repo, many classes)
+
+This one repo can hold as many textbooks as you want — one shared
+codebase (`index.html`, KaTeX, the Gemini integration, every bug fix)
+serving all of them, with each class scoped to exactly the one book they
+should see.
+
+- **`library.json`** at the repo root is the list of textbooks:
+
+  ```json
+  [
+    {
+      "id": "year9-maths",
+      "title": "Year 9 Mathematics",
+      "subtitle": "Essential Mathematics for the Australian Curriculum",
+      "cover": "assets/chapters-tile.png",
+      "manifest": "books/year9-maths/manifest.json"
+    }
+  ]
+  ```
+
+- **`books/<book-id>/`** holds that textbook's own chapter tree, in
+  exactly the same shape described below (`manifest.json` listing
+  chapters, each chapter a folder with its own `manifest.json` and
+  section folders). `books/year9-maths/` is the existing Year 9 Essential
+  Mathematics content, moved here unchanged.
+
+- **Adding a new textbook is content-only** — no app code changes. Build
+  the new book's chapters the same way (see "How a chapter is built"
+  below) under a new `books/<new-id>/` folder, then add one entry to
+  `library.json`. The app reads whatever is in `library.json` at load
+  time.
+
+- **Scoping a class to one book:** open the app with `?book=<id>` in the
+  URL, e.g. `https://<user>.github.io/<repo>/?book=year9-maths`. That
+  class's bookmark skips the textbook picker entirely and goes straight
+  to that book's chapter grid — students never see any other book, and
+  the header's "Home" link stays within that book instead of returning
+  to a picker.
+
+- **No `?book=` param:** if `library.json` has exactly one entry, the app
+  behaves exactly as it always has (a single **Chapters** tile). If it
+  has more than one, the landing screen shows one tile per book instead,
+  for you (or anyone without a locked URL) to pick from.
+
 ## How a chapter is built
 
 Unlike a typical "paste text, AI writes questions" tool, chapters here are
@@ -122,16 +169,17 @@ Unlike a typical "paste text, AI writes questions" tool, chapters here are
    `aiNotes` per question: solving notes for the AI tutor's own reasoning.
    These notes are **never shown to students** and are never treated as a
    confirmed answer unless the official Answers PDF backs them up.
-4. Claude writes `questions/<chapter>/manifest.json` referencing the
-   cropped images, and the app just reads whatever chapters exist there —
-   the app code itself never changes per chapter.
+4. Claude writes `books/<book-id>/<chapter>/manifest.json` referencing the
+   cropped images, and the app just reads whatever books/chapters exist
+   there — the app code itself never changes per chapter or per book.
 
-To add a new chapter, hand Claude the two PDFs and ask it to run the same
-process — see `tools/slice_chapter.py` for the reusable render/inspect/crop
-functions (`render` to preview pages, `blocks` to get precise coordinates,
-`slice` to execute a region spec and produce the PNGs).
+To add a new chapter (to an existing book, or a brand new one), hand Claude
+the two PDFs and ask it to run the same process — see
+`tools/slice_chapter.py` for the reusable render/inspect/crop functions
+(`render` to preview pages, `blocks` to get precise coordinates, `slice` to
+execute a region spec and produce the PNGs).
 
-### Chapter manifest schema (`questions/<id>/manifest.json`)
+### Chapter manifest schema (`books/<book-id>/<id>/manifest.json`)
 
 ```json
 {
@@ -165,9 +213,14 @@ question map and subset picker group entries by the leading part of their
 `id` (e.g. `ex1a`..`ex1f` group under `ex1`), so keep that naming pattern
 (`<parentid><letter>`) for multi-part questions.
 
-Each chapter has its own folder (`questions/7A/`, `questions/7B/`, ...) with
-a `manifest.json` and an `assets/` folder of cropped PNGs. Add a line to the
-top-level `questions/manifest.json` pointing at the new chapter's manifest.
+Each chapter has its own folder (`books/year9-maths/7A/`,
+`books/year9-maths/7B/`, ...) with a `manifest.json` and an `assets/`
+folder of cropped PNGs. Add a line to that book's top-level
+`books/<book-id>/manifest.json` pointing at the new chapter's manifest —
+and if the chapter is grouped under a parent chapter (like 7A–7H all
+living under Chapter 7 "Geometry"), add it to that chapter's own
+`manifest.json` `sections` list too (see `books/year9-maths/7/manifest.json`
+for the existing example of that middle layer).
 
 ## Wiring in the official answer key
 

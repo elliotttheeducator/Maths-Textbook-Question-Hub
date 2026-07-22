@@ -183,17 +183,12 @@
 
 <main>
   <div id="landingScreen">
-    <div class="landing-hero">
-      <button class="landing-tile" id="chapters-tile-btn">
-        <img src="assets/chapters-tile.png" alt="Chapters">
-        <span>Chapters</span>
-      </button>
-    </div>
+    <div class="landing-hero" id="library-hero"></div>
   </div>
 
   <div id="homeScreen" style="display:none;">
     <button id="back-to-landing-1" class="small" style="margin-bottom:1rem;">&larr; Home</button>
-    <h2>Essential Mathematics — Year 9</h2>
+    <h2 id="home-title">Loading…</h2>
     <div class="chapter-grid" id="chapter-grid"></div>
   </div>
 
@@ -322,9 +317,12 @@
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/auto-render.min.js"></script>
 <script>
-const MANIFEST_URL = 'questions/manifest.json';
+const LIBRARY_URL = 'library.json';
 
 const state = {
+  library: [],
+  book: null,
+  lockedBook: false,
   manifest: [],
   chapter: null,
   chapterBaseDir: '',
@@ -367,10 +365,60 @@ function groupKey(id) {
   return m ? m[1] : id;
 }
 
+// ---------- Library (which textbook) ----------
+
+async function bootLibrary() {
+  const res = await fetch(LIBRARY_URL);
+  state.library = await res.json();
+
+  const params = new URLSearchParams(window.location.search);
+  const requestedId = params.get('book');
+  const requested = requestedId ? state.library.find(b => b.id === requestedId) : null;
+
+  if (requested) {
+    state.lockedBook = true;
+    await selectBook(requested);
+    el('back-to-landing-1').style.display = 'none';
+    showView('home');
+    return;
+  }
+
+  if (state.library.length === 1) {
+    await selectBook(state.library[0]);
+  }
+  renderLibraryHero();
+  showView('landing');
+}
+
+function renderLibraryHero() {
+  const hero = el('library-hero');
+  hero.innerHTML = '';
+  if (state.library.length <= 1) {
+    const book = state.library[0];
+    hero.appendChild(h('button', { class: 'landing-tile', onclick: () => showView('home') }, [
+      h('img', { src: book.cover, alt: book.title }),
+      h('span', {}, 'Chapters'),
+    ]));
+    return;
+  }
+  state.library.forEach(book => {
+    hero.appendChild(h('button', { class: 'landing-tile', onclick: async () => { await selectBook(book); showView('home'); } }, [
+      h('img', { src: book.cover, alt: book.title }),
+      h('span', {}, book.title),
+    ]));
+  });
+}
+
+async function selectBook(book) {
+  state.book = book;
+  await loadManifest(book.manifest);
+  el('home-title').textContent = book.title;
+}
+
 // ---------- Home (chapters) ----------
 
-async function loadManifest() {
-  const res = await fetch(MANIFEST_URL);
+async function loadManifest(manifestPath) {
+  const res = await fetch(manifestPath);
   state.manifest = await res.json();
   const grid = el('chapter-grid');
   grid.innerHTML = '';
@@ -381,7 +429,6 @@ async function loadManifest() {
     children.push(h('p', {}, m.description || ''));
     grid.appendChild(h('div', { class: 'chapter-card', onclick: () => openChapterSections(m.path) }, children));
   });
-  showView('landing');
 }
 
 // ---------- Sections (within a chapter) ----------
@@ -844,9 +891,8 @@ function handleChatInputFormatting(e) {
 
 // ---------- wiring ----------
 
-el('home-link').addEventListener('click', () => showView('landing'));
-el('chapters-tile-btn').addEventListener('click', () => showView('home'));
-el('back-to-landing-1').addEventListener('click', () => showView('landing'));
+el('home-link').addEventListener('click', () => showView(state.lockedBook ? 'home' : 'landing'));
+el('back-to-landing-1').addEventListener('click', () => showView(state.lockedBook ? 'home' : 'landing'));
 el('back-to-home-2').addEventListener('click', () => showView('home'));
 el('back-to-sections-1').addEventListener('click', () => showView('sections'));
 el('back-to-cover-1').addEventListener('click', () => showView('cover'));
@@ -876,7 +922,7 @@ el('settings-cancel').addEventListener('click', () => el('settings-dialog').clos
 el('settings-save').addEventListener('click', saveSettings);
 
 updateTeacherVisibility();
-loadManifest();
+bootLibrary();
 </script>
 </body>
 </html>
