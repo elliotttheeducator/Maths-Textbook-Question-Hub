@@ -1,0 +1,876 @@
+{
+  "id": "7G",
+  "title": "Similar triangles",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 7 Geometry, Section 7G. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    },
+    {
+      "image": "assets/keyideas_2.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 15 \u2014 Choosing a similarity test for triangles",
+      "image": "assets/example15.png"
+    },
+    {
+      "title": "Example 16 \u2014 Finding a missing length using similarity",
+      "image": "assets/example16.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "E",
+      "aiNotes": "Official answer (from the Cambridge answer key): E",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C",
+      "aiNotes": "Official answer (from the Cambridge answer key): C",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "DF",
+      "aiNotes": "Official answer (from the Cambridge answer key): DF",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "BC",
+      "aiNotes": "Official answer (from the Cambridge answer key): BC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220A",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220A",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1f",
+      "tier": "warmup",
+      "topic": "identifying corresponding vertices, sides and angles in similar triangles",
+      "image": "assets/bu1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220E",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220E",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2",
+      "tier": "warmup",
+      "topic": "finding the scale factor between two similar right-angled triangles",
+      "image": "assets/bu2.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2.5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2.5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ]
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "recalling the tests for similarity",
+      "image": "assets/bu3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "SAS, AAA, and RHS",
+      "aiNotes": "Official answer (from the Cambridge answer key): SAS, AAA, and RHS",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "recalling the tests for similarity",
+      "image": "assets/bu3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "shape, size",
+      "aiNotes": "Official answer (from the Cambridge answer key): shape, size",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "RHS",
+      "aiNotes": "Official answer (from the Cambridge answer key): RHS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "SSS",
+      "aiNotes": "Official answer (from the Cambridge answer key): SSS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "SAS",
+      "aiNotes": "Official answer (from the Cambridge answer key): SAS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1e",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "RHS",
+      "aiNotes": "Official answer (from the Cambridge answer key): RHS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1f",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1g",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "SAS",
+      "aiNotes": "Official answer (from the Cambridge answer key): SAS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1h",
+      "tier": "fluency",
+      "topic": "choosing the correct similarity test (SSS, SAS, AAA or RHS)",
+      "image": "assets/ex1h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "SSS",
+      "aiNotes": "Official answer (from the Cambridge answer key): SSS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ABC ||| \u0394GHI",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ABC ||| \u0394GHI",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ABC ||| \u0394MNO",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ABC ||| \u0394MNO",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ABC ||| \u0394ADE",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ABC ||| \u0394ADE",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394HFG ||| \u0394HJI",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394HFG ||| \u0394HJI",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ADC ||| \u0394AEB",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ADC ||| \u0394AEB",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "writing a similarity statement with letters in matching order",
+      "image": "assets/ex2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ABD ||| \u0394ECD",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ABD ||| \u0394ECD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching up vertices in the wrong order in a similarity statement (e.g. writing \u0394ABC ||| \u0394HGI instead of \u0394ABC ||| \u0394GHI)",
+          "reason": "the order of letters in a similarity statement must match corresponding vertices - matching the wrong pairs makes every follow-up ratio wrong"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "giving a reason (SSS, SAS, AAA or RHS) why two triangles are similar",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "using similarity to find an unknown side length",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "giving a reason (SSS, SAS, AAA or RHS) why two triangles are similar",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "RHS",
+      "aiNotes": "Official answer (from the Cambridge answer key): RHS",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "using similarity to find an unknown side length",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and an unknown side from similar triangles",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  scale factor = 1.6   ii  x = 14.4",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  scale factor = 1.6   ii  x = 14.4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "finding the scale factor and an unknown side from similar triangles",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  scale factor = 3.5   ii  x = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  scale factor = 3.5   ii  x = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "giving a reason (SSS, SAS, AAA or RHS) why two triangles are similar",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "using similarity to find an unknown side length",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 15",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 15",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "giving a reason and finding an unknown side for a pair of similar triangles",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  AAA   ii  x = 6.5",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  AAA   ii  x = 6.5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        },
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "giving a reason and finding an unknown side for a pair of similar triangles",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  AAA   ii  x = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  AAA   ii  x = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        },
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "giving a reason and finding an unknown side for a pair of similar triangles",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  AAA   ii  x = 24",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  AAA   ii  x = 24",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        },
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "problem-solving",
+      "topic": "finding an unknown side using similar triangles",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8b",
+      "tier": "problem-solving",
+      "topic": "finding an unknown side using similar triangles",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 16",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 16",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8c",
+      "tier": "problem-solving",
+      "topic": "finding an unknown side using similar triangles",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 2.8",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 2.8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing the sides in the wrong order when finding the scale factor, or multiplying by the scale factor instead of dividing (or vice versa)",
+          "reason": "scale factor = corresponding side on the larger/enlarged triangle divided by the matching side on the smaller triangle - getting this upside down inverts every answer"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex9a",
+      "tier": "problem-solving",
+      "topic": "identifying the triangle that is not similar to the other two",
+      "image": "assets/ex9a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394DEF",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394DEF",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming two triangles are similar just because they look alike, without checking angles or side ratios",
+          "reason": "similarity must be proven with one of the four tests (SSS, SAS, AAA, RHS) - visual resemblance is not proof"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "problem-solving",
+      "topic": "identifying the triangle that is not similar to the other two",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394DEF",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394DEF",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming two triangles are similar just because they look alike, without checking angles or side ratios",
+          "reason": "similarity must be proven with one of the four tests (SSS, SAS, AAA, RHS) - visual resemblance is not proof"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9c",
+      "tier": "problem-solving",
+      "topic": "identifying the triangle that is not similar to the other two",
+      "image": "assets/ex9c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394ABC",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394ABC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming two triangles are similar just because they look alike, without checking angles or side ratios",
+          "reason": "similarity must be proven with one of the four tests (SSS, SAS, AAA, RHS) - visual resemblance is not proof"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9d",
+      "tier": "problem-solving",
+      "topic": "identifying the triangle that is not similar to the other two",
+      "image": "assets/ex9d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u0394DEF",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u0394DEF",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming two triangles are similar just because they look alike, without checking angles or side ratios",
+          "reason": "similarity must be proven with one of the four tests (SSS, SAS, AAA, RHS) - visual resemblance is not proof"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10",
+      "tier": "reasoning",
+      "topic": "giving reasons why two triangles are similar",
+      "image": "assets/ex10.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ACB = 25\u00b0 (angle sum of a triangle), so \u0394ABC ||| \u0394HGI (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ACB = 25\u00b0 (angle sum of a triangle), so \u0394ABC ||| \u0394HGI (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "picking SSS when only two sides are known, or picking SAS when the equal angle isn't the INCLUDED angle between the two known sides",
+          "reason": "SSS needs all three sides in ratio; SAS needs the angle between the two matched sides specifically - an angle elsewhere in the triangle doesn't count"
+        }
+      ]
+    },
+    {
+      "id": "ex11",
+      "tier": "reasoning",
+      "topic": "giving reasons why two triangles are NOT similar",
+      "image": "assets/ex11.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220WXY = 55\u00b0 (angle sum of a triangle), not similar as the angles are not equal",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220WXY = 55\u00b0 (angle sum of a triangle), not similar as the angles are not equal",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming two triangles are similar just because they look alike, without checking angles or side ratios",
+          "reason": "similarity must be proven with one of the four tests (SSS, SAS, AAA, RHS) - visual resemblance is not proof"
+        }
+      ]
+    },
+    {
+      "id": "ex12",
+      "tier": "reasoning",
+      "topic": "explaining why triangles formed by intersecting transversals across parallel lines are similar",
+      "image": "assets/ex12.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2 pairs of equal alternate angles are always formed (vertically opposite angles are also equal), so the triangles are similar by AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2 pairs of equal alternate angles are always formed (vertically opposite angles are also equal), so the triangles are similar by AAA",
+      "misconceptions": []
+    },
+    {
+      "id": "ex13",
+      "tier": "reasoning",
+      "topic": "comparing the AAS congruence test with the closest similarity test",
+      "image": "assets/ex13.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA - in congruency a side length is needed for the triangles to be the same size; in similarity it is not needed",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA - in congruency a side length is needed for the triangles to be the same size; in similarity it is not needed",
+      "misconceptions": []
+    },
+    {
+      "id": "ex14a",
+      "tier": "enrichment",
+      "topic": "completing a table of length, area and volume scale factors for similar prisms",
+      "image": "assets/ex14a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Length scale factor: Original 1, Image 1 = 2, Image 2 = 3, Image 3 = 4. Area (cross-section): Original 4, Image 1 = 16, Image 2 = 36, Image 3 = 64. Area scale factor: Original 1, Image 1 = 4, Image 2 = 9, Image 3 = 16. Volume: Original 12, Image 1 = 96, Image 2 = 324, Image 3 = 768. Volume scale factor: Original 1, Image 1 = 8, Image 2 = 27, Image 3 = 64.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Length scale factor: Original 1, Image 1 = 2, Image 2 = 3, Image 3 = 4. Area (cross-section): Original 4, Image 1 = 16, Image 2 = 36, Image 3 = 64. Area scale factor: Original 1, Image 1 = 4, Image 2 = 9, Image 3 = 16. Volume: Original 12, Image 1 = 96, Image 2 = 324, Image 3 = 768. Volume scale factor: Original 1, Image 1 = 8, Image 2 = 27, Image 3 = 64.",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14b",
+      "tier": "enrichment",
+      "topic": "spotting the relationship between area scale factor and length scale factor",
+      "image": "assets/ex14b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Area scale factor = (length scale factor)\u00b2",
+      "aiNotes": "Official answer (from the Cambridge answer key): Area scale factor = (length scale factor)\u00b2",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14c",
+      "tier": "enrichment",
+      "topic": "generalising the area scale factor rule",
+      "image": "assets/ex14c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n\u00b2",
+      "aiNotes": "Official answer (from the Cambridge answer key): n\u00b2",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14d",
+      "tier": "enrichment",
+      "topic": "applying the area scale factor rule",
+      "image": "assets/ex14d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  100   ii  400   iii  10 000",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  100   ii  400   iii  10 000",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14e",
+      "tier": "enrichment",
+      "topic": "applying the area scale factor rule to a fractional length scale factor",
+      "image": "assets/ex14e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "1/4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 1/4",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14f",
+      "tier": "enrichment",
+      "topic": "spotting the relationship between volume scale factor and length scale factor",
+      "image": "assets/ex14f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "volume scale factor = (length scale factor)\u00b3",
+      "aiNotes": "Official answer (from the Cambridge answer key): volume scale factor = (length scale factor)\u00b3",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14g",
+      "tier": "enrichment",
+      "topic": "generalising the volume scale factor rule",
+      "image": "assets/ex14g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n\u00b3",
+      "aiNotes": "Official answer (from the Cambridge answer key): n\u00b3",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    },
+    {
+      "id": "ex14h",
+      "tier": "enrichment",
+      "topic": "applying the volume scale factor rule",
+      "image": "assets/ex14h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  125   ii  1000   iii  1/8",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  125   ii  1000   iii  1/8",
+      "misconceptions": [],
+      "contextImage": "assets/ex14_context.png"
+    }
+  ]
+}

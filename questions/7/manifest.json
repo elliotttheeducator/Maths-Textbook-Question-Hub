@@ -20,6 +20,12 @@
       "title": "Enlargement and similar figures",
       "path": "questions/7F/manifest.json",
       "description": "Enlarging figures from a centre of enlargement, scale factors, and using similarity to find unknown lengths."
+    },
+    {
+      "id": "7G",
+      "title": "Similar triangles",
+      "path": "questions/7G/manifest.json",
+      "description": "The four tests for similar triangles (SSS, SAS, AAA, RHS) and using similarity to find unknown lengths."
     }
   ]
 }
