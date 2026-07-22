@@ -1,8 +1,9 @@
 [
   {
-    "id": "7A",
-    "title": "Angles and triangles",
-    "path": "questions/7A/manifest.json",
-    "description": "Complementary and supplementary angles, angles at a point, triangle angle sum, the exterior angle theorem, and clock angles."
+    "id": "7",
+    "title": "Geometry",
+    "path": "questions/7/manifest.json",
+    "cover": "questions/7/assets/cover.png",
+    "description": "Angles, parallel lines, enlargement, and similar triangles."
   }
 ]

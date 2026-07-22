@@ -89,6 +89,7 @@
   .chapter-card:hover { border-color: var(--chalk-yellow); }
   .chapter-card h3 { margin: 0 0 0.4rem; color: var(--chalk-yellow); }
   .chapter-card p { margin: 0; color: var(--chalk-dim); font-size: 0.9rem; }
+  .chapter-card img { width: 100%; border-radius: 8px; display: block; margin-bottom: 0.75rem; }
 
   /* Cover screen */
   #coverScreen h2 { text-align: center; }
@@ -195,8 +196,14 @@
     <div class="chapter-grid" id="chapter-grid"></div>
   </div>
 
+  <div id="sectionsScreen" style="display:none;">
+    <button id="back-to-home-2" class="small" style="margin-bottom:1rem;">&larr; All chapters</button>
+    <h2 id="chapter-section-title"></h2>
+    <div class="chapter-grid" id="section-grid"></div>
+  </div>
+
   <div id="coverScreen" style="display:none;">
-    <button id="back-to-home-1" class="small" style="margin-bottom:1rem;">&larr; All chapters</button>
+    <button id="back-to-sections-1" class="small" style="margin-bottom:1rem;">&larr; Back</button>
     <h2 id="section-title"></h2>
     <p class="lede" id="section-desc"></p>
     <div class="paper" id="cover-image-wrap"><img id="cover-image" alt="Chapter cover"></div>
@@ -317,6 +324,8 @@ const MANIFEST_URL = 'questions/manifest.json';
 
 const state = {
   manifest: [],
+  chapter: null,
+  chapterBaseDir: '',
   bank: null,
   baseDir: '',
   order: [],
@@ -345,7 +354,7 @@ function h(tag, attrs = {}, children = []) {
 }
 
 function showView(name) {
-  ['landing', 'home', 'cover', 'map', 'subset', 'quiz'].forEach(v => {
+  ['landing', 'home', 'sections', 'cover', 'map', 'subset', 'quiz'].forEach(v => {
     el(v + 'Screen').style.display = v === name ? 'block' : 'none';
   });
   window.scrollTo(0, 0);
@@ -356,7 +365,7 @@ function groupKey(id) {
   return m ? m[1] : id;
 }
 
-// ---------- Home ----------
+// ---------- Home (chapters) ----------
 
 async function loadManifest() {
   const res = await fetch(MANIFEST_URL);
@@ -364,12 +373,32 @@ async function loadManifest() {
   const grid = el('chapter-grid');
   grid.innerHTML = '';
   state.manifest.forEach(m => {
-    grid.appendChild(h('div', { class: 'chapter-card', onclick: () => openChapter(m.path) }, [
-      h('h3', {}, `${m.id} — ${m.title}`),
-      h('p', {}, m.description || ''),
-    ]));
+    const children = [];
+    if (m.cover) children.push(h('img', { src: m.cover, alt: m.title }));
+    children.push(h('h3', {}, `${m.id} — ${m.title}`));
+    children.push(h('p', {}, m.description || ''));
+    grid.appendChild(h('div', { class: 'chapter-card', onclick: () => openChapterSections(m.path) }, children));
   });
   showView('landing');
+}
+
+// ---------- Sections (within a chapter) ----------
+
+async function openChapterSections(path) {
+  const res = await fetch(path);
+  state.chapter = await res.json();
+  state.chapterBaseDir = path.slice(0, path.lastIndexOf('/') + 1);
+
+  el('chapter-section-title').textContent = `Chapter ${state.chapter.id} — ${state.chapter.title}`;
+  const grid = el('section-grid');
+  grid.innerHTML = '';
+  (state.chapter.sections || []).forEach(s => {
+    grid.appendChild(h('div', { class: 'chapter-card', onclick: () => openChapter(s.path) }, [
+      h('h3', {}, `${s.id} — ${s.title}`),
+      h('p', {}, s.description || ''),
+    ]));
+  });
+  showView('sections');
 }
 
 // ---------- Cover ----------
@@ -807,7 +836,8 @@ function handleChatInputFormatting(e) {
 el('home-link').addEventListener('click', () => showView('landing'));
 el('chapters-tile-btn').addEventListener('click', () => showView('home'));
 el('back-to-landing-1').addEventListener('click', () => showView('landing'));
-el('back-to-home-1').addEventListener('click', () => showView('home'));
+el('back-to-home-2').addEventListener('click', () => showView('home'));
+el('back-to-sections-1').addEventListener('click', () => showView('sections'));
 el('back-to-cover-1').addEventListener('click', () => showView('cover'));
 el('back-to-cover-2').addEventListener('click', () => showView('cover'));
 el('back-to-cover-3').addEventListener('click', () => showView('cover'));
