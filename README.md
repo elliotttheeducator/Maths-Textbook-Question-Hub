@@ -107,7 +107,16 @@ worked answer" shows the real printed answer, and the AI tutor is told it
 can confidently confirm correctness for that question. Until then, the tutor
 sticks to discussing method and explicitly tells the student to confirm the
 final answer with their teacher — it will never assert an unverified answer
-as correct.
+as correct. `7A` (all 16 questions) is done this way and is a working example
+of the full pattern.
+
+Answer keys are almost always plain typeset text with no diagrams, which
+doesn't need per-question image cropping to scale across a whole textbook.
+`answers/full_book_answers.json` holds the **entire textbook's** answer
+text (extracted once, native PDF text, not OCR), with `answers/section_index.json`
+mapping each section code straight to its page — see `answers/README.md`.
+When building a new chapter, look its section up there first instead of
+asking for that chapter's answers PDF again.
 
 ## How the AI tutor works
 

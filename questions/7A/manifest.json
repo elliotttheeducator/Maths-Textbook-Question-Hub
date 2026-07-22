@@ -13,31 +13,31 @@
     { "title": "Example 3 — Finding exterior and other angles", "image": "assets/example3.png" }
   ],
   "questions": [
-    { "id": "bu1", "tier": "warmup", "topic": "angle types & rules (fill in the blank)", "image": "assets/bu1.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a=right, b=180 (straight), c=revolution, d=obtuse, e=acute, f=180, g=90, h=supplementary, i=180, j=equal.",
+    { "id": "bu1", "tier": "warmup", "topic": "angle types & rules (fill in the blank)", "image": "assets/bu1.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu1.png",
+      "aiNotes": "Official answers: a=right, b=180°, c=revolution, d=obtuse, e=acute, f=180°, g=90°, h=supplementary, i=180°, j=equal.",
       "misconceptions": [
         { "wrongAnswer": "swapping supplementary/complementary", "reason": "confuses which sums to 90° vs 180°" },
         { "wrongAnswer": "swapping obtuse/reflex ranges", "reason": "confuses 90°-180° (obtuse) with 180°-360° (reflex)" }
       ] },
 
-    { "id": "bu2", "tier": "warmup", "topic": "naming triangle types from a description", "image": "assets/bu2.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a=isosceles, b=obtuse(-angled), c=equilateral, d=isosceles, e=acute(-angled), f=scalene, g=right-angled.",
+    { "id": "bu2", "tier": "warmup", "topic": "naming triangle types from a description", "image": "assets/bu2.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu2.png",
+      "aiNotes": "Official answers: a=isosceles triangle, b=obtuse angled triangle, c=equilateral triangle, d=isosceles triangle, e=acute angled triangle, f=scalene triangle, g=right-angled triangle.",
       "misconceptions": [
         { "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)", "reason": "triangles are classified two different ways and a student may answer with the wrong family" }
       ] },
 
-    { "id": "bu3", "tier": "warmup", "topic": "naming and estimating angle types from a diagram", "image": "assets/bu3.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "This is a hands-on estimate-then-measure-with-a-protractor task (name the angle type shown, estimate its size, then verify with a real protractor). There is no single verifiable numeric answer without the official answer key or a physical protractor — focus the conversation on how to recognise each angle TYPE (acute/right/obtuse/reflex/revolution) from the arc drawn in the diagram, not on pinning down an exact degree value.",
+    { "id": "bu3", "tier": "warmup", "topic": "naming and estimating angle types from a diagram", "image": "assets/bu3.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu3.png",
+      "aiNotes": "Official answers: a=acute,50°. b=right,90°. c=obtuse,101°. d=reflex,202°. e=straight,180°. f=revolution,360°. (Note: e is a straight angle, not reflex, even though its diagram might look similar to d at a glance.)",
       "misconceptions": [] },
 
-    { "id": "bu4", "tier": "warmup", "topic": "classifying angle pairs (S/C/N)", "image": "assets/bu4.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a) 30+60=90 -> C. b) 45+135=180 -> S. c) 100+90=190 -> N. d) 50+40=90 -> C.",
+    { "id": "bu4", "tier": "warmup", "topic": "classifying angle pairs (S/C/N)", "image": "assets/bu4.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu4.png",
+      "aiNotes": "Official answers: a=C, b=S, c=N, d=C.",
       "misconceptions": [
         { "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first", "reason": "e.g. 100°,90° sum to 190°, which is neither" }
       ] },
 
-    { "id": "ex1", "tier": "fluency", "topic": "supplementary and complementary angles", "image": "assets/ex1.png", "officialAnswerAvailable": false, "answerImage": null,
-      "aiNotes": "a) 55: supp 125, comp 35. b) 74: supp 106, comp 16. c) 89: supp 91, comp 1. d) 22: supp 158, comp 68. e) 38: supp 142, comp 52. f) 47: supp 133, comp 43.",
+    { "id": "ex1", "tier": "fluency", "topic": "supplementary and complementary angles", "image": "assets/ex1.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex1.png",
+      "aiNotes": "Official answers: a) 55: supp 125°, comp 35°. b) 74: supp 106°, comp 16°. c) 89: supp 91°, comp 1°. d) 22: supp 158°, comp 68°. e) 38: supp 142°, comp 52°. f) 47: supp 133°, comp 43°.",
       "misconceptions": [
         { "wrongAnswer": "swapping the two results", "reason": "using 90-x for supplementary or 180-x for complementary" }
       ] },
