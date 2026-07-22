@@ -27,11 +27,11 @@ runs entirely in the browser.
    - Settings itself is teacher-mode-only (see below) — the very first time,
      with no PIN set yet, toggling Teacher mode unlocks it immediately so
      you can do this initial setup at all.
-3. From the landing screen, pick a textbook (if there's only one set up,
-   this is a single **Chapters** tile — see "Multiple textbooks" below if
-   you're running more than one class/book from this same repo) — then
-   click a chapter to open its cover screen (Key Ideas and Worked
-   Examples, scrollable, straight from the textbook).
+3. The app opens straight into the chapter grid for its default textbook
+   (no picker screen — see "Multiple textbooks" below if you're running
+   more than one class/book from this same repo). Click a chapter to open
+   its cover screen (Key Ideas and Worked Examples, scrollable, straight
+   from the textbook).
 4. Click **Ready? Start questions →**. Questions run in the exact order
    Cambridge printed them (fluency → problem-solving → reasoning →
    enrichment, increasing difficulty) — sequential by default, never
@@ -50,10 +50,12 @@ never see a reveal button on the shared screen by default:
   clicking the toggle turns Teacher mode on immediately with no gate; the
   PIN is friction to keep the button off the student-facing screen, not
   real security).
-- With Teacher mode on, four things appear:
+- With Teacher mode on, five things appear:
   - **⚙️ Settings** itself (API key, model, PIN) — students never see this,
     so once you've set it up on a device the key just works from then on
     with no student-facing configuration at all.
+  - **📚 Textbooks** in the header — the only way to reach the textbook
+    picker (see "Multiple textbooks" below); students never see it.
   - **Show official worked answer** on each question, revealing the actual
     Cambridge answer crop (or an honest "not available yet" note if that
     question's official answer hasn't been wired in).
@@ -120,7 +122,7 @@ should see.
       "id": "year9-maths",
       "title": "Year 9 Mathematics",
       "subtitle": "Essential Mathematics for the Australian Curriculum",
-      "cover": "assets/chapters-tile.png",
+      "cover": "books/year9-maths/7/assets/cover.png",
       "manifest": "books/year9-maths/manifest.json"
     }
   ]
@@ -138,17 +140,20 @@ should see.
   `library.json`. The app reads whatever is in `library.json` at load
   time.
 
-- **Scoping a class to one book:** open the app with `?book=<id>` in the
-  URL, e.g. `https://<user>.github.io/<repo>/?book=year9-maths`. That
-  class's bookmark skips the textbook picker entirely and goes straight
-  to that book's chapter grid — students never see any other book, and
-  the header's "Home" link stays within that book instead of returning
-  to a picker.
+- **The textbook picker is teacher-only.** Students never see a "which
+  book" screen at all — the app always opens straight into a chapter
+  grid. Give each class a bookmarked URL with `?book=<id>`, e.g.
+  `https://<user>.github.io/<repo>/?book=year9-maths`, and that class
+  always lands on that book's chapters. With no `?book=` param the app
+  falls back to the first entry in `library.json`, so a single-textbook
+  deployment needs no URL param at all and just works.
 
-- **No `?book=` param:** if `library.json` has exactly one entry, the app
-  behaves exactly as it always has (a single **Chapters** tile). If it
-  has more than one, the landing screen shows one tile per book instead,
-  for you (or anyone without a locked URL) to pick from.
+- **Switching books as a teacher:** turn on Teacher mode (🔒) and click
+  **📚 Textbooks** in the header — that's the only path to the picker
+  screen, which lists every book in `library.json` by its real cover
+  image. Pick one to jump straight to its chapter grid. Useful for
+  demoing a different class's book on the same device, or for a bare
+  (no `?book=`) URL where you want to switch away from the default.
 
 ## How a chapter is built
 

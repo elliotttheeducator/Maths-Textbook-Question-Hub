@@ -67,7 +67,7 @@
   .paper img { display: block; width: 100%; height: auto; border-radius: 4px; }
 
   /* Landing screen */
-  .landing-hero { display: flex; justify-content: center; align-items: center; min-height: 55vh; }
+  .landing-hero { display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; gap: 2rem; min-height: 55vh; }
   .landing-tile {
     background: var(--paper); border: none; border-radius: 18px; padding: 1.25rem 1.25rem 1.5rem;
     cursor: pointer; width: 280px; box-shadow: 0 10px 30px rgba(0,0,0,0.4);
@@ -177,17 +177,19 @@
   <h1 id="home-link">📐 EduFlow</h1>
   <div class="controls">
     <button id="teacher-toggle-btn" class="small">🔒 Teacher mode</button>
+    <button id="textbooks-btn" class="teacher-only" style="display:none;">📚 Textbooks</button>
     <button id="settings-btn" class="teacher-only" style="display:none;">⚙️ Settings</button>
   </div>
 </header>
 
 <main>
-  <div id="landingScreen">
+  <div id="landingScreen" style="display:none;">
+    <button id="back-to-home-3" class="small" style="margin-bottom:1rem;">&larr; Back</button>
+    <h2>Textbooks</h2>
     <div class="landing-hero" id="library-hero"></div>
   </div>
 
   <div id="homeScreen" style="display:none;">
-    <button id="back-to-landing-1" class="small" style="margin-bottom:1rem;">&larr; Home</button>
     <h2 id="home-title">Loading…</h2>
     <div class="chapter-grid" id="chapter-grid"></div>
   </div>
@@ -322,7 +324,6 @@ const LIBRARY_URL = 'library.json';
 const state = {
   library: [],
   book: null,
-  lockedBook: false,
   manifest: [],
   chapter: null,
   chapterBaseDir: '',
@@ -375,32 +376,14 @@ async function bootLibrary() {
   const requestedId = params.get('book');
   const requested = requestedId ? state.library.find(b => b.id === requestedId) : null;
 
-  if (requested) {
-    state.lockedBook = true;
-    await selectBook(requested);
-    el('back-to-landing-1').style.display = 'none';
-    showView('home');
-    return;
-  }
-
-  if (state.library.length === 1) {
-    await selectBook(state.library[0]);
-  }
+  await selectBook(requested || state.library[0]);
   renderLibraryHero();
-  showView('landing');
+  showView('home');
 }
 
 function renderLibraryHero() {
   const hero = el('library-hero');
   hero.innerHTML = '';
-  if (state.library.length <= 1) {
-    const book = state.library[0];
-    hero.appendChild(h('button', { class: 'landing-tile', onclick: () => showView('home') }, [
-      h('img', { src: book.cover, alt: book.title }),
-      h('span', {}, 'Chapters'),
-    ]));
-    return;
-  }
   state.library.forEach(book => {
     hero.appendChild(h('button', { class: 'landing-tile', onclick: async () => { await selectBook(book); showView('home'); } }, [
       h('img', { src: book.cover, alt: book.title }),
@@ -891,8 +874,9 @@ function handleChatInputFormatting(e) {
 
 // ---------- wiring ----------
 
-el('home-link').addEventListener('click', () => showView(state.lockedBook ? 'home' : 'landing'));
-el('back-to-landing-1').addEventListener('click', () => showView(state.lockedBook ? 'home' : 'landing'));
+el('home-link').addEventListener('click', () => showView('home'));
+el('textbooks-btn').addEventListener('click', () => { renderLibraryHero(); showView('landing'); });
+el('back-to-home-3').addEventListener('click', () => showView('home'));
 el('back-to-home-2').addEventListener('click', () => showView('home'));
 el('back-to-sections-1').addEventListener('click', () => showView('sections'));
 el('back-to-cover-1').addEventListener('click', () => showView('cover'));

@@ -3,7 +3,7 @@
     "id": "year9-maths",
     "title": "Year 9 Mathematics",
     "subtitle": "Essential Mathematics for the Australian Curriculum",
-    "cover": "assets/chapters-tile.png",
+    "cover": "books/year9-maths/7/assets/cover.png",
     "manifest": "books/year9-maths/manifest.json"
   }
 ]
