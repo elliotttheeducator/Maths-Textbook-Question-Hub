@@ -1,8 +1,9 @@
 # Maths Textbook Question Hub
 
 A single-page classroom app: put it on the big screen, work through a
-chapter's questions one at a time, and get a Socratic AI tutor to help —
-using the actual textbook page images, not an AI recreation of them.
+chapter's questions in the order Cambridge designed them, and get a
+Socratic AI tutor to help — using the actual textbook page images, not an
+AI recreation of them.
 
 **The textbook is the source of truth.** Every question and worked example
 the app displays is a direct image crop of the real Cambridge PDF — nothing
@@ -22,14 +23,53 @@ runs entirely in the browser.
      Google account, no billing required for the free tier.
    - The key is stored only in that browser's `localStorage`. It is sent
      directly from the browser to Google's API and nowhere else.
-3. Pick a chapter from the dropdown. The cover screen shows the chapter's
-   Key Ideas and Worked Examples (scrollable) straight from the textbook.
-4. Click **Ready? Start questions →**. Each question shows the cropped
-   textbook image; students type into the chat box below it and the AI
-   tutor asks guiding questions back rather than just marking it right/wrong.
-5. **Show official worked answer** reveals the matching crop from the
-   Answers PDF — if that chapter's answer key hasn't been added yet, it
-   says so honestly instead of guessing.
+   - Optionally set a **Teacher PIN** here too (see Teacher mode below).
+3. The home screen lists every chapter — click one to open its cover screen
+   (Key Ideas and Worked Examples, scrollable, straight from the textbook).
+4. Click **Ready? Start questions →**. Questions run in the exact order
+   Cambridge printed them (fluency → problem-solving → reasoning →
+   enrichment, increasing difficulty) — sequential by default, never
+   shuffled. Each question shows the cropped textbook image (plus a shared
+   instruction/context image where relevant); students type into the chat
+   box below it and the AI tutor asks guiding questions back rather than
+   marking it right/wrong.
+
+## Teacher mode
+
+Answers, jumping around, and picking a custom subset of questions are all
+gated behind **Teacher mode** (the 🔒 button in the header) so students
+never see a reveal button on the shared screen by default:
+
+- Set a **Teacher PIN** in Settings (optional — if you leave it blank,
+  clicking the toggle turns Teacher mode on immediately with no gate; the
+  PIN is friction to keep the button off the student-facing screen, not
+  real security).
+- With Teacher mode on, three things appear:
+  - **Show official worked answer** on each question, revealing the actual
+    Cambridge answer crop (or an honest "not available yet" note if that
+    question's official answer hasn't been wired in).
+  - **🗺️ Jump to a question** on the chapter cover — a full map of every
+    question, grouped the same way the textbook groups them, click any one
+    to go straight there.
+  - **☑️ Pick a custom subset** on the chapter cover — check exactly the
+    questions/sub-parts you want covered (e.g. "1a, 1c, 1e, 4b, 4d") and
+    start a session containing only those, in the order you picked them.
+- Teacher mode resets to off on every page load — nothing stays unlocked
+  after a refresh.
+
+## Sub-parts, not merged questions
+
+Every lettered sub-part (a, b, c, ...) is its own question with its own
+image, its own chat thread, and its own progress-bar step — a combined
+image like "Q4 a-f" (six independent triangle diagrams in one picture) was
+genuinely ambiguous for the chat tutor and for tracking which part a
+student was answering, so each part is cropped separately. Where several
+sub-parts share instructions that only appear once on the page (e.g. "For
+each of the following angle sizes, find (i) the supplementary angle (ii)
+the complementary angle"), that shared instruction is its own
+`contextImage`, shown above the specific sub-part's image so nothing
+printed on the page is lost — see the `contextImage` field in the schema
+below.
 
 ## Deployment (GitHub Pages)
 
@@ -47,11 +87,13 @@ Unlike a typical "paste text, AI writes questions" tool, chapters here are
 
 1. You provide the chapter PDF (and, ideally, the matching Answers PDF) to
    a Claude Code session with this repo open.
-2. Claude renders the PDF pages, visually identifies the bounding box of
-   each logical region (key ideas, each worked example, each numbered
-   exercise question), and crops them straight out of the PDF at high
-   resolution using `tools/slice_chapter.py` — no OCR, no redrawing, pixel
-   crops of the real page.
+2. Claude renders the PDF pages, reads exact text-block coordinates
+   (`tools/slice_chapter.py`'s `blocks` command) to find each logical
+   region precisely rather than guessing from a screenshot, and crops
+   every sub-part separately — key ideas, each worked example, and every
+   lettered sub-part of every numbered exercise question — straight out of
+   the PDF at high resolution. No OCR, no redrawing, pixel crops of the
+   real page.
 3. Claude also extracts the embedded text under each crop (`get_text`,
    not OCR — these are digitally typeset PDFs) to write private
    `aiNotes` per question: solving notes for the AI tutor's own reasoning.
@@ -63,9 +105,8 @@ Unlike a typical "paste text, AI writes questions" tool, chapters here are
 
 To add a new chapter, hand Claude the two PDFs and ask it to run the same
 process — see `tools/slice_chapter.py` for the reusable render/inspect/crop
-functions (`render` to preview pages, `blocks` to get precise y-coordinates
-for crop boxes instead of guessing from a screenshot, `slice` to execute a
-region spec and produce the PNGs).
+functions (`render` to preview pages, `blocks` to get precise coordinates,
+`slice` to execute a region spec and produce the PNGs).
 
 ### Chapter manifest schema (`questions/<id>/manifest.json`)
 
@@ -79,10 +120,11 @@ region spec and produce the PNGs).
   "workedExamples": [ { "title": "Example 1 - ...", "image": "assets/example1.png" } ],
   "questions": [
     {
-      "id": "ex1",
+      "id": "ex1a",
       "tier": "warmup | fluency | problem-solving | reasoning | enrichment",
       "topic": "short topic label shown as a badge",
-      "image": "assets/ex1.png",
+      "image": "assets/ex1a.png",
+      "contextImage": "assets/ex1_context.png",
       "officialAnswerAvailable": false,
       "answerImage": null,
       "aiNotes": "private solving notes for the tutor's own reasoning, never shown to students, never asserted as ground truth unless officialAnswerAvailable is true",
@@ -94,6 +136,12 @@ region spec and produce the PNGs).
 }
 ```
 
+`contextImage` is optional — only present when several sub-parts share a
+printed instruction/diagram that appears once on the page (see above). The
+question map and subset picker group entries by the leading part of their
+`id` (e.g. `ex1a`..`ex1f` group under `ex1`), so keep that naming pattern
+(`<parentid><letter>`) for multi-part questions.
+
 Each chapter has its own folder (`questions/7A/`, `questions/7B/`, ...) with
 a `manifest.json` and an `assets/` folder of cropped PNGs. Add a line to the
 top-level `questions/manifest.json` pointing at the new chapter's manifest.
@@ -101,14 +149,14 @@ top-level `questions/manifest.json` pointing at the new chapter's manifest.
 ## Wiring in the official answer key
 
 Once you have the chapter's Answers PDF, ask Claude to slice out the answer
-region matching each question, set `answerImage` to that crop's path, and
+region matching each sub-part, set `answerImage` to that crop's path, and
 flip `officialAnswerAvailable` to `true`. From then on, "Show official
-worked answer" shows the real printed answer, and the AI tutor is told it
-can confidently confirm correctness for that question. Until then, the tutor
-sticks to discussing method and explicitly tells the student to confirm the
-final answer with their teacher — it will never assert an unverified answer
-as correct. `7A` (all 16 questions) is done this way and is a working example
-of the full pattern.
+worked answer" (teacher mode only) shows the real printed answer, and the
+AI tutor is told it can confidently confirm correctness for that question.
+Until then, the tutor sticks to discussing method and explicitly tells the
+student to confirm the final answer with their teacher — it will never
+assert an unverified answer as correct. `7A` (all 85 sub-parts) is done
+this way and is a working example of the full pattern.
 
 Answer keys are almost always plain typeset text with no diagrams, which
 doesn't need per-question image cropping to scale across a whole textbook.
@@ -120,9 +168,13 @@ asking for that chapter's answers PDF again.
 
 ## How the AI tutor works
 
-The chat is a genuine back-and-forth, not a one-shot verdict. Each message
-sends the full conversation history plus a system instruction built from
-that question's topic, private `aiNotes`, misconceptions list, and whether
+The chat is a genuine back-and-forth, not a one-shot verdict. On every
+question, the tutor is sent the actual cropped question image (and context
+image, if any) as real image data — not just a text description — so it
+can reason about diagrams, tick marks, and right-angle marks directly
+instead of guessing from `aiNotes` alone. Each message sends that image
+plus the full conversation history plus a system instruction built from
+the question's topic, private `aiNotes`, misconceptions list, and whether
 an official answer exists yet. The tutor is told to ask short Socratic
 questions ("which rule applies here?"), nudge around known misconceptions
 by name, and only get more directive if the student seems stuck — never to
@@ -134,5 +186,6 @@ place that needs changing is the `callGeminiChat` function in `index.html`.
 ## Privacy note
 
 Everything runs client-side. The only network call is the direct
-browser → Gemini API request carrying the question context and the chat
-messages (no names, no accounts, nothing persisted server-side).
+browser → Gemini API request carrying the question image, question
+context, and the chat messages (no names, no accounts, nothing persisted
+server-side).

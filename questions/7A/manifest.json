@@ -1,110 +1,1365 @@
 {
   "id": "7A",
   "title": "Angles and triangles",
-  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) — Chapter 7 Geometry, Section 7A. Images are direct crops of the original textbook pages.",
-  "cover": { "image": "assets/cover.png" },
+  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 7 Geometry, Section 7A. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
   "keyIdeas": [
-    { "image": "assets/keyideas_1.png" },
-    { "image": "assets/keyideas_2.png" }
+    {
+      "image": "assets/keyideas_1.png"
+    },
+    {
+      "image": "assets/keyideas_2.png"
+    }
   ],
   "workedExamples": [
-    { "title": "Example 1 — Finding supplementary and complementary angles", "image": "assets/example1.png" },
-    { "title": "Example 2 — Finding unknown angles in triangles", "image": "assets/example2.png" },
-    { "title": "Example 3 — Finding exterior and other angles", "image": "assets/example3.png" }
+    {
+      "title": "Example 1 \u2014 Finding supplementary and complementary angles",
+      "image": "assets/example1.png"
+    },
+    {
+      "title": "Example 2 \u2014 Finding unknown angles in triangles",
+      "image": "assets/example2.png"
+    },
+    {
+      "title": "Example 3 \u2014 Finding exterior and other angles",
+      "image": "assets/example3.png"
+    }
   ],
   "questions": [
-    { "id": "bu1", "tier": "warmup", "topic": "angle types & rules (fill in the blank)", "image": "assets/bu1.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu1.png",
-      "aiNotes": "Official answers: a=right, b=180°, c=revolution, d=obtuse, e=acute, f=180°, g=90°, h=supplementary, i=180°, j=equal.",
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1a.png",
+      "aiNotes": "Official answer: right",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1b.png",
+      "aiNotes": "Official answer: 180\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1c.png",
+      "aiNotes": "Official answer: revolution",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1d.png",
+      "aiNotes": "Official answer: obtuse",
       "misconceptions": [
-        { "wrongAnswer": "swapping supplementary/complementary", "reason": "confuses which sums to 90° vs 180°" },
-        { "wrongAnswer": "swapping obtuse/reflex ranges", "reason": "confuses 90°-180° (obtuse) with 180°-360° (reflex)" }
-      ] },
-
-    { "id": "bu2", "tier": "warmup", "topic": "naming triangle types from a description", "image": "assets/bu2.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu2.png",
-      "aiNotes": "Official answers: a=isosceles triangle, b=obtuse angled triangle, c=equilateral triangle, d=isosceles triangle, e=acute angled triangle, f=scalene triangle, g=right-angled triangle.",
+        {
+          "wrongAnswer": "swapping obtuse and reflex ranges",
+          "reason": "confuses 90\u00b0-180\u00b0 (obtuse) with 180\u00b0-360\u00b0 (reflex)"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1e.png",
+      "aiNotes": "Official answer: acute",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1f",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1f.png",
+      "aiNotes": "Official answer: 180\u00b0",
       "misconceptions": [
-        { "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)", "reason": "triangles are classified two different ways and a student may answer with the wrong family" }
-      ] },
-
-    { "id": "bu3", "tier": "warmup", "topic": "naming and estimating angle types from a diagram", "image": "assets/bu3.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu3.png",
-      "aiNotes": "Official answers: a=acute,50°. b=right,90°. c=obtuse,101°. d=reflex,202°. e=straight,180°. f=revolution,360°. (Note: e is a straight angle, not reflex, even though its diagram might look similar to d at a glance.)",
-      "misconceptions": [] },
-
-    { "id": "bu4", "tier": "warmup", "topic": "classifying angle pairs (S/C/N)", "image": "assets/bu4.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_bu4.png",
-      "aiNotes": "Official answers: a=C, b=S, c=N, d=C.",
+        {
+          "wrongAnswer": "swapping obtuse and reflex ranges",
+          "reason": "confuses 90\u00b0-180\u00b0 (obtuse) with 180\u00b0-360\u00b0 (reflex)"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1g",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1g.png",
+      "aiNotes": "Official answer: 90\u00b0",
       "misconceptions": [
-        { "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first", "reason": "e.g. 100°,90° sum to 190°, which is neither" }
-      ] },
-
-    { "id": "ex1", "tier": "fluency", "topic": "supplementary and complementary angles", "image": "assets/ex1.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex1.png",
-      "aiNotes": "Official answers: a) 55: supp 125°, comp 35°. b) 74: supp 106°, comp 16°. c) 89: supp 91°, comp 1°. d) 22: supp 158°, comp 68°. e) 38: supp 142°, comp 52°. f) 47: supp 133°, comp 43°.",
+        {
+          "wrongAnswer": "swapping supplementary and complementary",
+          "reason": "confuses which sums to 90\u00b0 vs 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1h",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1h.png",
+      "aiNotes": "Official answer: supplementary",
       "misconceptions": [
-        { "wrongAnswer": "swapping the two results", "reason": "using 90-x for supplementary or 180-x for complementary" }
-      ] },
-
-    { "id": "ex2", "tier": "fluency", "topic": "angles at a point (complementary/supplementary/revolution)", "image": "assets/ex2.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex2.png",
-      "aiNotes": "Official answers: a=63, b=71, c=38, d=147, e=233, f=33. Each part shows rays at a point where the marked angles form a right angle, a straight line, or a full revolution together with a°.",
+        {
+          "wrongAnswer": "swapping supplementary and complementary",
+          "reason": "confuses which sums to 90\u00b0 vs 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1i",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1i.png",
+      "aiNotes": "Official answer: 180\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1j",
+      "tier": "warmup",
+      "topic": "angle types & rules (fill in the blank)",
+      "image": "assets/bu1j.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu1j.png",
+      "aiNotes": "Official answer: equal",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2a.png",
+      "aiNotes": "Official answer: isosceles triangle",
       "misconceptions": [
-        { "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180°)", "reason": "some of these are actually a full revolution (360°) or a marked right angle (90°) — the student needs to read which one applies from the diagram itself" }
-      ] },
-
-    { "id": "ex3", "tier": "fluency", "topic": "triangle angle sum and classification", "image": "assets/ex3.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex3.png",
-      "aiNotes": "Official answers: a) obtuse isosceles, a=40. b) acute scalene, b=30. c) right-angled scalene, c=90. d) equilateral, d=60. e) obtuse isosceles, e=100. f) right-angled isosceles, f=45. g) obtuse scalene, g=100. h) equilateral, h=60. i) acute scalene, i=70.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2b.png",
+      "aiNotes": "Official answer: obtuse angled triangle",
       "misconceptions": [
-        { "wrongAnswer": "subtracting only one of the two given angles from 180", "reason": "e.g. thinking a=140 instead of a=40 in part a" },
-        { "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90° makes it obtuse", "reason": "e.g. missing that part a is isosceles AND obtuse (100° angle), not just isosceles" }
-      ] },
-
-    { "id": "ex4", "tier": "fluency", "topic": "triangle angle sum with exterior/isosceles diagrams", "image": "assets/ex4.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex4.png",
-      "aiNotes": "Official answers: a) s=120. b) t=20. c) r=70. d) a=60, x=120. e) a=100, b=140. f) c=115, d=65.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2c.png",
+      "aiNotes": "Official answer: equilateral triangle",
       "misconceptions": [
-        { "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle", "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it" }
-      ] },
-
-    { "id": "ex5", "tier": "problem-solving", "topic": "clock angles (minute hand rotation)", "image": "assets/ex5.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex5.png",
-      "aiNotes": "Official answers (minute hand moves 6°/minute): a) 360°. b) 90°. c) 60°. d) 90°. e) 432° (more than one revolution). f) 6°. g) 720°. h) 8640°.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2d.png",
+      "aiNotes": "Official answer: isosceles triangle",
       "misconceptions": [
-        { "wrongAnswer": "using 1°/minute instead of 6°/minute", "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate" },
-        { "wrongAnswer": "capping the 72-minute answer at 360°", "reason": "doesn't realise the hand can go past a full revolution" }
-      ] },
-
-    { "id": "ex6", "tier": "fluency", "topic": "exterior angle and vertically opposite angles", "image": "assets/ex6.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex6.png",
-      "aiNotes": "Official answers: a) x=56. b) x=155. Both combine an isosceles triangle with vertically opposite / exterior angle relationships (similar style to Example 3b).",
-      "misconceptions": [] },
-
-    { "id": "ex7", "tier": "problem-solving", "topic": "angle between clock hands", "image": "assets/ex7.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex7.png",
-      "aiNotes": "Official answers (angle = |30*H - 5.5*M|, take 360 minus if over 180): a) 90°. b) 150°. c) 15°. d) 165°. e) 157.5°. f) 80°. g) 177.5°. h) 171°. i) 121.5°.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2e",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2e.png",
+      "aiNotes": "Official answer: acute angled triangle",
       "misconceptions": [
-        { "wrongAnswer": "treating the hour hand as fixed exactly on its number", "reason": "forgets the hour hand moves 0.5°/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7" },
-        { "wrongAnswer": "giving the reflex angle instead of the smaller angle", "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180°" }
-      ] },
-
-    { "id": "ex8", "tier": "reasoning", "topic": "circle geometry — tangent and radius", "image": "assets/ex8.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex8.png",
-      "aiNotes": "Official derivation: angle AOB + angle ABO = 120° (exterior angle of the triangle formed by the tangent, radius and chord). angle ABO=90° (tangent is 90° to radius), so angle AOB=30°. x is the reflex of that (going the long way around the centre), so x = 360-30 = 330.",
-      "misconceptions": [] },
-
-    { "id": "ex9", "tier": "reasoning", "topic": "circle geometry — isosceles radii", "image": "assets/ex9.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex9.png",
-      "aiNotes": "Official derivation: AO=BO (both radii), so triangle AOB is isosceles with apex angle AOB=116° at O. Base angles are equal: angle OAB = (180-116)/2 = 32.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2f",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2f.png",
+      "aiNotes": "Official answer: scalene triangle",
       "misconceptions": [
-        { "wrongAnswer": "not recognising OA and OB as radii", "reason": "misses that both are radii of the same circle and therefore equal, which is what makes the triangle isosceles" }
-      ] },
-
-    { "id": "ex10", "tier": "reasoning", "topic": "exterior angle theorem (proof steps)", "image": "assets/ex10.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex10.png",
-      "aiNotes": "Official answers: a) 160°. b) 165°. c) General proof: angle WYZ + a + b = 180 (angle sum of triangle), and angle XYZ + angle WYZ = 180 (straight line), so angle XYZ = a + b. The question explicitly says not to just quote the exterior angle theorem — walk through the straight-line/angle-sum steps.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2g",
+      "tier": "warmup",
+      "topic": "naming triangle types from a description",
+      "image": "assets/bu2g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu2g.png",
+      "aiNotes": "Official answer: right-angled triangle",
       "misconceptions": [
-        { "wrongAnswer": "just applying the exterior angle theorem directly (XYZ=a+b) without the intermediate steps", "reason": "the question explicitly asks NOT to use the theorem as a shortcut, but to derive it from angle sum + straight line facts" }
-      ] },
-
-    { "id": "ex11", "tier": "reasoning", "topic": "exterior angle theorem (proof)", "image": "assets/ex11.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex11.png",
-      "aiNotes": "Official proof: let interior angles be a,b,c with a+b+c=180. Each exterior angle = 180 minus its adjacent interior angle, so the three exterior angles sum to 540-(a+b+c) = 540-180 = 360.",
+        {
+          "wrongAnswer": "mixing up the side-length family (scalene/isosceles/equilateral) with the angle family (acute/right/obtuse)",
+          "reason": "triangles are classified two different ways and a student may answer with the wrong family"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3a.png",
+      "aiNotes": "Official answer: acute, 50\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3b.png",
+      "aiNotes": "Official answer: right, 90\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3c",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3c.png",
+      "aiNotes": "Official answer: obtuse, 101\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3d",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3d.png",
+      "aiNotes": "Official answer: reflex, 202\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3e",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3e.png",
+      "aiNotes": "Official answer: straight, 180\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3f",
+      "tier": "warmup",
+      "topic": "naming and estimating angle types from a diagram",
+      "image": "assets/bu3f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu3f.png",
+      "aiNotes": "Official answer: revolution, 360\u00b0",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu4a",
+      "tier": "warmup",
+      "topic": "classifying angle pairs (S/C/N)",
+      "image": "assets/bu4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu4a.png",
+      "aiNotes": "Official answer: C (complementary, 30+60=90)",
       "misconceptions": [
-        { "wrongAnswer": "stating '360° because it's a revolution' with no derivation", "reason": "asserts the result without connecting it back to the 180° interior angle sum, which is what the question asks to prove" }
-      ] },
-
-    { "id": "ex12", "tier": "enrichment", "topic": "algebra with angles at a point / in a triangle", "image": "assets/ex12.png", "officialAnswerAvailable": true, "answerImage": "assets/ans_ex12.png",
-      "aiNotes": "Official answers: a) 4x=90, x=22.5. b) 3x=180, x=60. c) 10x=360, x=36. d) 2(x+15)+x=180, x=50. e) 2x+20=140, x=60. f) 6x+90=360, x=45.",
+        {
+          "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first",
+          "reason": "e.g. 100\u00b0,90\u00b0 sum to 190\u00b0, which is neither"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4b",
+      "tier": "warmup",
+      "topic": "classifying angle pairs (S/C/N)",
+      "image": "assets/bu4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu4b.png",
+      "aiNotes": "Official answer: S (supplementary, 45+135=180)",
       "misconceptions": [
-        { "wrongAnswer": "using 180 instead of 360 for a full-revolution diagram (part c)", "reason": "forgets these angles go all the way around a point rather than along a straight line" }
-      ] }
+        {
+          "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first",
+          "reason": "e.g. 100\u00b0,90\u00b0 sum to 190\u00b0, which is neither"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4c",
+      "tier": "warmup",
+      "topic": "classifying angle pairs (S/C/N)",
+      "image": "assets/bu4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu4c.png",
+      "aiNotes": "Official answer: N (neither, 100+90=190)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first",
+          "reason": "e.g. 100\u00b0,90\u00b0 sum to 190\u00b0, which is neither"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4d",
+      "tier": "warmup",
+      "topic": "classifying angle pairs (S/C/N)",
+      "image": "assets/bu4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_bu4d.png",
+      "aiNotes": "Official answer: C (complementary, 50+40=90)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming any two angles shown together must be S or C without adding them first",
+          "reason": "e.g. 100\u00b0,90\u00b0 sum to 190\u00b0, which is neither"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1a.png",
+      "aiNotes": "Official answer: 55\u00b0: supplementary 125\u00b0, complementary 35\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1b.png",
+      "aiNotes": "Official answer: 74\u00b0: supplementary 106\u00b0, complementary 16\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1c.png",
+      "aiNotes": "Official answer: 89\u00b0: supplementary 91\u00b0, complementary 1\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1d.png",
+      "aiNotes": "Official answer: 22\u00b0: supplementary 158\u00b0, complementary 68\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1e",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1e.png",
+      "aiNotes": "Official answer: 38\u00b0: supplementary 142\u00b0, complementary 52\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1f",
+      "tier": "fluency",
+      "topic": "supplementary and complementary angles",
+      "image": "assets/ex1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex1f.png",
+      "aiNotes": "Official answer: 47\u00b0: supplementary 133\u00b0, complementary 43\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "swapping the two results",
+          "reason": "using 90-x for supplementary or 180-x for complementary"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2a.png",
+      "aiNotes": "Official answer: a = 63",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2b.png",
+      "aiNotes": "Official answer: a = 71",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2c.png",
+      "aiNotes": "Official answer: a = 38",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2d.png",
+      "aiNotes": "Official answer: a = 147",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2e.png",
+      "aiNotes": "Official answer: a = 233",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "angles at a point (complementary/supplementary/revolution)",
+      "image": "assets/ex2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex2f.png",
+      "aiNotes": "Official answer: a = 33",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming every diagram is 'angles on a straight line' (180\u00b0)",
+          "reason": "some of these are actually a full revolution (360\u00b0) or a marked right angle (90\u00b0) \u2014 the student needs to read which one applies from the diagram itself"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3a.png",
+      "aiNotes": "Official answer: obtuse isosceles, a = 40",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3b.png",
+      "aiNotes": "Official answer: acute scalene, b = 30",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3c.png",
+      "aiNotes": "Official answer: right-angled scalene, c = 90",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3d.png",
+      "aiNotes": "Official answer: equilateral, d = 60",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3e",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3e.png",
+      "aiNotes": "Official answer: obtuse isosceles, e = 100",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3f",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3f.png",
+      "aiNotes": "Official answer: right-angled isosceles, f = 45",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3g",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3g.png",
+      "aiNotes": "Official answer: obtuse scalene, g = 100",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3h",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3h.png",
+      "aiNotes": "Official answer: equilateral, h = 60",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3i",
+      "tier": "fluency",
+      "topic": "triangle angle sum and classification",
+      "image": "assets/ex3i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex3i.png",
+      "aiNotes": "Official answer: acute scalene, i = 70",
+      "misconceptions": [
+        {
+          "wrongAnswer": "subtracting only one of the two given angles from 180",
+          "reason": "e.g. thinking a=140 instead of a=40 when the two given angles are 100\u00b0 and 40\u00b0"
+        },
+        {
+          "wrongAnswer": "naming the triangle type without checking whether two computed angles are equal, or missing that an angle over 90\u00b0 makes it obtuse",
+          "reason": "e.g. missing that a triangle with angles 100\u00b0,40\u00b0,40\u00b0 is isosceles AND obtuse, not just isosceles"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4a.png",
+      "aiNotes": "Official answer: s = 120",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4b.png",
+      "aiNotes": "Official answer: t = 20",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4c.png",
+      "aiNotes": "Official answer: r = 70",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4d.png",
+      "aiNotes": "Official answer: a = 60, x = 120",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4e",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4e.png",
+      "aiNotes": "Official answer: a = 100, b = 140",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4f",
+      "tier": "fluency",
+      "topic": "triangle angle sum with exterior/isosceles diagrams",
+      "image": "assets/ex4f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex4f.png",
+      "aiNotes": "Official answer: c = 115, d = 65",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating an angle drawn outside the triangle as if it were an interior angle",
+          "reason": "several of these diagrams mark the EXTERIOR angle, which is supplementary to the interior angle at that vertex, not equal to it"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5a.png",
+      "aiNotes": "Official answer: 360\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5b.png",
+      "aiNotes": "Official answer: 90\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5c.png",
+      "aiNotes": "Official answer: 60\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5d",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5d.png",
+      "aiNotes": "Official answer: 90\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5e",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5e.png",
+      "aiNotes": "Official answer: 432\u00b0 (more than one revolution)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        },
+        {
+          "wrongAnswer": "capping the answer at 360\u00b0",
+          "reason": "doesn't realise the hand can go past a full revolution for times over 60 minutes"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5f",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5f.png",
+      "aiNotes": "Official answer: 6\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5g",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5g.png",
+      "aiNotes": "Official answer: 720\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5h",
+      "tier": "problem-solving",
+      "topic": "clock angles (minute hand rotation)",
+      "image": "assets/ex5h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex5h.png",
+      "aiNotes": "Official answer: 8640\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 1\u00b0/minute instead of 6\u00b0/minute",
+          "reason": "confuses the minute hand's rate with something like the second hand or a mis-scaled rate"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "exterior angle and vertically opposite angles",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex6a.png",
+      "aiNotes": "Official answer: x = 56",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "exterior angle and vertically opposite angles",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex6b.png",
+      "aiNotes": "Official answer: x = 155",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7a.png",
+      "aiNotes": "Official answer: 90\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7b.png",
+      "aiNotes": "Official answer: 150\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7c.png",
+      "aiNotes": "Official answer: 15\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7d",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7d.png",
+      "aiNotes": "Official answer: 165\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7e",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7e.png",
+      "aiNotes": "Official answer: 157.5\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7f",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7f.png",
+      "aiNotes": "Official answer: 80\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7g",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7g.png",
+      "aiNotes": "Official answer: 177.5\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7h",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7h.png",
+      "aiNotes": "Official answer: 171\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7i",
+      "tier": "problem-solving",
+      "topic": "angle between clock hands",
+      "image": "assets/ex7i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex7i.png",
+      "aiNotes": "Official answer: 121.5\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "treating the hour hand as fixed exactly on its number",
+          "reason": "forgets the hour hand moves 0.5\u00b0/minute between numbers, e.g. at 6:30 it's halfway between 6 and 7"
+        },
+        {
+          "wrongAnswer": "giving the reflex angle instead of the smaller angle",
+          "reason": "the question asks for the acute/obtuse angle between the hands, which should not exceed 180\u00b0"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8",
+      "tier": "reasoning",
+      "topic": "circle geometry \u2014 tangent and radius",
+      "image": "assets/ex8.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex8.png",
+      "aiNotes": "Official answer: angle AOB + angle ABO = 120\u00b0 (exterior angle of the triangle formed by the tangent, radius and chord). angle ABO=90\u00b0 (tangent is 90\u00b0 to radius), so angle AOB=30\u00b0. x is the reflex of that (going the long way around the centre), so x = 360-30 = 330.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex9",
+      "tier": "reasoning",
+      "topic": "circle geometry \u2014 isosceles radii",
+      "image": "assets/ex9.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex9.png",
+      "aiNotes": "Official answer: AO=BO (both radii), so triangle AOB is isosceles with apex angle AOB=116\u00b0 at O. Base angles are equal: angle OAB = (180-116)/2 = 32.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "not recognising OA and OB as radii",
+          "reason": "misses that both are radii of the same circle and therefore equal, which is what makes the triangle isosceles"
+        }
+      ]
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "exterior angle theorem (proof steps)",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex10a.png",
+      "aiNotes": "Official answer: 160\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "just applying the exterior angle theorem directly without the intermediate steps",
+          "reason": "the question explicitly asks NOT to use the theorem as a shortcut, but to derive it from angle sum + straight line facts"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "exterior angle theorem (proof steps)",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex10b.png",
+      "aiNotes": "Official answer: 165\u00b0",
+      "misconceptions": [
+        {
+          "wrongAnswer": "just applying the exterior angle theorem directly without the intermediate steps",
+          "reason": "the question explicitly asks NOT to use the theorem as a shortcut, but to derive it from angle sum + straight line facts"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10c",
+      "tier": "reasoning",
+      "topic": "exterior angle theorem (proof steps)",
+      "image": "assets/ex10c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex10c.png",
+      "aiNotes": "Official answer: angle WYZ + a + b = 180 (angle sum of triangle), and angle XYZ + angle WYZ = 180 (straight line), so angle XYZ = a + b.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "just applying the exterior angle theorem directly without the intermediate steps",
+          "reason": "the question explicitly asks NOT to use the theorem as a shortcut, but to derive it from angle sum + straight line facts"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11",
+      "tier": "reasoning",
+      "topic": "exterior angle theorem (proof)",
+      "image": "assets/ex11.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex11.png",
+      "aiNotes": "Official answer: Let interior angles be a,b,c with a+b+c=180. Each exterior angle = 180 minus its adjacent interior angle, so the three exterior angles sum to 540-(a+b+c) = 540-180 = 360.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stating '360\u00b0 because it's a revolution' with no derivation",
+          "reason": "asserts the result without connecting it back to the 180\u00b0 interior angle sum, which is what the question asks to prove"
+        }
+      ]
+    },
+    {
+      "id": "ex12a",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12a.png",
+      "aiNotes": "Official answer: 4x=90, x=22.5",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12b",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12b.png",
+      "aiNotes": "Official answer: 3x=180, x=60",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12c",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12c.png",
+      "aiNotes": "Official answer: 10x=360, x=36",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using 180 instead of 360 for a full-revolution diagram",
+          "reason": "forgets these angles go all the way around a point rather than along a straight line"
+        }
+      ],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12d",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12d.png",
+      "aiNotes": "Official answer: 2(x+15)+x=180, x=50",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12e",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12e.png",
+      "aiNotes": "Official answer: 2x+20=140, x=60",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12f",
+      "tier": "enrichment",
+      "topic": "algebra with angles at a point / in a triangle",
+      "image": "assets/ex12f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": "assets/ans_ex12f.png",
+      "aiNotes": "Official answer: 6x+90=360, x=45",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    }
   ]
 }
