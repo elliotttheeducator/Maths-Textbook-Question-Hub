@@ -6,65 +6,78 @@
 <title>Maths Question Hub</title>
 <style>
   :root {
-    --bg: #0f1420;
-    --panel: #1a2236;
-    --panel-2: #222c45;
-    --text: #eef1f8;
-    --muted: #9aa5c0;
-    --accent: #5b8cff;
-    --good: #35c26f;
-    --bad: #e2555a;
-    --border: #2c3654;
+    --board: #1d3c2e;
+    --board-2: #22452f;
+    --board-edge: #16301e;
+    --frame: #5c3d24;
+    --frame-2: #4a3019;
+    --chalk: #f5f2e6;
+    --chalk-dim: #cdd6c8;
+    --chalk-yellow: #ffd76a;
+    --chalk-blue: #9fd8f0;
+    --chalk-pink: #ff9e9e;
+    --border: rgba(245, 242, 230, 0.4);
   }
   * { box-sizing: border-box; }
   html, body {
     margin: 0; padding: 0;
-    background: var(--bg);
-    color: var(--text);
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     min-height: 100vh;
+    color: var(--chalk);
+    font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive, sans-serif;
+    background-color: var(--board);
+    background-image:
+      radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px),
+      radial-gradient(ellipse at 50% 0%, var(--board-2) 0%, var(--board) 55%, var(--board-edge) 100%);
+    background-size: 5px 5px, 100% 100%;
   }
+  h1, h2, h3 { text-shadow: 0 0 3px rgba(245,242,230,0.35); }
+
   header {
     display: flex; align-items: center; justify-content: space-between;
     padding: 1rem 1.5rem;
-    background: var(--panel);
-    border-bottom: 1px solid var(--border);
+    background: linear-gradient(var(--frame), var(--frame-2));
+    border-bottom: 6px solid var(--frame-2);
+    box-shadow: 0 4px 10px rgba(0,0,0,0.35);
   }
-  header h1 { font-size: 1.3rem; margin: 0; font-weight: 600; }
-  header .controls { display: flex; gap: 0.75rem; align-items: center; }
-  select, button, input[type="text"], input[type="password"] {
+  header h1 { font-size: 1.4rem; margin: 0; font-weight: 600; color: var(--chalk-yellow); }
+  header .controls { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+
+  select, button, input[type="text"], input[type="password"], textarea {
     font-size: 1rem;
-    background: var(--panel-2);
-    color: var(--text);
-    border: 1px solid var(--border);
-    border-radius: 8px;
+    font-family: inherit;
+    background: rgba(0,0,0,0.2);
+    color: var(--chalk);
+    border: 2px dashed var(--border);
+    border-radius: 10px;
     padding: 0.5rem 0.8rem;
   }
-  button { cursor: pointer; }
-  button:hover { border-color: var(--accent); }
-  button.primary { background: var(--accent); border-color: var(--accent); color: #fff; font-weight: 600; }
+  textarea { width: 100%; resize: vertical; }
+  button { cursor: pointer; transition: background 0.15s ease, border-color 0.15s ease; }
+  button:hover { border-color: var(--chalk-yellow); background: rgba(255,255,255,0.08); }
+  button.primary { border-style: solid; border-color: var(--chalk-yellow); color: var(--chalk-yellow); font-weight: 600; }
   button.primary:disabled { opacity: 0.5; cursor: not-allowed; }
-  button.icon { padding: 0.5rem 0.7rem; }
+  button.danger { border-color: var(--chalk-pink); color: var(--chalk-pink); }
+  button.small { padding: 0.3rem 0.6rem; font-size: 0.85rem; }
 
   main {
-    max-width: 900px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 2rem 1.5rem 4rem;
   }
   .status-row {
-    display: flex; justify-content: space-between; align-items: center;
-    color: var(--muted); font-size: 0.95rem; margin-bottom: 1rem;
+    display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem;
+    color: var(--chalk-dim); font-size: 0.95rem; margin-bottom: 1rem;
   }
   .tally { display: flex; gap: 1rem; }
-  .tally span.good { color: var(--good); }
-  .tally span.bad { color: var(--bad); }
+  .tally span.good { color: var(--chalk-yellow); }
+  .tally span.bad { color: var(--chalk-pink); }
 
   #startScreen { text-align: center; padding: 4rem 1rem; }
-  #startScreen p { color: var(--muted); max-width: 480px; margin: 0.5rem auto 2rem; }
+  #startScreen p { color: var(--chalk-dim); max-width: 480px; margin: 0.5rem auto 2rem; }
 
   .card {
-    background: var(--panel);
-    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.18);
+    border: 2px dashed var(--border);
     border-radius: 16px;
     padding: 2rem;
     margin-bottom: 1.5rem;
@@ -74,12 +87,14 @@
     font-size: 0.75rem;
     text-transform: uppercase;
     letter-spacing: 0.05em;
-    color: var(--muted);
-    background: var(--panel-2);
+    color: var(--chalk-dim);
+    background: rgba(0,0,0,0.25);
+    border: 1px solid var(--border);
     border-radius: 999px;
     padding: 0.2rem 0.7rem;
     margin-right: 0.5rem;
   }
+  .badge.warn { color: var(--chalk-yellow); border-color: var(--chalk-yellow); }
   #question-text {
     font-size: 1.8rem;
     line-height: 1.4;
@@ -99,29 +114,68 @@
     line-height: 1.5;
     display: none;
   }
-  #feedback-panel.correct { display: block; background: rgba(53,194,111,0.12); border: 1px solid var(--good); }
-  #feedback-panel.incorrect { display: block; background: rgba(226,85,90,0.12); border: 1px solid var(--bad); }
-  #feedback-panel.pending { display: block; background: var(--panel-2); border: 1px solid var(--border); color: var(--muted); }
+  #feedback-panel.correct { display: block; background: rgba(255,215,106,0.12); border: 2px dashed var(--chalk-yellow); }
+  #feedback-panel.incorrect { display: block; background: rgba(255,158,158,0.12); border: 2px dashed var(--chalk-pink); }
+  #feedback-panel.pending { display: block; background: rgba(0,0,0,0.2); border: 2px dashed var(--border); color: var(--chalk-dim); }
 
   .actions-row { display: flex; gap: 0.75rem; margin-top: 1.5rem; flex-wrap: wrap; }
   .reveal-box {
     margin-top: 1rem; padding: 1rem; border-radius: 10px;
-    background: var(--panel-2); color: var(--muted); font-size: 1rem; display: none;
+    background: rgba(0,0,0,0.2); color: var(--chalk-dim); font-size: 1rem; display: none;
+    white-space: pre-wrap;
   }
   .reveal-box.show { display: block; }
 
+  #reference-panel {
+    display: none;
+    max-height: 50vh;
+    overflow-y: auto;
+    background: rgba(0,0,0,0.18);
+    border: 2px dashed var(--border);
+    border-radius: 16px;
+    padding: 1.5rem 2rem;
+    margin-bottom: 1.5rem;
+  }
+  #reference-panel.show { display: block; }
+  #reference-panel h3 { color: var(--chalk-yellow); margin-top: 1.2rem; }
+  #reference-panel h3:first-child { margin-top: 0; }
+  #reference-panel ul { padding-left: 1.2rem; }
+  #reference-panel li { margin-bottom: 0.5rem; line-height: 1.4; }
+  .example-block { margin-bottom: 1.2rem; padding-bottom: 1rem; border-bottom: 1px dashed var(--border); }
+  .example-block:last-child { border-bottom: none; }
+  .example-block p { color: var(--chalk-dim); margin: 0.3rem 0; }
+  .example-block pre { white-space: pre-wrap; font-family: inherit; margin: 0.3rem 0 0; color: var(--chalk); }
+
   dialog {
-    background: var(--panel); color: var(--text);
-    border: 1px solid var(--border); border-radius: 14px;
+    background: var(--board-2); color: var(--chalk);
+    border: 2px dashed var(--border); border-radius: 14px;
     padding: 1.5rem; width: 420px; max-width: 90vw;
   }
   dialog::backdrop { background: rgba(0,0,0,0.6); }
-  dialog label { display: block; margin: 0.9rem 0 0.3rem; font-size: 0.9rem; color: var(--muted); }
+  dialog label { display: block; margin: 0.9rem 0 0.3rem; font-size: 0.9rem; color: var(--chalk-dim); }
   dialog input { width: 100%; }
-  dialog p.hint { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+  dialog p.hint { font-size: 0.85rem; color: var(--chalk-dim); margin-top: 0.4rem; }
   dialog .dialog-actions { display: flex; justify-content: flex-end; gap: 0.6rem; margin-top: 1.5rem; }
 
-  footer { text-align: center; color: var(--muted); font-size: 0.8rem; padding: 2rem 1rem; }
+  footer { text-align: center; color: var(--chalk-dim); font-size: 0.8rem; padding: 2rem 1rem; }
+
+  #importScreen label { display: block; margin: 1rem 0 0.4rem; color: var(--chalk-dim); font-size: 0.95rem; }
+  #importScreen textarea#paste-input { min-height: 220px; font-size: 0.95rem; }
+  .fieldset {
+    border: 1px dashed var(--border); border-radius: 12px;
+    padding: 1rem 1.2rem; margin: 1rem 0;
+    background: rgba(0,0,0,0.12);
+  }
+  .fieldset-row { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; margin-bottom: 0.5rem; }
+  .fieldset-row label { margin: 0; white-space: nowrap; }
+  .fieldset-row input, .fieldset-row select { flex: 1; min-width: 120px; }
+  .misconception-row { display: flex; gap: 0.5rem; margin-bottom: 0.4rem; align-items: center; }
+  .misconception-row input { flex: 1; }
+  .section-heading { display: flex; justify-content: space-between; align-items: center; margin-top: 2rem; }
+  .section-heading h3 { color: var(--chalk-yellow); margin: 0; }
+  .draft-meta { display: flex; gap: 1rem; flex-wrap: wrap; margin-top: 1rem; }
+  .draft-meta > div { flex: 1; min-width: 200px; }
+  #import-status { color: var(--chalk-dim); margin-top: 0.75rem; }
 </style>
 </head>
 <body>
@@ -130,7 +184,8 @@
   <h1>📐 Maths Question Hub</h1>
   <div class="controls">
     <select id="section-select"></select>
-    <button id="settings-btn" class="icon" title="AI settings">⚙️ Settings</button>
+    <button id="import-nav-btn">+ Add chapter</button>
+    <button id="settings-btn">⚙️ Settings</button>
   </div>
 </header>
 
@@ -144,16 +199,22 @@
   <div id="quizScreen" style="display:none;">
     <div class="status-row">
       <div id="progress"></div>
-      <div class="tally">
-        <span class="good" id="tally-correct">✓ 0</span>
-        <span class="bad" id="tally-incorrect">✗ 0</span>
+      <div style="display:flex; gap:0.75rem; align-items:center;">
+        <button id="reference-toggle-btn" class="small">📖 Key ideas &amp; examples</button>
+        <div class="tally">
+          <span class="good" id="tally-correct">✓ 0</span>
+          <span class="bad" id="tally-incorrect">✗ 0</span>
+        </div>
       </div>
     </div>
+
+    <div id="reference-panel"></div>
 
     <div class="card">
       <div>
         <span class="badge" id="q-tier"></span>
         <span class="badge" id="q-topic"></span>
+        <span class="badge warn" id="q-review" style="display:none;">⚠ verify before trusting</span>
       </div>
       <p id="question-text"></p>
 
@@ -173,6 +234,38 @@
       <div class="reveal-box" id="reveal-box"></div>
     </div>
   </div>
+
+  <div id="importScreen" style="display:none;">
+    <h2>Add a chapter</h2>
+    <p style="color:var(--chalk-dim);">Copy the question text from your textbook (Building Understanding, Exercise questions, worked examples — whatever you've got) and paste it below. The AI drafts a question bank in the same format as the rest of the app; anything it can't verify from text alone (usually diagram-only questions) gets flagged <span class="badge warn" style="display:inline-block;">⚠ verify</span> so you can check it before trusting it with students.</p>
+
+    <div class="draft-meta">
+      <div>
+        <label for="chapter-id-input">Chapter ID (e.g. 7B)</label>
+        <input type="text" id="chapter-id-input" placeholder="7B">
+      </div>
+      <div>
+        <label for="chapter-title-input">Chapter title</label>
+        <input type="text" id="chapter-title-input" placeholder="e.g. Quadrilaterals and polygons">
+      </div>
+    </div>
+
+    <label for="paste-input">Pasted textbook text</label>
+    <textarea id="paste-input" placeholder="Paste the chapter/section text here..."></textarea>
+
+    <div class="actions-row">
+      <button id="generate-btn" class="primary">Generate with AI</button>
+      <button id="import-cancel-btn">Cancel</button>
+    </div>
+    <div id="import-status"></div>
+
+    <div id="draft-editor"></div>
+
+    <div class="actions-row" id="draft-save-row" style="display:none;">
+      <button id="save-local-btn" class="primary">Save to this browser</button>
+      <button id="download-json-btn">Download JSON</button>
+    </div>
+  </div>
 </main>
 
 <footer>Runs entirely in your browser. Your API key is stored only in this browser's local storage.</footer>
@@ -184,7 +277,7 @@
   <p class="hint">Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API.</p>
   <label for="model-input">Model</label>
   <input type="text" id="model-input" placeholder="gemini-2.0-flash">
-  <p class="hint">Default free-tier model is gemini-2.0-flash. Change this if Google renames or updates their free model.</p>
+  <p class="hint">Default free-tier model is gemini-2.0-flash. Used for both tutoring feedback and chapter import.</p>
   <div class="dialog-actions">
     <button id="settings-cancel">Cancel</button>
     <button id="settings-save" class="primary">Save</button>
@@ -193,16 +286,37 @@
 
 <script>
 const MANIFEST_URL = 'questions/manifest.json';
+const LOCAL_CHAPTERS_KEY = 'mqh_custom_chapters';
+const TIERS = ['warmup', 'fluency', 'problem-solving', 'reasoning', 'enrichment'];
+
 const state = {
   manifest: [],
+  localChapters: [],
   bank: null,
   order: [],
   index: 0,
   correctCount: 0,
   incorrectCount: 0,
+  draft: null,
 };
 
 const el = (id) => document.getElementById(id);
+
+function h(tag, attrs = {}, children = []) {
+  const node = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) {
+    if (k === 'class') node.className = v;
+    else if (k.startsWith('on') && typeof v === 'function') node.addEventListener(k.slice(2), v);
+    else if (k === 'checked') node.checked = v;
+    else if (k === 'value') node.value = v;
+    else node.setAttribute(k, v);
+  }
+  (Array.isArray(children) ? children : [children]).forEach(c => {
+    if (c == null) return;
+    node.appendChild(typeof c === 'string' ? document.createTextNode(c) : c);
+  });
+  return node;
+}
 
 function shuffle(arr) {
   const a = arr.slice();
@@ -213,34 +327,86 @@ function shuffle(arr) {
   return a;
 }
 
-async function loadManifest() {
-  const res = await fetch(MANIFEST_URL);
-  state.manifest = await res.json();
+function showView(name) {
+  el('startScreen').style.display = name === 'start' ? 'block' : 'none';
+  el('quizScreen').style.display = name === 'quiz' ? 'block' : 'none';
+  el('importScreen').style.display = name === 'import' ? 'block' : 'none';
+}
+
+function loadLocalChapters() {
+  try {
+    state.localChapters = JSON.parse(localStorage.getItem(LOCAL_CHAPTERS_KEY) || '[]');
+  } catch (e) {
+    state.localChapters = [];
+  }
+}
+
+function saveLocalChapters() {
+  localStorage.setItem(LOCAL_CHAPTERS_KEY, JSON.stringify(state.localChapters));
+}
+
+function rebuildSectionSelect() {
   const select = el('section-select');
-  select.innerHTML = state.manifest.map(m => `<option value="${m.file}">${m.id} — ${m.title}</option>`).join('');
-  select.addEventListener('change', updateStartScreen);
+  select.innerHTML = '';
+  if (state.manifest.length) {
+    const group = h('optgroup', { label: 'Textbook chapters' });
+    state.manifest.forEach(m => group.appendChild(h('option', { value: m.file }, `${m.id} — ${m.title}`)));
+    select.appendChild(group);
+  }
+  if (state.localChapters.length) {
+    const group = h('optgroup', { label: 'Saved in this browser' });
+    state.localChapters.forEach(c => group.appendChild(h('option', { value: `local:${c.id}` }, `${c.id} — ${c.title}`)));
+    select.appendChild(group);
+  }
   updateStartScreen();
 }
 
+async function loadManifest() {
+  loadLocalChapters();
+  try {
+    const res = await fetch(MANIFEST_URL);
+    state.manifest = await res.json();
+  } catch (e) {
+    state.manifest = [];
+  }
+  rebuildSectionSelect();
+}
+
 function updateStartScreen() {
-  const file = el('section-select').value;
-  const entry = state.manifest.find(m => m.file === file);
-  if (entry) {
-    el('section-title').textContent = `${entry.id} — ${entry.title}`;
-    el('section-desc').textContent = entry.description || '';
+  const value = el('section-select').value;
+  if (value && value.startsWith('local:')) {
+    const id = value.slice(6);
+    const entry = state.localChapters.find(c => c.id === id);
+    if (entry) {
+      el('section-title').textContent = `${entry.id} — ${entry.title}`;
+      el('section-desc').textContent = entry.description || '(saved in this browser)';
+    }
+  } else {
+    const entry = state.manifest.find(m => m.file === value);
+    if (entry) {
+      el('section-title').textContent = `${entry.id} — ${entry.title}`;
+      el('section-desc').textContent = entry.description || '';
+    }
   }
 }
 
 async function startSection() {
-  const file = el('section-select').value;
-  const res = await fetch(file);
-  state.bank = await res.json();
+  const value = el('section-select').value;
+  if (!value) return;
+  if (value.startsWith('local:')) {
+    const id = value.slice(6);
+    const entry = state.localChapters.find(c => c.id === id);
+    state.bank = entry.bank;
+  } else {
+    const res = await fetch(value);
+    state.bank = await res.json();
+  }
   state.order = shuffle(state.bank.questions.map((_, i) => i));
   state.index = 0;
   state.correctCount = 0;
   state.incorrectCount = 0;
-  el('startScreen').style.display = 'none';
-  el('quizScreen').style.display = 'block';
+  populateReferencePanel(state.bank);
+  showView('quiz');
   showQuestion();
 }
 
@@ -252,6 +418,7 @@ function showQuestion() {
   const q = currentQuestion();
   el('q-tier').textContent = q.tier;
   el('q-topic').textContent = q.topic;
+  el('q-review').style.display = q.needsReview ? 'inline-block' : 'none';
   el('question-text').textContent = q.prompt;
   el('progress').textContent = `Question ${state.index + 1} of ${state.order.length}`;
   el('answer-input').value = '';
@@ -278,6 +445,29 @@ function nextQuestion() {
   showQuestion();
 }
 
+function populateReferencePanel(bank) {
+  const panel = el('reference-panel');
+  panel.innerHTML = '';
+  panel.classList.remove('show');
+  if (bank.keyIdeas && bank.keyIdeas.length) {
+    panel.appendChild(h('h3', {}, 'Key ideas'));
+    const ul = h('ul');
+    bank.keyIdeas.forEach(k => ul.appendChild(h('li', {}, k)));
+    panel.appendChild(ul);
+  }
+  if (bank.workedExamples && bank.workedExamples.length) {
+    panel.appendChild(h('h3', {}, 'Worked examples'));
+    bank.workedExamples.forEach(ex => {
+      const block = h('div', { class: 'example-block' }, [
+        h('strong', {}, ex.title || ''),
+        h('p', {}, ex.question || ''),
+        h('pre', {}, ex.solution || ''),
+      ]);
+      panel.appendChild(block);
+    });
+  }
+}
+
 function getSettings() {
   return {
     apiKey: localStorage.getItem('mqh_api_key') || '',
@@ -301,16 +491,20 @@ Evaluate the student's answer and respond in the required JSON format.`;
 
 const SYSTEM_INSTRUCTION = `You are a friendly, encouraging Year 9 maths tutor giving live feedback on a classroom projector screen. Keep responses to 2-3 short, spoken-style sentences. Never simply restate the correct answer when the student is wrong — give a Socratic nudge toward the specific mistake first, referencing the matching known misconception if one is given. If the student is correct, briefly affirm why. Reply with ONLY compact JSON in this exact shape, no markdown fences, no extra commentary: {"correct": true or false, "feedback": "..."}`;
 
-async function callGemini(q, studentAnswer) {
+async function callGeminiRaw(systemInstruction, userText, maxOutputTokens) {
   const { apiKey, model } = getSettings();
   if (!apiKey) {
     throw new Error('No API key set. Click Settings and paste a free Gemini API key from Google AI Studio.');
   }
   const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
   const body = {
-    systemInstruction: { parts: [{ text: SYSTEM_INSTRUCTION }] },
-    contents: [{ parts: [{ text: buildPrompt(q, studentAnswer) }] }],
-    generationConfig: { temperature: 0.3 },
+    systemInstruction: { parts: [{ text: systemInstruction }] },
+    contents: [{ parts: [{ text: userText }] }],
+    generationConfig: {
+      temperature: 0.3,
+      responseMimeType: 'application/json',
+      ...(maxOutputTokens ? { maxOutputTokens } : {}),
+    },
   };
   const res = await fetch(url, {
     method: 'POST',
@@ -319,15 +513,20 @@ async function callGemini(q, studentAnswer) {
   });
   if (!res.ok) {
     const errText = await res.text();
-    throw new Error(`API error (${res.status}): ${errText.slice(0, 200)}`);
+    throw new Error(`API error (${res.status}): ${errText.slice(0, 300)}`);
   }
   const data = await res.json();
   const raw = data.candidates?.[0]?.content?.parts?.[0]?.text || '';
   const cleaned = raw.trim().replace(/^```json/i, '').replace(/^```/, '').replace(/```$/, '').trim();
+  return cleaned;
+}
+
+async function callGemini(q, studentAnswer) {
+  const cleaned = await callGeminiRaw(SYSTEM_INSTRUCTION, buildPrompt(q, studentAnswer));
   try {
     return JSON.parse(cleaned);
   } catch (e) {
-    return { correct: null, feedback: raw || 'The AI returned an unexpected response format.' };
+    return { correct: null, feedback: cleaned || 'The AI returned an unexpected response format.' };
   }
 }
 
@@ -367,9 +566,11 @@ async function submitAnswer(ev) {
 
 function toggleReveal() {
   const q = currentQuestion();
-  const box = el('reveal-box');
-  box.textContent = `Answer: ${q.answer}` + (q.workedExample ? ` (see ${q.workedExample} in the textbook)` : '');
-  box.classList.toggle('show');
+  let text = `Answer: ${q.answer}`;
+  if (q.workedExample) text += ` (see ${q.workedExample})`;
+  if (q.needsReview && q.reviewNote) text += `\n\n⚠ ${q.reviewNote}`;
+  el('reveal-box').textContent = text;
+  el('reveal-box').classList.toggle('show');
 }
 
 function openSettings() {
@@ -385,14 +586,258 @@ function saveSettings() {
   el('settings-dialog').close();
 }
 
+// ---------- Import / chapter-generation pipeline ----------
+
+const EXTRACTION_SYSTEM_INSTRUCTION = `You digitize maths textbook pages into a structured JSON question bank for a classroom quiz app. Given raw pasted text from a textbook chapter/section (which may include learning intentions, key ideas, worked examples with solutions, and exercise questions), extract and return ONLY a single JSON object (no markdown fences, no commentary) with this exact shape:
+
+{
+  "section": "short id like 7B",
+  "title": "section title",
+  "keyIdeas": ["short reference fact", ...],
+  "workedExamples": [{"title": "Example N - short name", "question": "...", "solution": "..."}],
+  "questions": [
+    {
+      "tier": "warmup | fluency | problem-solving | reasoning | enrichment",
+      "topic": "short topic label",
+      "prompt": "the question, phrased as standalone text a student can answer without seeing the original page (spell out any given numeric values)",
+      "answer": "the correct answer, computed/verified by you",
+      "workedExample": "optional cross-reference like 'Example 2'",
+      "needsReview": true or false,
+      "reviewNote": "only if needsReview is true: explain what about the original diagram/figure could not be fully verified from text alone",
+      "misconceptions": [{"wrongAnswer": "a plausible wrong answer", "reason": "the likely misconception behind it"}]
+    }
+  ]
+}
+
+Rules:
+- Only include a question if you can state a correct, verifiable answer. If a question's answer depends on reading an image/diagram (tick marks, right-angle boxes, exact figure layout) that isn't fully described in the pasted text, either skip it entirely, OR include it with needsReview=true, your best-guess answer, and a clear reviewNote explaining the uncertainty. Never state an unverified answer with needsReview=false.
+- Write 1-2 plausible misconceptions per question based on common student errors for that type of problem, even if the misconceptions aren't explicitly in the source text.
+- "warmup" = conceptual/fill-in-the-blank with no calculation. "fluency" = direct application of a method just taught. "problem-solving" = requires an extra step or real-world framing. "reasoning" = requires an explanation/proof, not just a numeric answer. "enrichment" = hardest tier, often algebraic.
+- Keep prompts self-contained plain text (no reliance on an image the student can't see).`;
+
+function newEmptyDraft() {
+  return { id: '', title: '', keyIdeas: [], workedExamples: [], questions: [] };
+}
+
+function openImport() {
+  state.draft = null;
+  el('paste-input').value = '';
+  el('chapter-id-input').value = '';
+  el('chapter-title-input').value = '';
+  el('import-status').textContent = '';
+  el('draft-editor').innerHTML = '';
+  el('draft-save-row').style.display = 'none';
+  el('generate-btn').disabled = false;
+  showView('import');
+}
+
+async function generateDraft() {
+  const text = el('paste-input').value.trim();
+  if (!text) return;
+  el('generate-btn').disabled = true;
+  el('import-status').textContent = 'Generating question bank with AI... this can take a little while for a full chapter.';
+  el('draft-editor').innerHTML = '';
+  el('draft-save-row').style.display = 'none';
+
+  try {
+    const cleaned = await callGeminiRaw(EXTRACTION_SYSTEM_INSTRUCTION, text, 8192);
+    let parsed;
+    try {
+      parsed = JSON.parse(cleaned);
+    } catch (e) {
+      el('import-status').textContent = '⚠️ The AI response was not valid JSON. Raw response below — you can copy/retry with shorter text.';
+      const pre = h('pre', { style: 'white-space:pre-wrap; background:rgba(0,0,0,0.25); padding:1rem; border-radius:10px;' }, cleaned);
+      el('draft-editor').appendChild(pre);
+      return;
+    }
+    const idInput = el('chapter-id-input').value.trim();
+    const titleInput = el('chapter-title-input').value.trim();
+    state.draft = {
+      id: idInput || parsed.section || `chapter-${Date.now()}`,
+      title: titleInput || parsed.title || 'Untitled chapter',
+      keyIdeas: Array.isArray(parsed.keyIdeas) ? parsed.keyIdeas : [],
+      workedExamples: Array.isArray(parsed.workedExamples) ? parsed.workedExamples : [],
+      questions: Array.isArray(parsed.questions) ? parsed.questions.map(q => ({
+        tier: TIERS.includes(q.tier) ? q.tier : 'fluency',
+        topic: q.topic || '',
+        prompt: q.prompt || '',
+        answer: q.answer || '',
+        workedExample: q.workedExample || '',
+        needsReview: !!q.needsReview,
+        reviewNote: q.reviewNote || '',
+        misconceptions: Array.isArray(q.misconceptions) ? q.misconceptions.map(m => ({ wrongAnswer: m.wrongAnswer || '', reason: m.reason || '' })) : [],
+      })) : [],
+    };
+    const flagged = state.draft.questions.filter(q => q.needsReview).length;
+    el('import-status').textContent = `Drafted ${state.draft.questions.length} questions (${flagged} flagged for review). Edit anything below, then save.`;
+    renderDraft();
+    el('draft-save-row').style.display = 'flex';
+  } catch (err) {
+    el('import-status').textContent = `⚠️ ${err.message}`;
+  } finally {
+    el('generate-btn').disabled = false;
+  }
+}
+
+function renderDraft() {
+  const container = el('draft-editor');
+  container.innerHTML = '';
+  if (!state.draft) return;
+  const d = state.draft;
+
+  // Chapter meta
+  const metaRow = h('div', { class: 'fieldset-row' }, [
+    h('label', {}, 'ID:'),
+    h('input', { type: 'text', value: d.id, oninput: (e) => { d.id = e.target.value; } }),
+    h('label', {}, 'Title:'),
+    h('input', { type: 'text', value: d.title, oninput: (e) => { d.title = e.target.value; } }),
+  ]);
+  container.appendChild(metaRow);
+
+  // Key ideas
+  container.appendChild(h('div', { class: 'section-heading' }, [
+    h('h3', {}, `Key ideas (${d.keyIdeas.length})`),
+    h('button', { class: 'small', onclick: () => { d.keyIdeas.push(''); renderDraft(); } }, '+ Add key idea'),
+  ]));
+  d.keyIdeas.forEach((ki, i) => {
+    container.appendChild(h('div', { class: 'fieldset-row' }, [
+      h('input', { type: 'text', value: ki, oninput: (e) => { d.keyIdeas[i] = e.target.value; } }),
+      h('button', { class: 'small danger', onclick: () => { d.keyIdeas.splice(i, 1); renderDraft(); } }, '✕'),
+    ]));
+  });
+
+  // Worked examples
+  container.appendChild(h('div', { class: 'section-heading' }, [
+    h('h3', {}, `Worked examples (${d.workedExamples.length})`),
+    h('button', { class: 'small', onclick: () => { d.workedExamples.push({ title: '', question: '', solution: '' }); renderDraft(); } }, '+ Add example'),
+  ]));
+  d.workedExamples.forEach((ex, i) => {
+    const titleInput = h('input', { type: 'text', value: ex.title, placeholder: 'Title', oninput: (e) => { ex.title = e.target.value; } });
+    const qArea = h('textarea', { rows: 2, placeholder: 'Question', oninput: (e) => { ex.question = e.target.value; } });
+    qArea.value = ex.question;
+    const sArea = h('textarea', { rows: 3, placeholder: 'Solution', oninput: (e) => { ex.solution = e.target.value; } });
+    sArea.value = ex.solution;
+    container.appendChild(h('div', { class: 'fieldset' }, [
+      h('div', { class: 'fieldset-row' }, [titleInput, h('button', { class: 'small danger', onclick: () => { d.workedExamples.splice(i, 1); renderDraft(); } }, 'Remove example')]),
+      qArea, sArea,
+    ]));
+  });
+
+  // Questions
+  container.appendChild(h('div', { class: 'section-heading' }, [
+    h('h3', {}, `Questions (${d.questions.length})`),
+    h('button', { class: 'small', onclick: () => { d.questions.push({ tier: 'fluency', topic: '', prompt: '', answer: '', workedExample: '', needsReview: false, reviewNote: '', misconceptions: [] }); renderDraft(); } }, '+ Add question'),
+  ]));
+  d.questions.forEach((q, i) => {
+    const tierSelect = h('select', { onchange: (e) => { q.tier = e.target.value; } },
+      TIERS.map(t => h('option', { value: t, ...(t === q.tier ? { selected: true } : {}) }, t)));
+    if (!tierSelect.value) tierSelect.value = q.tier;
+    const topicInput = h('input', { type: 'text', value: q.topic, placeholder: 'Topic', oninput: (e) => { q.topic = e.target.value; } });
+    const promptArea = h('textarea', { rows: 2, placeholder: 'Question prompt', oninput: (e) => { q.prompt = e.target.value; } });
+    promptArea.value = q.prompt;
+    const answerArea = h('textarea', { rows: 2, placeholder: 'Correct answer', oninput: (e) => { q.answer = e.target.value; } });
+    answerArea.value = q.answer;
+    const workedExInput = h('input', { type: 'text', value: q.workedExample, placeholder: 'Worked example ref (optional)', oninput: (e) => { q.workedExample = e.target.value; } });
+
+    const reviewCheckbox = h('input', { type: 'checkbox', checked: q.needsReview, onchange: (e) => { q.needsReview = e.target.checked; renderDraft(); } });
+    const reviewRow = h('div', { class: 'fieldset-row' }, [reviewCheckbox, h('label', {}, 'Needs review (diagram-dependent / uncertain)')]);
+    let reviewNoteInput = null;
+    if (q.needsReview) {
+      reviewNoteInput = h('input', { type: 'text', value: q.reviewNote, placeholder: 'Why this needs a human check', oninput: (e) => { q.reviewNote = e.target.value; } });
+    }
+
+    const misconceptionsWrap = h('div', {});
+    misconceptionsWrap.appendChild(h('label', {}, 'Common misconceptions:'));
+    q.misconceptions.forEach((m, mi) => {
+      misconceptionsWrap.appendChild(h('div', { class: 'misconception-row' }, [
+        h('input', { type: 'text', value: m.wrongAnswer, placeholder: 'Wrong answer pattern', oninput: (e) => { m.wrongAnswer = e.target.value; } }),
+        h('input', { type: 'text', value: m.reason, placeholder: 'Underlying mistake', oninput: (e) => { m.reason = e.target.value; } }),
+        h('button', { class: 'small danger', onclick: () => { q.misconceptions.splice(mi, 1); renderDraft(); } }, '✕'),
+      ]));
+    });
+    misconceptionsWrap.appendChild(h('button', { class: 'small', onclick: () => { q.misconceptions.push({ wrongAnswer: '', reason: '' }); renderDraft(); } }, '+ Add misconception'));
+
+    container.appendChild(h('div', { class: 'fieldset' }, [
+      h('div', { class: 'fieldset-row' }, [tierSelect, topicInput, h('button', { class: 'small danger', onclick: () => { d.questions.splice(i, 1); renderDraft(); } }, 'Remove question')]),
+      promptArea, answerArea, workedExInput,
+      reviewRow, ...(reviewNoteInput ? [reviewNoteInput] : []),
+      misconceptionsWrap,
+    ]));
+  });
+}
+
+function buildFinalBank() {
+  const d = state.draft;
+  return {
+    section: d.id,
+    title: d.title,
+    source: 'Digitized via Maths Question Hub import tool — verify before classroom use',
+    keyIdeas: d.keyIdeas.filter(k => k.trim()),
+    workedExamples: d.workedExamples.filter(ex => ex.question || ex.solution),
+    questions: d.questions.map((q, i) => ({
+      id: `${d.id}-q${i + 1}`,
+      tier: q.tier,
+      topic: q.topic,
+      prompt: q.prompt,
+      answer: q.answer,
+      ...(q.workedExample ? { workedExample: q.workedExample } : {}),
+      ...(q.needsReview ? { needsReview: true, reviewNote: q.reviewNote } : {}),
+      misconceptions: q.misconceptions.filter(m => m.wrongAnswer || m.reason),
+    })),
+  };
+}
+
+function saveDraftLocally() {
+  if (!state.draft || !state.draft.id) {
+    el('import-status').textContent = '⚠️ Give the chapter an ID before saving.';
+    return;
+  }
+  const bank = buildFinalBank();
+  const existingIndex = state.localChapters.findIndex(c => c.id === bank.section);
+  const entry = { id: bank.section, title: bank.title, description: `${bank.questions.length} questions, saved in this browser`, bank };
+  if (existingIndex >= 0) state.localChapters[existingIndex] = entry;
+  else state.localChapters.push(entry);
+  saveLocalChapters();
+  rebuildSectionSelect();
+  el('section-select').value = `local:${bank.section}`;
+  updateStartScreen();
+  showView('start');
+}
+
+function downloadDraftJson() {
+  if (!state.draft || !state.draft.id) {
+    el('import-status').textContent = '⚠️ Give the chapter an ID before downloading.';
+    return;
+  }
+  const bank = buildFinalBank();
+  const blob = new Blob([JSON.stringify(bank, null, 2)], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = `${bank.section}.json`;
+  a.click();
+  URL.revokeObjectURL(url);
+  el('import-status').textContent = `Downloaded ${bank.section}.json — add it to the questions/ folder and add a line to manifest.json to make it permanent for every device.`;
+}
+
+// ---------- wiring ----------
+
 el('start-btn').addEventListener('click', startSection);
+el('section-select').addEventListener('change', updateStartScreen);
 el('answer-form').addEventListener('submit', submitAnswer);
 el('next-btn').addEventListener('click', nextQuestion);
 el('restart-btn').addEventListener('click', startSection);
 el('reveal-btn').addEventListener('click', toggleReveal);
+el('reference-toggle-btn').addEventListener('click', () => el('reference-panel').classList.toggle('show'));
 el('settings-btn').addEventListener('click', openSettings);
 el('settings-cancel').addEventListener('click', () => el('settings-dialog').close());
 el('settings-save').addEventListener('click', saveSettings);
+
+el('import-nav-btn').addEventListener('click', openImport);
+el('import-cancel-btn').addEventListener('click', () => showView('start'));
+el('generate-btn').addEventListener('click', generateDraft);
+el('save-local-btn').addEventListener('click', saveDraftLocally);
+el('download-json-btn').addEventListener('click', downloadDraftJson);
 
 loadManifest();
 </script>

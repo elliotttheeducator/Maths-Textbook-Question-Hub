@@ -9,6 +9,23 @@
     "Exterior angle theorem: the exterior angle of a triangle equals the sum of the two opposite (remote) interior angles.",
     "Triangle types by side length: scalene (no equal sides), isosceles (two equal sides/angles), equilateral (all sides/angles equal, all 60°). By angle: acute (all angles < 90°), right-angled (one 90° angle), obtuse (one angle > 90°)."
   ],
+  "workedExamples": [
+    {
+      "title": "Example 1 — Finding supplementary and complementary angles",
+      "question": "For an angle of size 47°, determine the size of its (a) supplementary angle and (b) complementary angle.",
+      "solution": "(a) 180° − 47° = 133° — supplementary angles sum to 180°.\n(b) 90° − 47° = 43° — complementary angles sum to 90°."
+    },
+    {
+      "title": "Example 2 — Finding unknown angles in triangles",
+      "question": "Name the type of triangle and find the pronumeral: (a) angles 60°, 60°, x°  (b) an isosceles triangle with apex 120° and two equal base angles r°  (c) angles s°, 50°, 60°.",
+      "solution": "(a) Equilateral triangle. x = 60 — all sides equal, so all angles equal.\n(b) Obtuse isosceles triangle. 2r + 120 = 180 → 2r = 60 → r = 30. Angles in a triangle sum to 180°; since it's isosceles both base angles are r°.\n(c) Acute scalene triangle. s + 50 + 60 = 180 → s + 110 = 180 → s = 70."
+    },
+    {
+      "title": "Example 3 — Finding exterior and other angles",
+      "question": "Find the pronumeral: (a) an exterior angle y° next to a triangle with interior angles 90° and 55°  (b) two triangles sharing a vertex where a 47° base angle appears twice via an isosceles triangle and vertically opposite angles, find x°.",
+      "solution": "(a) y = 90 + 55 = 145 — exterior angle theorem: the exterior angle equals the sum of the two opposite (remote) interior angles. (Alternatively: the third interior angle is 180−90−55=35°, and y is supplementary to it: y=180−35=145.)\n(b) x + 47 + 47 = 180 → x + 94 = 180 → x = 86 — uses the isosceles triangle's equal base angles and that vertically opposite angles are equal."
+    }
+  ],
   "questions": [
     { "id": "7A-BU1-a", "tier": "warmup", "topic": "angle types", "prompt": "A 90° angle is called a _____ angle.", "answer": "right", "misconceptions": [{"wrongAnswer": "straight", "reason": "confuses right (90°) with straight (180°)"}] },
     { "id": "7A-BU1-b", "tier": "warmup", "topic": "angle types", "prompt": "A _____ angle is called a straight angle.", "answer": "180°", "misconceptions": [{"wrongAnswer": "90°", "reason": "confuses straight (180°) with right (90°)"}] },
