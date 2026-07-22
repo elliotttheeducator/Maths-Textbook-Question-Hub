@@ -26,6 +26,12 @@
       "title": "Similar triangles",
       "path": "questions/7G/manifest.json",
       "description": "The four tests for similar triangles (SSS, SAS, AAA, RHS) and using similarity to find unknown lengths."
+    },
+    {
+      "id": "7H",
+      "title": "Proving and applying similar triangles",
+      "path": "questions/7H/manifest.json",
+      "description": "Writing full similarity proofs with reasons, and applying similar triangles to practical measurement problems like shadows, rivers and chasms."
     }
   ]
 }

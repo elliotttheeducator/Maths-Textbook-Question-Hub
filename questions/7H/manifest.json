@@ -1,0 +1,514 @@
+{
+  "id": "7H",
+  "title": "Proving and applying similar triangles",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 9 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 7 Geometry, Section 7H. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 17 \u2014 Proving two triangles are similar (part 1)",
+      "image": "assets/example17_p1.png"
+    },
+    {
+      "title": "Example 17 \u2014 Proving two triangles are similar (part 2)",
+      "image": "assets/example17_p2.png"
+    },
+    {
+      "title": "Example 18 \u2014 Applying similarity (part 1)",
+      "image": "assets/example18_p1.png"
+    },
+    {
+      "title": "Example 18 \u2014 Applying similarity (part 2)",
+      "image": "assets/example18_p2.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1",
+      "tier": "warmup",
+      "topic": "identifying the angle common to two overlapping triangles",
+      "image": "assets/bu1.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ]
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "identifying vertically opposite angles",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ACB and \u2220ECD",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ACB and \u2220ECD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "missing that two triangles meeting at a crossing point share a pair of vertically opposite angles",
+          "reason": "whenever two line segments cross, the angles opposite each other at the intersection are always equal - this is a free angle pair in bowtie-shaped diagrams"
+        }
+      ]
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "identifying alternate angles in parallel lines",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220BAC = \u2220DEC and \u2220CBA = \u2220CDE",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220BAC = \u2220DEC and \u2220CBA = \u2220CDE",
+      "misconceptions": []
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "identifying the angle common to two triangles",
+      "image": "assets/bu3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "identifying corresponding sides in overlapping similar triangles",
+      "image": "assets/bu3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  AC   ii  DB",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  AC   ii  DB",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar, giving reasons",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220AEB = \u2220CDB (alternate angles, EA \u2225 DC); \u2220EAB = \u2220DCB (alternate angles, EA \u2225 DC); \u2220EBA = \u2220DBC (vertically opposite); \u2234 \u0394AEB ||| \u0394CDB (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220AEB = \u2220CDB (alternate angles, EA \u2225 DC); \u2220EAB = \u2220DCB (alternate angles, EA \u2225 DC); \u2220EBA = \u2220DBC (vertically opposite); \u2234 \u0394AEB ||| \u0394CDB (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "jumping straight to the similarity statement without stating the angle/side reasons that justify it",
+          "reason": "a similarity proof needs each equal angle pair (or side ratio) stated with its reason before the concluding similarity statement - the conclusion alone isn't a proof"
+        },
+        {
+          "wrongAnswer": "missing that two triangles meeting at a crossing point share a pair of vertically opposite angles",
+          "reason": "whenever two line segments cross, the angles opposite each other at the intersection are always equal - this is a free angle pair in bowtie-shaped diagrams"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar, giving reasons",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220BAC = \u2220DEC (alternate angles, AB \u2225 DE); \u2220ABC = \u2220EDC (alternate angles, AB \u2225 DE); \u2220ACB = \u2220ECD (vertically opposite); \u2234 \u0394ACB ||| \u0394ECD (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220BAC = \u2220DEC (alternate angles, AB \u2225 DE); \u2220ABC = \u2220EDC (alternate angles, AB \u2225 DE); \u2220ACB = \u2220ECD (vertically opposite); \u2234 \u0394ACB ||| \u0394ECD (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "jumping straight to the similarity statement without stating the angle/side reasons that justify it",
+          "reason": "a similarity proof needs each equal angle pair (or side ratio) stated with its reason before the concluding similarity statement - the conclusion alone isn't a proof"
+        },
+        {
+          "wrongAnswer": "missing that two triangles meeting at a crossing point share a pair of vertically opposite angles",
+          "reason": "whenever two line segments cross, the angles opposite each other at the intersection are always equal - this is a free angle pair in bowtie-shaped diagrams"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar, giving reasons",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C is common; \u2220CDB = \u2220CEA (corresponding angles, AE \u2225 BD); \u2220CBD = \u2220CAE (corresponding angles, AE \u2225 BD); \u2234 \u0394CBD ||| \u0394CAE (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C is common; \u2220CDB = \u2220CEA (corresponding angles, AE \u2225 BD); \u2220CBD = \u2220CAE (corresponding angles, AE \u2225 BD); \u2234 \u0394CBD ||| \u0394CAE (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        },
+        {
+          "wrongAnswer": "jumping straight to the similarity statement without stating the angle/side reasons that justify it",
+          "reason": "a similarity proof needs each equal angle pair (or side ratio) stated with its reason before the concluding similarity statement - the conclusion alone isn't a proof"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar, giving reasons",
+      "image": "assets/ex1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220A is common; \u2220ABE = \u2220ADC (given); \u2234 \u0394ABE ||| \u0394ADC (AA) \u2014 note 2 angles is enough since \u2220AEB = \u2220ACD by the angle sum of a triangle",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220A is common; \u2220ABE = \u2220ADC (given); \u2234 \u0394ABE ||| \u0394ADC (AA) \u2014 note 2 angles is enough since \u2220AEB = \u2220ACD by the angle sum of a triangle",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar using SAS",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C is common; CA/CD = 6/2 = 3; CE/CB = 9/3 = 3; \u2234 \u0394CDB ||| \u0394CAE (SAS)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C is common; CA/CD = 6/2 = 3; CE/CB = 9/3 = 3; \u2234 \u0394CDB ||| \u0394CAE (SAS)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        },
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar using SAS",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220D is common; AD/CD = 28/7 = 4; DB/DE = 48/12 = 4; \u2234 \u0394ABD ||| \u0394CED (SAS)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220D is common; AD/CD = 28/7 = 4; DB/DE = 48/12 = 4; \u2234 \u0394ABD ||| \u0394CED (SAS)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        },
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "proving two triangles are similar using SAS",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220DCE = \u2220BCA (vertically opposite); EC/AC = 2/5; DC/BC = 3/7.5 = 2/5; \u2234 \u0394DCE ||| \u0394BCA (SAS)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220DCE = \u2220BCA (vertically opposite); EC/AC = 2/5; DC/BC = 3/7.5 = 2/5; \u2234 \u0394DCE ||| \u0394BCA (SAS)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        },
+        {
+          "wrongAnswer": "missing that two triangles meeting at a crossing point share a pair of vertically opposite angles",
+          "reason": "whenever two line segments cross, the angles opposite each other at the intersection are always equal - this is a free angle pair in bowtie-shaped diagrams"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "problem-solving",
+      "topic": "giving a reason why two triangles (formed by a shadow) are similar",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA (all angles are the same, since the sun's rays hit the ground at the same angle)",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA (all angles are the same, since the sun's rays hit the ground at the same angle)",
+      "misconceptions": []
+    },
+    {
+      "id": "ex3b",
+      "tier": "problem-solving",
+      "topic": "using similar triangles to find the height of a tree from its shadow",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "40 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 40 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex4a",
+      "tier": "problem-solving",
+      "topic": "giving a reason why two triangles (formed by supporting cables) are similar",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "AAA",
+      "aiNotes": "Official answer (from the Cambridge answer key): AAA",
+      "misconceptions": []
+    },
+    {
+      "id": "ex4b",
+      "tier": "problem-solving",
+      "topic": "using similar triangles to find the height of a pole",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7.5 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7.5 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex5",
+      "tier": "problem-solving",
+      "topic": "using similar triangles (shadows) to find the height of a lamp post",
+      "image": "assets/ex5.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex6",
+      "tier": "problem-solving",
+      "topic": "using similar triangles formed by pegs to find the width of a river",
+      "image": "assets/ex6.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "20 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 20 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex7",
+      "tier": "problem-solving",
+      "topic": "using similar triangles formed by pegs to find the width of a chasm",
+      "image": "assets/ex7.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7.2 m",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7.2 m",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex8",
+      "tier": "problem-solving",
+      "topic": "finding an unknown length AB using similar triangles",
+      "image": "assets/ex8.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "55/6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 55/6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex9a",
+      "tier": "reasoning",
+      "topic": "proving two triangles are similar in an isosceles triangle diagram, finding an extra angle first",
+      "image": "assets/ex9a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ADC = \u2220ACD = 80\u00b0 (base angles of isosceles \u0394ADC); \u2220ACB = 100\u00b0 (straight angle); \u2220CAB = 60\u00b0 (angle sum of \u0394ACB); so \u2220DAB = 80\u00b0; \u2220DAC = \u2220DBA (given 20\u00b0); \u2220D is common; \u2220ACD = \u2220BAD (both 80\u00b0); \u2234 \u0394ACD ||| \u0394BAD (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ADC = \u2220ACD = 80\u00b0 (base angles of isosceles \u0394ADC); \u2220ACB = 100\u00b0 (straight angle); \u2220CAB = 60\u00b0 (angle sum of \u0394ACB); so \u2220DAB = 80\u00b0; \u2220DAC = \u2220DBA (given 20\u00b0); \u2220D is common; \u2220ACD = \u2220BAD (both 80\u00b0); \u2234 \u0394ACD ||| \u0394BAD (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "jumping straight to the similarity statement without stating the angle/side reasons that justify it",
+          "reason": "a similarity proof needs each equal angle pair (or side ratio) stated with its reason before the concluding similarity statement - the conclusion alone isn't a proof"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "reasoning",
+      "topic": "using similarity to find two lengths as fractions",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "DC = 20/3, CB = 25/3",
+      "aiNotes": "Official answer (from the Cambridge answer key): DC = 20/3, CB = 25/3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "proving a right triangle split by an altitude creates two similar triangles",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  \u2220B is common; \u2220DAB = \u2220ACB (given 90\u00b0); \u2234 \u0394ABD ||| \u0394CBA (AAA).   ii  \u2220D is common; \u2220DCA = \u2220DAB (given 90\u00b0); \u2234 \u0394ABD ||| \u0394CAD (AAA)",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  \u2220B is common; \u2220DAB = \u2220ACB (given 90\u00b0); \u2234 \u0394ABD ||| \u0394CBA (AAA).   ii  \u2220D is common; \u2220DCA = \u2220DAB (given 90\u00b0); \u2234 \u0394ABD ||| \u0394CAD (AAA)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "using similar triangles to find three unknown lengths in a right triangle split by an altitude",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  BD = 25/3   ii  AC = 4   iii  AB = 20/3",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  BD = 25/3   ii  AC = 4   iii  AB = 20/3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "enrichment",
+      "topic": "proving a length relationship using similar triangles (AE = 4AC)",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220ACB = \u2220ECD (vertically opposite); \u2220CAB = \u2220CED (alternate angles, DE \u2225 BA); \u2234 \u0394ABC ||| \u0394EDC (AAA); so DC/BC = EC/AC (corresponding sides); 6/2 = EC/AC; \u2234 3AC = CE; as AC + CE = AE, AE = 4AC",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220ACB = \u2220ECD (vertically opposite); \u2220CAB = \u2220CED (alternate angles, DE \u2225 BA); \u2234 \u0394ABC ||| \u0394EDC (AAA); so DC/BC = EC/AC (corresponding sides); 6/2 = EC/AC; \u2234 3AC = CE; as AC + CE = AE, AE = 4AC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "missing that two triangles meeting at a crossing point share a pair of vertically opposite angles",
+          "reason": "whenever two line segments cross, the angles opposite each other at the intersection are always equal - this is a free angle pair in bowtie-shaped diagrams"
+        },
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex11b",
+      "tier": "enrichment",
+      "topic": "proving a length relationship using similar triangles (BC = 1/2 CE)",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C is common; \u2220DBC = \u2220AEC (given); \u2234 \u0394CBD ||| \u0394CEA (AAA); so DB/AE = BC/CE (corresponding sides); 2/4 = BC/CE; \u2234 4BC = 2CE; BC = 1/2 CE",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C is common; \u2220DBC = \u2220AEC (given); \u2234 \u0394CBD ||| \u0394CEA (AAA); so DB/AE = BC/CE (corresponding sides); 2/4 = BC/CE; \u2234 4BC = 2CE; BC = 1/2 CE",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        },
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex11c",
+      "tier": "enrichment",
+      "topic": "proving a length relationship using similar triangles (CE = 7/5 CD)",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C is common; \u2220CBD = \u2220CAE (corresponding angles, BD \u2225 AE); \u2234 \u0394CBD ||| \u0394CAE (AAA); so CB/CA = CD/CE; 5/7 = CD/CE; \u2234 5CE = 7CD; \u2234 CE = 7/5 CD",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C is common; \u2220CBD = \u2220CAE (corresponding angles, BD \u2225 AE); \u2234 \u0394CBD ||| \u0394CAE (AAA); so CB/CA = CD/CE; 5/7 = CD/CE; \u2234 5CE = 7CD; \u2234 CE = 7/5 CD",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        },
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    },
+    {
+      "id": "ex11d",
+      "tier": "enrichment",
+      "topic": "proving a length relationship using similar triangles (AB = 3BC)",
+      "image": "assets/ex11d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2220C is common; \u2220CBD = \u2220CAE (given 90\u00b0); \u2234 \u0394CBD ||| \u0394CAE (AAA); so BD/AE = CB/CA; 2/8 = CB/CA; 1/4 = CB/(CB + AB), which rearranges to give AB = 3BC",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2220C is common; \u2220CBD = \u2220CAE (given 90\u00b0); \u2234 \u0394CBD ||| \u0394CAE (AAA); so BD/AE = CB/CA; 2/8 = CB/CA; 1/4 = CB/(CB + AB), which rearranges to give AB = 3BC",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting to state the shared/common angle as one of the equal angle pairs when the two triangles overlap",
+          "reason": "when two triangles share a vertex or overlap, the angle at that shared point is automatically equal in both triangles (it's literally the same angle) - this is often the easiest pair to spot first"
+        },
+        {
+          "wrongAnswer": "dividing sides that don't actually correspond to each other across the two triangles",
+          "reason": "for SAS, the two ratios must use sides from the SAME two triangles that surround the matched angle - mixing up which side belongs to which triangle gives a meaningless ratio"
+        }
+      ]
+    }
+  ]
+}
