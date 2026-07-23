@@ -1,0 +1,2024 @@
+{
+  "id": "9D",
+  "title": "Solving equations algebraically",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 9 Equations, Section 9D. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 8 \u2014 Solving one-step equations",
+      "image": "assets/example8.png"
+    },
+    {
+      "title": "Example 9 \u2014 Solving two-step equations",
+      "image": "assets/example9.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "deciding if an equation is true for a given value",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "deciding if an equation is true for a given value",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "deciding if an equation is true for a given value",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "deciding if an equation is true for a given value",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "deciding if an equation is true for a given value",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "finding a missing number in an equation-solving diagram",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "stating the solution to a one-step equation",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 6",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu3",
+      "tier": "warmup",
+      "topic": "using an equivalent equation to state a solution",
+      "image": "assets/bu3.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "g = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): g = 2",
+      "misconceptions": []
+    },
+    {
+      "id": "bu4a",
+      "tier": "warmup",
+      "topic": "identifying the operation applied to both sides of an equation",
+      "image": "assets/bu4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2212 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2212 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4b",
+      "tier": "warmup",
+      "topic": "identifying the operation applied to both sides of an equation",
+      "image": "assets/bu4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u00f7 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u00f7 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4c",
+      "tier": "warmup",
+      "topic": "identifying the operation applied to both sides of an equation",
+      "image": "assets/bu4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u00d7 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u00d7 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4d",
+      "tier": "warmup",
+      "topic": "identifying the operation applied to both sides of an equation",
+      "image": "assets/bu4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "+ 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): + 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  x = 5   ii  x = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  x = 5   ii  x = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  y = 7   ii  y = 64",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  y = 7   ii  y = 64",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i  q = 40   ii  q = 21",
+      "aiNotes": "Official answer (from the Cambridge answer key): i  q = 40   ii  q = 21",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "g = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): g = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): i = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2g",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2h",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2i",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "j = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): j = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2j",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2j.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2k",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2k.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "v = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): v = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2l",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2l.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2m",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2m.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2n",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2n.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2o",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2o.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "z = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): z = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2p",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2p.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2q",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2q.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2r",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2r.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2s",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2s.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2t",
+      "tier": "fluency",
+      "topic": "solving a one-step equation algebraically",
+      "image": "assets/ex2t.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): n = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "completing the steps to solve an equation algebraically",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7a + 3 = 38 \u2192 (\u22123 both sides) \u2192 7a = 35 \u2192 (\u00f77 both sides) \u2192 a = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7a + 3 = 38 \u2192 (\u22123 both sides) \u2192 7a = 35 \u2192 (\u00f77 both sides) \u2192 a = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "completing the steps to solve an equation algebraically",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4b \u2212 10 = 14 \u2192 (+10 both sides) \u2192 4b = 24 \u2192 (\u00f74 both sides) \u2192 b = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4b \u2212 10 = 14 \u2192 (+10 both sides) \u2192 4b = 24 \u2192 (\u00f74 both sides) \u2192 b = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "completing the steps to solve an equation algebraically",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2(q + 6) = 20 \u2192 (\u00f72 both sides) \u2192 q + 6 = 10 \u2192 (\u22126 both sides) \u2192 q = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2(q + 6) = 20 \u2192 (\u00f72 both sides) \u2192 q + 6 = 10 \u2192 (\u22126 both sides) \u2192 q = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "completing the steps to solve an equation algebraically",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "5 = x/10 + 3 \u2192 (\u22123 both sides) \u2192 2 = x/10 \u2192 (\u00d710 both sides) \u2192 20 = x",
+      "aiNotes": "Official answer (from the Cambridge answer key): 5 = x/10 + 3 \u2192 (\u22123 both sides) \u2192 2 = x/10 \u2192 (\u00d710 both sides) \u2192 20 = x",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "stating the first operation needed to solve an equation",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Subtract 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): Subtract 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "stating the first operation needed to solve an equation",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Add 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): Add 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "stating the first operation needed to solve an equation",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Divide by 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): Divide by 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "stating the first operation needed to solve an equation",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Divide by 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): Divide by 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "to isolate the pronumeral you must undo the LAST operation applied first - undoing them in the original order leaves the equation more complicated, not less"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "f = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): f = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5d",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5e",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5f",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5g",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): n = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5h",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): n = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5i",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "g = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): g = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5j",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5j.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5k",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5k.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "z = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): z = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5l",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5l.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5m",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5m.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5n",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5n.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5o",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5o.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5p",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5p.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "c = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): c = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5q",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5q.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5r",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5r.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5s",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5s.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5t",
+      "tier": "fluency",
+      "topic": "solving a two-step equation algebraically and checking by substitution",
+      "image": "assets/ex5t.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 3/4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 3/4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 24/5",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 24/5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6c",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "w = 4/3",
+      "aiNotes": "Official answer (from the Cambridge answer key): w = 4/3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6d",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 4/3",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 4/3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6e",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 5/8",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 5/8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6f",
+      "tier": "fluency",
+      "topic": "solving an equation with a fractional solution",
+      "image": "assets/ex6f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 1/3",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 1/3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "r = \u22127",
+      "aiNotes": "Official answer (from the Cambridge answer key): r = \u22127",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = \u22123",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22123",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = \u221216",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = \u221216",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7d",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = \u221224",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = \u221224",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7e",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = \u22125",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22125",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7f",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = \u22129",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = \u22129",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7g",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = \u22126",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22126",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7h",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = \u22124",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22124",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7i",
+      "tier": "fluency",
+      "topic": "solving an equation with a negative solution",
+      "image": "assets/ex7i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = \u22123/2",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22123/2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x + 5 = 12 \u2192 x = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): x + 5 = 12 \u2192 x = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8b",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2y = 10 \u2192 y = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2y = 10 \u2192 y = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8c",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2b + 6 = 44 \u2192 b = 19",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2b + 6 = 44 \u2192 b = 19",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8d",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3(k \u2212 7) = 18 \u2192 k = 13",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3(k \u2212 7) = 18 \u2192 k = 13",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8e",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b/4 + 3 = 6 \u2192 b = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): b/4 + 3 = 6 \u2192 b = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8f",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving it",
+      "image": "assets/ex8f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k/2 \u2212 10 = 1 \u2192 k = 22",
+      "aiNotes": "Official answer (from the Cambridge answer key): k/2 \u2212 10 = 1 \u2192 k = 22",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex9a",
+      "tier": "problem-solving",
+      "topic": "writing an equation to describe a worded pay problem",
+      "image": "assets/ex9a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12n + 50 = 410",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12n + 50 = 410",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "problem-solving",
+      "topic": "solving a worded pay problem algebraically",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n = 30 hours",
+      "aiNotes": "Official answer (from the Cambridge answer key): n = 30 hours",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10a",
+      "tier": "problem-solving",
+      "topic": "writing an expression for a total cost",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12 + 5x",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12 + 5x",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "problem-solving",
+      "topic": "writing an equation from a worded total-cost statement",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12 + 5x = 14.5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12 + 5x = 14.5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10c",
+      "tier": "problem-solving",
+      "topic": "solving a total-cost equation algebraically",
+      "image": "assets/ex10c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 0.5, so pens cost 50 cents each",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 0.5, so pens cost 50 cents each",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10d",
+      "tier": "problem-solving",
+      "topic": "checking a solution by substitution",
+      "image": "assets/ex10d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Substituting x = 0.5 into 12 + 5x gives 12 + 2.5 = 14.5, which matches the total cost, confirming x = 0.5 is correct",
+      "aiNotes": "Official answer (from the Cambridge answer key): Substituting x = 0.5 into 12 + 5x gives 12 + 2.5 = 14.5, which matches the total cost, confirming x = 0.5 is correct",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping at the solution without substituting it back in to check LHS = RHS",
+          "reason": "checking by substitution confirms the solution is correct and catches arithmetic slips before they're marked wrong"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "problem-solving",
+      "topic": "writing and solving an equation from an area diagram",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3w = 15 \u2192 w = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3w = 15 \u2192 w = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11b",
+      "tier": "problem-solving",
+      "topic": "writing and solving an equation from an area diagram",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4x = 12 \u2192 x = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4x = 12 \u2192 x = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11c",
+      "tier": "problem-solving",
+      "topic": "writing and solving an equation from a perimeter diagram",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2(10 + x) = 28 \u2192 x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2(10 + x) = 28 \u2192 x = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11d",
+      "tier": "problem-solving",
+      "topic": "writing and solving an equation from a perimeter diagram",
+      "image": "assets/ex11d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4w = 28 \u2192 w = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4w = 28 \u2192 w = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
+          "reason": "worded problems must be translated carefully term by term - 'subtracted from' and 'is subtracted' reverse the order compared to how they read left to right"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex12a",
+      "tier": "problem-solving",
+      "topic": "solving a multi-step equation with brackets algebraically",
+      "image": "assets/ex12a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12b",
+      "tier": "problem-solving",
+      "topic": "solving a multi-step equation with brackets algebraically",
+      "image": "assets/ex12b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12c",
+      "tier": "problem-solving",
+      "topic": "solving a multi-step equation with brackets algebraically",
+      "image": "assets/ex12c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex13",
+      "tier": "reasoning",
+      "topic": "writing five different equations with the same solution",
+      "image": "assets/ex13.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Examples include: x + 1 = 3, 7x = 14, 21 \u2212 x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Examples include: x + 1 = 3, 7x = 14, 21 \u2212 x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
+      "misconceptions": []
+    },
+    {
+      "id": "ex14a",
+      "tier": "reasoning",
+      "topic": "filling in the missing steps to show two equations are equivalent",
+      "image": "assets/ex14a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2x + 5 = 13 \u2192 (\u22125 both sides) \u2192 2x = 8 \u2192 (\u00f72 both sides) \u2192 x = 4 \u2192 (\u00d75 both sides) \u2192 5x = 20",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2x + 5 = 13 \u2192 (\u22125 both sides) \u2192 2x = 8 \u2192 (\u00f72 both sides) \u2192 x = 4 \u2192 (\u00d75 both sides) \u2192 5x = 20",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex14a_context.png"
+    },
+    {
+      "id": "ex14b",
+      "tier": "reasoning",
+      "topic": "showing two equations are equivalent by finding the missing steps",
+      "image": "assets/ex14b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "10 + 2x = 20 \u2192 (\u221210 both sides) \u2192 2x = 10 \u2192 (\u00f72 both sides) \u2192 x = 5 \u2192 (\u22123 both sides) \u2192 x \u2212 3 = 2 \u2192 (\u00d72 both sides) \u2192 2(x \u2212 3) = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10 + 2x = 20 \u2192 (\u221210 both sides) \u2192 2x = 10 \u2192 (\u00f72 both sides) \u2192 x = 5 \u2192 (\u22123 both sides) \u2192 x \u2212 3 = 2 \u2192 (\u00d72 both sides) \u2192 2(x \u2212 3) = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ]
+    },
+    {
+      "id": "ex14c",
+      "tier": "reasoning",
+      "topic": "deciding if the same solution guarantees two equations are equivalent",
+      "image": "assets/ex14c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes \u2014 if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes \u2014 if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex14d",
+      "tier": "reasoning",
+      "topic": "deciding if different solutions guarantee two equations are not equivalent",
+      "image": "assets/ex14d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes \u2014 if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes \u2014 if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
+      "misconceptions": []
+    },
+    {
+      "id": "ex15a",
+      "tier": "reasoning",
+      "topic": "describing the mistake made when solving an equation",
+      "image": "assets/ex15a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "First step, should have subtracted 2 first (before dividing by 4).",
+      "aiNotes": "Official answer (from the Cambridge answer key): First step, should have subtracted 2 first (before dividing by 4).",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex15b",
+      "tier": "reasoning",
+      "topic": "describing the mistake made when solving an equation",
+      "image": "assets/ex15b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Second step, the LHS was divided by 3 but the RHS only had 3 subtracted.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Second step, the LHS was divided by 3 but the RHS only had 3 subtracted.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex15c",
+      "tier": "reasoning",
+      "topic": "describing the mistake made when solving an equation",
+      "image": "assets/ex15c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "First step, the RHS has 5 added instead of subtracted.",
+      "aiNotes": "Official answer (from the Cambridge answer key): First step, the RHS has 5 added instead of subtracted.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex15d",
+      "tier": "reasoning",
+      "topic": "describing the mistake made when solving an equation",
+      "image": "assets/ex15d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "First step, the LHS has 11a subtracted instead of 12 subtracted (subtracting the whole 12a term is needed, not just part of it, or the operation was mismatched between sides).",
+      "aiNotes": "Official answer (from the Cambridge answer key): First step, the LHS has 11a subtracted instead of 12 subtracted (subtracting the whole 12a term is needed, not just part of it, or the operation was mismatched between sides).",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex16a",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16b",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16c",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16d",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16e",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16f",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 19",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 19",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16g",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "j = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): j = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    },
+    {
+      "id": "ex16h",
+      "tier": "enrichment",
+      "topic": "solving an equation with the pronumeral on both sides",
+      "image": "assets/ex16h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation",
+          "reason": "an equation stays true (equivalent) only if the exact same operation is applied to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
+          "reason": "careless handling of negative numbers during multi-step solving is the most common source of an incorrect solution"
+        }
+      ],
+      "contextImage": "assets/ex16_context.png"
+    }
+  ]
+}
