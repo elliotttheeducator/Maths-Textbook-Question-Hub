@@ -12,19 +12,99 @@
   ],
   "workedExamples": [
     {
-      "title": "Example 17 \u2014 Proving two triangles are similar (part 1)",
+      "title": "Example 17 \u2014 Proving two triangles are similar",
+      "image": "assets/example17_p2.png",
+      "diagram": "assets/example17_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Prove that $\\triangle ABC$ and $\\triangle EDC$ are similar.",
+          "line": "\\angle BAC = \\angle DEC",
+          "reasoning": "AB is parallel to DE, so alternate angles at A and E are equal."
+        },
+        {
+          "part": "a",
+          "line": "\\angle ABC = \\angle EDC",
+          "reasoning": "AB is parallel to DE, so alternate angles at B and D are equal too."
+        },
+        {
+          "part": "a",
+          "line": "\\angle ACB = \\angle ECD",
+          "reasoning": "\u2220ACB and \u2220ECD are vertically opposite angles \u2014 vertically opposite angles are always equal."
+        },
+        {
+          "part": "a",
+          "line": "\\triangle ABC \\sim \\triangle EDC \\text{ (AAA)}",
+          "reasoning": "Three pairs of equal angles proves the triangles are similar."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Prove that $\\triangle ACE$ and $\\triangle DCB$ are similar.",
+          "line": "\\angle ACE = \\angle DCB",
+          "reasoning": "\u2220ACE and \u2220DCB are the same angle at C, shared by both triangles \u2014 a common angle."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{AC}{DC} = \\dfrac{18}{6} = 3",
+          "reasoning": "AC and DC are one pair of corresponding sides around the common angle. Divide to find their ratio."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{EC}{BC} = \\dfrac{12}{4} = 3",
+          "reasoning": "EC and BC are the other pair of corresponding sides around the common angle. Divide to find their ratio too."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{AC}{DC} = \\dfrac{EC}{BC} = 3",
+          "reasoning": "Both ratios equal 3, so the two pairs of sides are in the same proportion."
+        },
+        {
+          "part": "b",
+          "line": "\\triangle ACE \\sim \\triangle DCB \\text{ (SAS)}",
+          "reasoning": "Two pairs of sides in the same ratio, with the included (common) angle equal, proves similarity by SAS."
+        }
+      ]
+    },
+    {
+      "title": "Example 17 \u2014 Part a, full worked solution",
       "image": "assets/example17_p1.png"
     },
     {
-      "title": "Example 17 \u2014 Proving two triangles are similar (part 2)",
-      "image": "assets/example17_p2.png"
+      "title": "Example 18 \u2014 Applying similarity",
+      "image": "assets/example18_p1.png",
+      "diagram": "assets/example18_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Give a reason why the two triangles are similar.",
+          "line": "\\text{AAA}",
+          "reasoning": "The sun's rays pass over Chris and the stick and hit the ground at approximately the same angle, so all three angles in each right-angled shadow triangle match."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Determine Chris' height.",
+          "line": "\\text{scale factor} = \\dfrac{1.2}{0.8}",
+          "reasoning": "Chris' shadow (1.2 m) and the stick's shadow (0.8 m) are corresponding sides. Divide to find the scale factor."
+        },
+        {
+          "part": "b",
+          "line": "\\text{scale factor} = \\dfrac{1.2}{0.8} = 1.5",
+          "reasoning": "1.2 \u00f7 0.8 = 1.5."
+        },
+        {
+          "part": "b",
+          "line": "\\text{Chris' height} = 1 \\times 1.5",
+          "reasoning": "The stick's height (1 m) corresponds to Chris' height. Multiply by the scale factor."
+        },
+        {
+          "part": "b",
+          "line": "\\text{Chris' height} = 1 \\times 1.5 = 1.5\\text{ m}",
+          "reasoning": "1 \u00d7 1.5 = 1.5, so Chris is 1.5 m tall."
+        }
+      ]
     },
     {
-      "title": "Example 18 \u2014 Applying similarity (part 1)",
-      "image": "assets/example18_p1.png"
-    },
-    {
-      "title": "Example 18 \u2014 Applying similarity (part 2)",
+      "title": "Example 18 \u2014 Now you try",
       "image": "assets/example18_p2.png"
     }
   ],
