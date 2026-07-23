@@ -177,6 +177,7 @@
   <h1 id="home-link">📐 EduFlow</h1>
   <div class="controls">
     <button id="teacher-toggle-btn" class="small">🔒 Teacher mode</button>
+    <button id="access-code-btn" class="small">🔑 Access code</button>
     <button id="textbooks-btn" class="teacher-only" style="display:none;">📚 Textbooks</button>
     <button id="settings-btn" class="teacher-only" style="display:none;">⚙️ Settings</button>
   </div>
@@ -863,10 +864,22 @@ function promptForAccessCode(wasWrong) {
   });
 }
 
+function openAccessCodeManually() {
+  el('access-code-error').style.display = 'none';
+  el('access-code-entry-input').value = localStorage.getItem('mqh_access_code') || '';
+  el('access-code-dialog').showModal();
+  el('access-code-entry-input').focus();
+}
+
 function submitAccessCode() {
   const val = el('access-code-entry-input').value.trim();
   el('access-code-dialog').close();
-  if (accessCodeResolver) { accessCodeResolver(val || null); accessCodeResolver = null; }
+  if (accessCodeResolver) {
+    accessCodeResolver(val || null);
+    accessCodeResolver = null;
+  } else {
+    localStorage.setItem('mqh_access_code', val);
+  }
 }
 
 function cancelAccessCode() {
@@ -881,15 +894,13 @@ async function callAI(systemInstruction, imageParts, history) {
   let res = null;
   if (WORKER_URL) {
     let attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
-    if (attempt.reached && await isAccessCodeError(attempt.res)) {
-      const hadCodeAlready = !!localStorage.getItem('mqh_access_code');
-      const code = await promptForAccessCode(hadCodeAlready);
-      if (code) {
-        localStorage.setItem('mqh_access_code', code);
-        attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
-      } else {
-        attempt = { reached: false };
-      }
+    let isRetry = !!localStorage.getItem('mqh_access_code');
+    while (attempt.reached && await isAccessCodeError(attempt.res)) {
+      const code = await promptForAccessCode(isRetry);
+      if (!code) { attempt = { reached: false }; break; }
+      localStorage.setItem('mqh_access_code', code);
+      attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
+      isRetry = true;
     }
     if (attempt.reached) {
       res = attempt.res;
@@ -1114,6 +1125,7 @@ el('settings-cancel').addEventListener('click', () => el('settings-dialog').clos
 el('settings-save').addEventListener('click', saveSettings);
 el('provider-input').addEventListener('change', () => loadProviderFieldsInto(el('provider-input').value));
 
+el('access-code-btn').addEventListener('click', openAccessCodeManually);
 el('access-code-cancel').addEventListener('click', cancelAccessCode);
 el('access-code-submit').addEventListener('click', submitAccessCode);
 el('access-code-entry-input').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submitAccessCode(); } });
