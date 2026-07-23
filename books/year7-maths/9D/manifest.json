@@ -1,7 +1,7 @@
 {
   "id": "9D",
   "title": "Solving equations algebraically",
-  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 9 Equations, Section 9D. Images are direct crops of the original textbook pages.",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) — Chapter 9 Equations, Section 9D. Images are direct crops of the original textbook pages.",
   "cover": {
     "image": "assets/cover.png"
   },
@@ -12,68 +12,166 @@
   ],
   "workedExamples": [
     {
-      "title": "Example 8 \u2014 Solving one-step equations",
+      "title": "Example 8 — Solving one-step equations",
       "image": "assets/example8.png",
       "walkthrough": [
         {
           "part": "a",
-          "prompt": "Part a \u2014 Solve $5x = 30$ algebraically.",
+          "prompt": "Part a — Solve $5x = 30$ algebraically.",
           "line": "5x = 30",
-          "reasoning": "x is multiplied by 5. To undo that, we do the opposite operation \u2014 divide."
+          "reasoning": "x is multiplied by 5. To undo that, we do the opposite operation — divide."
         },
         {
           "part": "a",
           "line": "5x \\div 5 = 30 \\div 5",
           "highlight": "\\div 5",
-          "reasoning": "The opposite of \u00d75 is \u00f75. Dividing both sides by the same amount keeps the equation balanced \u2014 this gives an equivalent equation."
+          "reasoning": "The opposite of ×5 is ÷5. Dividing both sides by the same amount keeps the equation balanced — this gives an equivalent equation."
         },
         {
           "part": "a",
           "line": "x = 6",
-          "reasoning": "5x ÷ 5 simplifies to x, and 30 ÷ 5 = 6. So the solution is x = 6.",
-          "final": true
+          "reasoning": "5x ÷ 5 simplifies to x, and 30 ÷ 5 = 6. So the solution is x = 6."
         },
         {
           "part": "b",
-          "prompt": "Part b \u2014 Solve $17 = y - 21$ algebraically.",
+          "prompt": "Part b — Solve $17 = y - 21$ algebraically.",
           "line": "17 = y - 21",
-          "reasoning": "21 is being subtracted from y. To undo that, we do the opposite operation \u2014 add 21."
+          "reasoning": "21 is being subtracted from y. To undo that, we do the opposite operation — add 21."
         },
         {
           "part": "b",
           "line": "17 + 21 = y - 21 + 21",
           "highlight": "+ 21",
-          "reasoning": "The opposite of \u221221 is +21. Adding 21 to both sides keeps the equation balanced."
+          "reasoning": "The opposite of −21 is +21. Adding 21 to both sides keeps the equation balanced."
         },
         {
           "part": "b",
           "line": "38 = y",
-          "reasoning": "17 + 21 = 38, and y - 21 + 21 simplifies to y. Solutions are usually written with the pronumeral on the left, so y = 38.",
-          "final": true
+          "reasoning": "17 + 21 = 38, and y - 21 + 21 simplifies to y. Solutions are usually written with the pronumeral on the left, so y = 38."
         },
         {
           "part": "c",
-          "prompt": "Part c \u2014 Solve $10 = \\dfrac{q}{3}$ algebraically.",
+          "prompt": "Part c — Solve $10 = \\dfrac{q}{3}$ algebraically.",
           "line": "10 = \\dfrac{q}{3}",
-          "reasoning": "q is being divided by 3. To undo that, we do the opposite operation \u2014 multiply by 3."
+          "reasoning": "q is being divided by 3. To undo that, we do the opposite operation — multiply by 3."
         },
         {
           "part": "c",
           "line": "10 \\times 3 = \\dfrac{q}{3} \\times 3",
           "highlight": "\\times 3",
-          "reasoning": "The opposite of \u00f73 is \u00d73. Multiplying both sides by 3 keeps the equation balanced."
+          "reasoning": "The opposite of ÷3 is ×3. Multiplying both sides by 3 keeps the equation balanced."
         },
         {
           "part": "c",
           "line": "30 = q",
-          "reasoning": "10 × 3 = 30, and q/3 × 3 simplifies to q. Writing the pronumeral on the left, the solution is q = 30.",
-          "final": true
+          "reasoning": "10 × 3 = 30, and q/3 × 3 simplifies to q. Writing the pronumeral on the left, the solution is q = 30."
         }
       ]
     },
     {
-      "title": "Example 9 \u2014 Solving two-step equations",
-      "image": "assets/example9.png"
+      "title": "Example 9 — Solving two-step equations",
+      "image": "assets/example9.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a — Solve $7 + 4a = 23$ algebraically.",
+          "line": "7 + 4a = 23",
+          "reasoning": "Two operations act on a here: ×4, then +7. To undo them we work backwards — first undo the +7, then undo the ×4."
+        },
+        {
+          "part": "a",
+          "line": "7 + 4a - 7 = 23 - 7",
+          "highlight": "- 7",
+          "reasoning": "The opposite of +7 is −7. Subtracting 7 from both sides keeps the equation balanced."
+        },
+        {
+          "part": "a",
+          "line": "4a = 16",
+          "reasoning": "7 + 4a − 7 simplifies to 4a, and 23 − 7 = 16."
+        },
+        {
+          "part": "a",
+          "line": "4a \\div 4 = 16 \\div 4",
+          "highlight": "\\div 4",
+          "reasoning": "Now undo the ×4. The opposite of ×4 is ÷4 — divide both sides by 4."
+        },
+        {
+          "part": "a",
+          "line": "a = 4",
+          "reasoning": "4a ÷ 4 simplifies to a, and 16 ÷ 4 = 4. So the solution is a = 4."
+        },
+        {
+          "part": "a",
+          "line": "\\text{LHS} = 7 + 4 \\times 4 = 23, \\quad \\text{RHS} = 23 \\ \\checkmark",
+          "reasoning": "Substituting a = 4 back into the original equation gives 23 on both sides — the solution checks out."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b — Solve $\\dfrac{d}{3} - 2 = 4$ algebraically.",
+          "line": "\\dfrac{d}{3} - 2 = 4",
+          "reasoning": "Two operations act on d here: ÷3, then −2. To undo them we work backwards — first undo the −2, then undo the ÷3."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{d}{3} - 2 + 2 = 4 + 2",
+          "highlight": "+ 2",
+          "reasoning": "The opposite of −2 is +2. Add 2 to both sides."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{d}{3} = 6",
+          "reasoning": "d/3 − 2 + 2 simplifies to d/3, and 4 + 2 = 6."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{d}{3} \\times 3 = 6 \\times 3",
+          "highlight": "\\times 3",
+          "reasoning": "Now undo the ÷3. The opposite of ÷3 is ×3 — multiply both sides by 3."
+        },
+        {
+          "part": "b",
+          "line": "d = 18",
+          "reasoning": "d/3 × 3 simplifies to d, and 6 × 3 = 18. So the solution is d = 18."
+        },
+        {
+          "part": "b",
+          "line": "\\text{LHS} = \\dfrac{18}{3} - 2 = 4, \\quad \\text{RHS} = 4 \\ \\checkmark",
+          "reasoning": "Substituting d = 18 back into the original equation gives 4 on both sides — the solution checks out."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c — Solve $12 = 2(e + 1)$ algebraically.",
+          "line": "12 = 2(e + 1)",
+          "reasoning": "The bracket (e + 1) is multiplied by 2. To undo that, first divide both sides by 2."
+        },
+        {
+          "part": "c",
+          "line": "12 \\div 2 = 2(e + 1) \\div 2",
+          "highlight": "\\div 2",
+          "reasoning": "The opposite of ×2 is ÷2. Divide both sides by 2."
+        },
+        {
+          "part": "c",
+          "line": "6 = e + 1",
+          "reasoning": "12 ÷ 2 = 6, and 2(e + 1) ÷ 2 simplifies to e + 1."
+        },
+        {
+          "part": "c",
+          "line": "6 - 1 = e + 1 - 1",
+          "highlight": "- 1",
+          "reasoning": "Now undo the +1. The opposite of +1 is −1 — subtract 1 from both sides."
+        },
+        {
+          "part": "c",
+          "line": "5 = e",
+          "reasoning": "6 − 1 = 5, and e + 1 − 1 simplifies to e. Writing the pronumeral on the left, the solution is e = 5."
+        },
+        {
+          "part": "c",
+          "line": "\\text{LHS} = 12, \\quad \\text{RHS} = 2(5 + 1) = 12 \\ \\checkmark",
+          "reasoning": "Substituting e = 5 into the RHS gives 12, matching the LHS — the solution checks out."
+        }
+      ]
     }
   ],
   "questions": [
@@ -179,8 +277,8 @@
       "image": "assets/bu4a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "\u2212 5",
-      "aiNotes": "Official answer (from the Cambridge answer key): \u2212 5",
+      "answer": "− 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): − 5",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -196,8 +294,8 @@
       "image": "assets/bu4b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "\u00f7 10",
-      "aiNotes": "Official answer (from the Cambridge answer key): \u00f7 10",
+      "answer": "÷ 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): ÷ 10",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -213,8 +311,8 @@
       "image": "assets/bu4c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "\u00d7 4",
-      "aiNotes": "Official answer (from the Cambridge answer key): \u00d7 4",
+      "answer": "× 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): × 4",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -650,8 +748,8 @@
       "image": "assets/ex3a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "7a + 3 = 38 \u2192 (\u22123 both sides) \u2192 7a = 35 \u2192 (\u00f77 both sides) \u2192 a = 5",
-      "aiNotes": "Official answer (from the Cambridge answer key): 7a + 3 = 38 \u2192 (\u22123 both sides) \u2192 7a = 35 \u2192 (\u00f77 both sides) \u2192 a = 5",
+      "answer": "7a + 3 = 38 → (−3 both sides) → 7a = 35 → (÷7 both sides) → a = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7a + 3 = 38 → (−3 both sides) → 7a = 35 → (÷7 both sides) → a = 5",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -667,8 +765,8 @@
       "image": "assets/ex3b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "4b \u2212 10 = 14 \u2192 (+10 both sides) \u2192 4b = 24 \u2192 (\u00f74 both sides) \u2192 b = 6",
-      "aiNotes": "Official answer (from the Cambridge answer key): 4b \u2212 10 = 14 \u2192 (+10 both sides) \u2192 4b = 24 \u2192 (\u00f74 both sides) \u2192 b = 6",
+      "answer": "4b − 10 = 14 → (+10 both sides) → 4b = 24 → (÷4 both sides) → b = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4b − 10 = 14 → (+10 both sides) → 4b = 24 → (÷4 both sides) → b = 6",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -684,8 +782,8 @@
       "image": "assets/ex3c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "2(q + 6) = 20 \u2192 (\u00f72 both sides) \u2192 q + 6 = 10 \u2192 (\u22126 both sides) \u2192 q = 4",
-      "aiNotes": "Official answer (from the Cambridge answer key): 2(q + 6) = 20 \u2192 (\u00f72 both sides) \u2192 q + 6 = 10 \u2192 (\u22126 both sides) \u2192 q = 4",
+      "answer": "2(q + 6) = 20 → (÷2 both sides) → q + 6 = 10 → (−6 both sides) → q = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2(q + 6) = 20 → (÷2 both sides) → q + 6 = 10 → (−6 both sides) → q = 4",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -701,8 +799,8 @@
       "image": "assets/ex3d.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "5 = x/10 + 3 \u2192 (\u22123 both sides) \u2192 2 = x/10 \u2192 (\u00d710 both sides) \u2192 20 = x",
-      "aiNotes": "Official answer (from the Cambridge answer key): 5 = x/10 + 3 \u2192 (\u22123 both sides) \u2192 2 = x/10 \u2192 (\u00d710 both sides) \u2192 20 = x",
+      "answer": "5 = x/10 + 3 → (−3 both sides) → 2 = x/10 → (×10 both sides) → 20 = x",
+      "aiNotes": "Official answer (from the Cambridge answer key): 5 = x/10 + 3 → (−3 both sides) → 2 = x/10 → (×10 both sides) → 20 = x",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -1308,8 +1406,8 @@
       "image": "assets/ex7a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "r = \u22127",
-      "aiNotes": "Official answer (from the Cambridge answer key): r = \u22127",
+      "answer": "r = −7",
+      "aiNotes": "Official answer (from the Cambridge answer key): r = −7",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1325,8 +1423,8 @@
       "image": "assets/ex7b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x = \u22123",
-      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22123",
+      "answer": "x = −3",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = −3",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1342,8 +1440,8 @@
       "image": "assets/ex7c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "t = \u221216",
-      "aiNotes": "Official answer (from the Cambridge answer key): t = \u221216",
+      "answer": "t = −16",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = −16",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1359,8 +1457,8 @@
       "image": "assets/ex7d.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "y = \u221224",
-      "aiNotes": "Official answer (from the Cambridge answer key): y = \u221224",
+      "answer": "y = −24",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = −24",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1376,8 +1474,8 @@
       "image": "assets/ex7e.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x = \u22125",
-      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22125",
+      "answer": "x = −5",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = −5",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1393,8 +1491,8 @@
       "image": "assets/ex7f.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "k = \u22129",
-      "aiNotes": "Official answer (from the Cambridge answer key): k = \u22129",
+      "answer": "k = −9",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = −9",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1410,8 +1508,8 @@
       "image": "assets/ex7g.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x = \u22126",
-      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22126",
+      "answer": "x = −6",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = −6",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1427,8 +1525,8 @@
       "image": "assets/ex7h.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x = \u22124",
-      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22124",
+      "answer": "x = −4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = −4",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1444,8 +1542,8 @@
       "image": "assets/ex7i.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x = \u22123/2",
-      "aiNotes": "Official answer (from the Cambridge answer key): x = \u22123/2",
+      "answer": "x = −3/2",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = −3/2",
       "misconceptions": [
         {
           "wrongAnswer": "a sign error when adding/subtracting during the undo steps, e.g. subtracting instead of adding an already-negative term",
@@ -1461,8 +1559,8 @@
       "image": "assets/ex8a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "x + 5 = 12 \u2192 x = 7",
-      "aiNotes": "Official answer (from the Cambridge answer key): x + 5 = 12 \u2192 x = 7",
+      "answer": "x + 5 = 12 → x = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): x + 5 = 12 → x = 7",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1478,8 +1576,8 @@
       "image": "assets/ex8b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "2y = 10 \u2192 y = 5",
-      "aiNotes": "Official answer (from the Cambridge answer key): 2y = 10 \u2192 y = 5",
+      "answer": "2y = 10 → y = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2y = 10 → y = 5",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1495,8 +1593,8 @@
       "image": "assets/ex8c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "2b + 6 = 44 \u2192 b = 19",
-      "aiNotes": "Official answer (from the Cambridge answer key): 2b + 6 = 44 \u2192 b = 19",
+      "answer": "2b + 6 = 44 → b = 19",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2b + 6 = 44 → b = 19",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1512,8 +1610,8 @@
       "image": "assets/ex8d.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "3(k \u2212 7) = 18 \u2192 k = 13",
-      "aiNotes": "Official answer (from the Cambridge answer key): 3(k \u2212 7) = 18 \u2192 k = 13",
+      "answer": "3(k − 7) = 18 → k = 13",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3(k − 7) = 18 → k = 13",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1529,8 +1627,8 @@
       "image": "assets/ex8e.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "b/4 + 3 = 6 \u2192 b = 12",
-      "aiNotes": "Official answer (from the Cambridge answer key): b/4 + 3 = 6 \u2192 b = 12",
+      "answer": "b/4 + 3 = 6 → b = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): b/4 + 3 = 6 → b = 12",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1546,8 +1644,8 @@
       "image": "assets/ex8f.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "k/2 \u2212 10 = 1 \u2192 k = 22",
-      "aiNotes": "Official answer (from the Cambridge answer key): k/2 \u2212 10 = 1 \u2192 k = 22",
+      "answer": "k/2 − 10 = 1 → k = 22",
+      "aiNotes": "Official answer (from the Cambridge answer key): k/2 − 10 = 1 → k = 22",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1650,8 +1748,8 @@
       "image": "assets/ex11a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "3w = 15 \u2192 w = 5",
-      "aiNotes": "Official answer (from the Cambridge answer key): 3w = 15 \u2192 w = 5",
+      "answer": "3w = 15 → w = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3w = 15 → w = 5",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1667,8 +1765,8 @@
       "image": "assets/ex11b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "4x = 12 \u2192 x = 3",
-      "aiNotes": "Official answer (from the Cambridge answer key): 4x = 12 \u2192 x = 3",
+      "answer": "4x = 12 → x = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4x = 12 → x = 3",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1684,8 +1782,8 @@
       "image": "assets/ex11c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "2(10 + x) = 28 \u2192 x = 4",
-      "aiNotes": "Official answer (from the Cambridge answer key): 2(10 + x) = 28 \u2192 x = 4",
+      "answer": "2(10 + x) = 28 → x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2(10 + x) = 28 → x = 4",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1701,8 +1799,8 @@
       "image": "assets/ex11d.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "4w = 28 \u2192 w = 7",
-      "aiNotes": "Official answer (from the Cambridge answer key): 4w = 28 \u2192 w = 7",
+      "answer": "4w = 28 → w = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4w = 28 → w = 7",
       "misconceptions": [
         {
           "wrongAnswer": "translating the words into an equation with the operations in the wrong order (e.g. writing 3 - k instead of k - 3)",
@@ -1781,8 +1879,8 @@
       "image": "assets/ex13.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "Examples include: x + 1 = 3, 7x = 14, 21 \u2212 x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
-      "aiNotes": "Official answer (from the Cambridge answer key): Examples include: x + 1 = 3, 7x = 14, 21 \u2212 x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
+      "answer": "Examples include: x + 1 = 3, 7x = 14, 21 − x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Examples include: x + 1 = 3, 7x = 14, 21 − x = 19, 4/x = x, x/2 = 1 (any equation that gives x = 2 when solved)",
       "misconceptions": []
     },
     {
@@ -1792,8 +1890,8 @@
       "image": "assets/ex14a.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "2x + 5 = 13 \u2192 (\u22125 both sides) \u2192 2x = 8 \u2192 (\u00f72 both sides) \u2192 x = 4 \u2192 (\u00d75 both sides) \u2192 5x = 20",
-      "aiNotes": "Official answer (from the Cambridge answer key): 2x + 5 = 13 \u2192 (\u22125 both sides) \u2192 2x = 8 \u2192 (\u00f72 both sides) \u2192 x = 4 \u2192 (\u00d75 both sides) \u2192 5x = 20",
+      "answer": "2x + 5 = 13 → (−5 both sides) → 2x = 8 → (÷2 both sides) → x = 4 → (×5 both sides) → 5x = 20",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2x + 5 = 13 → (−5 both sides) → 2x = 8 → (÷2 both sides) → x = 4 → (×5 both sides) → 5x = 20",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -1809,8 +1907,8 @@
       "image": "assets/ex14b.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "10 + 2x = 20 \u2192 (\u221210 both sides) \u2192 2x = 10 \u2192 (\u00f72 both sides) \u2192 x = 5 \u2192 (\u22123 both sides) \u2192 x \u2212 3 = 2 \u2192 (\u00d72 both sides) \u2192 2(x \u2212 3) = 4",
-      "aiNotes": "Official answer (from the Cambridge answer key): 10 + 2x = 20 \u2192 (\u221210 both sides) \u2192 2x = 10 \u2192 (\u00f72 both sides) \u2192 x = 5 \u2192 (\u22123 both sides) \u2192 x \u2212 3 = 2 \u2192 (\u00d72 both sides) \u2192 2(x \u2212 3) = 4",
+      "answer": "10 + 2x = 20 → (−10 both sides) → 2x = 10 → (÷2 both sides) → x = 5 → (−3 both sides) → x − 3 = 2 → (×2 both sides) → 2(x − 3) = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10 + 2x = 20 → (−10 both sides) → 2x = 10 → (÷2 both sides) → x = 5 → (−3 both sides) → x − 3 = 2 → (×2 both sides) → 2(x − 3) = 4",
       "misconceptions": [
         {
           "wrongAnswer": "applying the inverse operation to only one side of the equation",
@@ -1825,8 +1923,8 @@
       "image": "assets/ex14c.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "Yes \u2014 if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
-      "aiNotes": "Official answer (from the Cambridge answer key): Yes \u2014 if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
+      "answer": "Yes — if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes — if two equations each have a single solution and that solution is the same for both, the equations are equivalent.",
       "misconceptions": []
     },
     {
@@ -1836,8 +1934,8 @@
       "image": "assets/ex14d.png",
       "officialAnswerAvailable": true,
       "answerImage": null,
-      "answer": "Yes \u2014 if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
-      "aiNotes": "Official answer (from the Cambridge answer key): Yes \u2014 if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
+      "answer": "Yes — if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes — if two equations have different solutions they cannot be equivalent, since equivalent equations must have exactly the same solution(s).",
       "misconceptions": []
     },
     {
