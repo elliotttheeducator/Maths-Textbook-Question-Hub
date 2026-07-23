@@ -740,7 +740,7 @@ function revealStepLine(lineEl, latex) {
 
 function readingPauseMs(text) {
   const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
-  return Math.max(1000, Math.min(3000, words * 220));
+  return Math.max(500, Math.min(1500, words * 110));
 }
 
 async function askAboutStep(step, inputEl, replyEl, sendBtn) {
