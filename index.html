@@ -149,7 +149,7 @@
     border-radius: 4px; padding: 0.7rem 0.9rem; color: #4a4326; font-size: 0.92rem;
     box-shadow: 2px 3px 6px rgba(0,0,0,0.12);
     opacity: 0; transform: translateY(6px) rotate(-0.5deg);
-    transition: opacity 300ms ease 250ms, transform 300ms ease 250ms;
+    transition: opacity 300ms ease, transform 300ms ease;
   }
   .wb-toast.show { opacity: 1; transform: rotate(-0.5deg); }
   .wb-controls { margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
@@ -738,6 +738,11 @@ function revealStepLine(lineEl, latex) {
   requestAnimationFrame(() => requestAnimationFrame(() => lineEl.classList.add('revealed')));
 }
 
+function readingPauseMs(text) {
+  const words = (text || '').trim().split(/\s+/).filter(Boolean).length;
+  return Math.max(1000, Math.min(3000, words * 220));
+}
+
 async function askAboutStep(step, inputEl, replyEl, sendBtn) {
   const question = inputEl.value.trim();
   if (!question) return;
@@ -823,6 +828,12 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
     active.classList.remove('fading');
     stack.innerHTML = '';
     active.innerHTML = '';
+    const firstPrompt = steps[0] && steps[0].prompt;
+    if (firstPrompt) {
+      const promptEl = h('div', { class: 'wb-prompt' }, firstPrompt);
+      active.appendChild(promptEl);
+      renderMath(promptEl);
+    }
     const startBtn = h('button', { class: 'wb-understand' }, '▶ Start');
     startBtn.addEventListener('click', renderActiveStep);
     active.appendChild(h('div', { class: 'wb-controls wb-controls-center' }, startBtn));
@@ -868,8 +879,10 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
 
     active.appendChild(h('div', { class: 'wb-controls' }, [understandBtn, confusedWrap, replyBox]));
 
-    revealStepLine(lineEl, highlightLatex(step.line, step.highlight));
     requestAnimationFrame(() => toast.classList.add('show'));
+    setTimeout(() => {
+      revealStepLine(lineEl, highlightLatex(step.line, step.highlight));
+    }, readingPauseMs(step.reasoning));
   }
 
   function advance(step) {
