@@ -16,15 +16,118 @@
   "workedExamples": [
     {
       "title": "Example 4 \u2014 Deciding if lines are parallel",
-      "image": "assets/example4.png"
+      "image": "assets/example4.png",
+      "diagram": "assets/example4_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Decide if this diagram contains a pair of parallel lines.",
+          "line": "60\u00b0 + 114\u00b0",
+          "reasoning": "The marked angles (60\u00b0 and 114\u00b0) are cointerior angles \u2014 they lie between the two lines, on the same side of the transversal. Cointerior angles are supplementary (sum to 180\u00b0) only when the lines are parallel."
+        },
+        {
+          "part": "a",
+          "line": "60\u00b0 + 114\u00b0 = 174\u00b0",
+          "reasoning": "60 + 114 = 174."
+        },
+        {
+          "part": "a",
+          "line": "174\u00b0 \\ne 180\u00b0",
+          "reasoning": "174\u00b0 is not equal to 180\u00b0, so the cointerior angles are not supplementary."
+        },
+        {
+          "part": "a",
+          "line": "\\text{No \u2014 not parallel}",
+          "reasoning": "Since the cointerior angles aren't supplementary, these lines are not parallel."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Decide if this diagram contains a pair of parallel lines.",
+          "line": "79\u00b0 \\text{ and } 82\u00b0",
+          "reasoning": "The marked angles (79\u00b0 and 82\u00b0) are corresponding angles \u2014 the same position at each intersection. Corresponding angles are equal only when the lines are parallel."
+        },
+        {
+          "part": "b",
+          "line": "79\u00b0 \\ne 82\u00b0",
+          "reasoning": "79\u00b0 is not equal to 82\u00b0."
+        },
+        {
+          "part": "b",
+          "line": "\\text{No \u2014 not parallel}",
+          "reasoning": "Since the corresponding angles aren't equal, these lines are not parallel."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c \u2014 Decide if this diagram contains a pair of parallel lines.",
+          "line": "125\u00b0 \\text{ and } 125\u00b0",
+          "reasoning": "The marked angles (both 125\u00b0) are alternate angles \u2014 on opposite sides of the transversal, between the lines. Alternate angles are equal only when the lines are parallel."
+        },
+        {
+          "part": "c",
+          "line": "125\u00b0 = 125\u00b0",
+          "reasoning": "Both angles are 125\u00b0, so they are equal."
+        },
+        {
+          "part": "c",
+          "line": "\\text{Yes \u2014 parallel}",
+          "reasoning": "Since the alternate angles are equal, these lines are parallel."
+        }
+      ]
     },
     {
       "title": "Example 5 \u2014 Finding angles in parallel lines",
-      "image": "assets/example5.png"
+      "image": "assets/example5.png",
+      "diagram": "assets/example5_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Find $a$ and $b$.",
+          "line": "a = 110",
+          "reasoning": "a and the marked 110\u00b0 angle are vertically opposite angles \u2014 vertically opposite angles are always equal."
+        },
+        {
+          "part": "a",
+          "line": "b + 110 = 180",
+          "reasoning": "b and the 110\u00b0 angle are cointerior angles in parallel lines \u2014 cointerior angles are supplementary (add to 180\u00b0)."
+        },
+        {
+          "part": "a",
+          "line": "b = 70",
+          "reasoning": "Subtract 110 from both sides: 180 \u2212 110 = 70."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Find $a$ and $b$.",
+          "line": "b = 68",
+          "reasoning": "b and the marked 68\u00b0 angle are corresponding angles in parallel lines \u2014 corresponding angles are equal."
+        },
+        {
+          "part": "b",
+          "line": "a + 68 = 180",
+          "reasoning": "a and b sit together on a straight line, so they're supplementary: a + b = 180."
+        },
+        {
+          "part": "b",
+          "line": "a = 112",
+          "reasoning": "Substitute b = 68: a + 68 = 180, so a = 180 \u2212 68 = 112."
+        }
+      ]
     },
     {
       "title": "Example 6 \u2014 Adding a third parallel line",
-      "image": "assets/example6.png"
+      "image": "assets/example6.png",
+      "diagram": "assets/example6_diagram.png",
+      "walkthrough": [
+        {
+          "prompt": "Find $\\angle ABC$ by adding a third parallel line through B.",
+          "line": "\\angle ABC = 50\u00b0 + 70\u00b0",
+          "reasoning": "Adding a third parallel line through B (the dashed red line) creates two pairs of alternate angles: 50\u00b0 matching the top angle, and 70\u00b0 matching the bottom angle."
+        },
+        {
+          "line": "\\angle ABC = 50\u00b0 + 70\u00b0 = 120\u00b0",
+          "reasoning": "The third line splits \u2220ABC into two alternate-angle pairs of 50\u00b0 and 70\u00b0, which together make up the whole angle: 50 + 70 = 120\u00b0."
+        }
+      ]
     }
   ],
   "questions": [
