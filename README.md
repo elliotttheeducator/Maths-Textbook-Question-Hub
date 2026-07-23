@@ -264,9 +264,43 @@ dump the final numeric answer unprompted.
 If you'd rather use a different provider (OpenAI, Claude, etc.), the only
 place that needs changing is the `callGeminiChat` function in `index.html`.
 
+## Sharing one API key with a class (class codes)
+
+The original design had every device paste in its own Gemini API key via
+Settings — fine for one teacher testing solo, but painful for a real class:
+students had to be handed the key and walked through Teacher mode just to
+unlock Settings, and the key ends up copyable out of `localStorage` on
+every one of those devices.
+
+`cloudflare-worker/` sets up a small free proxy that fixes this: your real
+API key lives only in a Cloudflare KV store, addressed by a class code you
+choose yourself (e.g. `MrHallsYear7`, not a random string). Students get a
+link like:
+
+```
+https://<your-pages-url>/?book=year7-maths&class=MrHallsYear7
+```
+
+and that's it — no picker, no Settings, no Teacher mode, no key to find.
+The app reads the class code from the URL and routes chat requests through
+your Worker, which looks up the real key server-side and forwards the
+request to Gemini. The key itself never reaches a student's browser, so it
+can't be read out of devtools or shared further, unlike the code itself
+(which is fine to share — it only works from inside your Worker).
+
+See `cloudflare-worker/README.md` for the one-time (~15 minute) setup.
+Once deployed, tell whoever maintains the app your Worker's URL so it can
+be set as `WORKER_URL` near the top of `index.html`'s `<script>`.
+
+Without a class code (or before `WORKER_URL` is set), the app falls back
+to the original per-device API key in Settings — nothing about that flow
+changed, so solo testing still works exactly as before.
+
 ## Privacy note
 
-Everything runs client-side. The only network call is the direct
-browser → Gemini API request carrying the question image, question
-context, and the chat messages (no names, no accounts, nothing persisted
-server-side).
+Everything runs client-side. With a class code, the network calls are
+browser → your Cloudflare Worker → Gemini, and your Worker never logs or
+stores the chat content, only a per-class daily request count used to cap
+usage. Without a class code, it's the original direct browser → Gemini API
+request carrying the question image, question context, and the chat
+messages (no names, no accounts, nothing persisted server-side).

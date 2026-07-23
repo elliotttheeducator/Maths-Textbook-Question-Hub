@@ -286,13 +286,16 @@
   </div>
 </main>
 
-<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; your API key and teacher PIN are stored only in this browser's local storage.</footer>
+<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; your API key, class code and teacher PIN are stored only in this browser's local storage.</footer>
 
 <dialog id="settings-dialog">
   <h3>AI settings</h3>
+  <label for="class-code-input">Class code</label>
+  <input type="text" id="class-code-input" placeholder="e.g. MrHallsYear7">
+  <p class="hint">If your school has a class-code proxy set up (see cloudflare-worker/README.md), enter it here and students never need an API key at all — sharing a link with <code>&class=YourCode</code> already does this automatically, so you'd only set this manually for testing. Leave blank to use the API key below directly instead.</p>
   <label for="api-key-input">Gemini API key</label>
   <input type="password" id="api-key-input" placeholder="Paste your free Google AI Studio key">
-  <p class="hint">Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API.</p>
+  <p class="hint">Only used when no class code is set above. Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API.</p>
   <label for="model-input">Model</label>
   <input type="text" id="model-input" placeholder="gemini-2.5-flash-lite">
   <p class="hint">Google's free tier changes which models it covers over time, and the current free daily cap (often as low as 20 requests/day) is genuinely too low for a real class. Check aistudio.google.com/usage → Rate Limit for what's free right now. If you hit 429 errors during a lesson, the real fix is enabling billing on your Google Cloud project — Gemini Flash-Lite pricing is a fraction of a cent per message, so a whole class's daily use should still only be cents, not dollars.</p>
@@ -320,6 +323,11 @@
 <script src="vendor/katex/auto-render.min.js"></script>
 <script>
 const LIBRARY_URL = 'library.json';
+
+// Not a secret - just an address. Set this once you've deployed the proxy
+// in cloudflare-worker/ (see cloudflare-worker/README.md). The real secret
+// (your Gemini API key) lives only in that Worker's KV store, never here.
+const WORKER_URL = '';
 
 const state = {
   library: [],
@@ -375,6 +383,11 @@ async function bootLibrary() {
   const params = new URLSearchParams(window.location.search);
   const requestedId = params.get('book');
   const requested = requestedId ? state.library.find(b => b.id === requestedId) : null;
+
+  const classCode = params.get('class');
+  if (classCode) {
+    localStorage.setItem('mqh_class_code', classCode);
+  }
 
   await selectBook(requested || state.library[0]);
   renderLibraryHero();
@@ -653,6 +666,7 @@ function getSettings() {
     apiKey: localStorage.getItem('mqh_api_key') || '',
     model: localStorage.getItem('mqh_model') || 'gemini-2.5-flash-lite',
     pin: localStorage.getItem('mqh_teacher_pin') || '',
+    classCode: localStorage.getItem('mqh_class_code') || '',
   };
 }
 
@@ -695,27 +709,46 @@ function describeApiError(errText) {
 }
 
 async function callGeminiChat(systemInstruction, imageParts, history) {
-  const { apiKey, model } = getSettings();
-  if (!apiKey) {
-    throw new Error('No API key set. Click Settings and paste a free Gemini API key from Google AI Studio.');
-  }
-  const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+  const { apiKey, model, classCode } = getSettings();
+
   const contents = [];
   if (imageParts.length) {
     contents.push({ role: 'user', parts: [...imageParts, { text: 'This is the question the student is working on. Look at it carefully before responding.' }] });
     contents.push({ role: 'model', parts: [{ text: 'Got it, I can see the question clearly.' }] });
   }
   history.forEach(m => contents.push({ role: m.role, parts: [{ text: m.text }] }));
-  const body = {
+  const geminiBody = {
     systemInstruction: { parts: [{ text: systemInstruction }] },
     contents,
     generationConfig: { temperature: 0.5 },
   };
-  const res = await fetch(url, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify(body),
-  });
+
+  const useProxy = !!(classCode && WORKER_URL);
+
+  if (!useProxy && !apiKey) {
+    throw new Error('No API key set. Click Settings and paste a free Gemini API key from Google AI Studio (or ask your teacher for a class link).');
+  }
+
+  let res;
+  try {
+    if (useProxy) {
+      res = await fetch(WORKER_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', 'X-Class-Code': classCode },
+        body: JSON.stringify({ model, ...geminiBody }),
+      });
+    } else {
+      const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
+      res = await fetch(url, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(geminiBody),
+      });
+    }
+  } catch (err) {
+    throw new Error(`Couldn't reach the ${useProxy ? 'class proxy' : 'Gemini API'} — check your internet connection, or your network may be blocking it. (${err.message})`);
+  }
+
   if (!res.ok) {
     const errText = await res.text();
     throw new Error(`API error (${res.status}): ${describeApiError(errText)}`);
@@ -811,7 +844,8 @@ function submitPin() {
 // ---------- Settings ----------
 
 function openSettings() {
-  const { apiKey, model, pin } = getSettings();
+  const { apiKey, model, pin, classCode } = getSettings();
+  el('class-code-input').value = classCode;
   el('api-key-input').value = apiKey;
   el('model-input').value = model;
   el('pin-input').value = pin;
@@ -819,6 +853,7 @@ function openSettings() {
 }
 
 function saveSettings() {
+  localStorage.setItem('mqh_class_code', el('class-code-input').value.trim());
   localStorage.setItem('mqh_api_key', el('api-key-input').value.trim());
   localStorage.setItem('mqh_model', el('model-input').value.trim() || 'gemini-2.5-flash-lite');
   localStorage.setItem('mqh_teacher_pin', el('pin-input').value.trim());
