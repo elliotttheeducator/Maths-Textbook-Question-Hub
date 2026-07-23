@@ -1,0 +1,1714 @@
+{
+  "id": "9B",
+  "title": "Solving equations by inspection",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) — Chapter 9 Equations, Section 9B. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 4 — Finding the missing number",
+      "image": "assets/example4.png"
+    },
+    {
+      "title": "Example 5 — Solving equations by inspection",
+      "image": "assets/example5.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "classifying an equation as true or false for a given value",
+      "image": "assets/bu1a.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [
+        {
+          "wrongAnswer": "substituting the value 5 incorrectly or miscalculating the arithmetic once it is substituted",
+          "reason": "the student must actually compute both sides of the equation after substituting 5 for the box before deciding true or false, not just guess"
+        },
+        {
+          "wrongAnswer": "assuming any equation with a box in it is automatically 'true' because an equation is presented",
+          "reason": "an equation is only true for the specific value substituted - it must be checked by calculation, not assumed"
+        }
+      ]
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "classifying an equation as true or false for a given value",
+      "image": "assets/bu1b.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [
+        {
+          "wrongAnswer": "substituting the value 5 incorrectly or miscalculating the arithmetic once it is substituted",
+          "reason": "the student must actually compute both sides of the equation after substituting 5 for the box before deciding true or false, not just guess"
+        },
+        {
+          "wrongAnswer": "assuming any equation with a box in it is automatically 'true' because an equation is presented",
+          "reason": "an equation is only true for the specific value substituted - it must be checked by calculation, not assumed"
+        }
+      ]
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "classifying an equation as true or false for a given value",
+      "image": "assets/bu1c.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [
+        {
+          "wrongAnswer": "substituting the value 5 incorrectly or miscalculating the arithmetic once it is substituted",
+          "reason": "the student must actually compute both sides of the equation after substituting 5 for the box before deciding true or false, not just guess"
+        },
+        {
+          "wrongAnswer": "assuming any equation with a box in it is automatically 'true' because an equation is presented",
+          "reason": "an equation is only true for the specific value substituted - it must be checked by calculation, not assumed"
+        }
+      ]
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "classifying an equation as true or false for a given value",
+      "image": "assets/bu1d.png",
+      "contextImage": "assets/bu1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [
+        {
+          "wrongAnswer": "substituting the value 5 incorrectly or miscalculating the arithmetic once it is substituted",
+          "reason": "the student must actually compute both sides of the equation after substituting 5 for the box before deciding true or false, not just guess"
+        },
+        {
+          "wrongAnswer": "assuming any equation with a box in it is automatically 'true' because an equation is presented",
+          "reason": "an equation is only true for the specific value substituted - it must be checked by calculation, not assumed"
+        }
+      ]
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "evaluating the LHS of an equation for a given value of the unknown",
+      "image": "assets/bu2a.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "solving the equation for the unknown instead of just evaluating the LHS for the given value",
+          "reason": "this question only asks for the value of the left-hand side after substituting - it is not yet asking to solve the equation"
+        },
+        {
+          "wrongAnswer": "substituting the value into the RHS (13) instead of into the box on the LHS",
+          "reason": "the given value replaces the box, which sits on the left-hand side of the equation, not the number after the equals sign"
+        }
+      ]
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "evaluating the LHS of an equation for a given value of the unknown",
+      "image": "assets/bu2b.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "17",
+      "aiNotes": "Official answer (from the Cambridge answer key): 17",
+      "misconceptions": [
+        {
+          "wrongAnswer": "solving the equation for the unknown instead of just evaluating the LHS for the given value",
+          "reason": "this question only asks for the value of the left-hand side after substituting - it is not yet asking to solve the equation"
+        },
+        {
+          "wrongAnswer": "substituting the value into the RHS (13) instead of into the box on the LHS",
+          "reason": "the given value replaces the box, which sits on the left-hand side of the equation, not the number after the equals sign"
+        }
+      ]
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "evaluating the LHS of an equation for a given value of the unknown",
+      "image": "assets/bu2c.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "13",
+      "aiNotes": "Official answer (from the Cambridge answer key): 13",
+      "misconceptions": [
+        {
+          "wrongAnswer": "solving the equation for the unknown instead of just evaluating the LHS for the given value",
+          "reason": "this question only asks for the value of the left-hand side after substituting - it is not yet asking to solve the equation"
+        },
+        {
+          "wrongAnswer": "substituting the value into the RHS (13) instead of into the box on the LHS",
+          "reason": "the given value replaces the box, which sits on the left-hand side of the equation, not the number after the equals sign"
+        }
+      ]
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "evaluating the LHS of an equation for a given value of the unknown",
+      "image": "assets/bu2d.png",
+      "contextImage": "assets/bu2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "solving the equation for the unknown instead of just evaluating the LHS for the given value",
+          "reason": "this question only asks for the value of the left-hand side after substituting - it is not yet asking to solve the equation"
+        },
+        {
+          "wrongAnswer": "substituting the value into the RHS (13) instead of into the box on the LHS",
+          "reason": "the given value replaces the box, which sits on the left-hand side of the equation, not the number after the equals sign"
+        }
+      ]
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "identifying the unknown pronumeral in an equation",
+      "image": "assets/bu3a.png",
+      "contextImage": "assets/bu3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x",
+      "aiNotes": "Official answer (from the Cambridge answer key): x",
+      "misconceptions": [
+        {
+          "wrongAnswer": "naming a constant or coefficient in the equation as the pronumeral instead of the actual letter",
+          "reason": "the unknown/pronumeral is the letter itself (e.g. x, c, b, d), not any of the numbers multiplying or added to it"
+        },
+        {
+          "wrongAnswer": "trying to solve the equation for a numerical value instead of simply stating which letter is unknown",
+          "reason": "this question only asks the student to identify the pronumeral by name - no solving is required yet"
+        }
+      ]
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "identifying the unknown pronumeral in an equation",
+      "image": "assets/bu3b.png",
+      "contextImage": "assets/bu3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "c",
+      "aiNotes": "Official answer (from the Cambridge answer key): c",
+      "misconceptions": [
+        {
+          "wrongAnswer": "naming a constant or coefficient in the equation as the pronumeral instead of the actual letter",
+          "reason": "the unknown/pronumeral is the letter itself (e.g. x, c, b, d), not any of the numbers multiplying or added to it"
+        },
+        {
+          "wrongAnswer": "trying to solve the equation for a numerical value instead of simply stating which letter is unknown",
+          "reason": "this question only asks the student to identify the pronumeral by name - no solving is required yet"
+        }
+      ]
+    },
+    {
+      "id": "bu3c",
+      "tier": "warmup",
+      "topic": "identifying the unknown pronumeral in an equation",
+      "image": "assets/bu3c.png",
+      "contextImage": "assets/bu3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b",
+      "aiNotes": "Official answer (from the Cambridge answer key): b",
+      "misconceptions": [
+        {
+          "wrongAnswer": "naming a constant or coefficient in the equation as the pronumeral instead of the actual letter",
+          "reason": "the unknown/pronumeral is the letter itself (e.g. x, c, b, d), not any of the numbers multiplying or added to it"
+        },
+        {
+          "wrongAnswer": "trying to solve the equation for a numerical value instead of simply stating which letter is unknown",
+          "reason": "this question only asks the student to identify the pronumeral by name - no solving is required yet"
+        }
+      ]
+    },
+    {
+      "id": "bu3d",
+      "tier": "warmup",
+      "topic": "identifying the unknown pronumeral in an equation",
+      "image": "assets/bu3d.png",
+      "contextImage": "assets/bu3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d",
+      "aiNotes": "Official answer (from the Cambridge answer key): d",
+      "misconceptions": [
+        {
+          "wrongAnswer": "naming a constant or coefficient in the equation as the pronumeral instead of the actual letter",
+          "reason": "the unknown/pronumeral is the letter itself (e.g. x, c, b, d), not any of the numbers multiplying or added to it"
+        },
+        {
+          "wrongAnswer": "trying to solve the equation for a numerical value instead of simply stating which letter is unknown",
+          "reason": "this question only asks the student to identify the pronumeral by name - no solving is required yet"
+        }
+      ]
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection",
+      "image": "assets/ex1a.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection",
+      "image": "assets/ex1b.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "50",
+      "aiNotes": "Official answer (from the Cambridge answer key): 50",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection",
+      "image": "assets/ex1c.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "8",
+      "aiNotes": "Official answer (from the Cambridge answer key): 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection",
+      "image": "assets/ex1d.png",
+      "contextImage": "assets/ex1_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "17",
+      "aiNotes": "Official answer (from the Cambridge answer key): 17",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2a.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2b.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2c.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "10",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2d.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2e.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2f.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "70",
+      "aiNotes": "Official answer (from the Cambridge answer key): 70",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2g",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2g.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "20",
+      "aiNotes": "Official answer (from the Cambridge answer key): 20",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex2h",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (unknown on either side)",
+      "image": "assets/ex2h.png",
+      "contextImage": "assets/ex2_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "19",
+      "aiNotes": "Official answer (from the Cambridge answer key): 19",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3a.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3b.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3c.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3d.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3e",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3e.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3f",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3f.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3g",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3g.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3h",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3h.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3i",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3i.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "e = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): e = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3j",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3j.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "r = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): r = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3k",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3k.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex3l",
+      "tier": "fluency",
+      "topic": "solving one-step equations by inspection (pronumeral unknowns)",
+      "image": "assets/ex3l.png",
+      "contextImage": "assets/ex3_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "z = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): z = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "guessing a number without checking it actually makes the equation true",
+          "reason": "solving by inspection means trying values and checking they satisfy the equation - a guess must be verified by substitution"
+        },
+        {
+          "wrongAnswer": "applying the inverse operation to only one side of the equation, or to the wrong side",
+          "reason": "whatever value is found for the missing number must make BOTH sides of the equation equal when substituted back in"
+        }
+      ]
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4a.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4b.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4c.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4d.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "v = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): v = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4e",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4e.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4f",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4f.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4g",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4g.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "g = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): g = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4h",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4h.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "e = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): e = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4i",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4i.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4j",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4j.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4k",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4k.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex4l",
+      "tier": "fluency",
+      "topic": "solving two-step equations by inspection",
+      "image": "assets/ex4l.png",
+      "contextImage": "assets/ex4_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "o = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): o = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "checking only one of the two operations (e.g. the multiplication) and forgetting to check the second (e.g. the subtraction) when verifying a trial value",
+          "reason": "a two-step equation like 2p - 1 = 5 needs the trial value substituted through BOTH operations, in order, before comparing to the right-hand side"
+        },
+        {
+          "wrongAnswer": "not expanding the brackets before substituting, e.g. treating 4(e - 2) = 4 as if it were 4e - 2 = 4",
+          "reason": "brackets mean everything inside is multiplied by the number out the front - the trial value must be substituted inside the brackets first, then multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex5a",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5a.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex5b",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5b.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex5c",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5c.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex5d",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5d.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex5e",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5e.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex5f",
+      "tier": "fluency",
+      "topic": "solving equations with the unknown on both sides / with brackets, by inspection",
+      "image": "assets/ex5f.png",
+      "contextImage": "assets/ex5_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "stopping after trying one or two whole numbers between 1 and 10 without finding one that actually works",
+          "reason": "the question guarantees a whole-number solution between 1 and 10 exists, so the student should systematically try values in that range until the equation balances"
+        },
+        {
+          "wrongAnswer": "treating the unknown differently on each side, e.g. for 7 + x = 2 x x substituting a value for x on the left but not updating it on the right",
+          "reason": "when the same pronumeral appears on both sides, the same trial value must be substituted everywhere it appears"
+        }
+      ]
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6a.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "11",
+      "aiNotes": "Official answer (from the Cambridge answer key): 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6b.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex6c",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6c.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "16",
+      "aiNotes": "Official answer (from the Cambridge answer key): 16",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex6d",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6d.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "33",
+      "aiNotes": "Official answer (from the Cambridge answer key): 33",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex6e",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6e.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "30",
+      "aiNotes": "Official answer (from the Cambridge answer key): 30",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex6f",
+      "tier": "problem-solving",
+      "topic": "translating a worded statement into an equation and solving by inspection",
+      "image": "assets/ex6f.png",
+      "contextImage": "assets/ex6_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "performing the described operation in the wrong direction, e.g. reading '3 less than a number is 9' as 3 - x = 9 instead of x - 3 = 9",
+          "reason": "phrases like 'less than' and 'more than' describe what happens to the unknown number, so the number comes first and the adjustment is applied to it, not the other way around"
+        },
+        {
+          "wrongAnswer": "giving the value of the expression rather than the original unknown number",
+          "reason": "the question asks for the number itself (before doubling/halving/dividing), not the result stated in the sentence"
+        }
+      ]
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "choosing the correct equation for a worded age problem",
+      "image": "assets/ex7a.png",
+      "contextImage": "assets/ex7_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "B",
+      "aiNotes": "Official answer (from the Cambridge answer key): B",
+      "misconceptions": [
+        {
+          "wrongAnswer": "choosing an equation where the numbers are added in the wrong order, e.g. x + 18 = 5",
+          "reason": "Ezekiel's current age (x) plus the 5 years that pass equals his age in the future (18), so the equation must be x + 5 = 18"
+        }
+      ]
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "solving a worded age problem by inspection",
+      "image": "assets/ex7b.png",
+      "contextImage": "assets/ex7_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 13",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 13",
+      "misconceptions": [
+        {
+          "wrongAnswer": "solving a different equation than the one chosen in part a, or performing the wrong inverse operation",
+          "reason": "x + 5 = 18 is solved by finding what number plus 5 gives 18, i.e. by inspection or by subtracting 5 from 18"
+        }
+      ]
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "interpreting the solution of a worded age problem",
+      "image": "assets/ex7c.png",
+      "contextImage": "assets/ex7_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "13 years old",
+      "aiNotes": "Official answer (from the Cambridge answer key): 13 years old",
+      "misconceptions": [
+        {
+          "wrongAnswer": "answering with the value from '5 years' time' (18) instead of Ezekiel's current age",
+          "reason": "the question asks how old Ezekiel is now, which is the solution x, not the age he will be in 5 years"
+        }
+      ]
+    },
+    {
+      "id": "ex8a",
+      "tier": "problem-solving",
+      "topic": "writing an equation for a wage word problem",
+      "image": "assets/ex8a.png",
+      "contextImage": "assets/ex8_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "10x = 180",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10x = 180",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation with the operation reversed, e.g. writing 180x = 10 instead of 10x = 180",
+          "reason": "the rate ($10 per hour) multiplies the number of hours (x) to give the total earned, so the rate must be the coefficient of x, not the total"
+        },
+        {
+          "wrongAnswer": "solving the equation using the wrong inverse operation, e.g. multiplying instead of dividing",
+          "reason": "to undo multiplication by 10 in 10x = 180, both sides must be divided by 10, not multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex8b",
+      "tier": "problem-solving",
+      "topic": "solving a wage equation by inspection",
+      "image": "assets/ex8b.png",
+      "contextImage": "assets/ex8_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 18",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 18",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation with the operation reversed, e.g. writing 180x = 10 instead of 10x = 180",
+          "reason": "the rate ($10 per hour) multiplies the number of hours (x) to give the total earned, so the rate must be the coefficient of x, not the total"
+        },
+        {
+          "wrongAnswer": "solving the equation using the wrong inverse operation, e.g. multiplying instead of dividing",
+          "reason": "to undo multiplication by 10 in 10x = 180, both sides must be divided by 10, not multiplied"
+        }
+      ]
+    },
+    {
+      "id": "ex9a",
+      "tier": "problem-solving",
+      "topic": "writing an equation for a weight comparison word problem",
+      "image": "assets/ex9a.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2w = 70",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2w = 70",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation as w = 2 x 70 instead of 2w = 70",
+          "reason": "the brother's weight (70 kg) is twice Karim's weight (w), so 2w equals 70, not w equals 2 lots of 70"
+        },
+        {
+          "wrongAnswer": "solving for the brother's weight (70 kg) rather than Karim's weight (w)",
+          "reason": "the question asks to solve for w, Karim's own weight, using the equation 2w = 70"
+        }
+      ]
+    },
+    {
+      "id": "ex9b",
+      "tier": "problem-solving",
+      "topic": "solving a weight comparison equation by inspection",
+      "image": "assets/ex9b.png",
+      "contextImage": "assets/ex9_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "w = 35",
+      "aiNotes": "Official answer (from the Cambridge answer key): w = 35",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation as w = 2 x 70 instead of 2w = 70",
+          "reason": "the brother's weight (70 kg) is twice Karim's weight (w), so 2w equals 70, not w equals 2 lots of 70"
+        },
+        {
+          "wrongAnswer": "solving for the brother's weight (70 kg) rather than Karim's weight (w)",
+          "reason": "the question asks to solve for w, Karim's own weight, using the equation 2w = 70"
+        }
+      ]
+    },
+    {
+      "id": "ex10a",
+      "tier": "problem-solving",
+      "topic": "writing an equation for a cost word problem with decimals",
+      "image": "assets/ex10a.png",
+      "contextImage": "assets/ex10_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4.5x = 13.5",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4.5x = 13.5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation without the decimal price per kilogram, e.g. 4x = 13.5 instead of 4.5x = 13.5",
+          "reason": "the price per kilogram is $4.50, not $4, so the coefficient of x in the equation must be 4.5"
+        },
+        {
+          "wrongAnswer": "rounding or misplacing the decimal point when dividing 13.5 by 4.5 to solve for x",
+          "reason": "solving 4.5x = 13.5 requires dividing both sides by 4.5 carefully, including the decimal, to get the correct value of x"
+        }
+      ]
+    },
+    {
+      "id": "ex10b",
+      "tier": "problem-solving",
+      "topic": "solving a decimal cost equation by inspection",
+      "image": "assets/ex10b.png",
+      "contextImage": "assets/ex10_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation without the decimal price per kilogram, e.g. 4x = 13.5 instead of 4.5x = 13.5",
+          "reason": "the price per kilogram is $4.50, not $4, so the coefficient of x in the equation must be 4.5"
+        },
+        {
+          "wrongAnswer": "rounding or misplacing the decimal point when dividing 13.5 by 4.5 to solve for x",
+          "reason": "solving 4.5x = 13.5 requires dividing both sides by 4.5 carefully, including the decimal, to get the correct value of x"
+        }
+      ]
+    },
+    {
+      "id": "ex11a",
+      "tier": "problem-solving",
+      "topic": "writing an equation for a future-age word problem",
+      "image": "assets/ex11a.png",
+      "contextImage": "assets/ex11_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y + 12 = 3y",
+      "aiNotes": "Official answer (from the Cambridge answer key): y + 12 = 3y",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation as y + 12 = y x 3 confused with the wrong side tripled, e.g. 3y + 12 = y",
+          "reason": "in 12 years, Yanni's age (y + 12) will equal three times his CURRENT age (3y), so the equation is y + 12 = 3y"
+        },
+        {
+          "wrongAnswer": "solving for Yanni's age in 12 years' time rather than his current age",
+          "reason": "the pronumeral y represents Yanni's current age - the question asks to solve for y, not for y + 12"
+        }
+      ]
+    },
+    {
+      "id": "ex11b",
+      "tier": "problem-solving",
+      "topic": "solving a future-age equation by inspection",
+      "image": "assets/ex11b.png",
+      "contextImage": "assets/ex11_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "writing the equation as y + 12 = y x 3 confused with the wrong side tripled, e.g. 3y + 12 = y",
+          "reason": "in 12 years, Yanni's age (y + 12) will equal three times his CURRENT age (3y), so the equation is y + 12 = 3y"
+        },
+        {
+          "wrongAnswer": "solving for Yanni's age in 12 years' time rather than his current age",
+          "reason": "the pronumeral y represents Yanni's current age - the question asks to solve for y, not for y + 12"
+        }
+      ]
+    },
+    {
+      "id": "ex12a",
+      "tier": "reasoning",
+      "topic": "solving an equation with a repeated pronumeral by inspection",
+      "image": "assets/ex12a.png",
+      "contextImage": "assets/ex12_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve x + (x + 1) = 181 by pure trial and error without first simplifying the expression to 2x + 1",
+          "reason": "for larger numbers, simplifying x + (x + 1) to 2x + 1 first makes solving by inspection far quicker and less error-prone"
+        },
+        {
+          "wrongAnswer": "simplifying x + (x + 1) incorrectly, e.g. to 2x instead of 2x + 1",
+          "reason": "the constant term (+1) must be kept when combining the two x terms - only the pronumeral terms (x and x) combine to 2x"
+        }
+      ]
+    },
+    {
+      "id": "ex12b",
+      "tier": "reasoning",
+      "topic": "using a simplified expression to solve a harder equation by inspection",
+      "image": "assets/ex12b.png",
+      "contextImage": "assets/ex12_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2x + 1 = 181 so x = 90",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2x + 1 = 181 so x = 90",
+      "misconceptions": [
+        {
+          "wrongAnswer": "trying to solve x + (x + 1) = 181 by pure trial and error without first simplifying the expression to 2x + 1",
+          "reason": "for larger numbers, simplifying x + (x + 1) to 2x + 1 first makes solving by inspection far quicker and less error-prone"
+        },
+        {
+          "wrongAnswer": "simplifying x + (x + 1) incorrectly, e.g. to 2x instead of 2x + 1",
+          "reason": "the constant term (+1) must be kept when combining the two x terms - only the pronumeral terms (x and x) combine to 2x"
+        }
+      ]
+    },
+    {
+      "id": "ex13a",
+      "tier": "reasoning",
+      "topic": "solving a consecutive-integer word problem by inspection",
+      "image": "assets/ex13a.png",
+      "contextImage": "assets/ex13_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 14, so 14, 15 and 16 are the numbers.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 14, so 14, 15 and 16 are the numbers.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "finding a value of x that makes the equation true but not adding 1 and 2 to state all three consecutive numbers",
+          "reason": "the question asks for the three numbers (14, 15 and 16), not just the value of x"
+        },
+        {
+          "wrongAnswer": "claiming any right-hand side value would give a whole-number answer for x",
+          "reason": "since x + (x+1) + (x+2) simplifies to 3x + 3, the right-hand side must be a multiple of 3 for x to come out as a whole number"
+        }
+      ]
+    },
+    {
+      "id": "ex13b",
+      "tier": "reasoning",
+      "topic": "explaining why a consecutive-integer equation needs a multiple-of-3 solution",
+      "image": "assets/ex13b.png",
+      "contextImage": "assets/ex13_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "LHS is 3x + 3 or 3(x + 1), which will always be a multiple of 3.",
+      "aiNotes": "Official answer (from the Cambridge answer key): LHS is 3x + 3 or 3(x + 1), which will always be a multiple of 3.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "finding a value of x that makes the equation true but not adding 1 and 2 to state all three consecutive numbers",
+          "reason": "the question asks for the three numbers (14, 15 and 16), not just the value of x"
+        },
+        {
+          "wrongAnswer": "claiming any right-hand side value would give a whole-number answer for x",
+          "reason": "since x + (x+1) + (x+2) simplifies to 3x + 3, the right-hand side must be a multiple of 3 for x to come out as a whole number"
+        }
+      ]
+    },
+    {
+      "id": "ex14a",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14a.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 2 and y = 6; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 2 and y = 6; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    },
+    {
+      "id": "ex14b",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14b.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 12 and y = 10; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 12 and y = 10; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    },
+    {
+      "id": "ex14c",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14c.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 1 and y = 1; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 1 and y = 1; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    },
+    {
+      "id": "ex14d",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14d.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 12 and y = 0.5; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 12 and y = 0.5; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    },
+    {
+      "id": "ex14e",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14e.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 10 and y = 0; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 10 and y = 0; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    },
+    {
+      "id": "ex14f",
+      "tier": "enrichment",
+      "topic": "solving an equation with two unknowns by inspection (multiple valid solutions)",
+      "image": "assets/ex14f.png",
+      "contextImage": "assets/ex14_context.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 2 and y = 2; answers may vary.",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 2 and y = 2; answers may vary.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "assuming there is only one correct pair of values for x and y, and treating any other valid pair as wrong",
+          "reason": "equations with two unknowns and only one equation usually have many valid solution pairs - any pair that makes the equation true is acceptable, answers may vary"
+        },
+        {
+          "wrongAnswer": "substituting a trial value for x but forgetting to also choose and check a value for y (or vice versa) before confirming the equation balances",
+          "reason": "both x and y must be substituted together and the whole equation checked, since changing either value changes whether the equation is true"
+        }
+      ]
+    }
+  ]
+}
