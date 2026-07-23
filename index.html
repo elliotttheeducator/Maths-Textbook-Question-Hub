@@ -905,6 +905,7 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
 }
 
 function walkthroughGateSatisfied() {
+  if (state.teacherMode) return true;
   const list = (state.bank && state.bank.workedExamples) || [];
   return list.every((ex, idx) => {
     if (!Array.isArray(ex.walkthrough) || !ex.walkthrough.length) return true;
@@ -1312,6 +1313,7 @@ function updateTeacherVisibility() {
   document.querySelectorAll('.teacher-only').forEach(elm => { elm.style.display = on ? 'inline-block' : 'none'; });
   el('teacher-toggle-btn').textContent = on ? '🔓 Teacher mode' : '🔒 Teacher mode';
   el('teacher-toggle-btn').className = 'small' + (on ? ' teacher-on' : '');
+  updateWalkthroughGate();
 }
 
 function toggleTeacherMode() {
