@@ -18,8 +18,9 @@ runs entirely in the browser.
 ## Quick start
 
 1. Open `index.html` in a browser (or serve the folder — see Deployment below).
-2. Click **⚙️ Settings**, pick an AI provider (Gemini, OpenAI, or Claude),
-   paste in a free API key for it, and save.
+2. Click **🔒 Teacher mode**, enter the PIN (`5157`, hardcoded — see Teacher
+   mode below), then click **⚙️ Settings**, pick an AI provider (Gemini,
+   OpenAI, or Claude), paste in a free API key for it, and save.
    - Gemini: aistudio.google.com. OpenAI: platform.openai.com. Claude:
      console.anthropic.com.
    - The key is stored only in that browser's `localStorage`, one slot per
@@ -27,10 +28,6 @@ runs entirely in the browser.
      It's sent directly from the browser to that provider's API and nowhere
      else — unless a hosted proxy is configured (see "Sharing AI access
      with a class" below), in which case it's only used as a fallback.
-   - Optionally set a **Teacher PIN** here too (see Teacher mode below).
-   - Settings itself is teacher-mode-only (see below) — the very first time,
-     with no PIN set yet, toggling Teacher mode unlocks it immediately so
-     you can do this initial setup at all.
 3. The app opens straight into the chapter grid for its default textbook
    (no picker screen — see "Multiple textbooks" below if you're running
    more than one class/book from this same repo). Click a chapter to open
@@ -50,14 +47,15 @@ Answers, jumping around, and picking a custom subset of questions are all
 gated behind **Teacher mode** (the 🔒 button in the header) so students
 never see a reveal button on the shared screen by default:
 
-- Set a **Teacher PIN** in Settings (optional — if you leave it blank,
-  clicking the toggle turns Teacher mode on immediately with no gate; the
-  PIN is friction to keep the button off the student-facing screen, not
-  real security).
+- The PIN is a single hardcoded value, `5157` (`TEACHER_PIN` in
+  `index.html`), the same on every device — not something you set per
+  browser. This is friction to keep the button off the student-facing
+  screen, not real security; change the constant in the source if you want
+  a different code.
 - With Teacher mode on, five things appear:
-  - **⚙️ Settings** itself (API key, model, PIN) — students never see this,
-    so once you've set it up on a device the key just works from then on
-    with no student-facing configuration at all.
+  - **⚙️ Settings** itself (API key, model) — students never see this, so
+    once you've set it up on a device the key just works from then on with
+    no student-facing configuration at all.
   - **📚 Textbooks** in the header — the only way to reach the textbook
     picker (see "Multiple textbooks" below); students never see it.
   - **Show official worked answer** on each question, revealing the actual
@@ -291,10 +289,8 @@ Add `&provider=openai` or `&provider=claude` to point a specific link at a
 different provider than whatever's selected on your own device.
 
 Because this option needs no key at all, your public site link technically
-works for anyone who finds it, not just your class — set an `ACCESS_CODE`
-on the Worker (see `cloudflare-worker/README.md`) if that's a concern.
-Students are prompted for it automatically the first time they chat, or
-skip the prompt with `&access=YourCode` in the link.
+works for anyone who finds it, not just your class — worth knowing, though
+not something this app currently gates further.
 
 **2. Direct key in the link (fallback, or if you'd rather skip the proxy).**
 Your own device sets a provider + key the normal way: **⚙️ Settings** →

@@ -64,38 +64,9 @@ requests made *from a browser on your live site* can use it — some other
 website can't embed a call to your proxy. This does **not** stop someone
 who simply opens your actual public GitHub Pages link and uses the chat —
 that's a legitimate visit from your allowed origin as far as CORS is
-concerned, even if that visitor isn't one of your students. That's what
-the access code below is for.
-
-## Stopping random visitors from using your proxy for free (access code)
-
-Because the whole point of the proxy is that no student needs a key, your
-public site link works for *anyone* who finds it, not just your class —
-unless you set a shared access code.
-
-1. Add one more secret on your Worker: **Settings** → **Variables and
-   Secrets** → `ACCESS_CODE`, value = any password you choose (it doesn't
-   need to look random, just be something only your class knows).
-2. That's it — deploy, and every chat request now needs a matching code.
-   The first time a student without one tries to chat, the app
-   automatically shows a small "ask your teacher for the access code"
-   prompt, and remembers it in their browser afterwards so they're never
-   asked twice.
-3. To skip that prompt entirely, add `&access=YourCode` to the link you
-   share — same auto-save-on-first-visit pattern as `&key=`.
-
-Leave `ACCESS_CODE` unset if you don't want this at all — the proxy works
-exactly as before, no prompt, no code needed by anyone.
-
-This still doesn't stop someone who finds your Worker's raw URL from
-calling it directly with a script that also happens to know the access
-code (outside a browser, CORS doesn't apply) — there's no way to fully
-prevent that without asking every student to authenticate individually,
-which defeats the "no setup" goal. But it closes the much more likely
-scenario of a random visitor casually finding your GitHub Pages link. If
-you're ever concerned about usage, check your API usage dashboards for
-each provider; a sudden spike is the signal to rotate both the access
-code and the affected API key.
+concerned, even if that visitor isn't one of your students. If that ever
+becomes a real problem, check your API usage dashboards for each
+provider; a sudden spike is the signal to rotate the affected key.
 
 ## Changing or rotating a key later
 

@@ -177,7 +177,6 @@
   <h1 id="home-link">📐 EduFlow</h1>
   <div class="controls">
     <button id="teacher-toggle-btn" class="small">🔒 Teacher mode</button>
-    <button id="access-code-btn" class="small">🔑 Access code</button>
     <button id="textbooks-btn" class="teacher-only" style="display:none;">📚 Textbooks</button>
     <button id="settings-btn" class="teacher-only" style="display:none;">⚙️ Settings</button>
   </div>
@@ -287,7 +286,7 @@
   </div>
 </main>
 
-<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; API keys and your teacher PIN are stored only in this browser's local storage.</footer>
+<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; API keys are stored only in this browser's local storage.</footer>
 
 <dialog id="settings-dialog">
   <h3>AI settings</h3>
@@ -301,15 +300,9 @@
   <label for="api-key-input">API key (fallback only)</label>
   <input type="password" id="api-key-input" placeholder="Only needed if the hosted proxy is unreachable">
   <p class="hint">Get a free Gemini key at aistudio.google.com, an OpenAI key at platform.openai.com, or a Claude key at console.anthropic.com. Stored only in this browser, never sent anywhere except that provider's API. To let students connect without pasting anything, share a link with <code>&provider=openai&key=YourKey</code> added to the end (provider is optional, defaults to Gemini) — it's saved into their browser automatically on first visit.</p>
-  <label for="access-code-input">Access code (only if your class requires one)</label>
-  <input type="text" id="access-code-input" placeholder="Only needed if the hosted proxy is locked with one">
-  <p class="hint">If you've set an access code on your hosted proxy (see cloudflare-worker/README.md) to stop random visitors using it for free, students are prompted for this automatically the first time they chat — you only need to fill it in here for testing on your own device. Share a link with <code>&access=YourCode</code> to skip that prompt for them too.</p>
   <label for="model-input">Model</label>
   <input type="text" id="model-input" placeholder="gemini-3.5-flash-lite">
   <p class="hint">Leave blank to use a sensible default for the selected provider. Each provider's free tier changes its daily caps over time — check their usage dashboard if you hit rate-limit errors during a lesson. Per-message cost on paid tiers is a fraction of a cent, so a whole class's daily use should still only be cents, not dollars.</p>
-  <label for="pin-input">Teacher PIN (optional)</label>
-  <input type="password" id="pin-input" placeholder="e.g. 1234">
-  <p class="hint">If set, this PIN is required to turn on Teacher mode (answer reveal, jump-to-question, custom subsets). Leave blank to allow anyone to toggle it — not real security, just friction to keep answers off the student-facing screen by default.</p>
   <div class="dialog-actions">
     <button id="settings-cancel">Cancel</button>
     <button id="settings-save" class="primary">Save</button>
@@ -327,18 +320,6 @@
   </div>
 </dialog>
 
-<dialog id="access-code-dialog">
-  <h3>Class access code</h3>
-  <p class="hint">This class's AI tutor requires an access code. Ask your teacher for it.</p>
-  <label for="access-code-entry-input">Access code</label>
-  <input type="text" id="access-code-entry-input" placeholder="Access code">
-  <p class="hint" id="access-code-error" style="color:var(--chalk-pink); display:none;">Incorrect code, try again.</p>
-  <div class="dialog-actions">
-    <button id="access-code-cancel">Cancel</button>
-    <button id="access-code-submit" class="primary">Continue</button>
-  </div>
-</dialog>
-
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/auto-render.min.js"></script>
 <script>
@@ -349,6 +330,8 @@ const LIBRARY_URL = 'library.json';
 // from Settings/localStorage/&key= for whichever provider is selected.
 // See cloudflare-worker/README.md. Leave as '' to always go direct.
 const WORKER_URL = 'https://eduflow.elliotttheeducator.workers.dev/';
+
+const TEACHER_PIN = '5157';
 
 const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
 const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
@@ -500,10 +483,6 @@ async function bootLibrary() {
   if (sharedKey) {
     const activeProvider = (requestedProvider && PROVIDERS[requestedProvider]) ? requestedProvider : (localStorage.getItem('mqh_provider') || 'gemini');
     localStorage.setItem(`mqh_api_key_${activeProvider}`, sharedKey);
-  }
-  const sharedAccessCode = params.get('access');
-  if (sharedAccessCode) {
-    localStorage.setItem('mqh_access_code', sharedAccessCode);
   }
 
   await selectBook(requested || state.library[0]);
@@ -784,7 +763,6 @@ function getSettings() {
     provider,
     apiKey: localStorage.getItem(`mqh_api_key_${provider}`) || '',
     model: localStorage.getItem(`mqh_model_${provider}`) || PROVIDERS[provider].defaultModel,
-    pin: localStorage.getItem('mqh_teacher_pin') || '',
   };
 }
 
@@ -827,11 +805,10 @@ function describeApiError(errText) {
 }
 
 async function tryHostedProxy(provider, model, systemInstruction, imageParts, history) {
-  const accessCode = localStorage.getItem('mqh_access_code') || '';
   try {
     const res = await fetch(WORKER_URL, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', 'X-Access-Code': accessCode },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ provider, model, systemInstruction, imageParts, history }),
     });
     return { reached: true, res };
@@ -840,72 +817,17 @@ async function tryHostedProxy(provider, model, systemInstruction, imageParts, hi
   }
 }
 
-const ACCESS_CODE_ERROR_MESSAGE = 'Missing or incorrect access code.';
-
-async function isAccessCodeError(res) {
-  if (res.status !== 401) return false;
-  try {
-    const data = await res.clone().json();
-    return !!data && !!data.error && data.error.message === ACCESS_CODE_ERROR_MESSAGE;
-  } catch (e) {
-    return false;
-  }
-}
-
-let accessCodeResolver = null;
-
-function promptForAccessCode(wasWrong) {
-  return new Promise((resolve) => {
-    accessCodeResolver = resolve;
-    el('access-code-error').style.display = wasWrong ? 'block' : 'none';
-    el('access-code-entry-input').value = '';
-    el('access-code-dialog').showModal();
-    el('access-code-entry-input').focus();
-  });
-}
-
-function openAccessCodeManually() {
-  el('access-code-error').style.display = 'none';
-  el('access-code-entry-input').value = localStorage.getItem('mqh_access_code') || '';
-  el('access-code-dialog').showModal();
-  el('access-code-entry-input').focus();
-}
-
-function submitAccessCode() {
-  const val = el('access-code-entry-input').value.trim();
-  el('access-code-dialog').close();
-  if (accessCodeResolver) {
-    accessCodeResolver(val || null);
-    accessCodeResolver = null;
-  } else {
-    localStorage.setItem('mqh_access_code', val);
-  }
-}
-
-function cancelAccessCode() {
-  el('access-code-dialog').close();
-  if (accessCodeResolver) { accessCodeResolver(null); accessCodeResolver = null; }
-}
-
 async function callAI(systemInstruction, imageParts, history) {
   const { provider, apiKey, model } = getSettings();
   const adapter = PROVIDERS[provider] || PROVIDERS.gemini;
 
   let res = null;
   if (WORKER_URL) {
-    let attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
-    let isRetry = !!localStorage.getItem('mqh_access_code');
-    while (attempt.reached && await isAccessCodeError(attempt.res)) {
-      const code = await promptForAccessCode(isRetry);
-      if (!code) { attempt = { reached: false }; break; }
-      localStorage.setItem('mqh_access_code', code);
-      attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
-      isRetry = true;
-    }
+    const attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
     if (attempt.reached) {
       res = attempt.res;
     } else if (!apiKey) {
-      throw new Error(`This class requires an access code to use the hosted AI proxy, and no personal ${adapter.label} API key is set to fall back to. Ask your teacher for the access code, or click Settings and paste a key.`);
+      throw new Error(`Couldn't reach the hosted AI proxy, and no personal ${adapter.label} API key is set to fall back to. Click Settings and paste one, or check your internet connection.`);
     }
   }
 
@@ -994,12 +916,6 @@ function toggleTeacherMode() {
     updateTeacherVisibility();
     return;
   }
-  const { pin } = getSettings();
-  if (!pin) {
-    state.teacherMode = true;
-    updateTeacherVisibility();
-    return;
-  }
   el('pin-error').style.display = 'none';
   el('pin-entry-input').value = '';
   el('pin-dialog').showModal();
@@ -1007,8 +923,7 @@ function toggleTeacherMode() {
 }
 
 function submitPin() {
-  const { pin } = getSettings();
-  if (el('pin-entry-input').value === pin) {
+  if (el('pin-entry-input').value === TEACHER_PIN) {
     state.teacherMode = true;
     updateTeacherVisibility();
     el('pin-dialog').close();
@@ -1026,11 +941,9 @@ function loadProviderFieldsInto(provider) {
 }
 
 function openSettings() {
-  const { provider, pin } = getSettings();
+  const { provider } = getSettings();
   el('provider-input').value = provider;
   loadProviderFieldsInto(provider);
-  el('access-code-input').value = localStorage.getItem('mqh_access_code') || '';
-  el('pin-input').value = pin;
   el('settings-dialog').showModal();
 }
 
@@ -1039,8 +952,6 @@ function saveSettings() {
   localStorage.setItem('mqh_provider', provider);
   localStorage.setItem(`mqh_api_key_${provider}`, el('api-key-input').value.trim());
   localStorage.setItem(`mqh_model_${provider}`, el('model-input').value.trim());
-  localStorage.setItem('mqh_access_code', el('access-code-input').value.trim());
-  localStorage.setItem('mqh_teacher_pin', el('pin-input').value.trim());
   el('settings-dialog').close();
 }
 
@@ -1124,11 +1035,6 @@ el('settings-btn').addEventListener('click', openSettings);
 el('settings-cancel').addEventListener('click', () => el('settings-dialog').close());
 el('settings-save').addEventListener('click', saveSettings);
 el('provider-input').addEventListener('change', () => loadProviderFieldsInto(el('provider-input').value));
-
-el('access-code-btn').addEventListener('click', openAccessCodeManually);
-el('access-code-cancel').addEventListener('click', cancelAccessCode);
-el('access-code-submit').addEventListener('click', submitAccessCode);
-el('access-code-entry-input').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submitAccessCode(); } });
 
 updateTeacherVisibility();
 bootLibrary();
