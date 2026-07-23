@@ -177,6 +177,7 @@
   <h1 id="home-link">📐 EduFlow</h1>
   <div class="controls">
     <button id="teacher-toggle-btn" class="small">🔒 Teacher mode</button>
+    <button id="access-code-btn" class="small">🔑 Access code</button>
     <button id="textbooks-btn" class="teacher-only" style="display:none;">📚 Textbooks</button>
     <button id="settings-btn" class="teacher-only" style="display:none;">⚙️ Settings</button>
   </div>
@@ -320,6 +321,18 @@
   </div>
 </dialog>
 
+<dialog id="access-code-dialog">
+  <h3>Class access code</h3>
+  <p class="hint">This class's AI tutor requires an access code. Ask your teacher for it.</p>
+  <label for="access-code-entry-input">Access code</label>
+  <input type="text" id="access-code-entry-input" placeholder="Access code">
+  <p class="hint" id="access-code-error" style="color:var(--chalk-pink); display:none;">Incorrect code, try again.</p>
+  <div class="dialog-actions">
+    <button id="access-code-cancel">Cancel</button>
+    <button id="access-code-submit" class="primary">Continue</button>
+  </div>
+</dialog>
+
 <script src="vendor/katex/katex.min.js"></script>
 <script src="vendor/katex/auto-render.min.js"></script>
 <script>
@@ -332,6 +345,12 @@ const LIBRARY_URL = 'library.json';
 const WORKER_URL = 'https://eduflow.elliotttheeducator.workers.dev/';
 
 const TEACHER_PIN = '5157';
+
+// Purely client-side gate on the AI tutor - not real security (anyone can
+// read this constant from the page source), just friction so a random
+// visitor can't casually use the hosted proxy for free. Change this value
+// to whatever code you want your class to use.
+const CLASS_ACCESS_CODE = 'CHANGE_ME';
 
 const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
 const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
@@ -483,6 +502,10 @@ async function bootLibrary() {
   if (sharedKey) {
     const activeProvider = (requestedProvider && PROVIDERS[requestedProvider]) ? requestedProvider : (localStorage.getItem('mqh_provider') || 'gemini');
     localStorage.setItem(`mqh_api_key_${activeProvider}`, sharedKey);
+  }
+  const sharedAccessCode = params.get('access');
+  if (sharedAccessCode) {
+    localStorage.setItem('mqh_class_access_code', sharedAccessCode);
   }
 
   await selectBook(requested || state.library[0]);
@@ -817,7 +840,63 @@ async function tryHostedProxy(provider, model, systemInstruction, imageParts, hi
   }
 }
 
+function hasValidAccessCode() {
+  return localStorage.getItem('mqh_class_access_code') === CLASS_ACCESS_CODE;
+}
+
+let accessCodeResolver = null;
+
+function openAccessCodeManually() {
+  el('access-code-error').style.display = 'none';
+  el('access-code-entry-input').value = hasValidAccessCode() ? CLASS_ACCESS_CODE : '';
+  el('access-code-dialog').showModal();
+  el('access-code-entry-input').focus();
+}
+
+function submitAccessCode() {
+  const val = el('access-code-entry-input').value.trim();
+  const correct = val === CLASS_ACCESS_CODE;
+  if (correct) localStorage.setItem('mqh_class_access_code', val);
+
+  if (accessCodeResolver) {
+    el('access-code-dialog').close();
+    accessCodeResolver(correct);
+    accessCodeResolver = null;
+  } else if (correct) {
+    el('access-code-dialog').close();
+  } else {
+    el('access-code-error').style.display = 'block';
+  }
+}
+
+function cancelAccessCode() {
+  el('access-code-dialog').close();
+  if (accessCodeResolver) { accessCodeResolver(null); accessCodeResolver = null; }
+}
+
+async function ensureAccessCode() {
+  if (hasValidAccessCode()) return true;
+  let wasWrong = false;
+  while (true) {
+    const result = await new Promise((resolve) => {
+      accessCodeResolver = resolve;
+      el('access-code-error').style.display = wasWrong ? 'block' : 'none';
+      el('access-code-entry-input').value = '';
+      el('access-code-dialog').showModal();
+      el('access-code-entry-input').focus();
+    });
+    if (result === true) return true;
+    if (result === null) return false;
+    wasWrong = true;
+  }
+}
+
 async function callAI(systemInstruction, imageParts, history) {
+  const hasCode = await ensureAccessCode();
+  if (!hasCode) {
+    throw new Error('This class requires an access code before the AI tutor can be used. Ask your teacher for it, or click 🔑 Access code in the header.');
+  }
+
   const { provider, apiKey, model } = getSettings();
   const adapter = PROVIDERS[provider] || PROVIDERS.gemini;
 
@@ -1036,8 +1115,13 @@ el('settings-cancel').addEventListener('click', () => el('settings-dialog').clos
 el('settings-save').addEventListener('click', saveSettings);
 el('provider-input').addEventListener('change', () => loadProviderFieldsInto(el('provider-input').value));
 
+el('access-code-btn').addEventListener('click', openAccessCodeManually);
+el('access-code-cancel').addEventListener('click', cancelAccessCode);
+el('access-code-submit').addEventListener('click', submitAccessCode);
+el('access-code-entry-input').addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); submitAccessCode(); } });
+
 updateTeacherVisibility();
-bootLibrary();
+bootLibrary().then(() => ensureAccessCode());
 </script>
 </body>
 </html>
