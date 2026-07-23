@@ -117,6 +117,8 @@
   }
   .wb-title { margin: 0.2rem 0.4rem 0.7rem; color: var(--board-edge); font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive, sans-serif; font-size: 1.05rem; }
   .wb-surface { background: var(--wb-white); border-radius: 8px; padding: 1.1rem 1.2rem; }
+  .wb-diagram-wrap { text-align: center; margin-bottom: 1rem; padding-bottom: 1rem; border-bottom: 1px dashed #ddd; }
+  .wb-diagram { max-width: 100%; max-height: 320px; }
   .wb-stack { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.6rem; }
   .wb-history-item {
     display: flex; align-items: baseline; gap: 0.6rem;
@@ -728,6 +730,9 @@ function buildWalkthroughCard(ex) {
   const steps = ex.walkthrough;
   const card = h('div', { class: 'wb-card' });
   const surface = h('div', { class: 'wb-surface' });
+  if (ex.diagram) {
+    surface.appendChild(h('div', { class: 'wb-diagram-wrap' }, h('img', { class: 'wb-diagram', src: state.baseDir + ex.diagram, alt: 'Diagram for this example' })));
+  }
   const stack = h('div', { class: 'wb-stack' });
   const active = h('div', { class: 'wb-active' });
   surface.appendChild(stack);

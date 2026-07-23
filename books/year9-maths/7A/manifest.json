@@ -16,15 +16,125 @@
   "workedExamples": [
     {
       "title": "Example 1 \u2014 Finding supplementary and complementary angles",
-      "image": "assets/example1.png"
+      "image": "assets/example1.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Find the supplementary angle of $47\u00b0$.",
+          "line": "180\u00b0 - 47\u00b0",
+          "reasoning": "Supplementary angles sum to 180\u00b0, so we subtract the given angle from 180\u00b0."
+        },
+        {
+          "part": "a",
+          "line": "180\u00b0 - 47\u00b0 = 133\u00b0",
+          "reasoning": "180 \u2212 47 = 133, so the supplementary angle is 133\u00b0."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Find the complementary angle of $47\u00b0$.",
+          "line": "90\u00b0 - 47\u00b0",
+          "reasoning": "Complementary angles sum to 90\u00b0, so we subtract the given angle from 90\u00b0."
+        },
+        {
+          "part": "b",
+          "line": "90\u00b0 - 47\u00b0 = 43\u00b0",
+          "reasoning": "90 \u2212 47 = 43, so the complementary angle is 43\u00b0."
+        }
+      ]
     },
     {
       "title": "Example 2 \u2014 Finding unknown angles in triangles",
-      "image": "assets/example2.png"
+      "image": "assets/example2.png",
+      "diagram": "assets/example2_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Name the triangle above and find $x$.",
+          "line": "\\text{Equilateral triangle}",
+          "reasoning": "All three sides are marked with matching tick marks, meaning they're equal \u2014 that makes this an equilateral triangle, so all three angles are equal too."
+        },
+        {
+          "part": "a",
+          "line": "x = 60",
+          "reasoning": "Since all angles in an equilateral triangle are equal, and one is marked 60\u00b0, x must also be 60\u00b0."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Name the triangle above and find $r$.",
+          "line": "\\text{Obtuse isosceles triangle}",
+          "reasoning": "One angle (120\u00b0) is more than 90\u00b0, making it obtuse, and two sides are marked equal, making it isosceles \u2014 so both base angles are equal, each r\u00b0."
+        },
+        {
+          "part": "b",
+          "line": "2r + 120 = 180",
+          "reasoning": "Angles in a triangle add to 180\u00b0. Since the triangle is isosceles, both base angles are r\u00b0, giving 2r + 120 = 180."
+        },
+        {
+          "part": "b",
+          "line": "2r = 60",
+          "reasoning": "Subtract 120 from both sides: 180 \u2212 120 = 60."
+        },
+        {
+          "part": "b",
+          "line": "r = 30",
+          "reasoning": "Divide both sides by 2: 60 \u00f7 2 = 30."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c \u2014 Name the triangle above and find $s$.",
+          "line": "\\text{Acute scalene triangle}",
+          "reasoning": "All angles shown are less than 90\u00b0 (acute), and no sides are marked equal \u2014 this is an acute scalene triangle."
+        },
+        {
+          "part": "c",
+          "line": "s + 50 + 60 = 180",
+          "reasoning": "Angles in a triangle add to 180\u00b0."
+        },
+        {
+          "part": "c",
+          "line": "s + 110 = 180",
+          "reasoning": "Simplify: 50 + 60 = 110."
+        },
+        {
+          "part": "c",
+          "line": "s = 70",
+          "reasoning": "Subtract 110 from both sides: 180 \u2212 110 = 70."
+        }
+      ]
     },
     {
       "title": "Example 3 \u2014 Finding exterior and other angles",
-      "image": "assets/example3.png"
+      "image": "assets/example3.png",
+      "diagram": "assets/example3_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Find the value of $y$.",
+          "line": "y = 90 + 55",
+          "reasoning": "The exterior angle theorem says the exterior angle equals the sum of the two opposite (non-adjacent) interior angles \u2014 here, 90\u00b0 and 55\u00b0."
+        },
+        {
+          "part": "a",
+          "line": "y = 90 + 55 = 145",
+          "reasoning": "90 + 55 = 145, so y = 145."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Find the value of $x$.",
+          "line": "x + 47 + 47 = 180",
+          "reasoning": "The triangle is isosceles (two sides marked equal) with both base angles 47\u00b0 (vertically opposite the marked 47\u00b0 angle). Angles in a triangle add to 180\u00b0."
+        },
+        {
+          "part": "b",
+          "line": "x + 94 = 180",
+          "reasoning": "47 + 47 = 94."
+        },
+        {
+          "part": "b",
+          "line": "x = 86",
+          "reasoning": "Subtract 94 from both sides: 180 \u2212 94 = 86."
+        }
+      ]
     }
   ],
   "questions": [
