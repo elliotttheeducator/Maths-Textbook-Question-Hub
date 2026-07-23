@@ -286,16 +286,23 @@
   </div>
 </main>
 
-<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; your API key and teacher PIN are stored only in this browser's local storage.</footer>
+<footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; API keys and your teacher PIN are stored only in this browser's local storage.</footer>
 
 <dialog id="settings-dialog">
   <h3>AI settings</h3>
-  <label for="api-key-input">Gemini API key</label>
-  <input type="password" id="api-key-input" placeholder="Paste your free Google AI Studio key">
-  <p class="hint">Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API. To let students connect without pasting a key themselves, share a link with <code>&key=YourKey</code> added to the end — it's saved into their browser automatically on first visit.</p>
+  <label for="provider-input">AI provider</label>
+  <select id="provider-input">
+    <option value="gemini">Google Gemini</option>
+    <option value="openai">OpenAI (ChatGPT)</option>
+    <option value="claude">Anthropic Claude</option>
+  </select>
+  <p class="hint">Which AI answers the tutor chat. By default the app talks to a hosted proxy that already has a key configured server-side, so students need nothing at all — the key below is only used as a fallback if that proxy can't be reached.</p>
+  <label for="api-key-input">API key (fallback only)</label>
+  <input type="password" id="api-key-input" placeholder="Only needed if the hosted proxy is unreachable">
+  <p class="hint">Get a free Gemini key at aistudio.google.com, an OpenAI key at platform.openai.com, or a Claude key at console.anthropic.com. Stored only in this browser, never sent anywhere except that provider's API. To let students connect without pasting anything, share a link with <code>&provider=openai&key=YourKey</code> added to the end (provider is optional, defaults to Gemini) — it's saved into their browser automatically on first visit.</p>
   <label for="model-input">Model</label>
   <input type="text" id="model-input" placeholder="gemini-3.5-flash-lite">
-  <p class="hint">Google's free tier changes which models it covers over time, and the current free daily cap (often as low as 20 requests/day) is genuinely too low for a real class. Check aistudio.google.com/usage → Rate Limit for what's free right now. If you hit 429 errors during a lesson, the real fix is enabling billing on your Google Cloud project — Gemini Flash-Lite pricing is a fraction of a cent per message, so a whole class's daily use should still only be cents, not dollars.</p>
+  <p class="hint">Leave blank to use a sensible default for the selected provider. Each provider's free tier changes its daily caps over time — check their usage dashboard if you hit rate-limit errors during a lesson. Per-message cost on paid tiers is a fraction of a cent, so a whole class's daily use should still only be cents, not dollars.</p>
   <label for="pin-input">Teacher PIN (optional)</label>
   <input type="password" id="pin-input" placeholder="e.g. 1234">
   <p class="hint">If set, this PIN is required to turn on Teacher mode (answer reveal, jump-to-question, custom subsets). Leave blank to allow anyone to toggle it — not real security, just friction to keep answers off the student-facing screen by default.</p>
@@ -320,6 +327,94 @@
 <script src="vendor/katex/auto-render.min.js"></script>
 <script>
 const LIBRARY_URL = 'library.json';
+
+// Hosted proxy: holds the real API keys server-side so students never need
+// one. Tried first; if unreachable, the app falls back to a personal key
+// from Settings/localStorage/&key= for whichever provider is selected.
+// See cloudflare-worker/README.md. Leave as '' to always go direct.
+const WORKER_URL = 'https://eduflow.elliotttheeducator.workers.dev/';
+
+const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
+const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
+
+const PROVIDERS = {
+  gemini: {
+    label: 'Google Gemini',
+    defaultModel: 'gemini-3.5-flash-lite',
+    buildRequest(model, systemInstruction, imageParts, history) {
+      const contents = [];
+      if (imageParts.length) {
+        contents.push({ role: 'user', parts: [...imageParts.map(p => ({ inlineData: { mimeType: p.mimeType, data: p.data } })), { text: IMAGE_INTRO_TEXT }] });
+        contents.push({ role: 'model', parts: [{ text: IMAGE_ACK_TEXT }] });
+      }
+      history.forEach(m => contents.push({ role: m.role, parts: [{ text: m.text }] }));
+      return {
+        systemInstruction: { parts: [{ text: systemInstruction }] },
+        contents,
+        generationConfig: { temperature: 0.5 },
+      };
+    },
+    parseResponse(data) {
+      return data.candidates?.[0]?.content?.parts?.[0]?.text;
+    },
+    directUrl(model) {
+      return `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent`;
+    },
+    directHeaders(apiKey) {
+      return { 'Content-Type': 'application/json', 'x-goog-api-key': apiKey };
+    },
+  },
+  openai: {
+    label: 'OpenAI',
+    defaultModel: 'gpt-5-mini',
+    buildRequest(model, systemInstruction, imageParts, history) {
+      const messages = [{ role: 'system', content: systemInstruction }];
+      if (imageParts.length) {
+        messages.push({ role: 'user', content: [
+          ...imageParts.map(p => ({ type: 'image_url', image_url: { url: `data:${p.mimeType};base64,${p.data}` } })),
+          { type: 'text', text: IMAGE_INTRO_TEXT },
+        ] });
+        messages.push({ role: 'assistant', content: IMAGE_ACK_TEXT });
+      }
+      history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
+      return { model, messages };
+    },
+    parseResponse(data) {
+      return data.choices?.[0]?.message?.content;
+    },
+    directUrl() {
+      return 'https://api.openai.com/v1/chat/completions';
+    },
+    directHeaders(apiKey) {
+      return { 'Content-Type': 'application/json', Authorization: `Bearer ${apiKey}` };
+    },
+  },
+  claude: {
+    label: 'Anthropic Claude',
+    defaultModel: 'claude-haiku-4-5-20251001',
+    buildRequest(model, systemInstruction, imageParts, history) {
+      const messages = [];
+      if (imageParts.length) {
+        messages.push({ role: 'user', content: [
+          ...imageParts.map(p => ({ type: 'image', source: { type: 'base64', media_type: p.mimeType, data: p.data } })),
+          { type: 'text', text: IMAGE_INTRO_TEXT },
+        ] });
+        messages.push({ role: 'assistant', content: IMAGE_ACK_TEXT });
+      }
+      history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
+      return { model, max_tokens: 1024, system: systemInstruction, messages };
+    },
+    parseResponse(data) {
+      return data.content?.[0]?.text;
+    },
+    directUrl() {
+      return 'https://api.anthropic.com/v1/messages';
+    },
+    directHeaders(apiKey) {
+      return { 'Content-Type': 'application/json', 'x-api-key': apiKey, 'anthropic-version': '2023-06-01', 'anthropic-dangerous-direct-browser-access': 'true' };
+    },
+  },
+};
 
 const state = {
   library: [],
@@ -369,6 +464,11 @@ function groupKey(id) {
 // ---------- Library (which textbook) ----------
 
 async function bootLibrary() {
+  // Migrate the old single-provider key storage (pre-multi-provider) to Gemini's slot.
+  if (!localStorage.getItem('mqh_api_key_gemini') && localStorage.getItem('mqh_api_key')) {
+    localStorage.setItem('mqh_api_key_gemini', localStorage.getItem('mqh_api_key'));
+  }
+
   const res = await fetch(LIBRARY_URL);
   state.library = await res.json();
 
@@ -376,9 +476,14 @@ async function bootLibrary() {
   const requestedId = params.get('book');
   const requested = requestedId ? state.library.find(b => b.id === requestedId) : null;
 
+  const requestedProvider = params.get('provider');
+  if (requestedProvider && PROVIDERS[requestedProvider]) {
+    localStorage.setItem('mqh_provider', requestedProvider);
+  }
   const sharedKey = params.get('key');
   if (sharedKey) {
-    localStorage.setItem('mqh_api_key', sharedKey);
+    const activeProvider = (requestedProvider && PROVIDERS[requestedProvider]) ? requestedProvider : (localStorage.getItem('mqh_provider') || 'gemini');
+    localStorage.setItem(`mqh_api_key_${activeProvider}`, sharedKey);
   }
 
   await selectBook(requested || state.library[0]);
@@ -572,7 +677,7 @@ async function imageUrlToPart(url) {
     reader.onerror = reject;
     reader.readAsDataURL(blob);
   });
-  return { inlineData: { mimeType: blob.type || 'image/png', data } };
+  return { mimeType: blob.type || 'image/png', data };
 }
 
 async function showQuestion() {
@@ -654,9 +759,11 @@ function addSystemMessage(text) {
 }
 
 function getSettings() {
+  const provider = localStorage.getItem('mqh_provider') || 'gemini';
   return {
-    apiKey: localStorage.getItem('mqh_api_key') || '',
-    model: localStorage.getItem('mqh_model') || 'gemini-3.5-flash-lite',
+    provider,
+    apiKey: localStorage.getItem(`mqh_api_key_${provider}`) || '',
+    model: localStorage.getItem(`mqh_model_${provider}`) || PROVIDERS[provider].defaultModel,
     pin: localStorage.getItem('mqh_teacher_pin') || '',
   };
 }
@@ -699,35 +806,47 @@ function describeApiError(errText) {
   }
 }
 
-async function callGeminiChat(systemInstruction, imageParts, history) {
-  const { apiKey, model } = getSettings();
-
-  if (!apiKey) {
-    throw new Error('No API key set. Click Settings and paste a free Gemini API key from Google AI Studio (or ask your teacher for a class link).');
-  }
-
-  const contents = [];
-  if (imageParts.length) {
-    contents.push({ role: 'user', parts: [...imageParts, { text: 'This is the question the student is working on. Look at it carefully before responding.' }] });
-    contents.push({ role: 'model', parts: [{ text: 'Got it, I can see the question clearly.' }] });
-  }
-  history.forEach(m => contents.push({ role: m.role, parts: [{ text: m.text }] }));
-  const geminiBody = {
-    systemInstruction: { parts: [{ text: systemInstruction }] },
-    contents,
-    generationConfig: { temperature: 0.5 },
-  };
-
-  let res;
+async function tryHostedProxy(provider, model, systemInstruction, imageParts, history) {
   try {
-    const url = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model)}:generateContent?key=${encodeURIComponent(apiKey)}`;
-    res = await fetch(url, {
+    const res = await fetch(WORKER_URL, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(geminiBody),
+      body: JSON.stringify({ provider, model, systemInstruction, imageParts, history }),
     });
+    return { reached: true, res };
   } catch (err) {
-    throw new Error(`Couldn't reach the Gemini API — check your internet connection, or your network may be blocking it. (${err.message})`);
+    return { reached: false };
+  }
+}
+
+async function callAI(systemInstruction, imageParts, history) {
+  const { provider, apiKey, model } = getSettings();
+  const adapter = PROVIDERS[provider] || PROVIDERS.gemini;
+
+  let res = null;
+  if (WORKER_URL) {
+    const attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
+    if (attempt.reached) {
+      res = attempt.res;
+    } else if (!apiKey) {
+      throw new Error(`Couldn't reach the hosted AI proxy, and no personal ${adapter.label} API key is set to fall back to. Click Settings and paste one, or check your internet connection.`);
+    }
+  }
+
+  if (!res) {
+    if (!apiKey) {
+      throw new Error(`No API key set. Click Settings and paste a free ${adapter.label} API key (or ask your teacher for a class link).`);
+    }
+    const body = adapter.buildRequest(model, systemInstruction, imageParts, history);
+    try {
+      res = await fetch(adapter.directUrl(model), {
+        method: 'POST',
+        headers: adapter.directHeaders(apiKey),
+        body: JSON.stringify(body),
+      });
+    } catch (err) {
+      throw new Error(`Couldn't reach the ${adapter.label} API — check your internet connection, or your network may be blocking it. (${err.message})`);
+    }
   }
 
   if (!res.ok) {
@@ -735,7 +854,7 @@ async function callGeminiChat(systemInstruction, imageParts, history) {
     throw new Error(`API error (${res.status}): ${describeApiError(errText)}`);
   }
   const data = await res.json();
-  return data.candidates?.[0]?.content?.parts?.[0]?.text || '(no response)';
+  return adapter.parseResponse(data) || '(no response)';
 }
 
 async function sendChatMessage(ev) {
@@ -752,7 +871,7 @@ async function sendChatMessage(ev) {
   addSystemMessage('Tutor is thinking...');
 
   try {
-    const reply = await callGeminiChat(buildTutorSystemInstruction(q), state.currentImageParts, state.chatHistory);
+    const reply = await callAI(buildTutorSystemInstruction(q), state.currentImageParts, state.chatHistory);
     state.chatHistory.push({ role: 'model', text: reply });
   } catch (err) {
     state.chatHistory.push({ role: 'model', text: `⚠️ ${err.message}` });
@@ -824,17 +943,25 @@ function submitPin() {
 
 // ---------- Settings ----------
 
+function loadProviderFieldsInto(provider) {
+  el('api-key-input').value = localStorage.getItem(`mqh_api_key_${provider}`) || '';
+  el('model-input').value = localStorage.getItem(`mqh_model_${provider}`) || '';
+  el('model-input').placeholder = PROVIDERS[provider].defaultModel;
+}
+
 function openSettings() {
-  const { apiKey, model, pin } = getSettings();
-  el('api-key-input').value = apiKey;
-  el('model-input').value = model;
+  const { provider, pin } = getSettings();
+  el('provider-input').value = provider;
+  loadProviderFieldsInto(provider);
   el('pin-input').value = pin;
   el('settings-dialog').showModal();
 }
 
 function saveSettings() {
-  localStorage.setItem('mqh_api_key', el('api-key-input').value.trim());
-  localStorage.setItem('mqh_model', el('model-input').value.trim() || 'gemini-3.5-flash-lite');
+  const provider = el('provider-input').value;
+  localStorage.setItem('mqh_provider', provider);
+  localStorage.setItem(`mqh_api_key_${provider}`, el('api-key-input').value.trim());
+  localStorage.setItem(`mqh_model_${provider}`, el('model-input').value.trim());
   localStorage.setItem('mqh_teacher_pin', el('pin-input').value.trim());
   el('settings-dialog').close();
 }
@@ -918,6 +1045,7 @@ el('pin-entry-input').addEventListener('keydown', (e) => { if (e.key === 'Enter'
 el('settings-btn').addEventListener('click', openSettings);
 el('settings-cancel').addEventListener('click', () => el('settings-dialog').close());
 el('settings-save').addEventListener('click', saveSettings);
+el('provider-input').addEventListener('change', () => loadProviderFieldsInto(el('provider-input').value));
 
 updateTeacherVisibility();
 bootLibrary();

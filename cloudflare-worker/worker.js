@@ -1,34 +1,48 @@
-// EduFlow class-code proxy.
+// EduFlow AI proxy.
 //
-// Purpose: lets a whole class share one Gemini API key via a memorable class
-// code (e.g. "MrHallsYear7") without that key ever reaching a student's
-// browser. The real key lives only in this Worker's CLASS_KEYS KV namespace.
+// Purpose: lets the whole class use the tutor chat without any student ever
+// needing an API key. The real keys live only here, as Worker secrets, and
+// are never sent to a browser. The app tries this Worker first for every
+// chat message; only if it's unreachable does it fall back to a personal
+// key pasted into Settings on that device.
 //
-// Request shape expected from the app:
-//   POST /
-//   Header: X-Class-Code: MrHallsYear7
-//   Body:   { model: "gemini-2.5-flash-lite", systemInstruction, contents, generationConfig }
+// Request shape expected from the app (POST /, JSON body):
+//   {
+//     provider: "gemini" | "openai" | "claude",
+//     model: "...",
+//     systemInstruction: "...",
+//     imageParts: [{ mimeType, data }],   // data = base64, no data: prefix
+//     history: [{ role: "user" | "model", text: "..." }]
+//   }
 //
-// The Worker looks up the class code in KV, forwards the body (minus the
-// "model" field, which goes in the URL) to Gemini's generateContent endpoint
-// with the real key, and streams the response straight back.
+// The Worker translates that into the shape the chosen vendor expects, calls
+// it with the real key, and returns the vendor's response body and status
+// completely unchanged - success or error. The app already knows how to
+// parse each vendor's native response shape, so there's nothing to
+// translate on the way back.
+//
+// Configure real keys as Worker secrets (Settings -> Variables and Secrets
+// in the Cloudflare dashboard, or `wrangler secret put`), naming them
+// exactly:
+//   GEMINI_API_KEY
+//   OPENAI_API_KEY
+//   ANTHROPIC_API_KEY
+// You only need to set the ones you actually want to offer - a provider
+// with no key configured just returns a clear error instead of working.
 
-// Tighten this to your GitHub Pages origin once deployed, e.g.
-// 'https://elliotttheeducator.github.io' - '*' works everywhere but allows
-// any website to use your proxy (still gated by class code + daily cap).
-const ALLOWED_ORIGIN = '*';
+// Tighten this to your GitHub Pages origin so other websites can't ride on
+// your keys via a browser request. '*' works everywhere but removes that
+// protection - only use it for local testing.
+const ALLOWED_ORIGIN = 'https://elliotttheeducator.github.io';
 
-// Soft cap per class code per day, so one leaked code or a runaway loop
-// can't silently burn through your whole Gemini quota. Raise/lower via the
-// DAILY_LIMIT_PER_CLASS environment variable in the Worker settings if you
-// don't want to edit code, or just change the default below.
-const DEFAULT_DAILY_LIMIT = 300;
+const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
+const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
 
 function corsHeaders() {
   return {
     'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type, X-Class-Code',
+    'Access-Control-Allow-Headers': 'Content-Type',
   };
 }
 
@@ -39,6 +53,86 @@ function jsonError(message, status) {
   });
 }
 
+async function passThrough(vendorRes) {
+  const text = await vendorRes.text();
+  return new Response(text, {
+    status: vendorRes.status,
+    headers: { 'Content-Type': 'application/json', ...corsHeaders() },
+  });
+}
+
+async function callGemini(env, { model, systemInstruction, imageParts, history }) {
+  if (!env.GEMINI_API_KEY) return jsonError('Gemini is not configured on this server yet.', 501);
+
+  const contents = [];
+  if (imageParts.length) {
+    contents.push({ role: 'user', parts: [...imageParts.map(p => ({ inlineData: { mimeType: p.mimeType, data: p.data } })), { text: IMAGE_INTRO_TEXT }] });
+    contents.push({ role: 'model', parts: [{ text: IMAGE_ACK_TEXT }] });
+  }
+  history.forEach(m => contents.push({ role: m.role, parts: [{ text: m.text }] }));
+
+  const body = {
+    systemInstruction: { parts: [{ text: systemInstruction }] },
+    contents,
+    generationConfig: { temperature: 0.5 },
+  };
+
+  const vendorRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model || 'gemini-3.5-flash-lite')}:generateContent`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
+    body: JSON.stringify(body),
+  });
+  return passThrough(vendorRes);
+}
+
+async function callOpenAI(env, { model, systemInstruction, imageParts, history }) {
+  if (!env.OPENAI_API_KEY) return jsonError('OpenAI is not configured on this server yet.', 501);
+
+  const messages = [{ role: 'system', content: systemInstruction }];
+  if (imageParts.length) {
+    messages.push({ role: 'user', content: [
+      ...imageParts.map(p => ({ type: 'image_url', image_url: { url: `data:${p.mimeType};base64,${p.data}` } })),
+      { type: 'text', text: IMAGE_INTRO_TEXT },
+    ] });
+    messages.push({ role: 'assistant', content: IMAGE_ACK_TEXT });
+  }
+  history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
+
+  const vendorRes = await fetch('https://api.openai.com/v1/chat/completions', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${env.OPENAI_API_KEY}` },
+    body: JSON.stringify({ model: model || 'gpt-5-mini', messages }),
+  });
+  return passThrough(vendorRes);
+}
+
+async function callClaude(env, { model, systemInstruction, imageParts, history }) {
+  if (!env.ANTHROPIC_API_KEY) return jsonError('Claude is not configured on this server yet.', 501);
+
+  const messages = [];
+  if (imageParts.length) {
+    messages.push({ role: 'user', content: [
+      ...imageParts.map(p => ({ type: 'image', source: { type: 'base64', media_type: p.mimeType, data: p.data } })),
+      { type: 'text', text: IMAGE_INTRO_TEXT },
+    ] });
+    messages.push({ role: 'assistant', content: IMAGE_ACK_TEXT });
+  }
+  history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
+
+  const vendorRes = await fetch('https://api.anthropic.com/v1/messages', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      'x-api-key': env.ANTHROPIC_API_KEY,
+      'anthropic-version': '2023-06-01',
+    },
+    body: JSON.stringify({ model: model || 'claude-haiku-4-5-20251001', max_tokens: 1024, system: systemInstruction, messages }),
+  });
+  return passThrough(vendorRes);
+}
+
+const HANDLERS = { gemini: callGemini, openai: callOpenAI, claude: callClaude };
+
 export default {
   async fetch(request, env) {
     if (request.method === 'OPTIONS') {
@@ -48,24 +142,6 @@ export default {
       return jsonError('Method not allowed.', 405);
     }
 
-    const classCode = request.headers.get('X-Class-Code');
-    if (!classCode) {
-      return jsonError('Missing class code.', 400);
-    }
-
-    const apiKey = await env.CLASS_KEYS.get(classCode);
-    if (!apiKey) {
-      return jsonError(`Unknown class code "${classCode}". Ask your teacher to check the link.`, 404);
-    }
-
-    const dailyLimit = parseInt(env.DAILY_LIMIT_PER_CLASS || '', 10) || DEFAULT_DAILY_LIMIT;
-    const today = new Date().toISOString().slice(0, 10);
-    const usageKey = `usage:${classCode}:${today}`;
-    const currentUsage = parseInt((await env.CLASS_KEYS.get(usageKey)) || '0', 10);
-    if (currentUsage >= dailyLimit) {
-      return jsonError('This class has reached its daily question limit. Try again tomorrow, or ask your teacher.', 429);
-    }
-
     let payload;
     try {
       payload = await request.json();
@@ -73,31 +149,21 @@ export default {
       return jsonError('Invalid request body.', 400);
     }
 
-    const { model, ...geminiBody } = payload;
-    const geminiUrl = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model || 'gemini-2.5-flash-lite')}:generateContent?key=${apiKey}`;
+    const provider = payload.provider || 'gemini';
+    const handler = HANDLERS[provider];
+    if (!handler) {
+      return jsonError(`Unknown provider "${provider}".`, 400);
+    }
 
-    let geminiRes;
     try {
-      geminiRes = await fetch(geminiUrl, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(geminiBody),
+      return await handler(env, {
+        model: payload.model,
+        systemInstruction: payload.systemInstruction || '',
+        imageParts: payload.imageParts || [],
+        history: payload.history || [],
       });
     } catch (e) {
-      return jsonError('Could not reach Gemini right now. Please try again.', 502);
+      return jsonError('Could not reach the AI provider right now. Please try again.', 502);
     }
-
-    const responseText = await geminiRes.text();
-
-    if (geminiRes.ok) {
-      // Best-effort counter - a lost increment under a race just means the
-      // cap is slightly soft, which is fine for this purpose.
-      await env.CLASS_KEYS.put(usageKey, String(currentUsage + 1), { expirationTtl: 60 * 60 * 24 * 2 });
-    }
-
-    return new Response(responseText, {
-      status: geminiRes.status,
-      headers: { 'Content-Type': 'application/json', ...corsHeaders() },
-    });
   },
 };

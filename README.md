@@ -18,11 +18,15 @@ runs entirely in the browser.
 ## Quick start
 
 1. Open `index.html` in a browser (or serve the folder — see Deployment below).
-2. Click **⚙️ Settings**, paste in a free Gemini API key, and save.
-   - Get one at Google AI Studio (aistudio.google.com) — sign in with any
-     Google account, no billing required for the free tier.
-   - The key is stored only in that browser's `localStorage`. It is sent
-     directly from the browser to Google's API and nowhere else.
+2. Click **⚙️ Settings**, pick an AI provider (Gemini, OpenAI, or Claude),
+   paste in a free API key for it, and save.
+   - Gemini: aistudio.google.com. OpenAI: platform.openai.com. Claude:
+     console.anthropic.com.
+   - The key is stored only in that browser's `localStorage`, one slot per
+     provider so switching providers doesn't overwrite another one's key.
+     It's sent directly from the browser to that provider's API and nowhere
+     else — unless a hosted proxy is configured (see "Sharing AI access
+     with a class" below), in which case it's only used as a fallback.
    - Optionally set a **Teacher PIN** here too (see Teacher mode below).
    - Settings itself is teacher-mode-only (see below) — the very first time,
      with no PIN set yet, toggling Teacher mode unlocks it immediately so
@@ -261,38 +265,57 @@ questions ("which rule applies here?"), nudge around known misconceptions
 by name, and only get more directive if the student seems stuck — never to
 dump the final numeric answer unprompted.
 
-If you'd rather use a different provider (OpenAI, Claude, etc.), the only
-place that needs changing is the `callGeminiChat` function in `index.html`.
+Three providers are supported out of the box — Gemini, OpenAI, and Claude
+— behind a shared adapter interface (`PROVIDERS` in `index.html`), each
+implementing `buildRequest`/`parseResponse`/`directUrl`/`directHeaders` for
+its own API shape. Adding another provider means adding one more entry
+there, plus a matching handler in `cloudflare-worker/worker.js` if it
+should also be reachable through the hosted proxy.
 
-## Sharing one API key with a class
+## Sharing AI access with a class
 
-Your own device (the "teacher" copy) sets the Gemini API key the normal
-way: **⚙️ Settings** → paste the key → Save. That's stored in your
-browser's `localStorage` and nothing about that flow changes.
+There are two ways students can get chat working, and the app tries them
+in this order automatically — no manual switching needed.
 
-For students, the simplest way to skip that setup entirely is to put the
-key straight in the link you share:
+**1. Hosted proxy (recommended, zero setup for students).** A small
+Cloudflare Worker holds your real API key(s) server-side and the app talks
+to it by default — students never see a key, a picker, or a Settings
+dialog at all. Set it up once via `cloudflare-worker/README.md` (~10
+minutes), then any normal link just works:
 
 ```
-https://<your-pages-url>/?book=year7-maths&key=YOUR_API_KEY
+https://<your-pages-url>/?book=year7-maths
 ```
 
-The first time a student opens that link, the app saves the key into
-their browser automatically — no picker, no Settings dialog, no Teacher
-mode, nothing to paste. From then on it behaves exactly like a normal
-direct connection to Gemini from their own browser.
+Add `&provider=openai` or `&provider=claude` to point a specific link at a
+different provider than whatever's selected on your own device.
 
-The tradeoff: the key is visible in the URL you share (and in each
-student's `localStorage`), so anyone who has the link technically has the
-key too. That's fine for a low-stakes classroom key with no billing
-attached, but rotate the key (get a new one at aistudio.google.com) if a
-link ever gets shared more widely than intended, and don't reuse a key
-that's linked to a paid account. A locked-down alternative that never
-exposes the real key to students at all is still in `cloudflare-worker/`
-if that tradeoff stops being acceptable later — it's just more setup.
+**2. Direct key in the link (fallback, or if you'd rather skip the proxy).**
+Your own device sets a provider + key the normal way: **⚙️ Settings** →
+pick a provider → paste its key → Save. For students, put the key straight
+in the link instead:
+
+```
+https://<your-pages-url>/?book=year7-maths&provider=openai&key=YOUR_API_KEY
+```
+
+(`provider` is optional here too — omit it and it defaults to Gemini.) The
+first time a student opens that link, the app saves the key into their
+browser automatically. This is also what the app quietly falls back to if
+the hosted proxy from option 1 is ever unreachable, provided a key has
+been set that way.
+
+The tradeoff with option 2: the key is visible in the URL and in each
+student's `localStorage`, so anyone who has the link technically has the
+key too. Fine for a low-stakes key with no billing attached; rotate it if
+a link ever spreads further than intended, and don't reuse a key tied to a
+paid account. Option 1 doesn't have this problem at all, which is why it's
+the default.
 
 ## Privacy note
 
-Everything runs client-side: the browser talks directly to Google's
-Gemini API, carrying the question image, question context, and the chat
-messages. No names, no accounts, nothing persisted server-side.
+Everything runs client-side. With the hosted proxy, network calls are
+browser → your Cloudflare Worker → the AI provider, and the Worker doesn't
+log or store chat content. Without it, it's a direct browser → provider
+API request. Either way it carries the question image, question context,
+and chat messages — no names, no accounts, nothing persisted server-side.
