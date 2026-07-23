@@ -290,6 +290,12 @@ https://<your-pages-url>/?book=year7-maths
 Add `&provider=openai` or `&provider=claude` to point a specific link at a
 different provider than whatever's selected on your own device.
 
+Because this option needs no key at all, your public site link technically
+works for anyone who finds it, not just your class — set an `ACCESS_CODE`
+on the Worker (see `cloudflare-worker/README.md`) if that's a concern.
+Students are prompted for it automatically the first time they chat, or
+skip the prompt with `&access=YourCode` in the link.
+
 **2. Direct key in the link (fallback, or if you'd rather skip the proxy).**
 Your own device sets a provider + key the normal way: **⚙️ Settings** →
 pick a provider → paste its key → Save. For students, put the key straight

@@ -29,6 +29,14 @@
 //   ANTHROPIC_API_KEY
 // You only need to set the ones you actually want to offer - a provider
 // with no key configured just returns a clear error instead of working.
+//
+// Optionally also set ACCESS_CODE to a shared password of your choosing.
+// If set, every request must include a matching X-Access-Code header, or
+// it's rejected before any provider is even contacted - this stops random
+// visitors who stumble on your public site from using your AI proxy for
+// free, since without it there's no key requirement at all standing in
+// their way. Leave ACCESS_CODE unset to skip this check entirely (the
+// original zero-friction behaviour).
 
 // Tighten this to your GitHub Pages origin so other websites can't ride on
 // your keys via a browser request. '*' works everywhere but removes that
@@ -37,12 +45,13 @@ const ALLOWED_ORIGIN = 'https://elliotttheeducator.github.io';
 
 const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
 const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
+const ACCESS_CODE_ERROR_MESSAGE = 'Missing or incorrect access code.';
 
 function corsHeaders() {
   return {
     'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
     'Access-Control-Allow-Methods': 'POST, OPTIONS',
-    'Access-Control-Allow-Headers': 'Content-Type',
+    'Access-Control-Allow-Headers': 'Content-Type, X-Access-Code',
   };
 }
 
@@ -140,6 +149,13 @@ export default {
     }
     if (request.method !== 'POST') {
       return jsonError('Method not allowed.', 405);
+    }
+
+    if (env.ACCESS_CODE) {
+      const provided = request.headers.get('X-Access-Code');
+      if (provided !== env.ACCESS_CODE) {
+        return jsonError(ACCESS_CODE_ERROR_MESSAGE, 401);
+      }
     }
 
     let payload;
