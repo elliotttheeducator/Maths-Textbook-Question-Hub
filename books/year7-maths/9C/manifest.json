@@ -1,0 +1,1091 @@
+{
+  "id": "9C",
+  "title": "Equivalent equations",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) \u2014 Chapter 9 Equations, Section 9C. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 6 \u2014 Applying an operation (part 1)",
+      "image": "assets/example6_p1.png"
+    },
+    {
+      "title": "Example 6 \u2014 Applying an operation (part 2)",
+      "image": "assets/example6_p2.png"
+    },
+    {
+      "title": "Example 7 \u2014 Showing that equations are equivalent (part 1)",
+      "image": "assets/example7_p1.png"
+    },
+    {
+      "title": "Example 7 \u2014 Showing that equations are equivalent (part 2)",
+      "image": "assets/example7_p2.png"
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "adding the same number to both sides of an equation",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "10d + 15 = 30",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10d + 15 = 30",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "adding the same number to both sides of an equation",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7e + 10 = 41",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7e + 10 = 41",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "adding the same number to both sides of an equation",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2a + 10 = 22",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2a + 10 = 22",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "adding the same number to both sides of an equation",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x + 10 = 22",
+      "aiNotes": "Official answer (from the Cambridge answer key): x + 10 = 22",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "matching an equation to its equivalent equation",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C",
+      "aiNotes": "Official answer (from the Cambridge answer key): C",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "matching an equation to its equivalent equation",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "D",
+      "aiNotes": "Official answer (from the Cambridge answer key): D",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "matching an equation to its equivalent equation",
+      "image": "assets/bu2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "E",
+      "aiNotes": "Official answer (from the Cambridge answer key): E",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "matching an equation to its equivalent equation",
+      "image": "assets/bu2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "B",
+      "aiNotes": "Official answer (from the Cambridge answer key): B",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2e",
+      "tier": "warmup",
+      "topic": "matching an equation to its equivalent equation",
+      "image": "assets/bu2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A",
+      "aiNotes": "Official answer (from the Cambridge answer key): A",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides and simplifying",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 + x = 7 + 3, which simplifies to 6 + x = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 + x = 7 + 3, which simplifies to 6 + x = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting a term, e.g. writing 3x = 12 as 3x = 14 - 2 instead of 3x = 14 - 2 correctly",
+          "reason": "when isolating a term, careless arithmetic with the added/subtracted constant is the most common source of an incorrect equivalent equation"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides and simplifying",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12x = 21",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12x = 21",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting a term, e.g. writing 3x = 12 as 3x = 14 - 2 instead of 3x = 14 - 2 correctly",
+          "reason": "when isolating a term, careless arithmetic with the added/subtracted constant is the most common source of an incorrect equivalent equation"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides and simplifying",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 = b",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 = b",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting a term, e.g. writing 3x = 12 as 3x = 14 - 2 instead of 3x = 14 - 2 correctly",
+          "reason": "when isolating a term, careless arithmetic with the added/subtracted constant is the most common source of an incorrect equivalent equation"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides and simplifying",
+      "image": "assets/ex1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "5q = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): 5q = 4",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting a term, e.g. writing 3x = 12 as 3x = 14 - 2 instead of 3x = 14 - 2 correctly",
+          "reason": "when isolating a term, careless arithmetic with the added/subtracted constant is the most common source of an incorrect equivalent equation"
+        }
+      ],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6 + x = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6 + x = 11",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6x = 14",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6x = 14",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 = 2q",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 = 2q",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "6 + a = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): 6 + a = 10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12 + b = 15",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12 + b = 15",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "0 = 3b + 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 0 = 3b + 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2g",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4 = 7 + a",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4 = 7 + a",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2h",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12x + 2 = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12x + 2 = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2i",
+      "tier": "fluency",
+      "topic": "applying a stated operation to both sides",
+      "image": "assets/ex2i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7p = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7p = 12",
+      "misconceptions": [
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4x + 2 = 10 and 4x = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4x + 2 = 10 and 4x = 8",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7 + 3b = 12 and 9 + 3b = 14",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7 + 3b = 12 and 9 + 3b = 14",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "20a = 10 and 2a = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): 20a = 10 and 2a = 1",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4 = 12 - x and 8 = 2(12 - x)",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4 = 12 - x and 8 = 2(12 - x)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3e",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "18 = 3x and 6 = x",
+      "aiNotes": "Official answer (from the Cambridge answer key): 18 = 3x and 6 = x",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3f",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12 + x = 3 and 15 + x = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12 + x = 3 and 15 + x = 6",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3g",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "4(10 + b) = 80 and 10 + b = 20",
+      "aiNotes": "Official answer (from the Cambridge answer key): 4(10 + b) = 80 and 10 + b = 20",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3h",
+      "tier": "fluency",
+      "topic": "showing two equations are equivalent by stating the operation used",
+      "image": "assets/ex3h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "12x = 5 and 12x + 4 = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): 12x = 5 and 12x + 4 = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 5 \u2192 (+ 4) \u2192 x + 4 = 9 \u2192 (\u00d7 3) \u2192 3x + 12 = 27",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 5 \u2192 (+ 4) \u2192 x + 4 = 9 \u2192 (\u00d7 3) \u2192 3x + 12 = 27",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2 = a + 1 \u2192 (+ 4) \u2192 6 = a + 5 \u2192 (\u00d7 3) \u2192 18 = 3a + 15",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2 = a + 1 \u2192 (+ 4) \u2192 6 = a + 5 \u2192 (\u00d7 3) \u2192 18 = 3a + 15",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d - 4 = 2 \u2192 (+ 4) \u2192 d = 6 \u2192 (\u00d7 3) \u2192 3d = 18",
+      "aiNotes": "Official answer (from the Cambridge answer key): d - 4 = 2 \u2192 (+ 4) \u2192 d = 6 \u2192 (\u00d7 3) \u2192 3d = 18",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7 + a = 8 \u2192 (+ 4) \u2192 11 + a = 12 \u2192 (\u00d7 3) \u2192 33 + 3a = 36",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7 + a = 8 \u2192 (+ 4) \u2192 11 + a = 12 \u2192 (\u00d7 3) \u2192 33 + 3a = 36",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4e",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3y - 2 = 7 \u2192 (+ 4) \u2192 3y + 2 = 11 \u2192 (\u00d7 3) \u2192 9y + 6 = 33",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3y - 2 = 7 \u2192 (+ 4) \u2192 3y + 2 = 11 \u2192 (\u00d7 3) \u2192 9y + 6 = 33",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4f",
+      "tier": "fluency",
+      "topic": "finding an equivalent equation from two chained operations",
+      "image": "assets/ex4f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2x = 6 \u2192 (+ 4) \u2192 2x + 4 = 10 \u2192 (\u00d7 3) \u2192 6x + 12 = 30",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2x = 6 \u2192 (+ 4) \u2192 2x + 4 = 10 \u2192 (\u00d7 3) \u2192 6x + 12 = 30",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "using the opposite operation from the one stated, or applying it backwards",
+          "reason": "the question asks for the result of a SPECIFIC stated operation (e.g. '[+ 3]') applied to both sides - swap it for the wrong operation and you get a different (still possibly true, but not the asked-for) equation"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "matching an equation to its equivalent equation and naming the operation",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "E (+ 2)",
+      "aiNotes": "Official answer (from the Cambridge answer key): E (+ 2)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "matching an equation to its equivalent equation and naming the operation",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A (+ 4)",
+      "aiNotes": "Official answer (from the Cambridge answer key): A (+ 4)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "problem-solving",
+      "topic": "matching an equation to its equivalent equation and naming the operation",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "D (\u00f7 2)",
+      "aiNotes": "Official answer (from the Cambridge answer key): D (\u00f7 2)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5d",
+      "tier": "problem-solving",
+      "topic": "matching an equation to its equivalent equation and naming the operation",
+      "image": "assets/ex5d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "B (\u2212 2)",
+      "aiNotes": "Official answer (from the Cambridge answer key): B (\u2212 2)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5e",
+      "tier": "problem-solving",
+      "topic": "matching an equation to its equivalent equation and naming the operation",
+      "image": "assets/ex5e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C (\u00d7 2)",
+      "aiNotes": "Official answer (from the Cambridge answer key): C (\u00d7 2)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "matching an equation to one that merely looks similar rather than checking it's reachable by a genuine single operation",
+          "reason": "two equations are equivalent only if one can be produced from the other by adding/subtracting/multiplying/dividing both sides by the same amount, or swapping sides - superficial resemblance isn't enough"
+        }
+      ],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "listing the two steps that transform one equation into an equivalent one",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u00d7 3 then + 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u00d7 3 then + 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "listing the two steps that transform one equation into an equivalent one",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u00d7 10 then \u2212 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u00d7 10 then \u2212 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6c",
+      "tier": "problem-solving",
+      "topic": "listing the two steps that transform one equation into an equivalent one",
+      "image": "assets/ex6c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u00f7 5 then \u2212 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u00f7 5 then \u2212 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6d",
+      "tier": "problem-solving",
+      "topic": "listing the two steps that transform one equation into an equivalent one",
+      "image": "assets/ex6d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "\u2212 10 then \u00f7 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): \u2212 10 then \u00f7 3",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "writing a simpler equivalent equation in one operation",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2q = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2q = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "writing a simpler equivalent equation in one operation",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "10x = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): 10x = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "writing a simpler equivalent equation in one operation",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3 + x = 20",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3 + x = 20",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7d",
+      "tier": "problem-solving",
+      "topic": "writing a simpler equivalent equation in one operation",
+      "image": "assets/ex7d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 60",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 60",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "reasoning",
+      "topic": "completing an arrow-chain of equivalent equations",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "3x + 2 = 14 \u2192 (\u22122 both sides) \u2192 3x = 12 \u2192 (\u00f73 both sides) \u2192 x = 4 \u2192 (\u00d710 both sides) \u2192 10x = 40 \u2192 (+1 both sides) \u2192 10x + 1 = 41",
+      "aiNotes": "Official answer (from the Cambridge answer key): 3x + 2 = 14 \u2192 (\u22122 both sides) \u2192 3x = 12 \u2192 (\u00f73 both sides) \u2192 x = 4 \u2192 (\u00d710 both sides) \u2192 10x = 40 \u2192 (+1 both sides) \u2192 10x + 1 = 41",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        },
+        {
+          "wrongAnswer": "a sign error when adding/subtracting a term, e.g. writing 3x = 12 as 3x = 14 - 2 instead of 3x = 14 - 2 correctly",
+          "reason": "when isolating a term, careless arithmetic with the added/subtracted constant is the most common source of an incorrect equivalent equation"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8b",
+      "tier": "reasoning",
+      "topic": "showing two equations are equivalent via an intermediate equation",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "5x \u2212 3 = 32 \u2192 (+3 both sides) \u2192 5x = 35 \u2192 (\u00f75 both sides) \u2192 x = 7 \u2192 (+2 both sides) \u2192 x + 2 = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): 5x \u2212 3 = 32 \u2192 (+3 both sides) \u2192 5x = 35 \u2192 (\u00f75 both sides) \u2192 x = 7 \u2192 (+2 both sides) \u2192 x + 2 = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8c",
+      "tier": "reasoning",
+      "topic": "showing two equations are equivalent via an intermediate equation",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x \u00f7 2 = 5 \u2192 (\u00d72 both sides) \u2192 x = 10 \u2192 (+8 both sides) \u2192 x + 8 = 18, which is equivalent to (x + 8) \u00f7 2 = 9 and to (x \u00f7 2) + 4 = 9 (all forced by x = 10)",
+      "aiNotes": "Official answer (from the Cambridge answer key): x \u00f7 2 = 5 \u2192 (\u00d72 both sides) \u2192 x = 10 \u2192 (+8 both sides) \u2192 x + 8 = 18, which is equivalent to (x + 8) \u00f7 2 = 9 and to (x \u00f7 2) + 4 = 9 (all forced by x = 10)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex9ai",
+      "tier": "reasoning",
+      "topic": "multiplying both sides of an equation by zero",
+      "image": "assets/ex9ai.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "0 = 0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 0 = 0",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9aii",
+      "tier": "reasoning",
+      "topic": "multiplying both sides of an equation by zero",
+      "image": "assets/ex9aii.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "0 = 0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 0 = 0",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9aiii",
+      "tier": "reasoning",
+      "topic": "multiplying both sides of an equation by zero",
+      "image": "assets/ex9aiii.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "0 = 0",
+      "aiNotes": "Official answer (from the Cambridge answer key): 0 = 0",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "reasoning",
+      "topic": "explaining why multiplying by zero doesn't give a useful equivalent equation",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Regardless of the original equation, multiplying both sides by zero will always result in 0 = 0, so it destroys any information about the original equation.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Regardless of the original equation, multiplying both sides by zero will always result in 0 = 0, so it destroys any information about the original equation.",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "finding an equivalent equation with a given expression on one side",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 3 \u2192 (\u00d77 both sides) \u2192 7x = 21 \u2192 (+2 both sides) \u2192 7x + 2 = 23",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 3 \u2192 (\u00d77 both sides) \u2192 7x = 21 \u2192 (+2 both sides) \u2192 7x + 2 = 23",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "finding an equivalent equation with a given expression on one side",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 3 \u2192 (\u00d72 both sides) \u2192 2x = 6 \u2192 (+8 both sides) \u2192 8 + 2x = 14",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 3 \u2192 (\u00d72 both sides) \u2192 2x = 6 \u2192 (+8 both sides) \u2192 8 + 2x = 14",
+      "misconceptions": [
+        {
+          "wrongAnswer": "applying the operation to only one side of the equation",
+          "reason": "an equation stays equivalent (still true for the same solution) only if you do the exact same thing to both sides - changing just one side breaks the balance"
+        }
+      ],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "enrichment",
+      "topic": "classifying general statements about equivalence as true or false",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True; you can add 3 to both sides and then subtract 3 to get the original equation again.",
+      "aiNotes": "Official answer (from the Cambridge answer key): True; you can add 3 to both sides and then subtract 3 to get the original equation again.",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11b",
+      "tier": "enrichment",
+      "topic": "classifying general statements about equivalence as true or false",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True; simply perform the opposite operations in the reverse order, so + 4 becomes \u2212 4.",
+      "aiNotes": "Official answer (from the Cambridge answer key): True; simply perform the opposite operations in the reverse order, so + 4 becomes \u2212 4.",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11c",
+      "tier": "enrichment",
+      "topic": "classifying general statements about equivalence as true or false",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True; use the operations that take equation 1 to equation 2, then the operations that take equation 2 to equation 3.",
+      "aiNotes": "Official answer (from the Cambridge answer key): True; use the operations that take equation 1 to equation 2, then the operations that take equation 2 to equation 3.",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11d",
+      "tier": "enrichment",
+      "topic": "classifying general statements about equivalence as true or false",
+      "image": "assets/ex11d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False; e.g. equation 1: x = 4, equation 2: x = 5, equation 3: 2x = 8 \u2014 equation 1 and equation 3 are not equivalent even though neither adjacent pair is.",
+      "aiNotes": "Official answer (from the Cambridge answer key): False; e.g. equation 1: x = 4, equation 2: x = 5, equation 3: 2x = 8 \u2014 equation 1 and equation 3 are not equivalent even though neither adjacent pair is.",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    }
+  ]
+}
