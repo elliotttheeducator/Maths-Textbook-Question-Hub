@@ -350,7 +350,7 @@ const TEACHER_PIN = '5157';
 // read this constant from the page source), just friction so a random
 // visitor can't casually use the hosted proxy for free. Change this value
 // to whatever code you want your class to use.
-const CLASS_ACCESS_CODE = 'MathsIsAwesome';
+const CLASS_ACCESS_CODE = 'mathsisawesome'; // case-insensitive match, see hasValidAccessCode
 
 const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
 const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
@@ -841,7 +841,8 @@ async function tryHostedProxy(provider, model, systemInstruction, imageParts, hi
 }
 
 function hasValidAccessCode() {
-  return localStorage.getItem('mqh_class_access_code') === CLASS_ACCESS_CODE;
+  const stored = localStorage.getItem('mqh_class_access_code') || '';
+  return stored.toLowerCase() === CLASS_ACCESS_CODE.toLowerCase();
 }
 
 let accessCodeResolver = null;
@@ -855,7 +856,7 @@ function openAccessCodeManually() {
 
 function submitAccessCode() {
   const val = el('access-code-entry-input').value.trim();
-  const correct = val === CLASS_ACCESS_CODE;
+  const correct = val.toLowerCase() === CLASS_ACCESS_CODE.toLowerCase();
   if (correct) localStorage.setItem('mqh_class_access_code', val);
 
   if (accessCodeResolver) {
