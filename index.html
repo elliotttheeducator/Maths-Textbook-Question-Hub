@@ -105,7 +105,6 @@
   .cover-section h3 { color: var(--chalk-yellow); margin: 0 0 0.6rem; }
   .cover-section .paper { margin-bottom: 0.9rem; }
   #start-actions { text-align: center; margin-top: 2rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
-  #walkthrough-lock-msg { color: var(--chalk-dim); font-size: 0.9rem; margin-top: 1.5rem; margin-bottom: 0; }
   button[disabled] { opacity: 0.4; cursor: not-allowed; }
   button[disabled]:hover { border-color: var(--border); background: none; }
 
@@ -300,7 +299,6 @@
       <div id="cover-examples"></div>
     </div>
 
-    <p class="hint" id="walkthrough-lock-msg" style="display:none; text-align:center;">Complete the worked examples above to unlock the questions.</p>
     <div id="start-actions">
       <button id="start-btn" class="primary">Ready? Start questions →</button>
       <button id="map-btn" class="teacher-only" style="display:none;">🗺️ Jump to a question</button>
@@ -700,7 +698,6 @@ async function openChapter(path) {
 
   populateReferencePanel(state.bank);
   updateTeacherVisibility();
-  updateWalkthroughGate();
   showView('cover');
 }
 
@@ -807,7 +804,6 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
 
   function markDone() {
     localStorage.setItem(doneKey, '1');
-    updateWalkthroughGate();
   }
 
   function showCompletionPrompt() {
@@ -902,23 +898,6 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
     showStartGate();
   }
   return card;
-}
-
-function walkthroughGateSatisfied() {
-  if (state.teacherMode) return true;
-  const list = (state.bank && state.bank.workedExamples) || [];
-  return list.every((ex, idx) => {
-    if (!Array.isArray(ex.walkthrough) || !ex.walkthrough.length) return true;
-    return localStorage.getItem(walkthroughDoneKey(state.bank.id, idx)) === '1';
-  });
-}
-
-function updateWalkthroughGate() {
-  const satisfied = walkthroughGateSatisfied();
-  el('start-btn').disabled = !satisfied;
-  el('map-btn').disabled = !satisfied;
-  el('subset-btn').disabled = !satisfied;
-  el('walkthrough-lock-msg').style.display = satisfied ? 'none' : 'block';
 }
 
 // ---------- Sequencing ----------
@@ -1313,7 +1292,6 @@ function updateTeacherVisibility() {
   document.querySelectorAll('.teacher-only').forEach(elm => { elm.style.display = on ? 'inline-block' : 'none'; });
   el('teacher-toggle-btn').textContent = on ? '🔓 Teacher mode' : '🔒 Teacher mode';
   el('teacher-toggle-btn').className = 'small' + (on ? ' teacher-on' : '');
-  updateWalkthroughGate();
 }
 
 function toggleTeacherMode() {
