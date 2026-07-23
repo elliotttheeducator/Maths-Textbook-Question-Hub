@@ -17,7 +17,48 @@
     },
     {
       "title": "Example 14 \u2014 Using the scale factor",
-      "image": "assets/example14.png"
+      "image": "assets/example14.png",
+      "diagram": "assets/example14_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Find the scale factor from Original to Image.",
+          "line": "\\text{scale factor} = \\dfrac{\\text{image length}}{\\text{original length}}",
+          "reasoning": "To find a scale factor, choose a pair of corresponding sides (one on each figure) and divide the image length by the original length."
+        },
+        {
+          "part": "a",
+          "line": "\\text{scale factor} = \\dfrac{6}{4} = 1.5",
+          "reasoning": "The 4 cm side on the Original corresponds to the 6 cm side on the Image: 6 \u00f7 4 = 1.5."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Find the value of $x$.",
+          "line": "x = 3 \\times 1.5",
+          "reasoning": "x is on the Image, corresponding to the 3 cm side on the Original. Multiply the original length by the scale factor to get the image length."
+        },
+        {
+          "part": "b",
+          "line": "x = 3 \\times 1.5 = 4.5",
+          "reasoning": "3 \u00d7 1.5 = 4.5, so x = 4.5."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c \u2014 Find the value of $y$.",
+          "line": "y \\times 1.5 = 7.5",
+          "reasoning": "y is on the Original, corresponding to the 7.5 cm side on the Image. Multiplying y by the scale factor should give the image length."
+        },
+        {
+          "part": "c",
+          "line": "y = 7.5 \\div 1.5",
+          "reasoning": "Divide both sides by 1.5 to make y the subject."
+        },
+        {
+          "part": "c",
+          "line": "y = 7.5 \\div 1.5 = 5",
+          "reasoning": "7.5 \u00f7 1.5 = 5, so y = 5."
+        }
+      ]
     }
   ],
   "questions": [
