@@ -13,7 +13,63 @@
   "workedExamples": [
     {
       "title": "Example 8 \u2014 Solving one-step equations",
-      "image": "assets/example8.png"
+      "image": "assets/example8.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Solve $5x = 30$ algebraically.",
+          "line": "5x = 30",
+          "reasoning": "x is multiplied by 5. To undo that, we do the opposite operation \u2014 divide."
+        },
+        {
+          "part": "a",
+          "line": "5x \\div 5 = 30 \\div 5",
+          "highlight": "\\div 5",
+          "reasoning": "The opposite of \u00d75 is \u00f75. Dividing both sides by the same amount keeps the equation balanced \u2014 this gives an equivalent equation."
+        },
+        {
+          "part": "a",
+          "line": "x = 6",
+          "reasoning": "5x ÷ 5 simplifies to x, and 30 ÷ 5 = 6. So the solution is x = 6.",
+          "final": true
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Solve $17 = y - 21$ algebraically.",
+          "line": "17 = y - 21",
+          "reasoning": "21 is being subtracted from y. To undo that, we do the opposite operation \u2014 add 21."
+        },
+        {
+          "part": "b",
+          "line": "17 + 21 = y - 21 + 21",
+          "highlight": "+ 21",
+          "reasoning": "The opposite of \u221221 is +21. Adding 21 to both sides keeps the equation balanced."
+        },
+        {
+          "part": "b",
+          "line": "38 = y",
+          "reasoning": "17 + 21 = 38, and y - 21 + 21 simplifies to y. Solutions are usually written with the pronumeral on the left, so y = 38.",
+          "final": true
+        },
+        {
+          "part": "c",
+          "prompt": "Part c \u2014 Solve $10 = \\dfrac{q}{3}$ algebraically.",
+          "line": "10 = \\dfrac{q}{3}",
+          "reasoning": "q is being divided by 3. To undo that, we do the opposite operation \u2014 multiply by 3."
+        },
+        {
+          "part": "c",
+          "line": "10 \\times 3 = \\dfrac{q}{3} \\times 3",
+          "highlight": "\\times 3",
+          "reasoning": "The opposite of \u00f73 is \u00d73. Multiplying both sides by 3 keeps the equation balanced."
+        },
+        {
+          "part": "c",
+          "line": "30 = q",
+          "reasoning": "10 × 3 = 30, and q/3 × 3 simplifies to q. Writing the pronumeral on the left, the solution is q = 30.",
+          "final": true
+        }
+      ]
     },
     {
       "title": "Example 9 \u2014 Solving two-step equations",

@@ -19,6 +19,13 @@
     --chalk-pink: #ff9e9e;
     --border: rgba(245, 242, 230, 0.4);
     --paper: #faf8f0;
+    --wb-white: #fefefe;
+    --wb-frame: #c4cbd1;
+    --wb-frame-dark: #9aa2a9;
+    --wb-marker: #23262b;
+    --wb-accent: #d1481f;
+    --wb-sticky: #fff6c8;
+    --wb-sticky-edge: #e6d98a;
   }
   * { box-sizing: border-box; }
   html, body {
@@ -98,6 +105,74 @@
   .cover-section h3 { color: var(--chalk-yellow); margin: 0 0 0.6rem; }
   .cover-section .paper { margin-bottom: 0.9rem; }
   #start-actions { text-align: center; margin-top: 2rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+
+  /* Worked-example walkthrough (whiteboard) */
+  .wb-card {
+    background: var(--wb-frame);
+    border-radius: 14px;
+    padding: 10px;
+    margin-bottom: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+    border: 1px solid var(--wb-frame-dark);
+  }
+  .wb-title { margin: 0.2rem 0.4rem 0.7rem; color: var(--board-edge); font-family: "Segoe Print", "Bradley Hand", "Comic Sans MS", cursive, sans-serif; font-size: 1.05rem; }
+  .wb-surface { background: var(--wb-white); border-radius: 8px; padding: 1.1rem 1.2rem; }
+  .wb-stack { display: flex; flex-direction: column; gap: 0.5rem; margin-bottom: 0.6rem; }
+  .wb-history-item {
+    display: flex; align-items: baseline; gap: 0.6rem;
+    padding: 0.35rem 0.6rem; border-radius: 6px; background: rgba(0,0,0,0.03);
+    font-size: 0.85rem; color: #555;
+    opacity: 0; transform: scale(0.92) translateY(8px);
+    transition: opacity 280ms ease, transform 280ms ease;
+  }
+  .wb-history-item.settled { opacity: 1; transform: none; }
+  .wb-history-item .wb-history-prompt { font-style: italic; color: #888; font-size: 0.78rem; }
+  .wb-history-line .katex { font-size: 0.85rem; }
+  .wb-active { transition: opacity 180ms ease; }
+  .wb-active.fading { opacity: 0; }
+  .wb-prompt { color: #3a3f45; font-size: 1rem; margin-bottom: 0.6rem; }
+  .wb-board { min-height: 3.4rem; display: flex; align-items: center; }
+  .wb-line-wrap { display: inline-block; overflow: hidden; }
+  .wb-line {
+    display: inline-block; color: var(--wb-marker); font-size: 1.5rem;
+    clip-path: inset(0 100% 0 0);
+    transition: clip-path 900ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  .wb-line.revealed { clip-path: inset(0 0 0 0); }
+  .wb-toast {
+    margin-top: 0.9rem; background: var(--wb-sticky); border: 1px solid var(--wb-sticky-edge);
+    border-radius: 4px; padding: 0.7rem 0.9rem; color: #4a4326; font-size: 0.92rem;
+    box-shadow: 2px 3px 6px rgba(0,0,0,0.12);
+    opacity: 0; transform: translateY(6px) rotate(-0.5deg);
+    transition: opacity 300ms ease 250ms, transform 300ms ease 250ms;
+  }
+  .wb-toast.show { opacity: 1; transform: rotate(-0.5deg); }
+  .wb-controls { margin-top: 1rem; display: flex; align-items: center; gap: 0.75rem; flex-wrap: wrap; }
+  .wb-controls button { font-family: inherit; }
+  .wb-understand {
+    background: #1f8a4c; border-color: #1f8a4c; color: #fff; font-weight: 600;
+  }
+  .wb-understand:hover { background: #197a41; border-color: #197a41; }
+  .wb-confused { display: inline-flex; align-items: center; }
+  .wb-confused-btn { color: #555; border-color: #bbb; transition: opacity 220ms ease, max-width 220ms ease, padding 220ms ease; max-width: 220px; overflow: hidden; white-space: nowrap; }
+  .wb-confused.expanded .wb-confused-btn { opacity: 0; max-width: 0; padding: 0; border: 0; margin: 0; }
+  .wb-confused-box {
+    display: flex; align-items: center; gap: 0.5rem; width: 0; overflow: hidden;
+    transition: width 320ms ease;
+  }
+  .wb-confused.expanded .wb-confused-box { width: min(420px, 70vw); }
+  .wb-confused-input {
+    font-family: inherit; padding: 0.45rem 0.6rem; border-radius: 6px; border: 1px solid #bbb;
+    flex: 1 1 auto; min-width: 0; color: #222;
+  }
+  .wb-confused-send { white-space: nowrap; }
+  .wb-confused-reply {
+    flex-basis: 100%; margin-top: 0.6rem; padding: 0.6rem 0.8rem; border-radius: 6px;
+    background: #eef4fb; border: 1px solid #cfe0f0; color: #223; font-size: 0.9rem;
+    display: none;
+  }
+  .wb-confused-reply.show { display: block; }
+  .wb-final-image { display: block; width: 100%; border-radius: 6px; }
 
   .status-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: var(--chalk-dim); font-size: 0.95rem; margin-bottom: 0.75rem; }
   .tag {
@@ -585,7 +660,11 @@ async function openChapter(path) {
   const examplesWrap = el('cover-examples');
   examplesWrap.innerHTML = '';
   (state.bank.workedExamples || []).forEach(ex => {
-    examplesWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
+    if (Array.isArray(ex.walkthrough) && ex.walkthrough.length) {
+      examplesWrap.appendChild(buildWalkthroughCard(ex));
+    } else {
+      examplesWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
+    }
   });
 
   populateReferencePanel(state.bank);
@@ -603,6 +682,127 @@ function populateReferencePanel(bank) {
   (bank.workedExamples || []).forEach(ex => {
     panel.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
   });
+}
+
+// ---------- Worked-example walkthrough ----------
+
+function highlightLatex(line, highlight) {
+  if (!highlight) return line;
+  return line.split(highlight).join(`\\textcolor{#d1481f}{${highlight}}`);
+}
+
+function renderKatexInto(el, latex) {
+  try {
+    katex.render(latex, el, { throwOnError: false });
+  } catch (e) {
+    el.textContent = latex;
+  }
+}
+
+function revealStepLine(lineEl, latex) {
+  lineEl.classList.remove('revealed');
+  renderKatexInto(lineEl, latex);
+  void lineEl.offsetWidth;
+  requestAnimationFrame(() => requestAnimationFrame(() => lineEl.classList.add('revealed')));
+}
+
+async function askAboutStep(step, inputEl, replyEl, sendBtn) {
+  const question = inputEl.value.trim();
+  if (!question) return;
+  sendBtn.disabled = true;
+  inputEl.disabled = true;
+  replyEl.textContent = 'Thinking...';
+  replyEl.classList.add('show');
+  try {
+    const reply = await callAI(buildStepClarifySystemInstruction(step), [], [{ role: 'user', text: question }]);
+    replyEl.textContent = reply;
+    renderMath(replyEl);
+  } catch (err) {
+    replyEl.textContent = `⚠️ ${err.message}`;
+  }
+  sendBtn.disabled = false;
+  inputEl.disabled = false;
+}
+
+function buildWalkthroughCard(ex) {
+  const steps = ex.walkthrough;
+  const card = h('div', { class: 'wb-card' });
+  const surface = h('div', { class: 'wb-surface' });
+  const stack = h('div', { class: 'wb-stack' });
+  const active = h('div', { class: 'wb-active' });
+  surface.appendChild(stack);
+  surface.appendChild(active);
+  card.appendChild(h('h4', { class: 'wb-title' }, ex.title || 'Worked example'));
+  card.appendChild(surface);
+
+  let index = 0;
+
+  function addToStack(step) {
+    const lineEl = h('span', { class: 'wb-history-line' });
+    renderKatexInto(lineEl, highlightLatex(step.line, step.highlight));
+    const item = h('div', { class: 'wb-history-item' }, [
+      h('span', { class: 'wb-history-prompt' }, step.part ? `${step.part})` : ''),
+      lineEl,
+    ]);
+    stack.appendChild(item);
+    requestAnimationFrame(() => requestAnimationFrame(() => item.classList.add('settled')));
+  }
+
+  function finalize() {
+    surface.innerHTML = '';
+    surface.appendChild(h('img', { class: 'wb-final-image', src: state.baseDir + ex.image, alt: ex.title || 'Worked example' }));
+  }
+
+  function renderActiveStep() {
+    const step = steps[index];
+    active.innerHTML = '';
+    active.classList.remove('fading');
+
+    if (step.prompt) {
+      const promptEl = h('div', { class: 'wb-prompt' }, step.prompt);
+      active.appendChild(promptEl);
+      renderMath(promptEl);
+    }
+
+    const lineEl = h('span', { class: 'wb-line' });
+    active.appendChild(h('div', { class: 'wb-board' }, h('div', { class: 'wb-line-wrap' }, lineEl)));
+
+    const toast = h('div', { class: 'wb-toast' }, step.reasoning);
+    active.appendChild(toast);
+
+    const replyBox = h('div', { class: 'wb-confused-reply' });
+    const confusedInput = h('input', { type: 'text', class: 'wb-confused-input', placeholder: "What's confusing about this step?" });
+    const confusedSend = h('button', { class: 'wb-confused-send' }, 'Ask');
+    confusedSend.addEventListener('click', () => askAboutStep(step, confusedInput, replyBox, confusedSend));
+    confusedInput.addEventListener('keydown', (e) => { if (e.key === 'Enter') { e.preventDefault(); confusedSend.click(); } });
+    const confusedBox = h('div', { class: 'wb-confused-box' }, [confusedInput, confusedSend]);
+    const confusedWrap = h('div', { class: 'wb-confused' });
+    const confusedBtn = h('button', { class: 'wb-confused-btn' }, "I don't understand");
+    confusedBtn.addEventListener('click', () => confusedWrap.classList.add('expanded'));
+    confusedWrap.appendChild(confusedBtn);
+    confusedWrap.appendChild(confusedBox);
+
+    const understandBtn = h('button', { class: 'wb-understand' }, 'I understand this step');
+    understandBtn.addEventListener('click', () => advance(step));
+
+    active.appendChild(h('div', { class: 'wb-controls' }, [understandBtn, confusedWrap, replyBox]));
+
+    revealStepLine(lineEl, highlightLatex(step.line, step.highlight));
+    requestAnimationFrame(() => toast.classList.add('show'));
+  }
+
+  function advance(step) {
+    addToStack(step);
+    active.classList.add('fading');
+    index++;
+    setTimeout(() => {
+      if (index >= steps.length) finalize();
+      else renderActiveStep();
+    }, 180);
+  }
+
+  renderActiveStep();
+  return card;
 }
 
 // ---------- Sequencing ----------
@@ -809,6 +1009,15 @@ ${answerLine}
 Your teaching style: ask short, Socratic guiding questions ("which rule do you think applies here?", "what do angles on a straight line add to?"). Do not immediately state the final numeric answer. If the student names the wrong rule or a known misconception pattern, gently point them back toward the right idea rather than correcting them outright. If the student seems stuck after a couple of exchanges, you can give a stronger hint (e.g. name the relevant rule), but still let them do the final calculation themselves. Keep every reply to 1-3 short sentences, spoken-style, suitable for reading aloud in a classroom.
 
 Formatting: this chat renders LaTeX, so write ALL mathematical notation in LaTeX between $ delimiters — never plain-text approximations. Examples: $47^\\circ$ not "47 degrees" or "47°"; $\\frac{1}{2}$ not "1/2"; $x^2$ not "x^2"; $\\angle ABC$ not "angle ABC"; $\\triangle$ for triangle symbol. Ordinary prose stays outside the $ delimiters.`;
+}
+
+function buildStepClarifySystemInstruction(step) {
+  return `You are a friendly, encouraging maths tutor helping a student understand ONE STEP of a worked example from their textbook.
+
+The line of working shown to the student: ${step.line}
+Why this step is done: ${step.reasoning}
+
+The student says they don't understand this step and has typed a follow-up question below. Answer their specific question clearly in 2-4 short sentences, focused only on this one step — don't jump ahead to later steps or the final answer beyond this step. Render all maths in LaTeX between $ delimiters (e.g. $5x = 30$, $\\div 5$), never plain-text approximations.`;
 }
 
 function describeApiError(errText) {
