@@ -294,7 +294,7 @@
   <input type="password" id="api-key-input" placeholder="Paste your free Google AI Studio key">
   <p class="hint">Get a free key at Google AI Studio (aistudio.google.com) — one key for the whole class, no student sign-up needed. Stored only in this browser, never sent anywhere except Google's API. To let students connect without pasting a key themselves, share a link with <code>&key=YourKey</code> added to the end — it's saved into their browser automatically on first visit.</p>
   <label for="model-input">Model</label>
-  <input type="text" id="model-input" placeholder="gemini-2.5-flash-lite">
+  <input type="text" id="model-input" placeholder="gemini-3.5-flash-lite">
   <p class="hint">Google's free tier changes which models it covers over time, and the current free daily cap (often as low as 20 requests/day) is genuinely too low for a real class. Check aistudio.google.com/usage → Rate Limit for what's free right now. If you hit 429 errors during a lesson, the real fix is enabling billing on your Google Cloud project — Gemini Flash-Lite pricing is a fraction of a cent per message, so a whole class's daily use should still only be cents, not dollars.</p>
   <label for="pin-input">Teacher PIN (optional)</label>
   <input type="password" id="pin-input" placeholder="e.g. 1234">
@@ -656,7 +656,7 @@ function addSystemMessage(text) {
 function getSettings() {
   return {
     apiKey: localStorage.getItem('mqh_api_key') || '',
-    model: localStorage.getItem('mqh_model') || 'gemini-2.5-flash-lite',
+    model: localStorage.getItem('mqh_model') || 'gemini-3.5-flash-lite',
     pin: localStorage.getItem('mqh_teacher_pin') || '',
   };
 }
@@ -834,7 +834,7 @@ function openSettings() {
 
 function saveSettings() {
   localStorage.setItem('mqh_api_key', el('api-key-input').value.trim());
-  localStorage.setItem('mqh_model', el('model-input').value.trim() || 'gemini-2.5-flash-lite');
+  localStorage.setItem('mqh_model', el('model-input').value.trim() || 'gemini-3.5-flash-lite');
   localStorage.setItem('mqh_teacher_pin', el('pin-input').value.trim());
   el('settings-dialog').close();
 }
