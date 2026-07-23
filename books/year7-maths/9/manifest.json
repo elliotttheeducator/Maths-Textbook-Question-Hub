@@ -4,18 +4,6 @@
   "cover": "books/year7-maths/9/assets/cover.png",
   "sections": [
     {
-      "id": "9A",
-      "title": "Introduction to equations",
-      "path": "books/year7-maths/9A/manifest.json",
-      "description": "What an equation is, deciding whether an equation is true or false, and translating worded statements into equations."
-    },
-    {
-      "id": "9B",
-      "title": "Solving equations by inspection",
-      "path": "books/year7-maths/9B/manifest.json",
-      "description": "Finding the solution to a simple equation by inspection, and checking a solution by substitution."
-    },
-    {
       "id": "9C",
       "title": "Equivalent equations",
       "path": "books/year7-maths/9C/manifest.json",
@@ -26,30 +14,6 @@
       "title": "Solving equations algebraically",
       "path": "books/year7-maths/9D/manifest.json",
       "description": "Solving one- and two-step equations algebraically using inverse operations, and checking solutions."
-    },
-    {
-      "id": "9E",
-      "title": "Equations with fractions (Extending)",
-      "path": "books/year7-maths/9E/manifest.json",
-      "description": "Solving equations that include fractions."
-    },
-    {
-      "id": "9F",
-      "title": "Equations with brackets (Extending)",
-      "path": "books/year7-maths/9F/manifest.json",
-      "description": "Expanding brackets to solve equations."
-    },
-    {
-      "id": "9G",
-      "title": "Using formulas",
-      "path": "books/year7-maths/9G/manifest.json",
-      "description": "Substituting values into formulas and rearranging or solving for an unknown quantity in a formula."
-    },
-    {
-      "id": "9H",
-      "title": "Using equations to solve problems",
-      "path": "books/year7-maths/9H/manifest.json",
-      "description": "Translating worded problems into equations and solving them to answer real-world questions."
     }
   ]
 }
