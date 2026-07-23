@@ -105,6 +105,9 @@
   .cover-section h3 { color: var(--chalk-yellow); margin: 0 0 0.6rem; }
   .cover-section .paper { margin-bottom: 0.9rem; }
   #start-actions { text-align: center; margin-top: 2rem; display: flex; gap: 0.75rem; justify-content: center; flex-wrap: wrap; }
+  #walkthrough-lock-msg { color: var(--chalk-dim); font-size: 0.9rem; margin-top: 1.5rem; margin-bottom: 0; }
+  button[disabled] { opacity: 0.4; cursor: not-allowed; }
+  button[disabled]:hover { border-color: var(--border); background: none; }
 
   /* Worked-example walkthrough (whiteboard) */
   .wb-card {
@@ -175,6 +178,10 @@
   }
   .wb-confused-reply.show { display: block; }
   .wb-final-image { display: block; width: 100%; border-radius: 6px; }
+  .wb-complete-msg { font-size: 1.1rem; color: #23262b; text-align: center; padding: 1rem 0 0.5rem; }
+  .wb-controls-center { justify-content: center; }
+  .wb-replay-row { text-align: center; margin-top: 0.9rem; }
+  .wb-replay-btn { color: #555; border-color: #bbb; }
 
   .status-row { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 0.75rem; color: var(--chalk-dim); font-size: 0.95rem; margin-bottom: 0.75rem; }
   .tag {
@@ -293,6 +300,7 @@
       <div id="cover-examples"></div>
     </div>
 
+    <p class="hint" id="walkthrough-lock-msg" style="display:none; text-align:center;">Complete the worked examples above to unlock the questions.</p>
     <div id="start-actions">
       <button id="start-btn" class="primary">Ready? Start questions →</button>
       <button id="map-btn" class="teacher-only" style="display:none;">🗺️ Jump to a question</button>
@@ -644,10 +652,31 @@ async function openChapterSections(path) {
 
 // ---------- Cover ----------
 
+function computeGroupNumbers() {
+  const map = {};
+  let n = 0;
+  state.bank.questions.forEach(q => {
+    const key = groupKey(q.id);
+    if (!(key in map)) { n += 1; map[key] = n; }
+  });
+  return map;
+}
+
+function partSuffix(id) {
+  return id.slice(groupKey(id).length);
+}
+
+function questionLabel(id) {
+  const num = state.groupNumbers[groupKey(id)];
+  const suffix = partSuffix(id);
+  return suffix ? `${num}${suffix}` : `${num}`;
+}
+
 async function openChapter(path) {
   const res = await fetch(path);
   state.bank = await res.json();
   state.baseDir = path.slice(0, path.lastIndexOf('/') + 1);
+  state.groupNumbers = computeGroupNumbers();
 
   el('section-title').textContent = `${state.bank.id} — ${state.bank.title}`;
   el('section-desc').textContent = state.bank.source || '';
@@ -661,9 +690,9 @@ async function openChapter(path) {
 
   const examplesWrap = el('cover-examples');
   examplesWrap.innerHTML = '';
-  (state.bank.workedExamples || []).forEach(ex => {
+  (state.bank.workedExamples || []).forEach((ex, idx) => {
     if (Array.isArray(ex.walkthrough) && ex.walkthrough.length) {
-      examplesWrap.appendChild(buildWalkthroughCard(ex));
+      examplesWrap.appendChild(buildWalkthroughCard(ex, state.bank.id, idx));
     } else {
       examplesWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
     }
@@ -671,6 +700,7 @@ async function openChapter(path) {
 
   populateReferencePanel(state.bank);
   updateTeacherVisibility();
+  updateWalkthroughGate();
   showView('cover');
 }
 
@@ -726,21 +756,30 @@ async function askAboutStep(step, inputEl, replyEl, sendBtn) {
   inputEl.disabled = false;
 }
 
-function buildWalkthroughCard(ex) {
+function walkthroughDoneKey(bankId, exampleKey) {
+  return `mqh_wt_done_${bankId}_${exampleKey}`;
+}
+
+function buildWalkthroughCard(ex, bankId, exampleKey) {
   const steps = ex.walkthrough;
+  const doneKey = walkthroughDoneKey(bankId, exampleKey);
   const card = h('div', { class: 'wb-card' });
   const surface = h('div', { class: 'wb-surface' });
-  if (ex.diagram) {
-    surface.appendChild(h('div', { class: 'wb-diagram-wrap' }, h('img', { class: 'wb-diagram', src: state.baseDir + ex.diagram, alt: 'Diagram for this example' })));
-  }
   const stack = h('div', { class: 'wb-stack' });
   const active = h('div', { class: 'wb-active' });
-  surface.appendChild(stack);
-  surface.appendChild(active);
   card.appendChild(h('h4', { class: 'wb-title' }, ex.title || 'Worked example'));
   card.appendChild(surface);
 
   let index = 0;
+
+  function mountBoard() {
+    surface.innerHTML = '';
+    if (ex.diagram) {
+      surface.appendChild(h('div', { class: 'wb-diagram-wrap' }, h('img', { class: 'wb-diagram', src: state.baseDir + ex.diagram, alt: 'Diagram for this example' })));
+    }
+    surface.appendChild(stack);
+    surface.appendChild(active);
+  }
 
   function addToStack(step) {
     const lineEl = h('span', { class: 'wb-history-line' });
@@ -753,12 +792,49 @@ function buildWalkthroughCard(ex) {
     requestAnimationFrame(() => requestAnimationFrame(() => item.classList.add('settled')));
   }
 
-  function finalize() {
+  function showFinalStatic() {
     surface.innerHTML = '';
     surface.appendChild(h('img', { class: 'wb-final-image', src: state.baseDir + ex.image, alt: ex.title || 'Worked example' }));
+    const replayBtn = h('button', { class: 'wb-replay-btn' }, '↺ Replay this walkthrough');
+    replayBtn.addEventListener('click', restart);
+    surface.appendChild(h('div', { class: 'wb-replay-row' }, replayBtn));
+  }
+
+  function markDone() {
+    localStorage.setItem(doneKey, '1');
+    updateWalkthroughGate();
+  }
+
+  function showCompletionPrompt() {
+    mountBoard();
+    active.classList.remove('fading');
+    stack.innerHTML = '';
+    active.innerHTML = '';
+    active.appendChild(h('div', { class: 'wb-complete-msg' }, "You've been through every step!"));
+    const showBtn = h('button', { class: 'wb-understand' }, '📄 Show textbook page');
+    showBtn.addEventListener('click', () => { markDone(); showFinalStatic(); });
+    const againBtn = h('button', { class: 'wb-confused-btn' }, '↺ Start again');
+    againBtn.addEventListener('click', restart);
+    active.appendChild(h('div', { class: 'wb-controls wb-controls-center' }, [showBtn, againBtn]));
+  }
+
+  function showStartGate() {
+    mountBoard();
+    active.classList.remove('fading');
+    stack.innerHTML = '';
+    active.innerHTML = '';
+    const startBtn = h('button', { class: 'wb-understand' }, '▶ Start');
+    startBtn.addEventListener('click', renderActiveStep);
+    active.appendChild(h('div', { class: 'wb-controls wb-controls-center' }, startBtn));
+  }
+
+  function restart() {
+    index = 0;
+    showStartGate();
   }
 
   function renderActiveStep() {
+    mountBoard();
     const step = steps[index];
     active.innerHTML = '';
     active.classList.remove('fading');
@@ -801,13 +877,34 @@ function buildWalkthroughCard(ex) {
     active.classList.add('fading');
     index++;
     setTimeout(() => {
-      if (index >= steps.length) finalize();
+      if (index >= steps.length) showCompletionPrompt();
       else renderActiveStep();
     }, 180);
   }
 
-  renderActiveStep();
+  if (localStorage.getItem(doneKey) === '1') {
+    mountBoard();
+    showFinalStatic();
+  } else {
+    showStartGate();
+  }
   return card;
+}
+
+function walkthroughGateSatisfied() {
+  const list = (state.bank && state.bank.workedExamples) || [];
+  return list.every((ex, idx) => {
+    if (!Array.isArray(ex.walkthrough) || !ex.walkthrough.length) return true;
+    return localStorage.getItem(walkthroughDoneKey(state.bank.id, idx)) === '1';
+  });
+}
+
+function updateWalkthroughGate() {
+  const satisfied = walkthroughGateSatisfied();
+  el('start-btn').disabled = !satisfied;
+  el('map-btn').disabled = !satisfied;
+  el('subset-btn').disabled = !satisfied;
+  el('walkthrough-lock-msg').style.display = satisfied ? 'none' : 'block';
 }
 
 // ---------- Sequencing ----------
@@ -850,9 +947,9 @@ function openQuestionMap() {
       chips.appendChild(h('button', {
         class: 'map-chip' + (isCurrent ? ' current' : ''),
         onclick: () => { startQuestions(allIndicesInOrder()); state.index = i; showQuestion(); },
-      }, q.id));
+      }, partSuffix(q.id) || String(state.groupNumbers[key])));
     });
-    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `${key} (${items.length})`), chips]));
+    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `Question ${state.groupNumbers[key]} (${items.length})`), chips]));
   });
   showView('map');
 }
@@ -871,9 +968,9 @@ function openSubsetPicker() {
         checked: state.subsetSelection.has(i),
         onchange: (e) => { if (e.target.checked) state.subsetSelection.add(i); else state.subsetSelection.delete(i); },
       });
-      chips.appendChild(h('label', { class: 'map-chip picker' }, [checkbox, q.id]));
+      chips.appendChild(h('label', { class: 'map-chip picker' }, [checkbox, partSuffix(q.id) || String(state.groupNumbers[key])]));
     });
-    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `${key} (${items.length})`), chips]));
+    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `Question ${state.groupNumbers[key]} (${items.length})`), chips]));
   });
   showView('subset');
 }
@@ -920,7 +1017,7 @@ async function showQuestion() {
   } else {
     el('context-image-wrap').style.display = 'none';
   }
-  el('progress').textContent = `Question ${state.index + 1} of ${state.order.length} — ${q.id}`;
+  el('progress').textContent = `Question ${questionLabel(q.id)} (${state.index + 1} of ${state.order.length})`;
   renderProgressBar();
   el('chat-input').value = '';
   el('chat-input').disabled = false;
