@@ -16,11 +16,108 @@
   "workedExamples": [
     {
       "title": "Example 15 \u2014 Choosing a similarity test for triangles",
-      "image": "assets/example15.png"
+      "image": "assets/example15.png",
+      "diagram": "assets/example15_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Choose the similarity test that proves these triangles are similar.",
+          "line": "\\text{AAA}",
+          "reasoning": "Both triangles have three matching marked angles (\u25a1, \u2022, \u25cb) \u2014 three pairs of equal angles means AAA (often just written AA, since the third pair follows automatically)."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Choose the similarity test that proves these triangles are similar.",
+          "line": "\\dfrac{9}{3} = \\dfrac{6}{2}",
+          "reasoning": "Both are right-angled triangles. Check if the hypotenuses and one other pair of sides are in the same ratio."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{9}{3} = \\dfrac{6}{2} = 3",
+          "reasoning": "Both ratios equal 3, so the sides are in proportion \u2014 combined with the right angle, this proves similarity."
+        },
+        {
+          "part": "b",
+          "line": "\\text{RHS}",
+          "reasoning": "Right-angled triangles with the hypotenuse and one other side in the same ratio are similar by RHS."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c \u2014 Choose the similarity test that proves these triangles are similar.",
+          "line": "\\dfrac{21}{7} = \\dfrac{18}{6}",
+          "reasoning": "Two pairs of corresponding sides are marked, with the included angle (\u2022) equal in both triangles. Check if those two side pairs are in the same ratio."
+        },
+        {
+          "part": "c",
+          "line": "\\dfrac{21}{7} = \\dfrac{18}{6} = 3",
+          "reasoning": "Both ratios equal 3, so the two pairs of sides are in proportion, and the angle between them is equal."
+        },
+        {
+          "part": "c",
+          "line": "\\text{SAS}",
+          "reasoning": "Two pairs of sides in the same ratio, with the included angle equal, proves similarity by SAS."
+        },
+        {
+          "part": "d",
+          "prompt": "Part d \u2014 Choose the similarity test that proves these triangles are similar.",
+          "line": "\\dfrac{15}{5} = \\dfrac{12}{4} = \\dfrac{6}{2}",
+          "reasoning": "All three pairs of corresponding sides are marked. Check if all three ratios are equal."
+        },
+        {
+          "part": "d",
+          "line": "\\dfrac{15}{5} = \\dfrac{12}{4} = \\dfrac{6}{2} = 3",
+          "reasoning": "All three ratios equal 3, so all three pairs of sides are in proportion."
+        },
+        {
+          "part": "d",
+          "line": "\\text{SSS}",
+          "reasoning": "Three pairs of corresponding sides all in the same ratio proves similarity by SSS."
+        }
+      ]
     },
     {
       "title": "Example 16 \u2014 Finding a missing length using similarity",
-      "image": "assets/example16.png"
+      "image": "assets/example16.png",
+      "diagram": "assets/example16_diagram.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a \u2014 Give a reason why triangles AEC and BDC are similar.",
+          "line": "\\angle EAC = \\angle DBC",
+          "reasoning": "AE is parallel to BD, so the corresponding angles at A and B are equal: \u2220EAC = \u2220DBC."
+        },
+        {
+          "part": "a",
+          "line": "\\angle C \\text{ is common}",
+          "reasoning": "\u2220C is shared by both triangles \u2014 it's the same angle at vertex C in each."
+        },
+        {
+          "part": "a",
+          "line": "\\text{AAA (or AA)}",
+          "reasoning": "Two pairs of equal angles (with the third pair, \u2220AEC = \u2220BDC, following automatically) proves similarity \u2014 often just written AA since the third angle comes for free."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b \u2014 Find the value of $x$ (the length of $CE$).",
+          "line": "\\text{scale factor} = \\dfrac{AE}{BD} = \\dfrac{3}{2}",
+          "reasoning": "AE and BD are corresponding sides (3 cm and 2 cm), so their ratio gives the scale factor from the small triangle (BDC) to the large one (AEC)."
+        },
+        {
+          "part": "b",
+          "line": "\\text{scale factor} = \\dfrac{3}{2} = 1.5",
+          "reasoning": "3 \u00f7 2 = 1.5."
+        },
+        {
+          "part": "b",
+          "line": "x = 5 \\times 1.5",
+          "reasoning": "CD = 5 cm corresponds to CE = x. Multiply CD by the scale factor to find CE."
+        },
+        {
+          "part": "b",
+          "line": "x = 5 \\times 1.5 = 7.5",
+          "reasoning": "5 \u00d7 1.5 = 7.5, so x = 7.5."
+        }
+      ]
     }
   ],
   "questions": [
