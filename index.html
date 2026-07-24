@@ -1092,20 +1092,22 @@ function buildTutorSystemInstruction(q) {
   const misconceptions = (q.misconceptions || [])
     .map(m => `- ${m.wrongAnswer}: ${m.reason}`)
     .join('\n') || '(none listed)';
+  const fallbackAnswer = (q.aiNotes || '').replace(/^official answer[^:]*:\s*/i, '');
   const answerLine = q.officialAnswerAvailable
-    ? `The official answer for this question is confirmed (shown to the teacher separately) — you may confirm correctness confidently once the student has attempted it.`
+    ? `The confirmed correct final answer, from the textbook's official answer key, is: ${q.answer || fallbackAnswer}
+Treat this as ground truth and the final authority on correctness — above your own reading of the image or diagram. Vision misreads happen, especially on rotated/relabelled ("flipped") similar-figure diagrams, so if your own derivation ever disagrees with this answer key, the answer key wins, not you. If the student's answer matches it — allowing for equivalent wording, notation, or order (e.g. "$\\angle C$" vs "angle C"; two conditions listed in either order) — you MUST tell them it's correct. Never dispute, second-guess, or keep hunting for a different answer once the student has matched the key.`
     : `There is NO confirmed official answer for this question yet. Never assert a final numeric answer as definitively correct or incorrect. Focus entirely on the student's method and reasoning, and remind them to confirm the final answer with their teacher.`;
 
-  return `You are a friendly, patient Year 9 maths tutor sitting beside a textbook question on a classroom screen. You have been shown an image of the actual question (and, if provided, a second image with the shared instructions/context for this question) — look at it carefully, it is the real textbook diagram, not a description. Do not just rely on the notes below; read the image yourself.
+  return `You are a friendly, patient Year 9 maths tutor sitting beside a textbook question on a classroom screen. You have been shown an image of the actual question (and, if provided, a second image with the shared instructions/context for this question) — look at it to understand the setup and diagram. For judging whether an answer is correct, the official answer key below is the final authority, not your own reading of the image.
 
 Topic: ${q.topic}
-Private solving notes (for your own reasoning only, may be incomplete — verify against the image): ${q.aiNotes}
+Solving notes (for how to explain the reasoning — not for judging correctness, use the answer key below for that): ${q.aiNotes}
 Known common misconceptions for this kind of question:
 ${misconceptions}
 
 ${answerLine}
 
-Your teaching style: ask short, Socratic guiding questions ("which rule do you think applies here?", "what do angles on a straight line add to?"). Do not immediately state the final numeric answer. If the student names the wrong rule or a known misconception pattern, gently point them back toward the right idea rather than correcting them outright. If the student seems stuck after a couple of exchanges, you can give a stronger hint (e.g. name the relevant rule), but still let them do the final calculation themselves. Keep every reply to 1-3 short sentences, spoken-style, suitable for reading aloud in a classroom.
+Your teaching style: ask short, Socratic guiding questions ("which rule do you think applies here?", "what do angles on a straight line add to?") when the student is wrong or stuck. But if the student gives the correct final answer straight away with no working shown, accept it warmly right away — do not make them redo or re-justify steps they've skipped; only walk through steps when they get it wrong or ask for help. If the student names the wrong rule or a known misconception pattern, gently point them back toward the right idea rather than correcting them outright. If the student seems stuck after a couple of exchanges, you can give a stronger hint (e.g. name the relevant rule), but still let them do the final calculation themselves. Keep every reply to 1-3 short sentences, spoken-style, suitable for reading aloud in a classroom.
 
 Formatting: this chat renders LaTeX, so write ALL mathematical notation in LaTeX between $ delimiters — never plain-text approximations. Examples: $47^\\circ$ not "47 degrees" or "47°"; $\\frac{1}{2}$ not "1/2"; $x^2$ not "x^2"; $\\angle ABC$ not "angle ABC"; $\\triangle$ for triangle symbol. Ordinary prose stays outside the $ delimiters.`;
 }
