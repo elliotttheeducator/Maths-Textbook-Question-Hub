@@ -38,6 +38,21 @@ const ALLOWED_ORIGIN = 'https://elliotttheeducator.github.io';
 const IMAGE_INTRO_TEXT = 'This is the question the student is working on. Look at it carefully before responding.';
 const IMAGE_ACK_TEXT = 'Got it, I can see the question clearly.';
 
+// Cloudflare's edge gives up on a Worker response after ~100s and returns a
+// generic, unfriendly 524 error page. Timing the vendor call out ourselves
+// well before that lets us return a clean JSON error instead.
+const VENDOR_TIMEOUT_MS = 25000;
+
+async function fetchWithTimeout(url, options) {
+  const controller = new AbortController();
+  const timer = setTimeout(() => controller.abort(), VENDOR_TIMEOUT_MS);
+  try {
+    return await fetch(url, { ...options, signal: controller.signal });
+  } finally {
+    clearTimeout(timer);
+  }
+}
+
 function corsHeaders() {
   return {
     'Access-Control-Allow-Origin': ALLOWED_ORIGIN,
@@ -77,7 +92,7 @@ async function callGemini(env, { model, systemInstruction, imageParts, history }
     generationConfig: { temperature: 0.5 },
   };
 
-  const vendorRes = await fetch(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model || 'gemini-3.5-flash-lite')}:generateContent`, {
+  const vendorRes = await fetchWithTimeout(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(model || 'gemini-3.5-flash-lite')}:generateContent`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', 'x-goog-api-key': env.GEMINI_API_KEY },
     body: JSON.stringify(body),
@@ -98,7 +113,7 @@ async function callOpenAI(env, { model, systemInstruction, imageParts, history }
   }
   history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
 
-  const vendorRes = await fetch('https://api.openai.com/v1/chat/completions', {
+  const vendorRes = await fetchWithTimeout('https://api.openai.com/v1/chat/completions', {
     method: 'POST',
     headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${env.OPENAI_API_KEY}` },
     body: JSON.stringify({ model: model || 'gpt-5-mini', messages }),
@@ -119,7 +134,7 @@ async function callClaude(env, { model, systemInstruction, imageParts, history }
   }
   history.forEach(m => messages.push({ role: m.role === 'model' ? 'assistant' : 'user', content: m.text }));
 
-  const vendorRes = await fetch('https://api.anthropic.com/v1/messages', {
+  const vendorRes = await fetchWithTimeout('https://api.anthropic.com/v1/messages', {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -163,6 +178,9 @@ export default {
         history: payload.history || [],
       });
     } catch (e) {
+      if (e.name === 'AbortError') {
+        return jsonError('The AI provider took too long to respond. Please try again.', 504);
+      }
       return jsonError('Could not reach the AI provider right now. Please try again.', 502);
     }
   },

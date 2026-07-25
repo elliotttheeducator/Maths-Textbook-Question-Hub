@@ -1121,7 +1121,14 @@ Why this step is done: ${step.reasoning}
 The student says they don't understand this step and has typed a follow-up question below. Answer their specific question clearly in 2-4 short sentences, focused only on this one step — don't jump ahead to later steps or the final answer beyond this step. Render all maths in LaTeX between $ delimiters (e.g. $5x = 30$, $\\div 5$), never plain-text approximations.`;
 }
 
-function describeApiError(errText) {
+function isTimeoutStatus(status) {
+  return status === 524 || status === 504 || status === 522 || status === 408;
+}
+
+function describeApiError(errText, status) {
+  if (isTimeoutStatus(status)) {
+    return 'The AI tutor took too long to respond. This usually clears up on its own — try sending your message again.';
+  }
   try {
     const parsed = JSON.parse(errText);
     const err = parsed.error || {};
@@ -1213,7 +1220,10 @@ async function callAI(systemInstruction, imageParts, history) {
 
   let res = null;
   if (WORKER_URL) {
-    const attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
+    let attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
+    if (attempt.reached && isTimeoutStatus(attempt.res.status)) {
+      attempt = await tryHostedProxy(provider, model, systemInstruction, imageParts, history);
+    }
     if (attempt.reached) {
       res = attempt.res;
     } else if (!apiKey) {
@@ -1239,7 +1249,7 @@ async function callAI(systemInstruction, imageParts, history) {
 
   if (!res.ok) {
     const errText = await res.text();
-    throw new Error(`API error (${res.status}): ${describeApiError(errText)}`);
+    throw new Error(`API error (${res.status}): ${describeApiError(errText, res.status)}`);
   }
   const data = await res.json();
   return adapter.parseResponse(data) || '(no response)';
