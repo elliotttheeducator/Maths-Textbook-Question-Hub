@@ -190,10 +190,12 @@
   }
 
   /* Progress bar */
-  #progress-bar-track { display: flex; gap: 2px; height: 10px; border-radius: 6px; overflow: hidden; margin-bottom: 1.5rem; background: rgba(0,0,0,0.25); }
+  #progress-bar-track { display: flex; gap: 2px; height: 10px; border-radius: 6px; overflow: visible; margin-bottom: 1.5rem; background: rgba(0,0,0,0.25); }
   .progress-seg { flex: 1; background: rgba(255,255,255,0.08); }
   .progress-seg.done { background: var(--chalk-yellow); }
   .progress-seg.current { background: var(--chalk-blue); }
+  .progress-seg.seg-warmup.done { background: var(--chalk-pink); }
+  .progress-seg.seg-divider { margin-right: 6px; }
 
   #reference-panel { display: none; max-height: 55vh; overflow-y: auto; border-radius: 16px; padding: 0.25rem 0.25rem 1rem; margin-bottom: 1.5rem; }
   #reference-panel.show { display: block; }
@@ -240,6 +242,11 @@
 
   /* Question map */
   .map-group { margin-bottom: 1.25rem; }
+  .section-browser-tier {
+    color: var(--chalk-pink); text-transform: uppercase; letter-spacing: 0.06em; font-size: 1rem;
+    border-bottom: 1px solid var(--border); padding-bottom: 0.4rem; margin: 1.75rem 0 1rem;
+  }
+  .section-browser-tier:first-of-type { margin-top: 0; }
   .map-group h4 { color: var(--chalk-yellow); margin: 0 0 0.5rem; }
   .map-chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
   .map-chip {
@@ -301,14 +308,15 @@
 
     <div id="start-actions">
       <button id="start-btn" class="primary">Ready? Start questions →</button>
-      <button id="map-btn" class="teacher-only" style="display:none;">🗺️ Jump to a question</button>
       <button id="subset-btn" class="teacher-only" style="display:none;">☑️ Pick a custom subset</button>
     </div>
   </div>
 
   <div id="mapScreen" style="display:none;">
     <button id="back-to-cover-1" class="small" style="margin-bottom:1rem;">&larr; Back</button>
-    <h2>Jump to a question</h2>
+    <h2>Choose where to start</h2>
+    <p class="lede">Jump straight in, or pick any warmup or exercise question to start from there.</p>
+    <button id="start-beginning-btn" class="primary" style="margin-bottom:1.5rem;">▶ Start from the beginning</button>
     <div id="map-groups"></div>
   </div>
 
@@ -651,11 +659,24 @@ async function openChapterSections(path) {
 // ---------- Cover ----------
 
 function computeGroupNumbers() {
+  // Warmup (Building Understanding) groups are numbered in their own
+  // sequence ("Warmup 1, 2, 3…"); every other tier shares one continuous
+  // sequence ("1, 2, 3…"), matching how the textbook numbers Exercise
+  // questions across its Fluency/Problem-solving/Reasoning/Enrichment
+  // subsections without resetting.
   const map = {};
-  let n = 0;
+  let warmupN = 0;
+  let exerciseN = 0;
   state.bank.questions.forEach(q => {
     const key = groupKey(q.id);
-    if (!(key in map)) { n += 1; map[key] = n; }
+    if (key in map) return;
+    if (q.tier === 'warmup') {
+      warmupN += 1;
+      map[key] = { number: warmupN, isWarmup: true };
+    } else {
+      exerciseN += 1;
+      map[key] = { number: exerciseN, isWarmup: false };
+    }
   });
   return map;
 }
@@ -664,10 +685,22 @@ function partSuffix(id) {
   return id.slice(groupKey(id).length);
 }
 
+function groupDisplayName(key) {
+  const g = state.groupNumbers[key];
+  return g.isWarmup ? `Warmup ${g.number}` : `${g.number}`;
+}
+
+function groupHeading(key, count) {
+  const g = state.groupNumbers[key];
+  const name = g.isWarmup ? `Warmup ${g.number}` : `Question ${g.number}`;
+  return `${name} (${count})`;
+}
+
 function questionLabel(id) {
-  const num = state.groupNumbers[groupKey(id)];
+  const key = groupKey(id);
   const suffix = partSuffix(id);
-  return suffix ? `${num}${suffix}` : `${num}`;
+  const name = groupDisplayName(key);
+  return suffix ? `${name}${suffix}` : name;
 }
 
 async function openChapter(path) {
@@ -917,7 +950,16 @@ function currentQuestion() {
   return state.bank.questions[state.order[state.index]];
 }
 
-// ---------- Question map (jump around) ----------
+// ---------- Section browser (jump around) ----------
+
+const TIER_ORDER = ['warmup', 'fluency', 'problem-solving', 'reasoning', 'enrichment'];
+const TIER_LABELS = {
+  warmup: 'Warmup',
+  fluency: 'Fluency',
+  'problem-solving': 'Problem-solving',
+  reasoning: 'Reasoning',
+  enrichment: 'Enrichment',
+};
 
 function groupedQuestions() {
   const groups = {};
@@ -929,20 +971,37 @@ function groupedQuestions() {
   return groups;
 }
 
-function openQuestionMap() {
+function jumpToQuestion(i) {
+  state.order = allIndicesInOrder();
+  state.index = i;
+  showView('quiz');
+  showQuestion();
+}
+
+function openSectionBrowser() {
   const container = el('map-groups');
   container.innerHTML = '';
   const groups = groupedQuestions();
+
+  const byTier = {};
   Object.entries(groups).forEach(([key, items]) => {
-    const chips = h('div', { class: 'map-chips' });
-    items.forEach(({ q, i }) => {
-      const isCurrent = state.order[state.index] === i && el('quizScreen').style.display !== 'none';
-      chips.appendChild(h('button', {
-        class: 'map-chip' + (isCurrent ? ' current' : ''),
-        onclick: () => { startQuestions(allIndicesInOrder()); state.index = i; showQuestion(); },
-      }, partSuffix(q.id) || String(state.groupNumbers[key])));
+    const tier = items[0].q.tier;
+    (byTier[tier] || (byTier[tier] = [])).push([key, items]);
+  });
+
+  TIER_ORDER.filter(tier => byTier[tier]).forEach(tier => {
+    container.appendChild(h('h3', { class: 'section-browser-tier' }, TIER_LABELS[tier] || tier));
+    byTier[tier].forEach(([key, items]) => {
+      const chips = h('div', { class: 'map-chips' });
+      items.forEach(({ q, i }) => {
+        const isCurrent = state.order[state.index] === i && el('quizScreen').style.display !== 'none';
+        chips.appendChild(h('button', {
+          class: 'map-chip' + (isCurrent ? ' current' : ''),
+          onclick: () => jumpToQuestion(i),
+        }, partSuffix(q.id) || groupDisplayName(key)));
+      });
+      container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, groupHeading(key, items.length)), chips]));
     });
-    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `Question ${state.groupNumbers[key]} (${items.length})`), chips]));
   });
   showView('map');
 }
@@ -961,9 +1020,9 @@ function openSubsetPicker() {
         checked: state.subsetSelection.has(i),
         onchange: (e) => { if (e.target.checked) state.subsetSelection.add(i); else state.subsetSelection.delete(i); },
       });
-      chips.appendChild(h('label', { class: 'map-chip picker' }, [checkbox, partSuffix(q.id) || String(state.groupNumbers[key])]));
+      chips.appendChild(h('label', { class: 'map-chip picker' }, [checkbox, partSuffix(q.id) || groupDisplayName(key)]));
     });
-    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, `Question ${state.groupNumbers[key]} (${items.length})`), chips]));
+    container.appendChild(h('div', { class: 'map-group' }, [h('h4', {}, groupHeading(key, items.length)), chips]));
   });
   showView('subset');
 }
@@ -979,9 +1038,17 @@ function startSubset() {
 function renderProgressBar() {
   const track = el('progress-bar-track');
   track.innerHTML = '';
-  state.order.forEach((_, i) => {
-    const cls = i < state.index ? 'done' : (i === state.index ? 'current' : '');
-    track.appendChild(h('div', { class: 'progress-seg ' + cls }));
+  state.order.forEach((qIdx, i) => {
+    const isWarmup = state.bank.questions[qIdx].tier === 'warmup';
+    const nextIdx = state.order[i + 1];
+    const isDivider = isWarmup && nextIdx !== undefined && state.bank.questions[nextIdx].tier !== 'warmup';
+    const cls = [
+      'progress-seg',
+      i < state.index ? 'done' : (i === state.index ? 'current' : ''),
+      isWarmup ? 'seg-warmup' : '',
+      isDivider ? 'seg-divider' : '',
+    ].filter(Boolean).join(' ');
+    track.appendChild(h('div', { class: cls }));
   });
 }
 
@@ -1014,7 +1081,8 @@ async function showQuestion() {
   } else {
     el('context-image-wrap').style.display = 'none';
   }
-  el('progress').textContent = `Question ${questionLabel(q.id)} (${state.index + 1} of ${state.order.length})`;
+  const progressPrefix = state.groupNumbers[groupKey(q.id)].isWarmup ? '' : 'Question ';
+  el('progress').textContent = `${progressPrefix}${questionLabel(q.id)} (${state.index + 1} of ${state.order.length})`;
   renderProgressBar();
   el('chat-input').value = '';
   el('chat-input').disabled = false;
@@ -1413,8 +1481,8 @@ el('back-to-cover-1').addEventListener('click', () => showView('cover'));
 el('back-to-cover-2').addEventListener('click', () => showView('cover'));
 el('back-to-cover-3').addEventListener('click', () => showView('cover'));
 
-el('start-btn').addEventListener('click', () => startQuestions());
-el('map-btn').addEventListener('click', openQuestionMap);
+el('start-btn').addEventListener('click', openSectionBrowser);
+el('start-beginning-btn').addEventListener('click', () => startQuestions());
 el('subset-btn').addEventListener('click', () => { state.subsetSelection = new Set(); openSubsetPicker(); });
 el('subset-start-btn').addEventListener('click', startSubset);
 
