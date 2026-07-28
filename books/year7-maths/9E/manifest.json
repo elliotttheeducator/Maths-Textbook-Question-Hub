@@ -1,0 +1,1284 @@
+{
+  "id": "9E",
+  "title": "Equations with fractions",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) — Chapter 9 Equations, Section 9E (Extending). Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 10 — Solving equations with fractions",
+      "image": "assets/example10_p2.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a — Solve $\\dfrac{a}{7} = 3$ algebraically.",
+          "line": "\\dfrac{a}{7} = 3",
+          "reasoning": "a is divided by 7. To undo that, we do the opposite operation — multiply by 7."
+        },
+        {
+          "part": "a",
+          "line": "\\dfrac{a}{7} \\times 7 = 3 \\times 7",
+          "highlight": "\\times 7",
+          "reasoning": "The opposite of ÷7 is ×7. Multiplying both sides by 7 keeps the equation balanced and removes the fraction."
+        },
+        {
+          "part": "a",
+          "line": "a = 21",
+          "reasoning": "a/7 × 7 simplifies to a, and 3 × 7 = 21. So the solution is a = 21."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b — Solve $\\dfrac{5y}{3} = 10$ algebraically.",
+          "line": "\\dfrac{5y}{3} = 10",
+          "reasoning": "This fraction has denominator 3. Multiply both sides by 3 to remove it, then solve the simpler equation that's left."
+        },
+        {
+          "part": "b",
+          "line": "\\dfrac{5y}{3} \\times 3 = 10 \\times 3",
+          "highlight": "\\times 3",
+          "reasoning": "Multiplying both sides by 3 removes the denominator of 3."
+        },
+        {
+          "part": "b",
+          "line": "5y = 30",
+          "reasoning": "5y/3 × 3 simplifies to 5y, and 10 × 3 = 30."
+        },
+        {
+          "part": "b",
+          "line": "5y \\div 5 = 30 \\div 5",
+          "highlight": "\\div 5",
+          "reasoning": "Now solve 5y = 30 as usual: y is multiplied by 5, so divide both sides by 5."
+        },
+        {
+          "part": "b",
+          "line": "y = 6",
+          "reasoning": "5y ÷ 5 simplifies to y, and 30 ÷ 5 = 6. So the solution is y = 6."
+        },
+        {
+          "part": "b",
+          "line": "\\text{LHS} = \\dfrac{5 \\times 6}{3} = 10, \\quad \\text{RHS} = 10 \\ \\checkmark",
+          "reasoning": "Substituting y = 6 back into the original equation gives 10 on both sides — the solution checks out."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c — Solve $\\dfrac{3x}{4} + 7 = 13$ algebraically.",
+          "line": "\\dfrac{3x}{4} + 7 = 13",
+          "reasoning": "We don't have a fraction by itself on the LHS yet — first undo the +7 by subtracting 7 from both sides."
+        },
+        {
+          "part": "c",
+          "line": "\\dfrac{3x}{4} + 7 - 7 = 13 - 7",
+          "highlight": "- 7",
+          "reasoning": "The opposite of +7 is −7. Subtracting 7 from both sides keeps the equation balanced."
+        },
+        {
+          "part": "c",
+          "line": "\\dfrac{3x}{4} = 6",
+          "reasoning": "3x/4 + 7 − 7 simplifies to 3x/4, and 13 − 7 = 6."
+        },
+        {
+          "part": "c",
+          "line": "\\dfrac{3x}{4} \\times 4 = 6 \\times 4",
+          "highlight": "\\times 4",
+          "reasoning": "Now there's a fraction by itself. Multiply both sides by its denominator, 4, to remove it."
+        },
+        {
+          "part": "c",
+          "line": "3x = 24",
+          "reasoning": "3x/4 × 4 simplifies to 3x, and 6 × 4 = 24."
+        },
+        {
+          "part": "c",
+          "line": "3x \\div 3 = 24 \\div 3",
+          "highlight": "\\div 3",
+          "reasoning": "Solve 3x = 24 as usual: x is multiplied by 3, so divide both sides by 3."
+        },
+        {
+          "part": "c",
+          "line": "x = 8",
+          "reasoning": "3x ÷ 3 simplifies to x, and 24 ÷ 3 = 8. So the solution is x = 8."
+        },
+        {
+          "part": "c",
+          "line": "\\text{LHS} = \\dfrac{3 \\times 8}{4} + 7 = 13, \\quad \\text{RHS} = 13 \\ \\checkmark",
+          "reasoning": "Substituting x = 8 back into the original equation gives 13 on both sides — the solution checks out."
+        },
+        {
+          "part": "d",
+          "prompt": "Part d — Solve $\\dfrac{2x - 3}{5} = 3$ algebraically.",
+          "line": "\\dfrac{2x - 3}{5} = 3",
+          "reasoning": "The whole expression 2x − 3 is divided by 5. Multiply both sides by 5 first to remove the denominator."
+        },
+        {
+          "part": "d",
+          "line": "\\dfrac{2x - 3}{5} \\times 5 = 3 \\times 5",
+          "highlight": "\\times 5",
+          "reasoning": "Multiplying both sides by 5 removes the denominator of 5."
+        },
+        {
+          "part": "d",
+          "line": "2x - 3 = 15",
+          "reasoning": "(2x − 3)/5 × 5 simplifies to 2x − 3, and 3 × 5 = 15."
+        },
+        {
+          "part": "d",
+          "line": "2x - 3 + 3 = 15 + 3",
+          "highlight": "+ 3",
+          "reasoning": "Now solve 2x − 3 = 15 as usual: 3 is subtracted from 2x, so add 3 to both sides."
+        },
+        {
+          "part": "d",
+          "line": "2x = 18",
+          "reasoning": "2x − 3 + 3 simplifies to 2x, and 15 + 3 = 18."
+        },
+        {
+          "part": "d",
+          "line": "2x \\div 2 = 18 \\div 2",
+          "highlight": "\\div 2",
+          "reasoning": "x is multiplied by 2, so divide both sides by 2."
+        },
+        {
+          "part": "d",
+          "line": "x = 9",
+          "reasoning": "2x ÷ 2 simplifies to x, and 18 ÷ 2 = 9. So the solution is x = 9."
+        },
+        {
+          "part": "d",
+          "line": "\\text{LHS} = \\dfrac{2 \\times 9 - 3}{5} = 3, \\quad \\text{RHS} = 3 \\ \\checkmark",
+          "reasoning": "Substituting x = 9 back into the original equation gives 3 on both sides — the solution checks out."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "True",
+      "aiNotes": "Official answer (from the Cambridge answer key): True",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1f",
+      "tier": "warmup",
+      "topic": "interpreting fraction notation as division",
+      "image": "assets/bu1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False",
+      "aiNotes": "Official answer (from the Cambridge answer key): False",
+      "misconceptions": [],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "evaluating and comparing two different expressions built from the same numbers",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "7",
+      "aiNotes": "Official answer (from the Cambridge answer key): 7",
+      "misconceptions": []
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "evaluating and comparing two different expressions built from the same numbers",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "9",
+      "aiNotes": "Official answer (from the Cambridge answer key): 9",
+      "misconceptions": []
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "evaluating and comparing two different expressions built from the same numbers",
+      "image": "assets/bu2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "False — they give different values (7 and 9), so they are not equivalent expressions",
+      "aiNotes": "Official answer (from the Cambridge answer key): False — they give different values (7 and 9), so they are not equivalent expressions",
+      "misconceptions": []
+    },
+    {
+      "id": "bu3a",
+      "tier": "warmup",
+      "topic": "identifying the missing steps to solve a one-step fraction equation",
+      "image": "assets/bu3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 44 (multiply both sides by 4)",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 44 (multiply both sides by 4)",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3b",
+      "tier": "warmup",
+      "topic": "identifying the missing steps to solve a one-step fraction equation",
+      "image": "assets/bu3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 15 (multiply both sides by 5)",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 15 (multiply both sides by 5)",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3c",
+      "tier": "warmup",
+      "topic": "identifying the missing steps to solve a one-step fraction equation",
+      "image": "assets/bu3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "h = 28 (multiply both sides by 4)",
+      "aiNotes": "Official answer (from the Cambridge answer key): h = 28 (multiply both sides by 4)",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu3d",
+      "tier": "warmup",
+      "topic": "identifying the missing steps to solve a one-step fraction equation",
+      "image": "assets/bu3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 26 (multiply both sides by 13)",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 26 (multiply both sides by 13)",
+      "misconceptions": [],
+      "contextImage": "assets/bu3_context.png"
+    },
+    {
+      "id": "bu4a",
+      "tier": "warmup",
+      "topic": "choosing the correct first step to solve an equation with a fraction",
+      "image": "assets/bu4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "B — multiply both sides by 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): B — multiply both sides by 3",
+      "misconceptions": [],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4b",
+      "tier": "warmup",
+      "topic": "choosing the correct first step to solve an equation with a fraction",
+      "image": "assets/bu4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C — subtract 2 from both sides",
+      "aiNotes": "Official answer (from the Cambridge answer key): C — subtract 2 from both sides",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4c",
+      "tier": "warmup",
+      "topic": "choosing the correct first step to solve an equation with a fraction",
+      "image": "assets/bu4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A — multiply both sides by 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): A — multiply both sides by 2",
+      "misconceptions": [],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "bu4d",
+      "tier": "warmup",
+      "topic": "choosing the correct first step to solve an equation with a fraction",
+      "image": "assets/bu4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "D — add 3 to both sides",
+      "aiNotes": "Official answer (from the Cambridge answer key): D — add 3 to both sides",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/bu4_context.png"
+    },
+    {
+      "id": "ex1a",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction by multiplying both sides by the denominator",
+      "image": "assets/ex1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 8",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1b",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction by multiplying both sides by the denominator",
+      "image": "assets/ex1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 30",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 30",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1c",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction by multiplying both sides by the denominator",
+      "image": "assets/ex1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 35",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 35",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1d",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction by multiplying both sides by the denominator",
+      "image": "assets/ex1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 200",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 200",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 12",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 12",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "c = 18",
+      "aiNotes": "Official answer (from the Cambridge answer key): c = 18",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 16",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 16",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "r = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): r = 10",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2e",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 20",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 20",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2f",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 18",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 18",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2g",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2h",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 16",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 16",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2i",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "h = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): h = 10",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2j",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2j.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "j = 15",
+      "aiNotes": "Official answer (from the Cambridge answer key): j = 15",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2k",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2k.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "v = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): v = 9",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2l",
+      "tier": "fluency",
+      "topic": "solving a one-step equation with a fraction, where the numerator has a coefficient",
+      "image": "assets/ex2l.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 8",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "h = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): h = 9",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 6",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "j = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): j = 3",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3e",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = 3",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3f",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3g",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "w = 6",
+      "aiNotes": "Official answer (from the Cambridge answer key): w = 6",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3h",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "r = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): r = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3i",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3i.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 9",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3j",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3j.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "s = 3",
+      "aiNotes": "Official answer (from the Cambridge answer key): s = 3",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3k",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3k.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "l = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): l = 8",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3l",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3l.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "z = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): z = 7",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3m",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3m.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "v = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): v = 11",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3n",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3n.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "f = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): f = 9",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3o",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3o.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 2",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 2",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3p",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3p.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = 5",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3q",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3q.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "n = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): n = 5",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3r",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3r.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 11",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3s",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3s.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "p = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): p = 8",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3t",
+      "tier": "fluency",
+      "topic": "solving a two-step equation with a fraction, checking the solution by substitution",
+      "image": "assets/ex3t.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 9",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = -1",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = -1",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "a = -10",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = -10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = -10",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = -10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = -48",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = -48",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4e",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = -30",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = -30",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4f",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = -10",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = -10",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4g",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4g.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "u = -4",
+      "aiNotes": "Official answer (from the Cambridge answer key): u = -4",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4h",
+      "tier": "fluency",
+      "topic": "solving a two-step fraction equation that has a negative solution",
+      "image": "assets/ex4h.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "d = -5",
+      "aiNotes": "Official answer (from the Cambridge answer key): d = -5",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{n}{2} = 9$, so the number is $n = 18$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{n}{2} = 9$, so the number is $n = 18$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{q}{3} = 14$, so $q = 42$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{q}{3} = 14$, so $q = 42$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{2r}{5} = 6$, so $r = 15$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{2r}{5} = 6$, so $r = 15$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5d",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{q - 4}{2} = 3$, so $q = 10$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{q - 4}{2} = 3$, so $q = 10$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5e",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{x + 3}{4} = 2$, so $x = 5$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{x + 3}{4} = 2$, so $x = 5$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5f",
+      "tier": "problem-solving",
+      "topic": "translating a worded number problem into a fraction equation and solving it",
+      "image": "assets/ex5f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{y}{4} + 3 = 5$, so $y = 8$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{y}{4} + 3 = 5$, so $y = 8$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "modelling and solving a real-world problem (splitting a bill) with a fraction equation",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{b}{5} = 31.50$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{b}{5} = 31.50$",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "modelling and solving a real-world problem (splitting a bill) with a fraction equation",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$b = 157.50$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $b = 157.50$",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6c",
+      "tier": "problem-solving",
+      "topic": "modelling and solving a real-world problem (splitting a bill) with a fraction equation",
+      "image": "assets/ex6c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "The total cost of the bill is $157.50",
+      "aiNotes": "Official answer (from the Cambridge answer key): The total cost of the bill is $157.50",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "writing an expression and equation for a real-world problem involving a shared cost",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{x}{2} + 5$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{x}{2} + 5$",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "writing an expression and equation for a real-world problem involving a shared cost",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{x}{2} + 5 = 11$, so the total cost of hiring the court is $x = 12$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{x}{2} + 5 = 11$, so the total cost of hiring the court is $x = 12$",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "writing an expression and equation for a real-world problem involving a shared cost",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Theo paid $\\$6$ (half of $\\$12$)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Theo paid $\\$6$ (half of $\\$12$)",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "reasoning",
+      "topic": "reasoning about the difference between (ax+b)/c and ax/c+b",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$\\dfrac{2x+3}{5}$ divides the WHOLE expression $2x+3$ by 5, but $\\dfrac{2x}{5}+3$ only divides $2x$ by 5 and then adds 3 afterwards.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $\\dfrac{2x+3}{5}$ divides the WHOLE expression $2x+3$ by 5, but $\\dfrac{2x}{5}+3$ only divides $2x$ by 5 and then adds 3 afterwards.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex8b",
+      "tier": "reasoning",
+      "topic": "reasoning about the difference between (ax+b)/c and ax/c+b",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Multiply both sides by 5 (the fraction is already alone on the LHS).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Multiply both sides by 5 (the fraction is already alone on the LHS).",
+      "misconceptions": []
+    },
+    {
+      "id": "ex8c",
+      "tier": "reasoning",
+      "topic": "reasoning about the difference between (ax+b)/c and ax/c+b",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Subtract 3 from both sides (the fraction isn't alone on the LHS yet).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Subtract 3 from both sides (the fraction isn't alone on the LHS yet).",
+      "misconceptions": [
+        {
+          "wrongAnswer": "multiplying every term by the denominator before the fraction is alone on one side",
+          "reason": "you can only clear a fraction by multiplying by its denominator once the fraction is by itself on one side — first undo any number that's added or subtracted outside the fraction"
+        }
+      ]
+    },
+    {
+      "id": "ex8d",
+      "tier": "reasoning",
+      "topic": "reasoning about the difference between (ax+b)/c and ax/c+b",
+      "image": "assets/ex8d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "No — solving $\\dfrac{2x+3}{5}=\\dfrac{2x}{5}+3$ leads to $2x+3=2x+15$, i.e. $3=15$, which is never true, so there is no value of x for which they are equal.",
+      "aiNotes": "Official answer (from the Cambridge answer key): No — solving $\\dfrac{2x+3}{5}=\\dfrac{2x}{5}+3$ leads to $2x+3=2x+15$, i.e. $3=15$, which is never true, so there is no value of x for which they are equal.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex9a",
+      "tier": "reasoning",
+      "topic": "constructing an equation that has a given fractional solution",
+      "image": "assets/ex9a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Many equations work — e.g. $4x = 2$ (accept any equation that is true when $x = \\dfrac{1}{2}$, it doesn't need to match this exact example)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Many equations work — e.g. $4x = 2$ (accept any equation that is true when $x = \\dfrac{1}{2}$, it doesn't need to match this exact example)",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "reasoning",
+      "topic": "constructing an equation that has a given fractional solution",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Many equations work — e.g. $7x = 5$ (accept any equation that is true when $x = \\dfrac{5}{7}$, it doesn't need to match this exact example)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Many equations work — e.g. $7x = 5$ (accept any equation that is true when $x = \\dfrac{5}{7}$, it doesn't need to match this exact example)",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9c",
+      "tier": "reasoning",
+      "topic": "constructing an equation that has a given fractional solution",
+      "image": "assets/ex9c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Yes — e.g. $2x = -1$ has the solution $x = -\\dfrac{1}{2}$. Equations can absolutely have negative fraction solutions (accept any correct example and justification).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Yes — e.g. $2x = -1$ has the solution $x = -\\dfrac{1}{2}$. Equations can absolutely have negative fraction solutions (accept any correct example and justification).",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "recognising that dividing by a number and multiplying by its reciprocal are equivalent",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i: $x=10$ (multiply both sides by 2). ii: $x=10$ (also multiply both sides by 2, since $\\times \\frac{1}{2}$ is undone by $\\times 2$). Both give the same answer.",
+      "aiNotes": "Official answer (from the Cambridge answer key): i: $x=10$ (multiply both sides by 2). ii: $x=10$ (also multiply both sides by 2, since $\\times \\frac{1}{2}$ is undone by $\\times 2$). Both give the same answer.",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "recognising that dividing by a number and multiplying by its reciprocal are equivalent",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Both equations solve the same way: multiply both sides by 3 first, then subtract 4 — giving $x = 26$ in both cases.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Both equations solve the same way: multiply both sides by 3 first, then subtract 4 — giving $x = 26$ in both cases.",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10c",
+      "tier": "reasoning",
+      "topic": "recognising that dividing by a number and multiplying by its reciprocal are equivalent",
+      "image": "assets/ex10c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "It doesn't change the first step at all — dividing by a number and multiplying by its reciprocal are the same operation, so you still multiply both sides by 3 first either way.",
+      "aiNotes": "Official answer (from the Cambridge answer key): It doesn't change the first step at all — dividing by a number and multiplying by its reciprocal are the same operation, so you still multiply both sides by 3 first either way.",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "enrichment",
+      "topic": "solving an equation with a fraction and giving the answer as a fraction",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x = \\dfrac{7}{2}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x = \\dfrac{7}{2}$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "only multiplying/dividing the variable term instead of the whole numerator",
+          "reason": "the denominator divides the ENTIRE expression on top of the fraction (e.g. all of 2x - 3), so multiplying both sides by the denominator must be applied to the whole numerator, not just the term with the variable"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11b",
+      "tier": "enrichment",
+      "topic": "solving an equation with a fraction and giving the answer as a fraction",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x = \\dfrac{17}{6}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x = \\dfrac{17}{6}$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "only multiplying/dividing the variable term instead of the whole numerator",
+          "reason": "the denominator divides the ENTIRE expression on top of the fraction (e.g. all of 2x - 3), so multiplying both sides by the denominator must be applied to the whole numerator, not just the term with the variable"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11c",
+      "tier": "enrichment",
+      "topic": "solving an equation with a fraction and giving the answer as a fraction",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x = \\dfrac{19}{6}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x = \\dfrac{19}{6}$",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11d",
+      "tier": "enrichment",
+      "topic": "solving an equation with a fraction and giving the answer as a fraction",
+      "image": "assets/ex11d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x = \\dfrac{7}{6}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x = \\dfrac{7}{6}$",
+      "misconceptions": [],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex12",
+      "tier": "enrichment",
+      "topic": "modifying an equation with a fraction to change its solution",
+      "image": "assets/ex12.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Change the 3 to an 18: $\\dfrac{5x-18}{7}=6$ then gives $x=12$ (other changes exist, e.g. changing the 6 to $\\frac{57}{7}$, but changing 3 to 18 is the cleanest).",
+      "aiNotes": "Official answer (from the Cambridge answer key): Change the 3 to an 18: $\\dfrac{5x-18}{7}=6$ then gives $x=12$ (other changes exist, e.g. changing the 6 to $\\frac{57}{7}$, but changing 3 to 18 is the cleanest).",
+      "misconceptions": []
+    }
+  ]
+}

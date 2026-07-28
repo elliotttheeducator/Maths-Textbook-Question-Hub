@@ -871,7 +871,7 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
     confusedWrap.appendChild(confusedBox);
 
     const understandBtn = h('button', { class: 'wb-understand' }, 'I understand this step');
-    understandBtn.addEventListener('click', () => advance(step));
+    understandBtn.addEventListener('click', () => { understandBtn.disabled = true; advance(step); });
 
     active.appendChild(h('div', { class: 'wb-controls' }, [understandBtn, confusedWrap, replyBox]));
 

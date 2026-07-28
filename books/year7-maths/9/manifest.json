@@ -14,6 +14,12 @@
       "title": "Solving equations algebraically",
       "path": "books/year7-maths/9D/manifest.json",
       "description": "Solving one- and two-step equations algebraically using inverse operations, and checking solutions."
+    },
+    {
+      "id": "9E",
+      "title": "Equations with fractions",
+      "path": "books/year7-maths/9E/manifest.json",
+      "description": "Solving equations that contain a fraction by multiplying both sides by the denominator to remove it (Extending)."
     }
   ]
 }
