@@ -259,6 +259,21 @@
   .map-chip.picker { cursor: default; display: flex; align-items: center; }
 
   #back-link { color: var(--chalk-dim); background: none; border: none; text-decoration: underline; cursor: pointer; padding: 0; font-family: inherit; font-size: 0.95rem; margin-bottom: 1rem; }
+
+  #section-browser-fab {
+    position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 80;
+    border-radius: 999px; padding: 0.8rem 1.2rem; font-weight: 600;
+    background: var(--board-2); border: 2px solid var(--chalk-yellow); color: var(--chalk-yellow);
+    box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+  }
+  #section-browser-fab:hover { background: rgba(255,215,106,0.12); }
+  @media (max-width: 600px) {
+    #section-browser-fab {
+      bottom: 1rem; right: 1rem; width: 3rem; height: 3rem; padding: 0;
+      font-size: 1.3rem; display: flex; align-items: center; justify-content: center;
+    }
+    #section-browser-fab .fab-label { display: none; }
+  }
 </style>
 </head>
 <body>
@@ -379,6 +394,8 @@
 </main>
 
 <footer>Question and answer images are direct crops of the textbook — nothing is AI-recreated. Runs entirely in your browser; API keys are stored only in this browser's local storage.</footer>
+
+<button id="section-browser-fab" style="display:none;" title="Jump to a section">🧭 <span class="fab-label">Sections</span></button>
 
 <dialog id="settings-dialog">
   <h3>AI settings</h3>
@@ -558,10 +575,13 @@ function h(tag, attrs = {}, children = []) {
   return node;
 }
 
+const SECTION_FAB_VIEWS = new Set(['cover', 'quiz']);
+
 function showView(name) {
   ['landing', 'home', 'sections', 'cover', 'map', 'subset', 'quiz'].forEach(v => {
     el(v + 'Screen').style.display = v === name ? 'block' : 'none';
   });
+  el('section-browser-fab').style.display = SECTION_FAB_VIEWS.has(name) ? 'block' : 'none';
   window.scrollTo(0, 0);
 }
 
@@ -1482,6 +1502,7 @@ el('back-to-cover-2').addEventListener('click', () => showView('cover'));
 el('back-to-cover-3').addEventListener('click', () => showView('cover'));
 
 el('start-btn').addEventListener('click', openSectionBrowser);
+el('section-browser-fab').addEventListener('click', openSectionBrowser);
 el('start-beginning-btn').addEventListener('click', () => startQuestions());
 el('subset-btn').addEventListener('click', () => { state.subsetSelection = new Set(); openSubsetPicker(); });
 el('subset-start-btn').addEventListener('click', startSubset);
