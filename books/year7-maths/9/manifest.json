@@ -20,6 +20,12 @@
       "title": "Equations with fractions",
       "path": "books/year7-maths/9E/manifest.json",
       "description": "Solving equations that contain a fraction by multiplying both sides by the denominator to remove it (Extending)."
+    },
+    {
+      "id": "9F",
+      "title": "Equations with brackets",
+      "path": "books/year7-maths/9F/manifest.json",
+      "description": "Expanding brackets and collecting like terms to solve equations (Extending)."
     }
   ]
 }
