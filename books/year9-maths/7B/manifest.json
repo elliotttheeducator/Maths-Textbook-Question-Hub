@@ -482,7 +482,7 @@
       "officialAnswerAvailable": true,
       "answerImage": null,
       "answer": "a = 60, b = 120",
-      "aiNotes": "Official answer (from the Cambridge answer key): a = 60, b = 120",
+      "aiNotes": "Official answer (from the Cambridge answer key): a = 60, b = 120. Solving chain: the given 120 degree angle is NOT directly corresponding, alternate, or co-interior with a degree or b degree in one step (120 degree sits above the top line and to the left of the transversal - an exterior angle - while a degree and b degree are both at the bottom intersection, on the right of the transversal). First find the unlabeled angle at the bottom intersection that IS in the matching corresponding position to 120 degree (above the bottom line, left of the transversal) - that angle equals 120 degree by the corresponding angles rule. a degree is supplementary to that unlabeled angle (they sit on a straight line along the bottom line), so a = 180 - 120 = 60. b degree is vertically opposite that same unlabeled angle (equivalently: b degree and a degree are supplementary, sitting on a straight line along the transversal), so b = 120. When guiding the student, do not ask them to relate 120 degree and a degree directly - guide them to find the intermediate unlabeled corresponding angle first, then use that to get a degree and b degree.",
       "misconceptions": [
         {
           "wrongAnswer": "treating a cointerior (supplementary) pair as if it were equal, or an alternate/corresponding (equal) pair as if it summed to 180\u00b0",
