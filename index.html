@@ -1179,6 +1179,10 @@ function getSettings() {
 const GEOMETRY_TOPIC_PATTERN = /angle|triangle|parallel|similar|congruent|circle|polygon|quadrilateral|geometr|degree|vertex|vertices|bearing/i;
 
 function isGeometryQuestion(q) {
+  // The section's own "subject" tag is the reliable signal (set once per
+  // section, so it can't be missed by a topic phrased without a trigger
+  // word). The keyword check is only a safety net for any untagged section.
+  if (state.bank && state.bank.subject === 'geometry') return true;
   return GEOMETRY_TOPIC_PATTERN.test(q.topic || '') || GEOMETRY_TOPIC_PATTERN.test(q.aiNotes || '');
 }
 
