@@ -19,7 +19,7 @@
           "part": "a",
           "prompt": "Part a — Expand $4(x + 3)$.",
           "line": "4(x + 3)",
-          "reasoning": "The distributive law says $a(b+c) = ab + ac$. Multiply the 4 by each term inside the brackets."
+          "reasoning": "The distributive law says a(b+c) = ab + ac. Multiply the 4 by each term inside the brackets."
         },
         {
           "part": "a",

@@ -936,6 +936,7 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
 
     const toast = h('div', { class: 'wb-toast' }, step.reasoning);
     active.appendChild(toast);
+    renderMath(toast);
 
     const replyBox = h('div', { class: 'wb-confused-reply' });
     const confusedInput = h('input', { type: 'text', class: 'wb-confused-input', placeholder: "What's confusing about this step?" });
