@@ -911,12 +911,19 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
     }
     const startBtn = h('button', { class: 'wb-understand' }, '▶ Start');
     startBtn.addEventListener('click', renderActiveStep);
-    active.appendChild(h('div', { class: 'wb-controls wb-controls-center' }, startBtn));
+    const skipBtn = h('button', { class: 'wb-replay-btn' }, '📄 Skip to textbook page');
+    skipBtn.addEventListener('click', skipToFinal);
+    active.appendChild(h('div', { class: 'wb-controls wb-controls-center' }, [startBtn, skipBtn]));
   }
 
   function restart() {
     index = 0;
     showStartGate();
+  }
+
+  function skipToFinal() {
+    markDone();
+    showFinalStatic();
   }
 
   function renderActiveStep() {
@@ -953,7 +960,10 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
     const understandBtn = h('button', { class: 'wb-understand' }, 'I understand this step');
     understandBtn.addEventListener('click', () => { understandBtn.disabled = true; advance(step); });
 
-    active.appendChild(h('div', { class: 'wb-controls' }, [understandBtn, confusedWrap, replyBox]));
+    const skipBtn = h('button', { class: 'wb-replay-btn' }, '📄 Skip to textbook page');
+    skipBtn.addEventListener('click', skipToFinal);
+
+    active.appendChild(h('div', { class: 'wb-controls' }, [understandBtn, confusedWrap, skipBtn, replyBox]));
 
     requestAnimationFrame(() => toast.classList.add('show'));
     setTimeout(() => {
