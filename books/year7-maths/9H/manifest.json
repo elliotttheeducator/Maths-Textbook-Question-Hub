@@ -1,0 +1,535 @@
+{
+  "id": "9H",
+  "title": "Using equations to solve problems",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) — Chapter 9 Equations, Section 9H. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 16 — Solving a problem using equations",
+      "image": "assets/example16.png",
+      "walkthrough": [
+        {
+          "prompt": "The sum of Kate's current age in years and her age next year is 19. How old is Kate?",
+          "line": "k = \\text{Kate's current age in years}",
+          "reasoning": "Define a pronumeral to stand for the unknown number."
+        },
+        {
+          "line": "k + (k + 1) = 19",
+          "reasoning": "Write an equation to describe the situation. Kate's age next year is k + 1."
+        },
+        {
+          "line": "2k + 1 = 19",
+          "reasoning": "Simplify the LHS: k + (k + 1) = 2k + 1."
+        },
+        {
+          "line": "2k + 1 - 1 = 19 - 1",
+          "highlight": "- 1",
+          "reasoning": "Subtract 1 from both sides to undo the +1."
+        },
+        {
+          "line": "2k = 18",
+          "reasoning": "2k + 1 - 1 simplifies to 2k, and 19 - 1 = 18."
+        },
+        {
+          "line": "2k \\div 2 = 18 \\div 2",
+          "highlight": "\\div 2",
+          "reasoning": "k is multiplied by 2, so divide both sides by 2."
+        },
+        {
+          "line": "k = 9",
+          "reasoning": "2k ÷ 2 simplifies to k, and 18 ÷ 2 = 9."
+        },
+        {
+          "line": "\\text{Kate is currently 9 years old.}",
+          "reasoning": "Answer the original question, including units/context."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "choosing the correct definition for a pronumeral in a word problem",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A — Let m = Monique's current age (the actual unknown we want to find)",
+      "aiNotes": "Official answer (from the Cambridge answer key): A — Let m = Monique's current age (the actual unknown we want to find)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "choosing the correct definition for a pronumeral in a word problem",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C — Let w = the weight in kilograms of one box (the actual unknown)",
+      "aiNotes": "Official answer (from the Cambridge answer key): C — Let w = the weight in kilograms of one box (the actual unknown)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "choosing the correct definition for a pronumeral in a word problem",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "C — Let x = the number of sheep (the actual unknown)",
+      "aiNotes": "Official answer (from the Cambridge answer key): C — Let x = the number of sheep (the actual unknown)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "ex1",
+      "tier": "fluency",
+      "topic": "setting up and solving an equation for a word problem (age)",
+      "image": "assets/ex1.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Jerry is 21 (let $j$ = Jerry's current age; $j+(j+1)=43 \\to j=21$)",
+      "aiNotes": "Official answer (from the Cambridge answer key): Jerry is 21 (let $j$ = Jerry's current age; $j+(j+1)=43 \\to j=21$)",
+      "misconceptions": []
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Let $c$ = the cost of the car, in dollars",
+      "aiNotes": "Official answer (from the Cambridge answer key): Let $c$ = the cost of the car, in dollars",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$c + 2000 = 40000$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $c + 2000 = 40000$",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$c = 38000$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $c = 38000$",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "The car costs \\$38\\,000",
+      "aiNotes": "Official answer (from the Cambridge answer key): The car costs \\$38\\,000",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Let $p$ = the cost of one pen, in dollars",
+      "aiNotes": "Official answer (from the Cambridge answer key): Let $p$ = the cost of one pen, in dollars",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$12p = 15.60$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $12p = 15.60$",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$p = 1.30$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $p = 1.30$",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3d",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex3d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "One pen costs \\$1.30",
+      "aiNotes": "Official answer (from the Cambridge answer key): One pen costs \\$1.30",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Let $h$ = the number of hours Jonas worked",
+      "aiNotes": "Official answer (from the Cambridge answer key): Let $h$ = the number of hours Jonas worked",
+      "misconceptions": [
+        {
+          "wrongAnswer": "defining the pronumeral as a known/given value, or as the wrong quantity (e.g. 'next year's age' instead of 'current age')",
+          "reason": "the pronumeral must stand for the actual UNKNOWN quantity the problem is asking for - defining it as something already given, or as a related-but-different quantity, makes the resulting equation meaningless"
+        }
+      ],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$17h + 65 = 643$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $17h + 65 = 643$",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$17h = 578$, so $h = 34$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $17h = 578$, so $h = 34$",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4d",
+      "tier": "fluency",
+      "topic": "defining a pronumeral, writing an equation, and solving a word problem",
+      "image": "assets/ex4d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Jonas worked 34 hours",
+      "aiNotes": "Official answer (from the Cambridge answer key): Jonas worked 34 hours",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "fluency",
+      "topic": "writing and solving an equation for a rectangle's area",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$24w = 720$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $24w = 720$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "fluency",
+      "topic": "writing and solving an equation for a rectangle's area",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$w = 30$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $w = 30$",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "fluency",
+      "topic": "writing and solving an equation for a rectangle's area",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "The paddock is 30 m wide",
+      "aiNotes": "Official answer (from the Cambridge answer key): The paddock is 30 m wide",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5d",
+      "tier": "fluency",
+      "topic": "writing and solving an equation for a rectangle's area",
+      "image": "assets/ex5d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Perimeter $= 2(24+30) = 108$ m",
+      "aiNotes": "Official answer (from the Cambridge answer key): Perimeter $= 2(24+30) = 108$ m",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6",
+      "tier": "problem-solving",
+      "topic": "setting up and solving an equation from a worded number puzzle",
+      "image": "assets/ex6.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$2(2n+3)=34$, so $n = 7$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $2(2n+3)=34$, so $n = 7$",
+      "misconceptions": []
+    },
+    {
+      "id": "ex7",
+      "tier": "problem-solving",
+      "topic": "using a perimeter equation to find a missing side length",
+      "image": "assets/ex7.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x+6+2x+12=30$, so $x = 4$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x+6+2x+12=30$, so $x = 4$",
+      "misconceptions": []
+    },
+    {
+      "id": "ex8",
+      "tier": "problem-solving",
+      "topic": "setting up and solving an equation for a worded ratio problem",
+      "image": "assets/ex8.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Let $t$ = hours watched Monday. $t+2t+4t=10.5$, so $t=1.5$ hours",
+      "aiNotes": "Official answer (from the Cambridge answer key): Let $t$ = hours watched Monday. $t+2t+4t=10.5$, so $t=1.5$ hours",
+      "misconceptions": []
+    },
+    {
+      "id": "ex9",
+      "tier": "problem-solving",
+      "topic": "setting up and solving an equation for a combined-age problem",
+      "image": "assets/ex9.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Let $m$ = Marcus's age. $m+(m+2)=30$, so $m=14$",
+      "aiNotes": "Official answer (from the Cambridge answer key): Let $m$ = Marcus's age. $m+(m+2)=30$, so $m=14$",
+      "misconceptions": []
+    },
+    {
+      "id": "ex10",
+      "tier": "problem-solving",
+      "topic": "using the angle sum of a triangle to find a missing angle",
+      "image": "assets/ex10.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$154+x+x=180$, so $x = 13$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $154+x+x=180$, so $x = 13$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting that the three angles in a triangle always sum to 180°",
+          "reason": "every equation for a missing triangle angle starts from angle1 + angle2 + angle3 = 180 - skipping this means there's no equation to solve"
+        }
+      ]
+    },
+    {
+      "id": "ex11",
+      "tier": "problem-solving",
+      "topic": "using the angle sum of a triangle to find a missing angle",
+      "image": "assets/ex11.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$90+y+2y=180$, so $y = 30$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $90+y+2y=180$, so $y = 30$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting that the three angles in a triangle always sum to 180°",
+          "reason": "every equation for a missing triangle angle starts from angle1 + angle2 + angle3 = 180 - skipping this means there's no equation to solve"
+        }
+      ]
+    },
+    {
+      "id": "ex12",
+      "tier": "problem-solving",
+      "topic": "finding values by inspection that satisfy an equation",
+      "image": "assets/ex12.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Many pairs work — e.g. $w=3,h=6$ or $w=4,h=4$ (from $2w+2h=wh$, i.e. $(w-2)(h-2)=4$). Accept any valid pair.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Many pairs work — e.g. $w=3,h=6$ or $w=4,h=4$ (from $2w+2h=wh$, i.e. $(w-2)(h-2)=4$). Accept any valid pair.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex13",
+      "tier": "problem-solving",
+      "topic": "using properties of a rectangle to write and solve equations",
+      "image": "assets/ex13.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$2x+3=10$, so $x=3.5$; and $3y=6$, so $y=2$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $2x+3=10$, so $x=3.5$; and $3y=6$, so $y=2$",
+      "misconceptions": []
+    },
+    {
+      "id": "ex14a",
+      "tier": "reasoning",
+      "topic": "explaining why an equation is or isn't realistic for its context",
+      "image": "assets/ex14a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Solving $3c+10=4$ gives $c=-2$, a negative number of chairs, which is impossible - so Theodore must have set up the equation incorrectly.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Solving $3c+10=4$ gives $c=-2$, a negative number of chairs, which is impossible - so Theodore must have set up the equation incorrectly.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex14b",
+      "tier": "reasoning",
+      "topic": "explaining why an equation is or isn't realistic for its context",
+      "image": "assets/ex14b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Temperature CAN be negative (e.g. $-2°C$ is a perfectly normal temperature), so the same equation and its negative solution make sense in this context, unlike for counting chairs.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Temperature CAN be negative (e.g. $-2°C$ is a perfectly normal temperature), so the same equation and its negative solution make sense in this context, unlike for counting chairs.",
+      "misconceptions": []
+    },
+    {
+      "id": "ex15a",
+      "tier": "reasoning",
+      "topic": "deciding whether an equation has a valid whole-number solution in context",
+      "image": "assets/ex15a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$p=12$ — valid, since it's a whole number of pages",
+      "aiNotes": "Official answer (from the Cambridge answer key): $p=12$ — valid, since it's a whole number of pages",
+      "misconceptions": [],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex15b",
+      "tier": "reasoning",
+      "topic": "deciding whether an equation has a valid whole-number solution in context",
+      "image": "assets/ex15b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$p=2.90\\div0.35\\approx8.29$ — NOT valid, since $p$ must be a whole number of pages",
+      "aiNotes": "Official answer (from the Cambridge answer key): $p=2.90\\div0.35\\approx8.29$ — NOT valid, since $p$ must be a whole number of pages",
+      "misconceptions": [],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex15c",
+      "tier": "reasoning",
+      "topic": "deciding whether an equation has a valid whole-number solution in context",
+      "image": "assets/ex15c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$p=8$ — valid, since it's a whole number of pages",
+      "aiNotes": "Official answer (from the Cambridge answer key): $p=8$ — valid, since it's a whole number of pages",
+      "misconceptions": [],
+      "contextImage": "assets/ex15_context.png"
+    },
+    {
+      "id": "ex16",
+      "tier": "reasoning",
+      "topic": "proving a general result about isosceles triangle angles",
+      "image": "assets/ex16.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$a+2b=180$, so $a=180-2b$. Since $b$ is a whole number, $2b$ is even, and $180$ is even, so $a$ (even minus even) must also be even.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $a+2b=180$, so $a=180-2b$. Since $b$ is a whole number, $2b$ is even, and $180$ is even, so $a$ (even minus even) must also be even.",
+      "misconceptions": [
+        {
+          "wrongAnswer": "forgetting that the three angles in a triangle always sum to 180°",
+          "reason": "every equation for a missing triangle angle starts from angle1 + angle2 + angle3 = 180 - skipping this means there's no equation to solve"
+        }
+      ]
+    },
+    {
+      "id": "ex17a",
+      "tier": "enrichment",
+      "topic": "identifying and explaining impossible or under-determined triangle puzzles",
+      "image": "assets/ex17a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i: $(x+100)+(x-70)+30=180$, so $x=60$. ii: substituting $x=60$ gives the angle $(x-70)°=-10°$, a negative angle, which is impossible - so no such triangle exists.",
+      "aiNotes": "Official answer (from the Cambridge answer key): i: $(x+100)+(x-70)+30=180$, so $x=60$. ii: substituting $x=60$ gives the angle $(x-70)°=-10°$, a negative angle, which is impossible - so no such triangle exists.",
+      "misconceptions": [],
+      "contextImage": "assets/ex17_context.png"
+    },
+    {
+      "id": "ex17b",
+      "tier": "enrichment",
+      "topic": "identifying and explaining impossible or under-determined triangle puzzles",
+      "image": "assets/ex17b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i: $(60-x)+(70+x)+50=180$ simplifies to $180=180$ - the $x$ terms cancel out, so the equation is true for every value of $x$ and doesn't pin one down. ii: any $x$ with $-70 < x < 60$ keeps all three angles positive.",
+      "aiNotes": "Official answer (from the Cambridge answer key): i: $(60-x)+(70+x)+50=180$ simplifies to $180=180$ - the $x$ terms cancel out, so the equation is true for every value of $x$ and doesn't pin one down. ii: any $x$ with $-70 < x < 60$ keeps all three angles positive.",
+      "misconceptions": [],
+      "contextImage": "assets/ex17_context.png"
+    },
+    {
+      "id": "ex17c",
+      "tier": "enrichment",
+      "topic": "identifying and explaining impossible or under-determined triangle puzzles",
+      "image": "assets/ex17c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Open-ended - e.g. a triangle with angles $(x+120)°$, $(x-50)°$ and $40°$: solving gives $x=35$, but then $(x-50)°=-15°$, a negative angle, so it's impossible. Accept any puzzle where solving produces a negative or otherwise invalid angle.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Open-ended - e.g. a triangle with angles $(x+120)°$, $(x-50)°$ and $40°$: solving gives $x=35$, but then $(x-50)°=-15°$, a negative angle, so it's impossible. Accept any puzzle where solving produces a negative or otherwise invalid angle.",
+      "misconceptions": [],
+      "contextImage": "assets/ex17_context.png"
+    }
+  ]
+}

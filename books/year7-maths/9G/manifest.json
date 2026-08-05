@@ -1,0 +1,853 @@
+{
+  "id": "9G",
+  "title": "Using formulas",
+  "source": "Essential Mathematics for the Australian Curriculum, Year 7 (Cambridge, Greenwood et al. 2024) — Chapter 9 Equations, Section 9G. Images are direct crops of the original textbook pages.",
+  "cover": {
+    "image": "assets/cover.png"
+  },
+  "keyIdeas": [
+    {
+      "image": "assets/keyideas_1.png"
+    }
+  ],
+  "workedExamples": [
+    {
+      "title": "Example 14 — Applying a formula",
+      "image": "assets/example14.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a — Find $k$ if $b = 5$, using the rule $k = 3b + 2$.",
+          "line": "k = 3b + 2",
+          "reasoning": "Substitute b = 5 into the rule."
+        },
+        {
+          "part": "a",
+          "line": "k = 3 \\times 5 + 2",
+          "reasoning": "Replace b with 5."
+        },
+        {
+          "part": "a",
+          "line": "k = 17",
+          "reasoning": "3 × 5 + 2 = 15 + 2 = 17."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b — Find $k$ if $b = 10$, using the rule $k = 3b + 2$.",
+          "line": "k = 3b + 2",
+          "reasoning": "Substitute b = 10 into the rule."
+        },
+        {
+          "part": "b",
+          "line": "k = 3 \\times 10 + 2",
+          "reasoning": "Replace b with 10."
+        },
+        {
+          "part": "b",
+          "line": "k = 32",
+          "reasoning": "3 × 10 + 2 = 30 + 2 = 32."
+        },
+        {
+          "part": "c",
+          "prompt": "Part c — Find $b$ if $k = 23$, using the rule $k = 3b + 2$.",
+          "line": "23 = 3b + 2",
+          "reasoning": "Substitute k = 23 into the rule. Now solve the equation to find b."
+        },
+        {
+          "part": "c",
+          "line": "23 - 2 = 3b + 2 - 2",
+          "highlight": "- 2",
+          "reasoning": "Subtract 2 from both sides to undo the +2."
+        },
+        {
+          "part": "c",
+          "line": "21 = 3b",
+          "reasoning": "23 - 2 = 21, and 3b + 2 - 2 simplifies to 3b."
+        },
+        {
+          "part": "c",
+          "line": "21 \\div 3 = 3b \\div 3",
+          "highlight": "\\div 3",
+          "reasoning": "b is multiplied by 3, so divide both sides by 3."
+        },
+        {
+          "part": "c",
+          "line": "b = 7",
+          "reasoning": "21 ÷ 3 = 7, and 3b ÷ 3 simplifies to b. Writing the pronumeral on the left, the solution is b = 7."
+        }
+      ]
+    },
+    {
+      "title": "Example 15 — Applying a formula involving three pronumerals",
+      "image": "assets/example15_p2.png",
+      "walkthrough": [
+        {
+          "part": "a",
+          "prompt": "Part a — Find $Q$ if $w = 10$ and $t = 3$, using the rule $Q = w(4 + t)$.",
+          "line": "Q = w(4 + t)",
+          "reasoning": "Substitute w = 10 and t = 3 into the rule."
+        },
+        {
+          "part": "a",
+          "line": "Q = 10(4 + 3)",
+          "reasoning": "Replace w with 10 and t with 3."
+        },
+        {
+          "part": "a",
+          "line": "Q = 10 \\times 7",
+          "reasoning": "4 + 3 = 7 first — the brackets are worked out before multiplying."
+        },
+        {
+          "part": "a",
+          "line": "Q = 70",
+          "reasoning": "10 × 7 = 70."
+        },
+        {
+          "part": "b",
+          "prompt": "Part b — Find $t$ if $Q = 42$ and $w = 6$, using the rule $Q = w(4 + t)$.",
+          "line": "42 = 6(4 + t)",
+          "reasoning": "Substitute Q = 42 and w = 6 into the rule. Now solve the equation to find t."
+        },
+        {
+          "part": "b",
+          "line": "42 = 24 + 6t",
+          "reasoning": "Expand the brackets: 6 × 4 = 24 and 6 × t = 6t."
+        },
+        {
+          "part": "b",
+          "line": "42 - 24 = 24 + 6t - 24",
+          "highlight": "- 24",
+          "reasoning": "Subtract 24 from both sides to undo the +24."
+        },
+        {
+          "part": "b",
+          "line": "18 = 6t",
+          "reasoning": "42 - 24 = 18, and 24 + 6t - 24 simplifies to 6t."
+        },
+        {
+          "part": "b",
+          "line": "18 \\div 6 = 6t \\div 6",
+          "highlight": "\\div 6",
+          "reasoning": "t is multiplied by 6, so divide both sides by 6."
+        },
+        {
+          "part": "b",
+          "line": "3 = t",
+          "reasoning": "18 ÷ 6 = 3, and 6t ÷ 6 simplifies to t. Writing the pronumeral on the left, the solution is t = 3."
+        }
+      ]
+    }
+  ],
+  "questions": [
+    {
+      "id": "bu1a",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "N — 2x+5=10 has only one variable, so it's an equation to solve, not a rule",
+      "aiNotes": "Official answer (from the Cambridge answer key): N — 2x+5=10 has only one variable, so it's an equation to solve, not a rule",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1b",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "R — y=3x+5 relates two variables",
+      "aiNotes": "Official answer (from the Cambridge answer key): R — y=3x+5 relates two variables",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1c",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "R — F=ma relates three variables",
+      "aiNotes": "Official answer (from the Cambridge answer key): R — F=ma relates three variables",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1d",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "N — 5-q=3 has only one variable",
+      "aiNotes": "Official answer (from the Cambridge answer key): N — 5-q=3 has only one variable",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1e",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "R — w=12-v relates two variables",
+      "aiNotes": "Official answer (from the Cambridge answer key): R — w=12-v relates two variables",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu1f",
+      "tier": "warmup",
+      "topic": "deciding whether an equation is a rule (formula) or not",
+      "image": "assets/bu1f.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "R — P=I+k-3 relates three variables",
+      "aiNotes": "Official answer (from the Cambridge answer key): R — P=I+k-3 relates three variables",
+      "misconceptions": [
+        {
+          "wrongAnswer": "calling a one-variable equation a 'rule'",
+          "reason": "a formula/rule must show the relationship between TWO OR MORE variables - an equation with only one pronumeral (like 2x+5=10) is just an equation to solve, not a rule"
+        }
+      ],
+      "contextImage": "assets/bu1_context.png"
+    },
+    {
+      "id": "bu2a",
+      "tier": "warmup",
+      "topic": "substituting a value into an expression",
+      "image": "assets/bu2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "15",
+      "aiNotes": "Official answer (from the Cambridge answer key): 15",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2b",
+      "tier": "warmup",
+      "topic": "substituting a value into an expression",
+      "image": "assets/bu2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "36",
+      "aiNotes": "Official answer (from the Cambridge answer key): 36",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2c",
+      "tier": "warmup",
+      "topic": "substituting a value into an expression",
+      "image": "assets/bu2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "8",
+      "aiNotes": "Official answer (from the Cambridge answer key): 8",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "bu2d",
+      "tier": "warmup",
+      "topic": "substituting a value into an expression",
+      "image": "assets/bu2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "2",
+      "aiNotes": "Official answer (from the Cambridge answer key): 2",
+      "misconceptions": [],
+      "contextImage": "assets/bu2_context.png"
+    },
+    {
+      "id": "ex1ai",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex1ai.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 13",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 13",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1aii",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex1aii.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "k = 38",
+      "aiNotes": "Official answer (from the Cambridge answer key): k = 38",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1bi",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex1bi.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex1bii",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex1bii.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "b = 11",
+      "aiNotes": "Official answer (from the Cambridge answer key): b = 11",
+      "misconceptions": [],
+      "contextImage": "assets/ex1_context.png"
+    },
+    {
+      "id": "ex2a",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex2a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "h = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): h = 7",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2b",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex2b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "h = 9",
+      "aiNotes": "Official answer (from the Cambridge answer key): h = 9",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2c",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex2c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 8",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 8",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex2d",
+      "tier": "fluency",
+      "topic": "substituting into a rule, and solving for the other pronumeral",
+      "image": "assets/ex2d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "m = 10",
+      "aiNotes": "Official answer (from the Cambridge answer key): m = 10",
+      "misconceptions": [],
+      "contextImage": "assets/ex2_context.png"
+    },
+    {
+      "id": "ex3a",
+      "tier": "fluency",
+      "topic": "substituting into a formula, and solving for the other pronumeral",
+      "image": "assets/ex3a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 23",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 23",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3b",
+      "tier": "fluency",
+      "topic": "substituting into a formula, and solving for the other pronumeral",
+      "image": "assets/ex3b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex3c",
+      "tier": "fluency",
+      "topic": "substituting into a formula, and solving for the other pronumeral",
+      "image": "assets/ex3c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 7",
+      "misconceptions": [],
+      "contextImage": "assets/ex3_context.png"
+    },
+    {
+      "id": "ex4a",
+      "tier": "fluency",
+      "topic": "substituting into a rule with three pronumerals",
+      "image": "assets/ex4a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "A = 7",
+      "aiNotes": "Official answer (from the Cambridge answer key): A = 7",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4b",
+      "tier": "fluency",
+      "topic": "substituting into a rule with three pronumerals",
+      "image": "assets/ex4b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "q = 4",
+      "aiNotes": "Official answer (from the Cambridge answer key): q = 4",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex4c",
+      "tier": "fluency",
+      "topic": "substituting into a rule with three pronumerals",
+      "image": "assets/ex4c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "t = 0",
+      "aiNotes": "Official answer (from the Cambridge answer key): t = 0",
+      "misconceptions": [],
+      "contextImage": "assets/ex4_context.png"
+    },
+    {
+      "id": "ex5a",
+      "tier": "fluency",
+      "topic": "substituting into a formula with three pronumerals",
+      "image": "assets/ex5a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "G = 27",
+      "aiNotes": "Official answer (from the Cambridge answer key): G = 27",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5b",
+      "tier": "fluency",
+      "topic": "substituting into a formula with three pronumerals",
+      "image": "assets/ex5b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "x = 1",
+      "aiNotes": "Official answer (from the Cambridge answer key): x = 1",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex5c",
+      "tier": "fluency",
+      "topic": "substituting into a formula with three pronumerals",
+      "image": "assets/ex5c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "y = 5",
+      "aiNotes": "Official answer (from the Cambridge answer key): y = 5",
+      "misconceptions": [],
+      "contextImage": "assets/ex5_context.png"
+    },
+    {
+      "id": "ex6a",
+      "tier": "problem-solving",
+      "topic": "using the area-of-a-rectangle formula to find a missing side",
+      "image": "assets/ex6a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$20 = 5w$, so $w = 4$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $20 = 5w$, so $w = 4$",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex6b",
+      "tier": "problem-solving",
+      "topic": "using the area-of-a-rectangle formula to find a missing side",
+      "image": "assets/ex6b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "i: $25 = 5l$, so $l = 5$. ii: it's a square, since $l = w = 5$.",
+      "aiNotes": "Official answer (from the Cambridge answer key): i: $25 = 5l$, so $l = 5$. ii: it's a square, since $l = w = 5$.",
+      "misconceptions": [],
+      "contextImage": "assets/ex6_context.png"
+    },
+    {
+      "id": "ex7a",
+      "tier": "problem-solving",
+      "topic": "using the perimeter-of-a-rectangle formula",
+      "image": "assets/ex7a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$P = 16$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $P = 16$",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7b",
+      "tier": "problem-solving",
+      "topic": "using the perimeter-of-a-rectangle formula",
+      "image": "assets/ex7b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$l = 3$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $l = 3$",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex7c",
+      "tier": "problem-solving",
+      "topic": "using the perimeter-of-a-rectangle formula",
+      "image": "assets/ex7c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$l = 5$, so the area is $5 \\times 5 = 25$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $l = 5$, so the area is $5 \\times 5 = 25$",
+      "misconceptions": [],
+      "contextImage": "assets/ex7_context.png"
+    },
+    {
+      "id": "ex8a",
+      "tier": "problem-solving",
+      "topic": "using the density formula d=m/v",
+      "image": "assets/ex8a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$d = 3$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $d = 3$",
+      "misconceptions": [],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8b",
+      "tier": "problem-solving",
+      "topic": "using the density formula d=m/v",
+      "image": "assets/ex8b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$3 \\text{ g/cm}^3$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $3 \\text{ g/cm}^3$",
+      "misconceptions": [],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex8c",
+      "tier": "problem-solving",
+      "topic": "using the density formula d=m/v",
+      "image": "assets/ex8c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$10 = \\dfrac{m}{5}$, so $m = 50$ g",
+      "aiNotes": "Official answer (from the Cambridge answer key): $10 = \\dfrac{m}{5}$, so $m = 50$ g",
+      "misconceptions": [],
+      "contextImage": "assets/ex8_context.png"
+    },
+    {
+      "id": "ex9a",
+      "tier": "problem-solving",
+      "topic": "using the Celsius-Fahrenheit conversion formula",
+      "image": "assets/ex9a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$F = 68$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $F = 68$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "only multiplying part of the bracket, or doing the addition/subtraction before applying the outer multiplication",
+          "reason": "in a rule like Q=w(4+t), the brackets must be evaluated first (or expanded fully) - w only multiplies the WHOLE (4+t), not just the 4 or just the t"
+        }
+      ],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9b",
+      "tier": "problem-solving",
+      "topic": "using the Celsius-Fahrenheit conversion formula",
+      "image": "assets/ex9b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C = 10$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C = 10$",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9c",
+      "tier": "problem-solving",
+      "topic": "using the Celsius-Fahrenheit conversion formula",
+      "image": "assets/ex9c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C = 12$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C = 12$",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex9d",
+      "tier": "problem-solving",
+      "topic": "using the Celsius-Fahrenheit conversion formula",
+      "image": "assets/ex9d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$68°F = 20°C$ and $95°F = 35°C$, so the difference is $35 - 20 = 15°C$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $68°F = 20°C$ and $95°F = 35°C$, so the difference is $35 - 20 = 15°C$",
+      "misconceptions": [],
+      "contextImage": "assets/ex9_context.png"
+    },
+    {
+      "id": "ex10a",
+      "tier": "reasoning",
+      "topic": "comparing two formulas for the same real-world quantity",
+      "image": "assets/ex10a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Formula 1: $H = 210$. Formula 2: $H = 200.2$",
+      "aiNotes": "Official answer (from the Cambridge answer key): Formula 1: $H = 210$. Formula 2: $H = 200.2$",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10b",
+      "tier": "reasoning",
+      "topic": "comparing two formulas for the same real-world quantity",
+      "image": "assets/ex10b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Formula 1: $H = 120$. Formula 2: $H = 139.9$",
+      "aiNotes": "Official answer (from the Cambridge answer key): Formula 1: $H = 120$. Formula 2: $H = 139.9$",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10c",
+      "tier": "reasoning",
+      "topic": "comparing two formulas for the same real-world quantity",
+      "image": "assets/ex10c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Formula 1: $H = 180$. Formula 2: $H = 180.1$ — very close, demonstrating the two formulas agree closely for a 40-year-old.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Formula 1: $H = 180$. Formula 2: $H = 180.1$ — very close, demonstrating the two formulas agree closely for a 40-year-old.",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10d",
+      "tier": "reasoning",
+      "topic": "comparing two formulas for the same real-world quantity",
+      "image": "assets/ex10d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$190 = 220 - a$, so $a = 30$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $190 = 220 - a$, so $a = 30$",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex10e",
+      "tier": "reasoning",
+      "topic": "comparing two formulas for the same real-world quantity",
+      "image": "assets/ex10e.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$190 = 206.9 - 0.67a$, so $a = 16.9 \\div 0.67 \\approx 25$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $190 = 206.9 - 0.67a$, so $a = 16.9 \\div 0.67 \\approx 25$",
+      "misconceptions": [],
+      "contextImage": "assets/ex10_context.png"
+    },
+    {
+      "id": "ex11a",
+      "tier": "reasoning",
+      "topic": "rearranging a formula to make a different pronumeral the subject",
+      "image": "assets/ex11a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$d = \\dfrac{S - 3b}{5}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $d = \\dfrac{S - 3b}{5}$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "rearranging a formula uses the same idea as solving an equation - undo operations in REVERSE order (last operation applied gets undone first)"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11b",
+      "tier": "reasoning",
+      "topic": "rearranging a formula to make a different pronumeral the subject",
+      "image": "assets/ex11b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C = \\dfrac{5(F - 32)}{9}$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C = \\dfrac{5(F - 32)}{9}$",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "rearranging a formula uses the same idea as solving an equation - undo operations in REVERSE order (last operation applied gets undone first)"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex11c",
+      "tier": "reasoning",
+      "topic": "rearranging a formula to make a different pronumeral the subject",
+      "image": "assets/ex11c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$x = \\dfrac{Q - 36}{4}$ (expand the brackets first: $Q = 3x+36+x = 4x+36$)",
+      "aiNotes": "Official answer (from the Cambridge answer key): $x = \\dfrac{Q - 36}{4}$ (expand the brackets first: $Q = 3x+36+x = 4x+36$)",
+      "misconceptions": [
+        {
+          "wrongAnswer": "undoing the operations in the same order they were applied, instead of reverse order",
+          "reason": "rearranging a formula uses the same idea as solving an equation - undo operations in REVERSE order (last operation applied gets undone first)"
+        }
+      ],
+      "contextImage": "assets/ex11_context.png"
+    },
+    {
+      "id": "ex12a",
+      "tier": "reasoning",
+      "topic": "testing whether a proposed rule is consistent with given data",
+      "image": "assets/ex12a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C=D+t$ gives $10+20=30$ and $20+30=50$ — both match the table, so it is consistent.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C=D+t$ gives $10+20=30$ and $20+30=50$ — both match the table, so it is consistent.",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12b",
+      "tier": "reasoning",
+      "topic": "testing whether a proposed rule is consistent with given data",
+      "image": "assets/ex12b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C=3D$ gives $3\\times10=30$ (matches) but $3\\times20=60\\ne50$ (doesn't match) — so it is NOT consistent.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C=3D$ gives $3\\times10=30$ (matches) but $3\\times20=60\\ne50$ (doesn't match) — so it is NOT consistent.",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12c",
+      "tier": "reasoning",
+      "topic": "testing whether a proposed rule is consistent with given data",
+      "image": "assets/ex12c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$C=2D+10$ gives $2(10)+10=30$ and $2(20)+10=50$ — both match, so it is consistent.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $C=2D+10$ gives $2(10)+10=30$ and $2(20)+10=50$ — both match, so it is consistent.",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex12d",
+      "tier": "reasoning",
+      "topic": "testing whether a proposed rule is consistent with given data",
+      "image": "assets/ex12d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Many formulas work — e.g. $C=2t-10$ (gives 30 and 50) or $C=3D-t+20$ (gives 30 and 50). Accept any formula that gives $C=30$ when $D=10,t=20$ and $C=50$ when $D=20,t=30$.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Many formulas work — e.g. $C=2t-10$ (gives 30 and 50) or $C=3D-t+20$ (gives 30 and 50). Accept any formula that gives $C=30$ when $D=10,t=20$ and $C=50$ when $D=20,t=30$.",
+      "misconceptions": [],
+      "contextImage": "assets/ex12_context.png"
+    },
+    {
+      "id": "ex13a",
+      "tier": "enrichment",
+      "topic": "applying and rearranging a real-world formula (AFL scoring)",
+      "image": "assets/ex13a.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "Abbotsford: $S=6(11)+9=75$. Brunswick: $S=6(12)+2=74$. Abbotsford Apes are winning.",
+      "aiNotes": "Official answer (from the Cambridge answer key): Abbotsford: $S=6(11)+9=75$. Brunswick: $S=6(12)+2=74$. Abbotsford Apes are winning.",
+      "misconceptions": [],
+      "contextImage": "assets/ex13_context.png"
+    },
+    {
+      "id": "ex13b",
+      "tier": "enrichment",
+      "topic": "applying and rearranging a real-world formula (AFL scoring)",
+      "image": "assets/ex13b.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$55=6g+7$, so $g=8$ goals",
+      "aiNotes": "Official answer (from the Cambridge answer key): $55=6g+7$, so $g=8$ goals",
+      "misconceptions": [],
+      "contextImage": "assets/ex13_context.png"
+    },
+    {
+      "id": "ex13c",
+      "tier": "enrichment",
+      "topic": "applying and rearranging a real-world formula (AFL scoring)",
+      "image": "assets/ex13c.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$S=6g+b+9q$",
+      "aiNotes": "Official answer (from the Cambridge answer key): $S=6g+b+9q$",
+      "misconceptions": [],
+      "contextImage": "assets/ex13_context.png"
+    },
+    {
+      "id": "ex13d",
+      "tier": "enrichment",
+      "topic": "applying and rearranging a real-world formula (AFL scoring)",
+      "image": "assets/ex13d.png",
+      "officialAnswerAvailable": true,
+      "answerImage": null,
+      "answer": "$(g,b) = (2,12)$, $(3,9)$ and $(7,7)$ also work (besides the given $4,8$) — these are exactly the cases where $g-1$ divides 6.",
+      "aiNotes": "Official answer (from the Cambridge answer key): $(g,b) = (2,12)$, $(3,9)$ and $(7,7)$ also work (besides the given $4,8$) — these are exactly the cases where $g-1$ divides 6.",
+      "misconceptions": [],
+      "contextImage": "assets/ex13_context.png"
+    }
+  ]
+}

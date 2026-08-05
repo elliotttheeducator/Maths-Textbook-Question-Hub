@@ -26,6 +26,18 @@
       "title": "Equations with brackets",
       "path": "books/year7-maths/9F/manifest.json",
       "description": "Expanding brackets and collecting like terms to solve equations (Extending)."
+    },
+    {
+      "id": "9G",
+      "title": "Using formulas",
+      "path": "books/year7-maths/9G/manifest.json",
+      "description": "Substituting into a formula and solving for any pronumeral, and rearranging formulas."
+    },
+    {
+      "id": "9H",
+      "title": "Using equations to solve problems",
+      "path": "books/year7-maths/9H/manifest.json",
+      "description": "Defining a pronumeral, writing an equation from a worded problem, and solving it."
     }
   ]
 }
