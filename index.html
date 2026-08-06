@@ -307,6 +307,7 @@
 <header>
   <h1 id="home-link">📐 EduFlow</h1>
   <div class="controls">
+    <button id="force-update-btn" class="small" title="Fetch the latest questions and images if something looks out of date">🔄 Update</button>
     <button id="teacher-toggle-btn" class="small">🔒 Teacher mode</button>
     <button id="access-code-btn" class="small">🔑 Access code</button>
     <button id="textbooks-btn" class="teacher-only" style="display:none;">📚 Textbooks</button>
@@ -472,6 +473,17 @@
 <script>
 const LIBRARY_URL = 'library.json';
 
+// Cache-buster for question/answer images and content manifests. GitHub
+// Pages caches static files in students' browsers for a while, so without
+// this, editing a cropped image or a manifest can leave some devices showing
+// stale content until their cache happens to expire. Bump this string
+// (e.g. to today's date) whenever content/assets change so every device
+// picks up the new files on its next normal load.
+const ASSET_VERSION = '20260806a';
+function assetUrl(path) {
+  return path + (path.includes('?') ? '&' : '?') + 'v=' + ASSET_VERSION;
+}
+
 // Hosted proxy: holds the real API keys server-side so students never need
 // one. Tried first; if unreachable, the app falls back to a personal key
 // from Settings/localStorage/&key= for whichever provider is selected.
@@ -624,7 +636,7 @@ async function bootLibrary() {
     localStorage.setItem('mqh_api_key_gemini', localStorage.getItem('mqh_api_key'));
   }
 
-  const res = await fetch(LIBRARY_URL);
+  const res = await fetch(assetUrl(LIBRARY_URL));
   state.library = await res.json();
 
   const params = new URLSearchParams(window.location.search);
@@ -670,13 +682,13 @@ async function selectBook(book) {
 // ---------- Home (chapters) ----------
 
 async function loadManifest(manifestPath) {
-  const res = await fetch(manifestPath);
+  const res = await fetch(assetUrl(manifestPath));
   state.manifest = await res.json();
   const grid = el('chapter-grid');
   grid.innerHTML = '';
   state.manifest.forEach(m => {
     const children = [];
-    if (m.cover) children.push(h('img', { src: m.cover, alt: m.title }));
+    if (m.cover) children.push(h('img', { src: assetUrl(m.cover), alt: m.title }));
     children.push(h('h3', {}, `${m.id} — ${m.title}`));
     children.push(h('p', {}, m.description || ''));
     grid.appendChild(h('div', { class: 'chapter-card', onclick: () => openChapterSections(m.path) }, children));
@@ -686,7 +698,7 @@ async function loadManifest(manifestPath) {
 // ---------- Sections (within a chapter) ----------
 
 async function openChapterSections(path) {
-  const res = await fetch(path);
+  const res = await fetch(assetUrl(path));
   state.chapter = await res.json();
   state.chapterBaseDir = path.slice(0, path.lastIndexOf('/') + 1);
 
@@ -750,19 +762,19 @@ function questionLabel(id) {
 }
 
 async function openChapter(path) {
-  const res = await fetch(path);
+  const res = await fetch(assetUrl(path));
   state.bank = await res.json();
   state.baseDir = path.slice(0, path.lastIndexOf('/') + 1);
   state.groupNumbers = computeGroupNumbers();
 
   el('section-title').textContent = `${state.bank.id} — ${state.bank.title}`;
   el('section-desc').textContent = state.bank.source || '';
-  el('cover-image').src = state.baseDir + state.bank.cover.image;
+  el('cover-image').src = assetUrl(state.baseDir + state.bank.cover.image);
 
   const keyIdeasWrap = el('cover-keyideas');
   keyIdeasWrap.innerHTML = '';
   (state.bank.keyIdeas || []).forEach(k => {
-    keyIdeasWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + k.image, alt: 'Key ideas' })));
+    keyIdeasWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: assetUrl(state.baseDir + k.image), alt: 'Key ideas' })));
   });
 
   const examplesWrap = el('cover-examples');
@@ -771,7 +783,7 @@ async function openChapter(path) {
     if (Array.isArray(ex.walkthrough) && ex.walkthrough.length) {
       examplesWrap.appendChild(buildWalkthroughCard(ex, state.bank.id, idx));
     } else {
-      examplesWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
+      examplesWrap.appendChild(h('div', { class: 'paper' }, h('img', { src: assetUrl(state.baseDir + ex.image), alt: ex.title || 'Worked example' })));
     }
   });
 
@@ -785,10 +797,10 @@ function populateReferencePanel(bank) {
   panel.innerHTML = '';
   panel.classList.remove('show');
   (bank.keyIdeas || []).forEach(k => {
-    panel.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + k.image, alt: 'Key ideas' })));
+    panel.appendChild(h('div', { class: 'paper' }, h('img', { src: assetUrl(state.baseDir + k.image), alt: 'Key ideas' })));
   });
   (bank.workedExamples || []).forEach(ex => {
-    panel.appendChild(h('div', { class: 'paper' }, h('img', { src: state.baseDir + ex.image, alt: ex.title || 'Worked example' })));
+    panel.appendChild(h('div', { class: 'paper' }, h('img', { src: assetUrl(state.baseDir + ex.image), alt: ex.title || 'Worked example' })));
   });
 }
 
@@ -856,7 +868,7 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
   function mountBoard() {
     surface.innerHTML = '';
     if (ex.diagram) {
-      surface.appendChild(h('div', { class: 'wb-diagram-wrap' }, h('img', { class: 'wb-diagram', src: state.baseDir + ex.diagram, alt: 'Diagram for this example' })));
+      surface.appendChild(h('div', { class: 'wb-diagram-wrap' }, h('img', { class: 'wb-diagram', src: assetUrl(state.baseDir + ex.diagram), alt: 'Diagram for this example' })));
     }
     surface.appendChild(stack);
     surface.appendChild(active);
@@ -875,7 +887,7 @@ function buildWalkthroughCard(ex, bankId, exampleKey) {
 
   function showFinalStatic() {
     surface.innerHTML = '';
-    surface.appendChild(h('img', { class: 'wb-final-image', src: state.baseDir + ex.image, alt: ex.title || 'Worked example' }));
+    surface.appendChild(h('img', { class: 'wb-final-image', src: assetUrl(state.baseDir + ex.image), alt: ex.title || 'Worked example' }));
     const replayBtn = h('button', { class: 'wb-replay-btn' }, '↺ Replay this walkthrough');
     replayBtn.addEventListener('click', restart);
     surface.appendChild(h('div', { class: 'wb-replay-row' }, replayBtn));
@@ -1131,9 +1143,9 @@ async function showQuestion() {
   state.currentImageParts = [];
   el('q-tier').textContent = q.tier;
   el('q-topic').textContent = q.topic;
-  el('question-image').src = state.baseDir + q.image;
+  el('question-image').src = assetUrl(state.baseDir + q.image);
   if (q.contextImage) {
-    el('context-image').src = state.baseDir + q.contextImage;
+    el('context-image').src = assetUrl(state.baseDir + q.contextImage);
     el('context-image-wrap').style.display = 'block';
   } else {
     el('context-image-wrap').style.display = 'none';
@@ -1151,8 +1163,8 @@ async function showQuestion() {
   addSystemMessage('Work through the question, then type your answer or ask for a hint.');
 
   try {
-    const parts = [await imageUrlToPart(state.baseDir + q.image)];
-    if (q.contextImage) parts.push(await imageUrlToPart(state.baseDir + q.contextImage));
+    const parts = [await imageUrlToPart(assetUrl(state.baseDir + q.image))];
+    if (q.contextImage) parts.push(await imageUrlToPart(assetUrl(state.baseDir + q.contextImage)));
     state.currentImageParts = parts;
   } catch (e) {
     state.currentImageParts = [];
@@ -1426,7 +1438,7 @@ function toggleReveal() {
   if (q.officialAnswerAvailable && q.answerImage) {
     el('answer-image-wrap').style.display = 'block';
     el('answer-text-wrap').style.display = 'none';
-    el('answer-image').src = state.baseDir + q.answerImage;
+    el('answer-image').src = assetUrl(state.baseDir + q.answerImage);
     el('answer-reveal').style.display = 'block';
     el('no-official-note').classList.remove('show');
   } else if (q.officialAnswerAvailable && q.answer) {
@@ -1567,6 +1579,21 @@ el('next-btn').addEventListener('click', nextQuestion);
 el('prev-btn').addEventListener('click', prevQuestion);
 el('reveal-btn').addEventListener('click', toggleReveal);
 el('reference-toggle-btn').addEventListener('click', () => el('reference-panel').classList.toggle('show'));
+
+el('force-update-btn').addEventListener('click', async () => {
+  const btn = el('force-update-btn');
+  btn.disabled = true;
+  btn.textContent = '🔄 Updating…';
+  try {
+    if (window.caches) {
+      const keys = await caches.keys();
+      await Promise.all(keys.map(k => caches.delete(k)));
+    }
+  } catch (e) { /* Cache Storage API not available - fine, URL bust below still works */ }
+  const url = new URL(window.location.href);
+  url.searchParams.set('_fresh', Date.now().toString());
+  window.location.href = url.toString();
+});
 
 el('teacher-toggle-btn').addEventListener('click', toggleTeacherMode);
 el('pin-cancel').addEventListener('click', () => el('pin-dialog').close());
